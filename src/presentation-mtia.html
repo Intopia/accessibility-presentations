@@ -1,0 +1,1326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MTIA - Managing Accessibility in Digital Projects | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#d3420d">
+          <h1>Managing Accessibility in Digital Projects</h1>
+          <span class="h5">MTIA</span>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#15828E">
+            <h3>Acknowledgement of country</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I'd like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, this is the <b>Cammeraygal people</b> of the Guringai tribe of the Eora nation.</p>
+            <p class="font-xs">(Feel free to add the Traditional owners of your land into chat)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I'd like to pay my respects to <b>Elders past and present</b>, and extend that respect to all First Nations people present today.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-intros">
+          <section data-background="#15828E">
+            <h3>Intros</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Add some quick intros in chat:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-id-card-regular"></span>What's your first name?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question-regular"></span>What's your current role?</li>
+              <li><span aria-hidden="true" class="icon icon-code"></span>How long have you been with MTIA?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design and HTML.</li>
+              <li><span aria-hidden="true" class="icon icon-css3"></span>2002: CSS.</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility.</li>
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-some-housekeeping">
+          <section data-background="#15828E">
+            <h3>Some housekeeping</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This workshop is for you</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-timer-regular"></span>We can go as slowly or quickly as needed.</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Ask questions at any time!</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>How to ask a question</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Option 1: Use the "raise hand" icon.</li>
+              <li><span aria-hidden="true" class="icon icon-comments-regular"></span>Option 2: Ask in chat - I may not see straight away.</li>
+              <li><span aria-hidden="true" class="icon icon-volume-high-regular"></span>Option 3: Unmute and interrupt at any time.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Cameras on or off?</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-eye"></span>Having cameras on at times helps with feedback.</li>
+              <li><span aria-hidden="true" class="icon icon-mug-regular"></span>However, everyone has different comfort levels.</li>
+              <li><span aria-hidden="true" class="icon icon-comments-regular"></span>I will prompt you when asking for feedback, so these are good times for the camera to be on.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A safe space</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-genderless"></span>Respect people's gender, identity, diversity.</li>
+              <li><span aria-hidden="true" class="icon icon-scale-balanced-regular"></span>No judgement of people's knowledge or questions.</li>
+              <li><span aria-hidden="true" class="icon icon-lock"></span>Confidentially around shared stories.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Break?</h5>
+            <p>We'll take a 10 min break around the hour mark.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of all slides and any other associated resources will be provided at the completion of the course.</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>Exercises</h5>
+            <p>We'll be using FigJam for some execises. You don't need an account!</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-will-we-cover-today">
+          <section data-background="#15828E">
+            <h3>What will we cover today?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><a href="#slide-why-should-you-care-about-accessibility">Why should you care about accessibility?</a></li>
+              <li><a href="#slide-what-is-wcag">What is WCAG?</a></li>
+              <li><a href="#slide-types-of-disabilities">Types of disability</a></li>
+              <li><a href="#slide-lets-meet-some-people">Let's meet some people</a></li>
+              <li><a href="#slide-accessibility-profiles">Accessibility profiles</a></li>
+              <li><a href="#slide-how-accessibility-mature-is-your-organisation">How accessibility-mature is your organisation?</a></li>
+              <li><a href="#slide-testing-tools">Testing tools (if time)</a></li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#15828E">
+            <h3>1. Why should you care about accessibility?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ul class="font-sm">
+              <li>Commercial incentives</li>
+              <li>Reputation</li>
+              <li>Legal responsibilities</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Commercial incentives</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Question:</h5>
+            <p>Do you know the percentage of people in Australia who have some form of disability?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In Australia, the term <b>"Disability"</b> means:</p>
+            <p class="font-sm"><i>"Any limitation, restriction or impairment which restricts everyday activities and has lasted, or is likely to last, for at least six months."</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In 2018 the <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2018" target="_blank">Australian Bureau of Statistics</a> reported that there were <b>4.4 million Australians with a disability</b> or 17.7% of the population.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And the prevalence of disability <b>increased with age</b>;</p>
+            <ul class="font-sm">
+              <li>11.6% of people aged 0-64 years had a disability</li>
+              <li>49.6% of people aged 65 years and over had a disability</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It is well-known that these estimates may be low, as many people <b>do not identify themselves as having some form of disability</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Globally, <b>people with disabilities</b> control around <a href="https://sheribyrnehaber.medium.com/people-with-disabilities-control-8-trillion-in-spending-dabd43a87d81" target="_blank">$8 trillion in spending</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can you afford to lose potential or existing customers <b>due to inaccessible products and services</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In 2015, the legal case <a href="https://mediaaccess.org.au/latest_news/news/coles-web-accessibility-case-settled" target="_blank">Gisele Mesnage vs Coles</a> was <b>settled out of court</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While a financial risk is associated with legal actions like this, the possible <b>damage to an organisation's reputation</b> is a far greater risk.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you receive a complaint via social media or any other channel, <b>the manner and speed of your response could have a massive impact</b> on the end result.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Question:</h5>
+            <p>Should you get an accessibility complaint about any of your products and services, do you have and guidelines or policies in place?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Legal responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Question:</h5>
+            <p>Do you know the rules around public-facing digital products within Australia?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All public-facing digital products in Australia are <b>required to comply with</b> the <a href="http://www.comlaw.gov.au/Series/C2004A04426" target="_blank">Disability Discrimination Act 1992</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm"><i>"The provision of online services through the web is a service covered by the DDA. Equal access for people with a disability is required by the DDA where it can reasonably be provided. This requirement applies to any organisation developing a website in Australia."</i></p>
+            <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/world-wide-web-access-disability-discrimination-act-advisory-notes-ver#required" target="_blank">Australian Human Rights Commission - Disability Discrimination Act Advisory Notes v4.1</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-wcag">
+          <section data-background="#15828E">
+            <h3>2. What is WCAG?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Question:</h5>
+            <p>What does the term "WCAG" stand for?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The World Wide Web Consortium (W3C) is the main organisation that <b>develops international standards for the World Wide Web</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One of the standards produced by the W3C is the <b>Web Content Accessibility Guidelines</b> - often referred to as "WCAG".</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li><b>WCAG 2.0</b> – released in Dec 2008</li>
+              <li><b>WCAG 2.1</b> – released June 2018</li>
+              <li><b>WCAG 2.2</b> – due later in 2022</li>
+              <li><b>WCAG 3.0</b> – expected 2023/24</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG is <b>structured</b> in the following way:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>4 Principles
+                <ul>
+                  <li>13 Guidelines
+                    <ul>
+                      <li>78 Success Criteria
+                        <ul>
+                          <li>Sufficient Techniques</li>
+                          <li>Advisory Techniques</li>
+                          <li>Failures</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>Principles</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At the top of WCAG are <b>four principles</b> that provide the foundation for Web accessibility.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>The four principles</h5>
+            <ul>
+              <li>Perceivable</li>
+              <li>Operable</li>
+              <li>Understandable</li>
+              <li>Robust</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <iframe width="880" height="495" src="https://www.youtube.com/embed/hs8sykCaf3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>Guidelines</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Under the principles are <b>13 guidelines</b> which provide the overarching goals to make content more accessible to users with different disabilities.</p>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>Success criteria</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For each guideline, <b>testable success criteria</b> are provided to allow WCAG 2.0 to be used for conformance testing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG 2.1 includes <b>78 “Success Criteria”</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These success criteria are <b>a checklist</b> that helps determine if the site/app can be considered “accessible”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each Success Criteria has a compliance level of either: <b>“A”, “AA” or “AAA”</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG 2.1</h5>
+            <ul>
+              <li><b>30 level &ldquo;A&rdquo;</b> (minumum level of conformance).</li>
+              <li><b>20 level &ldquo;AA&rdquo;</b>.</li>
+              <li><b>28 level &ldquo;AAA&rdquo;</b> (maximum level of conformance).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To be &ldquo;AA&rdquo; compliant, sites <b>must meet all &ldquo;A&rdquo; and &ldquo;AA&rdquo;</b> Success Criteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means that websites and web apps <b>must comply with all 50 of these Success Criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG 2.2</h5>
+            <ul class="font-sm">
+              <li>9 new success criteria
+                <ul>
+                  <li>2 Level A, 5 Level AA, 2 Level AAA</li>
+                </ul>
+              </li>
+              <li>2 updated success criteria
+                <ul>
+                  <li>1 renamed, 1 new level</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-types-of-disabilities">
+          <section data-background="#15828E">
+            <h3>3. Types of disabilities</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Disabilites are often grouped into <b>five broad categories</b>:</p>
+            <ul class="font-sm">
+              <li>Visual.</li>
+              <li>Auditory.</li>
+              <li>Physical.</li>
+              <li>Cognitive, learning, and neurological.</li>
+              <li>Speech.</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>1. Visual</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A. Low Vision:</h5>
+            <ul class="font-sm">
+              <li><a href="https://en.wikipedia.org/wiki/Macular_degeneration" target="_blank">Macular degeneration</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Glaucoma" target="_blank">Glaucoma</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Diabetic_retinopathy" target="_blank">Diabetic retinopathy</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Cataract" target="_blank">Cataract</a>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>B. Monochromacy:</h5>
+            <ul class="font-sm">
+              <li><i>Rod monochromacy</i>: inability to distinguish colours.</li>
+              <li><i>Cone monochromacy</i>: inability to distinguish colours.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>B. Dichromacy:</h5>
+            <ul class="font-sm">
+              <li><i>Protanopia</i>: absence of red retinal photoreceptors.</li>
+              <li><i>Deuteranopia</i>: absence of red retinal photoreceptors.</li>
+              <li><i>Tritanopia</i>: absence of blue retinal photoreceptors.</li>
+            </ul>
+           </section>
+
+          <section data-background="#EDEBEB">
+            <h5>B. Anomalous trichromacy:</h5>
+            <ul class="font-sm">
+              <li><i>Protanomaly</i>: poor red–green hue discrimination.</li>
+              <li><i>Deuteranomaly</i>: mildly affected red–green hue discrimination.</li>
+              <li><i>Tritanomaly</i>: poor blue–green and yellow–red/pink hue discrimination.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>C. Blindness</h5>
+            <ul class="font-sm">
+              <li>Blindness.</li>
+              <li>Legally blind.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>D. Other visual-related conditions</h5>
+            <ul class="font-sm">
+              <li><a href="https://en.wikipedia.org/wiki/Photosensitive_epilepsy" target="_blank">Photosensitive epilepsy</a>.</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>2. Auditory</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Auditory disabilities:</h5>
+            <ul class="font-sm">
+              <li>Hearing loss.</li>
+              <li>Hearing impaired.</li>
+              <li>Deafness.</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>3. Physical</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A. Traumatic Injuries</h5>
+            <ul class="font-sm">
+              <li>Spinal cord injuries that affect upper body.</li>
+              <li>Loss or damage to limb(s).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>B. Full-body Diseases & Conditions</h5>
+            <ul class="font-xs">
+              <li><a href="https://en.wikipedia.org/wiki/Arthritis" target="_blank">Arthritis</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Spina_bifida" target="_blank">Spina Bifida</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Cerebral_palsy" target="_blank">Cerebral Palsy</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Muscular_dystrophy" target="_blank">Muscular Dystrophy</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Multiple_sclerosis" target="_blank">Multiple Sclerosis</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Parkinson%27s_disease" target="_blank">Parkinson’s Disease</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Locked-in_syndrome" target="_blank">Locked in syndrome</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis" target="_blank">Amyotrophic Lateral Sclerosis</a> (ALS).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>C. Arm, Hand and Finger Disorders</h5>
+            <ul class="font-xs">
+              <li><a href="https://en.wikipedia.org/wiki/Osteoarthritis" target="_blank">Osteoarthritis</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Lymphedema" target="_blank">Lymphedema</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Trigger_finger" target="_blank">Trigger Finger</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Thromboangiitis_obliterans" target="_blank">Thromboangiitis obliterans</a> (Buerger's Disease).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Rheumatoid_arthritis" target="_blank">Rheumatoid Arthritis</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Boutonniere_deformity" target="_blank">Boutonnière Deformity</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Dupuytren%27s_contracture" target="_blank">Dupuytren Contracture</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Compartment_syndrome" target="_blank">Compartment Syndrome</a>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>D. Other motor-related conditions</h5>
+            <ul class="font-xs">
+              <li><a href="https://en.wikipedia.org/wiki/Chorea" target="_blank">Chorea</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Tremor" target="_blank">Tremors</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Myoclonus" target="_blank">Myoclonus</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Dystonia" target="_blank">Dystonia</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Ataxia" target="_blank">Ataxia</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Tic_disorder" target="_blank">Tic disorders</a>.</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>4. Cognitive, learning, and neurological.</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A. Intellectual disabilities</h5>
+            <ul class="font-xs">
+              <li><a href="https://en.wikipedia.org/wiki/Fragile_X_syndrome" target="_blank">Fragile X Syndrome</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Down_syndrome" target="_blank">Down Syndrome</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Autism_spectrum" target="_blank">Autism spectrum</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Fetal_alcohol_spectrum_disorder" target="_blank">Fetal Alcohol Spectrum Disorder</a> (FASD).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Williams_syndrome" target="_blank">Williams Syndrome</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Prader%E2%80%93Willi_syndrome" target="_blank">Prader-Willi Syndrome</a> (PWS).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Phenylketonuria" target="_blank">Phenylketonuria</a> (PKU).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Cerebral_palsy" target="_blank">Cerebral Palsy</a> (in some circumstances).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>B. Learning disabilities</h5>
+            <ul class="font-xs">
+              <li><a href="https://en.wikipedia.org/wiki/Dyscalculia" target="_blank">Dyscalculia</a> (related to numbers/maths).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Dyslexia" target="_blank">Dyslexia</a> (related to reading).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Aphasia" target="_blank">Aphasia</a> (related to understanding language).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" target="_blank">Attention Deficit Hyperactivity Disorder</a> (ADHD).</li>
+              <li><a href="https://en.wikipedia.org/wiki/Nonverbal_learning_disorder" target="_blank">Non-Verbal Learning Disabilities</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Language_disorder" target="_blank">Language Disorders</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Auditory_processing_disorder" target="_blank">Auditory processing disorders</a>.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Sensory_processing_disorder" target="_blank">Sensory processing disorders</a>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>C. Memory impairments</h5>
+            <ul class="font-xs">
+              <li><a href="https://www.dementia.org.au/about-dementia/what-is-dementia" target="_blank">Dementia</a></li>
+              <li><a href="https://www.alz.org/alzheimers-dementia/what-is-alzheimers" target="_blank">Alzheimer disease</a></li>
+              <li>Limited short-term memory</li>
+              <li>Missing long-term memory</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>5. Speech</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li><a href="https://www.nidcd.nih.gov/health/apraxia-speech" target="_blank">Apraxia of speech</a> (AOS).</li>
+              <li><a href="https://psychologydictionary.org/cluttering-tachyphemia/" target="_blank">Cluttering</a> (also called &ldquo;tachyphemia&rdquo;).</li>
+              <li><a href="https://www.asha.org/public/speech/disorders/dysarthria/" target="_blank">Dysarthria</a>.</li>
+              <li><a href="https://www.asha.org/practice-portal/clinical-topics/articulation-and-phonology/" target="_blank">Speech sound disorders</a>.</li>
+              <li><a href="https://www.asha.org/public/speech/disorders/stuttering/" target="_blank">Stuttering</a>.</li>
+              <li><a href="https://www.asha.org/practice-portal/clinical-topics/selective-mutism/" target="_blank">Selective Mutism</a>.</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>Disabilities are varied and complex</h4>
+          </section>
+
+          <section data-background="#fff">
+            <h5>Disabilities are varied and changing:</h5>
+            <ul class="font-sm">
+              <li>Disabilities may be spectrums</li>
+              <li>Some people have multiple disabilities or conditions.</li>
+              <li>Some disabilities change over time.</li>
+              <li>Some disabilities change day to day.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-lets-meet-some-people">
+          <section data-background="#15828E">
+            <h3>4. Let's meet some people</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Assistive technology is a term for <b>assistive, adaptive, and rehabilitative devices or software</b> for people with disabilities or the elderly population.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's meet some people and see how assistive technologies have allowed them to <b>interact with the digital world</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-xs">
+              <li><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> (eg. JAWS, NVDA, VoiceOver).</li>
+              <li><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille displays</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head wand</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Quadstick - Sip and Puff</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=XB4cjbYywqg" target="_blank">Head switches</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=kJKQmTumFP0&amp;t=55s" target="_blank">Dragon Naturally Speaking</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=DnGSbVx4ef0&amp;t=55s" target="_blank">Dynavox - Mouse emulation</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=04Rhnt4J2b4&amp;t=30s" target="_blank">Steve’s Story</a>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are just some examples of a <b>broad range of Assistive Technologies</b> in use today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-profiles">
+          <section data-background="#15828E">
+            <h3>5. Accessibility profiles</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we plan, design and build for <b>all these different types of disabilities</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One simple solution is to focus on <b>user profiles or personas</b> that can be used to represent different disability sets.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means you can <b>focus on a small set of user types</b>, rather than a huge list of specific disabilities and impairments.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These user profiles or personas can then be used <b>throughout ever stage of your process</b> to ensure inclusion.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’re now going to <b>do an activity</b> to <a href="https://www.figma.com/file/ClTpXPW2rObxyAVu9Kfrcw/MTIA---Managing-Accessibility-in-Digital-Projects?node-id=0%3A1" target="_blank">build out some accessibility profiles</a>, based on <a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles" target="_blank">Gov.UK</a>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-how-accessibility-mature-is-your-organisation">
+          <section data-background="#15828E">
+            <h3>6. How accessibility-mature is your organisation?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The W3C has a very detailed document called the <a href="https://www.w3.org/TR/maturity-model/" target="_blank">W3C Accessibility Maturity Model</a> that provides a <b>framework for measuring accessibility maturity</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is a <b>much simpler model</b> that allows you to quickly determine the accessibility-maturity of your organisation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's all go to the <a href="https://www.metamatrix.se/avocado" target="_blank">Acacado maturity model</a> and <b>try it out</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That was a <b>high-level, organisational view</b> of maturity. Let's dive deeper!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I'm like you all to <b>answer a series of questions</b> in chat.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And these questions are <b>not designed to shame</b> your organisation, or individuals.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, <b>it doesn't matter</b> if the answer are all either:</p>
+            <ul>
+              <li><i>"No"</i></li>
+              <li><i>"I don't know"</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These questions will <b>help to</b>:</p>
+            <ul class="font-sm">
+              <li>Define your current level of accessibility maturity</li>
+              <li>Provide a roadmap for areas of improvement</li>
+              <li>Decide highest priorities to focus on for our next session</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Key documents</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For these first questions, I'm going to ask whether you <b>know if some key accessibility documents exist</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But I'm also going to ask if <b>you'd know where to find them</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Knowing the exact location of key documents is a sign of <b>shared knowledge across the team</b>, and a higher level of maturity.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.1: Does your organisation have any sort of <b>commitment to accessibility/inclusion</b>?</p>
+            <p class="font-xs">If yes, would you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.2: Does your organisation have a <b>public accessibility statement</b>?</p>
+            <p class="font-xs">If yes, would you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-xs"><i>It presents information about the target level of web accessibility for the website and the methods used to achieve those targets.</i></p>
+            <p class="font-xs"><i>It acknowledges any areas of the website where accessibility targets have not been met.</i></p>
+            <p class="font-xs"><i>It is a powerful declaration of commitment.</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.3: Does your organisation have a <b>definition of "Supported technologies"</b>?</p>
+            <p class="font-xs">If yes, would you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-xs"><i>This is a list of technologies (browsers, operating systems and assistive technologies) that you have tested your products with and can declare will work as expected with your product.</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.4: Does your organisation have <b>accessibility guidelines for digital product procurement</b>?</p>
+            <p class="font-xs">If yes, would you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Knowledge / Skills</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.1: Are all roles <b>aware of the importance of accessibility</b>?</p>
+            <p class="font-sm">PM's, PO's, BA's, IM's, QA's, Designers, Engineers</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.2: Have designers, engineers and QA's received <b>role-specific accessibility training</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.3: Have all key roles been trained in <b>how to test for accessibility</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.4: Have <b>accessibility champions</b> have been established within teams?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Processes</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.1: Do you have processes for <b>accessibility-related complaints</b> from the public?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.2: Have <a href="https://about.abc.net.au/wp-content/uploads/2019/06/a11y_Tips4Teams.pdf" target="_blank">accessibility responsibilities</a> been <b>defined for all key roles</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.3: Are regular <b>accessibility design reviews</b> in place?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.4: Are <b>accessibility requirements</b> included as part of:</p>
+            <ul class="font-sm">
+              <li>Sprint planning?</li>
+              <li>User stories?</li>
+              <li>Estimates? (Fibonacci, T-shirt sizing)</li>
+              <li>Definitions of done?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.5: Have <b>disability profiles or personas</b> been established, and are they in use?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Testing</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.1: Is <b>accessibility testing</b> conducted by:</p>
+            <ul class="font-sm">
+              <li>External experts</li>
+              <li>Inhouse experts</li>
+              <li>QAs</li>
+              <li>Key roles within teams</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.2: Do teams have <b>automated accessibility testing tools</b> in place?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.3: Are regular <b>accessibility audits</b> conducted on products before and after launch?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.4: Are <b>people with disabilities</b> included in key processes?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>5. Procurement and hiring</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>5.1: Is accessibility considered as part of all <b>digital product procurement</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>5.2: Is accessibility skills/knowledge considered as part of <b>recruitment</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>6. Different mediums</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.1: Are there processes in place to make sure <b>internal and external Word documents</b> re accessible?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.2: Are there processes in place to make sure <b>internal and external PDF documents</b> re accessible?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.3: Are all <b>email communications</b> accessible</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.4: Are all <b>social media communications</b> accessible? (Alt text, captions / transcripts etc)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>7. Some questions for you, as managers</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>7.1: Are all digital managers aware of <b>standards and requirements that you need to comply with</b> for your digital products?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>7.2: Do all digital managers have the <b>remit to stop something from going live</b> if it is not accessible?</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-tools">
+          <section data-background="#15828E">
+            <h3>7. Testing tools</h3>
+          </section>
+  
+          <section data-background="#EDEBEB">
+            <p>There are a wide range of accessibility testing tools that can be used to <b>identify and address accessibility issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We're going to quickly glance through <b>a long list of possible tools</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Automated desktop tools</h5>
+            <ul class="font-sm">
+              <li><a href="https://www.deque.com/axe/" target="_blank">Axe by Deque</a></li>
+              <li><a href="https://accessibilityinsights.io/en/downloads/" target="_blank">Microsoft Accessibility Insights</a></li>
+              <li><a href="https://www.ssa.gov/accessibility/andi/help/install.html" target="_blank">ANDI tool</a></li>
+              <li><a href="https://wave.webaim.org/" target="_blank">WAVE tool</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Automated mobile tools</h5>
+            <ul class="font-sm">
+              <li><a href="https://chrome.google.com/webstore/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en" target="_blank">iOS Accessibility Inspector</a></li>
+              <li><a href="https://bit.ly/a11y-scanner" target="_blank">Android Accessibility Scanner</a></li>
+              <li><a href="https://www.deque.com/android-accessibility/" target="_blank">Axe for Android</a></li>
+              <li><a href="https://android-doc.github.io/tools/debugging/improving-w-lint.html" target="_blank">Android Studio - Lint</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Automated accessibility platforms</h5>
+            <ul class="font-sm">
+              <li><a href="https://www.accessibilityoz.com/products/ozart/" target="_blank">OzArt</a></li>
+              <li><a href="https://tenon.io/" target="_blank">Tenon</a></li>
+              <li><a href="https://monsido.com/" target="_blank">Monsido</a></li>
+              <li><a href="https://usablenet.com/technology/aqa" target="blank">UsableNet AQA</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are also many manual testing tools available that can be used to <b>identify specific accessibility issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Assistance tools</h5>
+            <ul class="font-sm">
+              <li><a href="https://chrispederick.com/work/web-developer/" target="_blank">Web Developer extension</a></li>
+              <li><a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en" target="_blank">HeadingMaps</a></li>
+              <li><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_blank">SkipTo Landmarks & Headings</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Colour and contrast tools</h5>
+            <ul class="font-sm">
+              <li><a href="https://paciellogroup.com/resources/contrastanalyser" target="_blank">Colour Contrast Analyser by TPGI</a></li>
+              <li><a href="https://leaverou.github.io/contrast-ratio" target="_blank">Contrast Ratio by Lea Verou</a></li>
+              <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Color Contrast Checker</a></li>
+              <li><a href="https://contrast-finder.tanaguru.com/" target="_blank">Tanaguru contrast finder</a></li>
+              <li><a href="https://www.getstark.co/" target="_blank">Stark</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And there are also a wide range of assistive technologies that can be used to <b>identify accessibility issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Desktop screen readers</h5>
+            <ul class="font-sm">
+              <li><a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank">JAWS for Windows</a> (licensed)</li>
+              <li><a href="https://www.nvaccess.org/download/" target="_blank">NVDA for Windows</a></li>
+              <li>VoiceOver for MacOS</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Mobile screen readers</h5>
+            <ul class="font-sm">
+              <li>TalkBack (Android)</li>
+              <li>VoiceOver for iOS (Apple)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Desktop Speech Interfaces</h5>
+            <ul class="font-sm">
+              <li>Dragon NaturallySpeaking (licensed)</li>
+              <li>Voice Control (Mac OS)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Mobile Speech Interfaces</h5>
+            <ul class="font-sm">
+              <li>Voice Access (Android)</li>
+              <li>Voice Control (iOS)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While these tools can be beneficial for teams, they <b>should not replace</b>:</p>
+            <ul>
+              <li>Expert reviews</li>
+              <li>Accessibility audits</li>
+              <li>Inclusive user research and testing</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Discussion</h5>
+            <ul>
+              <li>Have you used any of these tools in the past?</li>
+              <li>What did you like?</li>
+              <li>What did you dislike?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#15828E">
+            <h3>Time for questions/discussion?</h3>
+          </section>
+        </section>
+
+
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+<!--
+        <section id="slide-definitions">
+          <section data-background="#15828E">
+            <h3>1. A children's playground?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Imagine you were designing and building a <b>children’s playground</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How would you design the playground for <b>accessibility, diversity, equity, and inclusion?</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessibility</h5>
+            <p>This would mean considering the needs of children with disabilities - including neurodivergent children.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This could include</h5>
+            <ul class="font-sm">
+              <li>ramps</li>
+              <li>braille tactile displays</li>
+              <li>clear iconography</li>
+              <li>soundscapes</li>
+              <li>decompression spaces</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Diversity</h5>
+            <p>This would mean ensuring that all possible types of children were represented.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This could include</h5>
+            <ul class="font-sm">
+              <li>Morphology (body shape)</li>
+              <li>Language / Dialect.</li>
+              <li>Literacy / Education.</li>
+              <li>Culture / Beliefs / Ethnicity.</li>
+              <li>Ability / Disability / Neurodiversity.</li>
+              <li>Sexuality / Gender identity / Gender expression.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Equity</h5>
+            <p>This would mean ensuring that all of the children had the same opportunities to access activities within the playground.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This would mean that children <b>should not be restricted from any activities</b> based on their size, their language or culture, sexuality identity etc.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Inclusion</h5>
+            <p>This would mean ensuring that a diverse range of audiences would be involved, valued and engaged at every stage of the project.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At the minimum, inclusion would mean <b>asking these diverse groups of people for their opinion</b> at focus groups, interviews or user testing sessions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, <b>inclusion would involve co-creation</b> - the collaborative development of concepts and solutions with experts and these key audiences.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Imagine a playground for kids that had considered <b>accessibility, diversity, equity and inclusion</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What's our focus?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this session, we are focussing  making sure that <b>digital products and services</b> are accessible for everyone.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <b>includes</b> websites, web apps, native apps, email, PDFs and more.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 770 420" style="enable-background:new 0 0 770 420;" xml:space="preserve">
+              <title>Diagram showing A element as part of Flow, Interaction and Phrasing categories</title>
+              <style type="text/css">
+                .st1{fill:#B36AE2;}
+                .st2{fill:#51A7F9;}
+                .st3{fill:#70BF41;}
+                .st4{fill:#000000;}
+                .st5{fill:#000000;}
+                .st6{fill:#000000;}
+                .st7{opacity:0.2;}
+                .st8{font-family:'HelveticaNeue-Bold';font-size:20px;}
+                .st9{font-family:'HelveticaNeue';font-size:16px;}
+                .st10{fill:#dd0000;opacity:0.4;}
+              </style>
+              <ellipse class="st1 st7" cx="140" cy="280" rx="140" ry="140"></ellipse>
+              <ellipse class="st2 st7" cx="230" cy="140" rx="140" ry="140"></ellipse>
+              <ellipse class="st3 st7" cx="320" cy="280" rx="140" ry="140"></ellipse>
+
+              <text transform="matrix(1 0 0 1 188 110)" class="st4 st8">Inclusion</text>
+              <text transform="matrix(1 0 0 1 90 300)" class="st5 st8">Equity</text>
+              <text transform="matrix(1 0 0 1 300 300)" class="st6 st8">Diversity</text>
+
+              <ellipse class="st10" cx="230" cy="190" rx="30" ry="30"></ellipse>
+              <text transform="matrix(1 0 0 1 265 193)" class="st9">Accessibility</text>
+            </svg>  
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+-->
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CLIENT NAME: An introduction to Digital Accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#d3420d">
+          <h1>An introduction to Digital Accessibility</h1>
+          <span class="h5">CLIENT NAME</span>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#15828E">
+            <h2>Acknowledgement of country</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I'd like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, this is the <b>Cammeraygal people</b> of the Guringai tribe of the Eora nation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I'd like to pay my respects to <b>Elders past and present</b>, and extend that respect to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I would also like to acknowledge the <b>Tangata whenua</b> (people of the land) of Aotearoa (New Zealand)</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-intros">
+          <section data-background="#15828E">
+            <h2>Intros</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Add some quick intros in chat</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-location-check"></span>Which City/Country are you in?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question-regular"></span>What's your current role?</li>
+              <li><span aria-hidden="true" class="icon icon-timer-regular"></span>How long have you been with your current company?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design, HTML and CSS.</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility.</li>
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-some-housekeeping">
+          <section data-background="#15828E">
+            <h2>Some housekeeping</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Ask questions any time!</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Option 1: Use the "raise hand" icon.</li>
+              <li><span aria-hidden="true" class="icon icon-comments-regular"></span>Option 2: Ask in chat - I may not see straight away.</li>
+              <li><span aria-hidden="true" class="icon icon-volume-high-regular"></span>Option 3: Unmute and interrupt at any time.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Cameras on or off?</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-eye"></span>Having cameras on at times can be helpful.</li>
+              <li><span aria-hidden="true" class="icon icon-mug-regular"></span>However, everyone has different comfort levels.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-check-regular"></span>Choose your comfort level!</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A safe space</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-genderless"></span>Respect people's gender, identity, diversity.</li>
+              <li><span aria-hidden="true" class="icon icon-scale-balanced-regular"></span>No judgement of people's knowledge or questions.</li>
+              <li><span aria-hidden="true" class="icon icon-lock"></span>Confidentially around shared stories.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of the slides and any other associated resources will be provided at the completion of the session.</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>Exercises</h5>
+            <p>We'll be using FigJam for some execises. You don't need an account!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What will we cover today?</h5>
+            <ol class="font-sm">
+              <li><a href="#slide-why-should-you-care-about-accessibility">Why should you care about accessibility?</a></li>
+              <li><a href="#slide-lets-meet-some-people">Let's meet some people</a></li>
+              <li><a href="#slide-accessibility-profiles">Accessibility user profiles</a></li>
+              <li><a href="#slide-what-is-wcag">What is WCAG?</a></li>
+              <li><a href="#slide-how-accessibility-mature-is-your-organisation">How accessibility-mature is your organisation?</a></li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#15828E">
+            <h2>Why should you care about accessibility?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ol class="font-sm">
+              <li>Legal responsibilities</li>
+              <li>Reputation</li>
+              <li>User Experience</li>
+              <li>Commercial incentives</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Legal responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Every country has accessibility requirements</h5>
+            <ul class="font-sm">
+              <li>Australia: <a href="http://www.comlaw.gov.au/Series/C2004A04426" target="_blank">Disability Discrimination Act 1992</a></li>
+              <li>New Zealand: <a href="https://www.legislation.govt.nz/act/public/1993/0082/latest/DLM304212.html" target="_blank">The Human Rights Act 1993</a></li></li>
+              <li>USA: <a href="https://adata.org/learn-about-ada" target="_blank">The Americans with Disabilities Act (ADA) 1990</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some recent examples</h5>
+            <ul class="font-sm">
+              <li>2019, USA: <a href="https://www.prometsource.com/blog/supreme-court-marks-new-era-web-accessibility" target="_blank">Guillermo Robles v. Domino’s Pizza</a></li>
+              <li>2015, Australia: <a href="https://mediaaccess.org.au/latest_news/news/coles-web-accessibility-case-settled" target="_blank">Gisele Mesnage v. Coles</a></li>
+              <li>2000, Australia: <a href="https://humanrights.gov.au/our-work/disability-rights/bruce-lindsay-maguire-v-sydney-organising-committee-olympic-games">Bruce Maguire v. SOCOG</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While there are financial risks associated with legal actions like this, the possible <b>damage to an organisation's reputation</b> is far more significant.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><i>Domino’s will likely forever be remembered as the brand that argued against the basic rights of a blind man - and lost.</i></p>
+            <p class="font-xs"><a href="https://www.agiledrop.com/blog/7-reasons-why-accessibility-good-business" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>User Experience</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ultimately, accessibility is <b>about user experience</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Features intended for people with disabilities often <b>improve the user experience for many other groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Commercial incentives</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Do you know the <b>percentage of people</b> who have some form of disability in Australia, New Zealand or USA?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some stats</h5>
+            <ul>       
+              <li>Australia: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2018" target="_blank">17.7% of the population</a></li>
+              <li>New Zealand: <a href="https://www.stats.govt.nz/information-releases/labour-market-statistics-disability-june-2020-quarter" target="_blank">24.3% of the population</a></li>
+              <li>USA: <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">26% of the population</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These estimates are known to be low, as many people <b>do not identify themselves as having some form of disability</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can any company afford to <b>alienate such a large percentage</b> of its potential customer base?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Bottom line?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible digital services attract more visitors, improve customer experience, and <b>position your organisation as an inclusive and caring brand</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-lets-meet-some-people">
+          <section data-background="#15828E">
+            <h2>Let's meet some people</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We're going to look at how various people <b>interact with the digital world</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-xs">
+              <li><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> (e.g. JAWS, NVDA, VoiceOver).</li>
+              <li><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille displays</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head wand</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Quadstick - Sip and Puff</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=XB4cjbYywqg" target="_blank">Head switches</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=kJKQmTumFP0&amp;t=55s" target="_blank">Dragon Naturally Speaking</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=DnGSbVx4ef0&amp;t=55s" target="_blank">Dynavox - Mouse emulation</a>.</li>
+              <li><a href="https://www.youtube.com/watch?v=04Rhnt4J2b4&amp;t=30s" target="_blank">Steve’s Story</a>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All of these people <b>could be your customers</b> today... or tomorrow!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-profiles">
+          <section data-background="#15828E">
+            <h2>Accessibility user profiles</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we plan, design and build for <b>all these different types of disabilities</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One simple solution is to focus on <b>user profiles</b> that can be used to represent different disability sets.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means you can <b>focus on a small set of user types</b> rather than a massive list of specific disabilities and impairments.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These user profiles or personas can then be used <b>throughout your process</b> to ensure inclusion.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’re now going to <b>do an activity</b> to <a href="https://www.figma.com/file/TiUwP7oOY221IS9m4USdHX/SafeStack---User-Profiles?node-id=0%3A1&t=2fLqvzOBtPI9wHjf-1" target="_blank">build some accessibility user profiles</a> based on <a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles" target="_blank">Gov.UK</a>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-wcag">
+          <section data-background="#15828E">
+            <h2>What is WCAG?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>What does the term <b>"WCAG"</b> stand for?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The World Wide Web Consortium (W3C) is the primary organisation that <b>develops international standards for the World Wide Web</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One of the standards produced by the W3C is the <b>Web Content Accessibility Guidelines</b> - often referred to as "WCAG".</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li><b>WCAG 2.0</b> – released in Dec 2008</li>
+              <li><b>WCAG 2.1</b> – released June 2018</li>
+              <li><b>WCAG 2.2</b> – due later in 2022</li>
+              <li><b>WCAG 3.0</b> – expected 2023/24</li>
+            </ul>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>4 Principles</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li><b>4 Principles</b>
+                <ul>
+                  <li>13 Guidelines
+                    <ul>
+                      <li>78 Success Criteria
+                        <ul>
+                          <li>Sufficient Techniques</li>
+                          <li>Advisory Techniques</li>
+                          <li>Failures</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Perceivable</h5>
+            <p>Information and user interface components must be presented to users in ways they can perceive.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Operable</h5>
+            <p>User interface components and navigation must be operable by anyone.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. Understandable</h5>
+            <p>Information and the operation of a user interface must be understandable.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. Robust</h5>
+            <p>Content must be robust enough to be interpreted reliably by a wide variety of user agents.</p>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>13 Guidelines</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>4 Principles
+                <ul>
+                  <li><b>13 Guidelines</b>
+                    <ul>
+                      <li>78 Success Criteria
+                        <ul>
+                          <li>Sufficient Techniques</li>
+                          <li>Advisory Techniques</li>
+                          <li>Failures</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These guidelines <b>provide the overarching goals</b> to make content more accessible.</p>
+          </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+          <section data-background="#EDEBEB">
+            <h4>78 Success criteria</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>4 Principles
+                <ul>
+                  <li>13 Guidelines
+                    <ul>
+                      <li><b>78 Success Criteria</b>
+                        <ul>
+                          <li>Sufficient Techniques</li>
+                          <li>Advisory Techniques</li>
+                          <li>Failures</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are a series of <b>testable success criteria</b> that helps determine if the site/app can be considered “accessible”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each Success Criteria has a compliance level of either: <b>“A”, “AA”, or “AAA”</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG 2.1</h5>
+            <ul>
+              <li><b>30 level &ldquo;A&rdquo;</b> (minimum level of conformance).</li>
+              <li><b>20 level &ldquo;AA&rdquo;</b>.</li>
+              <li><b>28 level &ldquo;AAA&rdquo;</b> (maximum level of conformance).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To be &ldquo;AA&rdquo; compliant, sites <b>must meet all &ldquo;A&rdquo; and &ldquo;AA&rdquo;</b> Success Criteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means that websites and web apps <b>must comply with all 50 Success Criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG 2.2</h5>
+            <ul class="font-sm">
+              <li>9 new success criteria
+                <ul>
+                  <li>2 Level A, 5 Level AA, 2 Level AAA</li>
+                </ul>
+              </li>
+              <li>2 updated success criteria
+                <ul>
+                  <li>1 renamed, 1 new level</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-how-accessibility-mature-is-your-organisation">
+          <section data-background="#15828E">
+            <h2>How accessibility-mature is your organisation?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The W3C has a very detailed document called the <a href="https://www.w3.org/TR/maturity-model/" target="_blank">W3C Accessibility Maturity Model</a> that provides a <b>framework for measuring accessibility maturity</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is a <b>much simpler model</b> that allows you to quickly determine the accessibility-maturity of your organisation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's all go to the <a href="https://www.metamatrix.se/avocado" target="_blank">Acacado maturity model</a> and <b>try it out</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That was a <b>high-level, organisational view</b> of maturity. Let's dive deeper!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I'd like you all to <b>answer a series of questions</b> in chat - lots of individual answers and fine!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And these questions are <b>not designed to shame</b> your organisation or individuals.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, <b>it doesn't matter</b> if the answers are either:</p>
+            <ul>
+              <li><i>"No."</i></li>
+              <li><i>"I don't know."</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These questions will <b>help to</b>:</p>
+            <ul class="font-sm">
+              <li>Define your current level of accessibility maturity</li>
+              <li>Provide a roadmap for areas of improvement</li>
+              <li>Decide the highest priorities to focus on for our next session</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Key documents</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For these first questions, I'm going to ask whether you <b>know if some key accessibility documents exist</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But I'm also going to ask if <b>you'd know where to find them</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Knowing the exact location of important documents is a sign of <b>shared knowledge across the team</b> and a higher level of maturity.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.1: Does your organisation have a <b>commitment to accessibility/inclusion</b>?</p>
+            <p class="font-xs">If yes, do you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.2: Does your organisation have a <b>public accessibility statement</b>?</p>
+            <p class="font-xs">If yes, do you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-xs"><i>It presents information about the target level of web accessibility for the website and the methods used to achieve those targets.</i></p>
+            <p class="font-xs"><i>It acknowledges any areas of the website where accessibility targets have not been met.</i></p>
+            <p class="font-xs"><i>It is a powerful declaration of commitment.</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1.3: Does your organisation have a <b>definition of "Supported technologies"</b>?</p>
+            <p class="font-xs">If yes, do you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-xs"><i>This is a list of technologies (browsers, operating systems and assistive technologies) that you have tested your products with and can declare will work as expected with your product.</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Knowledge / Skills</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.1: Are all roles <b>aware of the importance of accessibility</b>?</p>
+            <p class="font-sm">PMs, POs, BAs, IMs, QAs, Designers, Engineers</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.2: Have designers, engineers, and QA's received <b>role-specific accessibility training</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.3: Have all key roles been trained in <b>how to test for accessibility</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2.4: Have <b>accessibility champions</b> been established within teams?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Processes</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.1: Do you have processes for <b>accessibility-related complaints</b> from the public?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.2: Have <a href="https://about.abc.net.au/wp-content/uploads/2019/06/a11y_Tips4Teams.pdf" target="_blank">accessibility responsibilities</a> been <b>defined for all key roles</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.3: Are regular <b>accessibility design reviews</b> in place?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.4: Are <b>accessibility requirements</b> included as part of:</p>
+            <ul class="font-sm">
+              <li>Sprint planning?</li>
+              <li>User stories?</li>
+              <li>Estimates? (Fibonacci, T-shirt sizing)</li>
+              <li>Definitions of done?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3.5: Have <b>disability profiles or personas</b> been established, and are they in use?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Testing</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.1: Is <b>accessibility testing</b> conducted by:</p>
+            <ul class="font-sm">
+              <li>External experts</li>
+              <li>Inhouse experts</li>
+              <li>QAs</li>
+              <li>Key roles within teams</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.2: Do teams have <b>automated accessibility testing tools</b> in place?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.3: Are regular <b>accessibility audits</b> conducted on products before and after launch?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4.4: Are <b>people with disabilities</b> included in key processes?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>5. Procurement and hiring</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>5.1: Does your organisation have <b>accessibility guidelines for digital product procurement</b>?</p>
+            <p class="font-xs">If yes, do you know where to find it?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>5.2: Is accessibility skills/knowledge considered part of <b>recruitment</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>6. Different mediums</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.1: Are there processes in place to ensure <b>internal and external Word documents</b> re accessible?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.2: Are there processes in place to ensure <b>internal and external PDF documents</b> re accessible?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.3: Are all <b>email communications</b> accessible</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6.4: Are all <b>social media communications</b> accessible? (Alt text, caption, transcripts etc.)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>7. Some questions for managers</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>7.1: Are all digital managers aware of <b>the standards and requirements that you must to comply with</b> for your digital products?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>7.2: Do all digital managers have the <b>remit to stop something from going live</b> if it is not accessible?</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#15828E">
+            <h2>Questions/discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
