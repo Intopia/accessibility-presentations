@@ -1,0 +1,212 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: #f2f2f2;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h1,
+h2 {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 .5em;
+  font-weight: 500;
+  line-height: 1.2;
+  text-shadow: none;
+  letter-spacing: normal;
+  text-transform: none;
+  word-wrap: break-word;
+  color: #d3420d;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin: 0 0 .5em;
+}
+
+h2 + h3 {
+  margin: 1.2em 0 .3em;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 2em 0 .3em;
+}
+
+p {
+  margin: 0 0 .3em;
+  line-height: 1.5;
+}
+
+ul {
+  margin: .5em 0 1.5em;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  padding: .5em;
+  margin: 0;
+  list-style: none;
+}
+
+ul li:nth-child(even) {
+  background: #efefef;
+}
+
+ul li:nth-child(odd) {
+  background: #dfdfdf;
+}
+
+hr {
+  margin: 2em 0;
+  border: 0;
+  height: 1px;
+  background: #999;
+}
+
+details {
+  padding: 0;
+  margin: 0;
+}
+
+details summary {
+  padding: .3em .3em .3em 0;
+  margin: 0;
+  cursor: pointer;
+  color: #000;
+  text-decoration: underline;
+}
+
+details summary:focus {
+  color: #fff;
+  background: #000;
+  outline: 0;
+}
+
+code {
+  font-size: 1em;
+  color: green;
+  font-family: consolas, courier, monospace;
+}
+
+kbd {
+  border: .03em solid #ccc;
+  border-radius: .2em;
+  padding: .2em .2em .1em;
+  color: #555;
+  background-image: linear-gradient(#fff, #eee);
+  box-shadow: .05em .05em .1em #aaa;
+  font-family: consolas, courier, monospace;
+}
+
+a,
+a code {
+  color: #000;
+  text-decoration: none;
+}
+
+h2 a {
+  color: #d3420d;
+}
+
+ {
+  color: #000;
+}
+
+a:focus,
+a:focus code {
+  color: #fff;
+  background: #000;
+  outline: 0;
+}
+
+a:hover,
+a:hover code {
+  text-decoration: underline;
+}
+
+a:active,
+a:active code {
+  color: red;
+  background: #fff;
+}
+
+/* ---------------------
+content
+-----------------------*/
+
+.main {
+  max-width: 45em;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 2em;
+  margin: 0 0 2em;
+  background: #fff;
+}
+
+.repo {
+  float: right;
+  font-size: .8em;
+}
+
+.branding {
+  margin: 0 0 20px;
+}
+
+.branding img {
+  width: 200px;
+}
+
+details a.exercise:hover {
+  color: #000;
+  background: rgba(255,0,0,.2) !important;
+}
+
+/* ---------------------
+small screen
+-----------------------*/
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .download {
+    position: static;
+    font-size: 1em;
+  }
+}
