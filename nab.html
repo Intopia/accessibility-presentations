@@ -81,7 +81,7 @@
 
         <section id="slide-what-is-my-role">
           <section data-background="#15828E">
-            <h2>What is my role?</h2>
+            <h2>Two areas of focus?</h2>
           </section>
 
           <section data-background="#EDEBEB">
@@ -105,23 +105,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>The process:</h5>
-            <ol class="font-sm">
-              <li>Decide our test aims and our preferred audiences</li>
-              <li>Write recruitment brief</li>
-              <li>Find participants</li>
-              <li>Create a script</li>
-              <li>Conduct user-testing sessions</li>
-              <li>Compile and publish results</li>
-            </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
             <p>We found that our testing was most effective when we went to people's homes or places of work and <b>watched them in action</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This allowed us to observe people <b>in their natural environment</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -151,31 +135,13 @@
           <section data-background="#EDEBEB">
             <p>Or complex components such as <b>sortable tables, dropdown-menus, date pickers or accordions</b>.</p>
           </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-a-testing-framework">
-          <section data-background="#15828E">
-            <h2>A testing framework</h2>
-          </section>
 
           <section data-background="#EDEBEB">
             <p>For this presentation, I&rsquo;ll share how I conducted <b>&ldquo;accessibility unit testing&rdquo; </b> on individual components.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This testing process allowed me to <b>confidently define the accessibility of each component</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>As we&rsquo;ll see a bit later, it can also be used as a framework when <b>designing or developing</b> new components.</p>
+            <p>As we&rsquo;ll see a bit later, this process can also help when <b>designing or developing</b> new components.</p>
           </section>
         </section>
 
@@ -193,7 +159,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>&ldquo;Accessibility unit testing&rdquo; is a process where the tiniest parts of a component are <b>individually and independently evaluated</b>.</p>
+            <p>&ldquo;Accessibility unit testing&rdquo; is a process where the smallest parts of a component are <b>individually and independently evaluated</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -209,11 +175,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>How can you <b>systematically test components</b> to ensure they are accessible?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>You can create <b>a series of tests</b> based on two concepts:</p>
+            <p>Accessibility unit tests are often based on <b>two concepts</b>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -221,7 +183,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>2. How users should be able to <b>interact with a component</b> to complete a task.</p>
+            <p>2. How users should be able to <b>interact with the component</b> to complete all relevant tasks.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -379,19 +341,18 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This approach means that <b>anyone in the team</b> should be able to:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul>
-              <li><b>Review</b> the results.</li>
-              <li>Determine which aspects of the component are <b>accessible and inaccessible</b>.</li>
-              <li><b>Repeat</b> the task in the future.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
             <p>Let&rsquo;s look at an example of an <b>autocomplete component</b> from the last design system I worked on.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Before we look at how to create these tasks, any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
           </section>
         </section>
 
@@ -431,6 +392,7 @@
               <li>People with <b>low vision</b>.</li>
               <li>People with <b>limited mobility</b>.</li>
               <li>People with <b>limited or no sight</b>.</li>
+              <li>People with <b>limited or no hearing</b>.</li>
             </ol>
           </section>
 
@@ -571,25 +533,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s dive a bit deeper into tests that could be used to determine the accessibility of a <b>date picker</b>.</p>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-a-modal-component">
-          <section data-background="#15828E">
-            <h2>A date picker</h2>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>We&rsquo;re going to use the <a href="https://dequeuniversity.com/library/aria/date-picker" target="_blank">Deque University date picker</a> for this demonstration.</p>
+            <p>Let&rsquo;s <b>dive a bit deeper into tests</b> that could be used to determine the accessibility of a <a href="https://dequeuniversity.com/library/aria/date-picker" target="_blank">date picker</a>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -648,13 +592,13 @@
 
           <section data-background="#EDEBEB">
             <div class="text-example">
-              <p>The users can navigate through dates using <kbd>ARROW</kbd> keys: <span class="badge">PASS/FAIL</span></p>
+              <p>The users can navigate through dates using all variations of <kbd>ARROW</kbd> keys: <span class="badge">PASS/FAIL</span></p>
             </div>
           </section>
 
           <section data-background="#EDEBEB">
             <div class="text-example">
-              <p>The users can navigate to previous or next month dates using the <kbd>ARROW</kbd> keys: <span class="badge">PASS/FAIL</span></p>
+              <p>The users can navigate to previous or next month dates using all variations of <kbd>ARROW</kbd> keys: <span class="badge">PASS/FAIL</span></p>
             </div>
           </section>
 
@@ -716,6 +660,10 @@
             <div class="text-example">
               <p>When the previous or next buttons are triggered, the Month title and date table updates: <span class="badge">PASS/FAIL</span></p>
             </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are just some examples of unit tests that could be <b>conducted using keyboard-only</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
