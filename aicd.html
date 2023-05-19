@@ -76,15 +76,19 @@
 
           <section data-background="#EDEBEB">
             <p>These slides are available at:</p>
-            <p class="font-sm"><a href="https://intopia.github.io/accessibility-presentations/nab.html#/" target="_blank">https://intopia.github.io/accessibility-presentations/nab.html#/</a></p>
+            <p class="font-sm"><a href="https://intopia.github.io/accessibility-presentations/aicd.html#/" target="_blank">https://intopia.github.io/accessibility-presentations/aicd.html#/</a></p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>What will we cover?</h5>
-            <ul class="icon-list font-sm">
+            <ul class="icon-list font-xs">
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-why-should-you-care-about-accessibility">Why should you care about accessibility?</a></li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-lets-meet-some-people">Let's meet some people</a></li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-accessibility-user-profiles">Accessibility user profiles</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-design-systems-accessible-design">Design systems: Accessible design</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-design-systems-accessible-engineering">Design systems: Accessible engineering</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-design-systems-documentation">Design systems: documentation</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-inclusive-design">Inclusive design</a></li>
             </ul>
           </section>
         </section>
@@ -430,50 +434,29 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>How can we plan, design and build for <b>all these different types of disabilities</b>?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>One solution is to create a set of <b>user profiles</b> that follow the broad categories we just reviewed.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ol class="font-sm">
-              <li>A person with no vision</li>
-              <li>A person with low vision</li>
-              <li>A person with reduced colour vision</li>
-              <li>A person with limited movement</li>
-              <li>A person with different learning or cognition</li>
-              <li>A person with reduced or no hearing</li>
-            </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Let's look at an example user profile for <b>a person with different learning or cognition</b>:</p>
+            <h5>How do they help?</h5>
+            <ul class="font-sm">
+              <li>Focus on people rather than concepts</li>
+              <li>Focus on individual experiences</li>
+              <li>Less likely to forget some experiences</li>
+              <li>Can be used at every state of design and development</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
             <div class="text-example">
               <div class="font-xs">
-            <h5>Simone - Dyslexic</h5>
-            <p>Simone is a 41-year-old office manager who lives with her husband and their 2 sons. She was diagnosed with dyslexia 2 years ago.</p>
-            <p>Simone uses <i>Read&Write</i> software which reads content aloud for her. It helps her read, spell and helps her feel more confident about her writing.</p>
-            <ul>
-              <li>She struggles to fill in forms.</li>
-              <li>She relies on search engines for spelling suggestions.</li>
-              <li>She struggles to concentrate with things moving on a page.</li>
-              <li>She struggles with long paragraphs and complex language.</li>
-            </ul>
+                <h5>Simone - Dyslexic</h5>
+                <p>Simone is a 41-year-old office manager who lives with her husband and their 2 sons. She was diagnosed with dyslexia 2 years ago.</p>
+                <p>Simone uses <i>Read&Write</i> software which reads content aloud for her. It helps her read, spell and helps her feel more confident about her writing.</p>
+                <ul>
+                  <li>She struggles to fill in forms.</li>
+                  <li>She relies on search engines for spelling suggestions.</li>
+                  <li>She struggles to concentrate with things moving on a page.</li>
+                  <li>She struggles with long paragraphs and complex language.</li>
+                </ul>
               </div>
             </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>User profiles like this allow you to <b>focus on a small set of user types</b> rather than a massive list of specific disabilities and impairments.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>These user profiles can become a shared language that can be used <b>throughout your process</b> to ensure inclusion.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -507,6 +490,124 @@
               <li>When designing and building new components <span class="font-xs success">(How would each user profile interact with the component)</span></li>
               <li>When documenting the accessibility requirements for using components.</li>
               <li>When reviewing existing components.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-design-systems-accessible-design">
+          <section data-background="#15828E">
+            <h2>Design systems: Accessible design</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use personas at the <b>earliest possible stage</b> to check design concepts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Be aware of <b>native vs non-native</b> when designing - and the impact on accessibility.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Simple is always better</b> - for everyone.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Be aware of how users <b>interact with notifications</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Design includes <b>focus order and focus management</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Design includes <b><a href="https://russmaxdesign.github.io/states/" target="_blank">all possible states</a></b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Handover to developers should include <b>key accessibility features</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-design-systems-accessible-engineering">
+          <section data-background="#15828E">
+            <h2>Design systems: Accessible engineering</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use personas at the <b>earliest possible stage</b> before beginning development.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Run through all test cases</b> at the earliest possible stage before beginning development.</p>
+          </section>
+          
+          <section data-background="#EDEBEB">
+            <p>Build so that developers <b>cannot break accessibility</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Conduct <b>rigorous accessibility unit testing</b> on all components before releases.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-design-systems-documentation">
+          <section data-background="#15828E">
+            <h2>Design systems: documentation</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Documentation should include <b>accessibility usage</b> associated with each component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Documentation should include concepts that <b>cannot be baked into components</b> - focus management, error management.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-inclusive-design">
+          <section data-background="#15828E">
+            <h2>Inclusive design</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>When journey mapping.</li>
+              <li>When conducting interviews, surveys, and all forms of user testing.</li>
+              <li>When designing processes and flows.</li>
+              <li>When designing key interactions.</li>
+              <li>When designing individual components.</li>
             </ul>
           </section>
         </section>
