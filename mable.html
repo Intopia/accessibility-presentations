@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mable: Introduction to digital accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#d3420d">
+          <h1>Introduction to digital accessibility</h1>
+          <p class="h5">Mable</p>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h5>Acknowledgement of Country</h5>
+            <p class="font-sm">I&rsquo;d like to acknowledge the Traditional Owners of the lands on which we meet today, the Cammeraygal people of the Eora.</p>
+            <p class="font-sm">We pay our respects to Elders past and present, and extend that respect to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aotearoa</h5>
+            <p>I would also like to acknowledge the <i>Tangata whenua</i> (people of the land) of <i>Aotearoa</i> (New Zealand)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Add some quick intros in chat:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-circle-question-regular"></span>What&rsquo;s your current role?</li>
+              <li><span aria-hidden="true" class="icon icon-timer-regular"></span>How long have you worked at your current organisation?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design and HTML</li>
+              <li><span aria-hidden="true" class="icon icon-css3"></span>2002: CSS</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility</li>
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Ask questions any time!</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Option 1: Use the &ldquo;raise hand&rdquo; icon</li>
+              <li><span aria-hidden="true" class="icon icon-comments-regular"></span>Option 2: Ask in chat</li>
+              <li><span aria-hidden="true" class="icon icon-volume-high-regular"></span>Option 3: Unmute and interrupt at any time</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of the slides and any other associated resources will be provided at the completion of the session.</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h4>What will we cover?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-testing-tools">Accessibility testing tools</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-measuring-the-importance-of-issues">Measuring the importance of issues</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-prioritising-how-issues-with-be-addressed">Prioritising how issues with be addressed</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-accessibility-user-profiles">Accessibility user profiles</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-tools">
+          <section data-background="#15828E">
+            <h2>Accessibility testing tools</h2>
+          </section>
+  
+          <section data-background="#EDEBEB">
+            <p>There are a wide range of accessibility testing tools that can be used to <b>identify and address accessibility issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All accessibility testing tools have <b>limitations</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They can <b>only detect about 25% to 30%</b> or so of accessibility issues. The remainder of issues require manual checking, by a person.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If an accessibility testing tools passes a website or application, it <b>doesn’t necessarily mean the site is accessible</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Most acessibility testing tools <b>cannot detect the following</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Broad concepts</h5>
+            <ol class="font-sm">
+              <li>Poor usability</li>
+              <li>Lack of or poor keyboard accessibility</li>
+              <li>Incorrect reading order</li>
+              <li>Improper use of HTML elements</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Content-related concepts</h5>
+            <ol class="font-sm">
+              <li>Poor alt-text</li>
+              <li>Poor use of page titles, headings or link text</li>
+              <li>Unreadable content</li>
+              <li>Poor form labels and instructions</li>
+              <li>Poor form error messages</li>
+              <li>Lack of and poor quality of captions or transcripts</li>
+            </ol>
+          </section>
+
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility testing tools <b>should not replace</b>:</p>
+            <ul class="font-sm">
+              <li>Expert reviews</li>
+              <li>Accessibility audits</li>
+              <li>Inclusive user research and testing</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However these tools are still very useful when reviewing the accessibility of digital products - as long as we are <b>aware of their weaknesses</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ready for a quickly glance through <b>a long list of possible tools</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Automated desktop tools</h5>
+            <ul class="font-sm">
+              <li><a href="https://www.deque.com/axe/">Axe by Deque</a></li>
+              <li><a href="https://accessibilityinsights.io/en/downloads/">Microsoft Accessibility Insights</a></li>
+              <li><a href="https://www.ssa.gov/accessibility/andi/help/install.html">ANDI tool</a></li>
+              <li><a href="https://wave.webaim.org/">WAVE tool</a></li>
+              <li><a href="https://www.tpgi.com/arc-platform/arc-toolkit/">ARC Toolkit</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Bookmarklets</h5>
+            <ul class="font-sm">
+              <li><a href="https://a11y-tools.com/bookmarklets/#revealfocusorder">A11y audit bookmarklets</a></li>
+              <li><a href="http://pauljadam.com/bookmarklets/">JavaScript Bookmarklets for Accessibility Testing</a></li>
+              <li><a href="https://codepen.io/stevef/full/YLMqbo">Text spacing bookmarklet</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Assistance tools</h5>
+            <ul class="font-sm">
+             <li><a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a></li>
+             <li><a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en">HeadingMaps</a></li>
+             <li><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf">SkipTo Landmarks &amp; Headings</a></li>
+             <li><a href="https://support.microsoft.com/en-au/help/13862/windows-10-use-high-contrast-mode">High Contrast Mode instructions</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Colour and contrast tools</h5>
+            <ul class="font-sm">
+             <li><a href="https://paciellogroup.com/resources/contrastanalyser">Colour Contrast Analyser by TPGI</a></li>
+             <li><a href="https://leaverou.github.io/contrast-ratio">Contrast Ratio by Lea Verou</a></li>
+             <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM Color Contrast Checker</a></li>
+             <li><a href="https://contrast-finder.tanaguru.com/">Tanaguru contrast finder</a></li>
+             <li><a href="https://www.getstark.co/">Stark</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Automated mobile tools</h5>
+            <ul class="font-sm">
+             <li><a href="https://chrome.google.com/webstore/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en">iOS Accessibility Inspector</a></li>
+             <li><a href="https://bit.ly/a11y-scanner">Android Accessibility Scanner</a></li>
+             <li><a href="https://www.deque.com/android-accessibility/">Axe for Android</a></li>
+             <li><a href="https://android-doc.github.io/tools/debugging/improving-w-lint.html">Android Studio - Lint</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Automated accessibility platforms</h5>
+            <ul class="font-sm">
+             <li><a href="https://www.accessibilityoz.com/products/ozart/">OzArt</a></li>
+             <li><a href="https://tenon.io/">Tenon</a></li>
+             <li><a href="https://monsido.com/">Monsido</a></li>
+             <li><a href="https://usablenet.com/technology/aqa">UsableNet AQA</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Desktop screen readers</h5>
+            <ul class="font-sm">
+              <li><a href="https://www.freedomscientific.com/products/software/jaws/">JAWS for Windows</a> (licensed)</li>
+              <li><a href="https://www.nvaccess.org/download/">NVDA for Windows</a></li>
+              <li>VoiceOver for MacOS</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Mobile screen readers</h5>
+            <ul class="font-sm">
+              <li>TalkBack (Android)</li>
+              <li>VoiceOver for iOS (Apple)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Desktop Speech Interfaces</h5>
+            <ul class="font-sm">
+              <li>Dragon NaturallySpeaking (licensed)</li>
+              <li>Voice Control (Mac OS)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Mobile Speech Interfaces</h5>
+            <ul class="font-sm">
+              <li>Voice Access (Android)</li>
+              <li>Voice Control (iOS)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Discussion</h5>
+            <ul>
+              <li>Have you used any of these tools in the past?</li>
+              <li>What did you like?</li>
+              <li>What did you dislike?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-measuring-the-importance-of-issues">
+          <section data-background="#15828E">
+            <h2>Measuring the importance of issues</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are three common ways to determine <b>the importance of accessibility issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Issue impact</h5>
+            <p>How much has the issue impacted the user's ability to accomplish the task.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A task may be:</p>
+            <ul class="font-sm">
+              <li>A process <span class="font-xs success">(Filling in a form)</span></li>
+              <li>A micro-process <span class="font-xs success">(Choosing a date)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li><b>Critical</b>: User cannot proceed with the task</li>
+              <li><b>High</b>: User can proceed but the experience may be impacted
+                <ul>
+                  <li>User must use an alternative method to complete task</li>
+                  <li>Alternative method may be more frustrating or required additional time</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Task criticality</h5>
+            <p>How critical is it to the business if the task can’t be completed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. Issue frequency</h5>
+            <p>How many times the issue has occurred across the tested pages/processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Which would you address first?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Issue 1:</h5>
+            <ul class="font-sm">
+              <li>Critical issue - the user cannot proceed</li>
+              <li>Very low impact for the business - on a page with little traffic</li>
+              <li>Only occurs once</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Issue 2:</h5>
+            <ul class="font-sm">
+              <li>High impact issue - the user can proceed but experience impacted</li>
+              <li>Affects core business revenue - users cannot get a quote</li>
+              <li>Only occurs once</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Which of these would be <b>the most important to address</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Let&rsquo;s rate some issues</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 1: How would you rate this issue?</h5>
+            <div class="text-example">
+              <p>A keyboard-only user cannot choose an item from a primary navigation dropdown menu as the entire menu is not keyboard accessible.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><b>Issue impact</b>:
+                <ul>
+                  <li>Can the user proceed with the task?</li>
+                  <li>Is the experience is impacted?</li>
+                </ul>
+              </li>
+              <li><b>Task criticality</b>:
+                <ul>
+                  <li>How critical is the task to the business?</li>
+                </ul>
+              </li>
+              <li><b>Issue frequency</b>:
+                <ul>
+                  <li>How many times across the site?</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 2: How would you rate this issue?</h5>
+            <div class="text-example">
+              <p>A user fails to fill in a required form field as this was not flagged to the user, so they are presented with an error message.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><b>Issue impact</b>:
+                <ul>
+                  <li>Can the user proceed with the task?</li>
+                  <li>Is the experience is impacted?</li>
+                </ul>
+              </li>
+              <li><b>Task criticality</b>:
+                <ul>
+                  <li>How critical is the task to the business?</li>
+                </ul>
+              </li>
+              <li><b>Issue frequency</b>:
+                <ul>
+                  <li>How many times across the site?</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 3: How would you rate this issue?</h5>
+            <div class="text-example">
+              <p>After closing a modal, keyboard focus is sent to the top of the page.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><b>Issue impact</b>:
+                <ul>
+                  <li>Can the user proceed with the task?</li>
+                  <li>Is the experience is impacted?</li>
+                </ul>
+              </li>
+              <li><b>Task criticality</b>:
+                <ul>
+                  <li>How critical is the task to the business?</li>
+                </ul>
+              </li>
+              <li><b>Issue frequency</b>:
+                <ul>
+                  <li>How many times across the site?</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-question-regular.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-prioritising-how-issues-with-be-addressed">
+          <section data-background="#15828E">
+            <h2>Prioritising how issues with be addressed</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are many ways to <b>prioritise how your team addresses issues</b>, depending on their knowledge, and the limitations of their systems</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 1:</h5>
+            <p>By criticality of issues - e.g. addressing all critical issues first.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 2:</h5>
+            <p>Whether the issue exists within a design system - and can therefore be resolved across multiple instances.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 3:</h5>
+            <p>By focussing on issues that are easy to resolve.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 4:</h5>
+            <p>By the ability of your team. Do they have the knowledge to resolve the issue?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 5:</h5>
+            <p>By limitations of systems. What can be fixed within the system in the short, medium and long term?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A mix of methods</h5>
+            <p>Of course, you could use a mixture of any of these methods to suit the needs of your team.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-user-profiles">
+          <section data-background="#15828E">
+            <h2>Accessibility user profiles</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we plan, design and build for <b>all these different types of disabilities</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One solution is to create a set of <b>user profiles</b> that follow the broad categories we just reviewed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>A person with no vision</li>
+              <li>A person with low vision</li>
+              <li>A person with reduced colour vision</li>
+              <li>A person with limited movement</li>
+              <li>A person with different learning or cognition</li>
+              <li>A person with reduced or no hearing</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility user profiles <b>do not replace</b> accessibility training, testing or auditing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, they help teams to focus on <b>different types of people and their individual needs</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, how would each of these user profiles <b>engage and interact with the following scenarios</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>A user-journey <span class="font-xs success">(e.g. Getting an insurance quote)</span></li>
+              <li>A process <span class="font-xs success">(e.g. Making a payment)</span></li>
+              <li>A page <span class="font-xs success">(e.g. Filling in a form)</span></li>
+              <li>A component <span class="font-xs success">(e.g. Choosing a date from a date picker)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These profiles have the greatest impact when used during the <b>early stages</b> of design, development and testing processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As a starting point, we’re now going to <b>do an activity</b> to build some accessibility user profiles based on <a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles" target="_blank">Gov.UK</a>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#15828E">
+            <h2>Questions/discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
