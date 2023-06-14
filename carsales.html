@@ -7,7 +7,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/theme/print.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
   </head>
   <body>
     <div class="reveal">
@@ -37,18 +50,10 @@
             <p class="font-sm">We pay our respects to Elders past and present, and extend that respect to all First Nations people present today.</p>
           </section>
 
-<!--
-          <section data-background="#EDEBEB">
-            <h5>Aotearoa</h5>
-            <p>I would also like to acknowledge the <i>Tangata whenua</i> (people of the land) of <i>Aotearoa</i> (New Zealand)</p>
-          </section>
--->
-
           <section data-background="#EDEBEB">
             <h5>My name is Russ Weakley:</h5>
             <ul class="icon-list">
               <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design and HTML</li>
-              <li><span aria-hidden="true" class="icon icon-css3"></span>2002: CSS</li>
               <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility</li>
               <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems</li>
             </ul>
@@ -69,7 +74,7 @@
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-why-should-you-care-about-accessibility">Why should you care about accessibility?</a></li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-what-is-wcag">What is WCAG?</a></li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-lets-meet-some-people">Let&rsquo;s meet some people</a></li>
-              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-accessibility-user-profiles">Accessibility user profiles</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-are-these-people-likely-to-use-your-site">Are these people likely to use your site?</a></li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-break">5 min break</a></li>
             </ul>
           </section>
@@ -77,15 +82,12 @@
           <section data-background="#EDEBEB">
             <h5>Part 2</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-some-demonstrations">Some demonstrations</a>
-                <ul>
-                  <li>Scenario 1: Judith, a keyboard-only user</li>
-                  <li>Scenario 2: Andrew, a screen-reader user</li>
-                  <li>Scenario 3: Mary, a screen magnification user</li>
-                  <li>Scenario 4: Joe, a user with short-term memory issues</li>
-                </ul>
-              </li>
-              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-accessibility-maturity">Accessibility maturity</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-some-demonstrations">Some demonstrations</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-judith">Scenario 1: Judith, a keyboard-only user</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-andrew">Scenario 2: Andrew, a screen-reader user</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-mary">Scenario 3: Mary, a screen magnification user</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-matt">Scenario 4: Matt, a user with short-term memory issues</a></li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="#slide-what-next">What next?</a></li>
             </ul>
           </section>
         </section>
@@ -108,13 +110,14 @@
             <ol class="font-sm">
               <li>Legal responsibilities</li>
               <li>Reputation</li>
-              <li>User Experience</li>
+              <li>Improved user experience</li>
               <li>Commercial incentives</li>
+              <li>Ethical responsibilities</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Legal responsibilities</h4>
+            <h4>1. Legal responsibilities</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -126,11 +129,15 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Reputation</h4>
+            <p>We&rsquo;ll explore what <b>&ldquo;WCAG 2.0 AA&rdquo;</b> means every soon.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Some recent examples</h5>
+            <h4>2. Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples</h5>
             <ul class="font-sm">
               <li>2019, USA: <a href="https://www.prometsource.com/blog/supreme-court-marks-new-era-web-accessibility" target="_blank">Guillermo Robles v. Domino&rsquo;s Pizza</a></li>
               <li>2015, Australia: <a href="https://mediaaccess.org.au/latest_news/news/coles-web-accessibility-case-settled" target="_blank">Gisele Mesnage v. Coles</a></li>
@@ -148,7 +155,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>User Experience</h4>
+            <h4>3. Improved user experience</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -156,7 +163,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Commercial incentives</h4>
+            <h4>4. Commercial incentives</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -187,6 +194,18 @@
 
           <section data-background="#EDEBEB">
             <p>Can any organisation afford to <b>alienate potential customers</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>5. Ethical responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>People with disabilities often have to fight for the fundamental right to access information and services - <b>while facing ignorance from others</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible digital products allow people with disabilities to be <b>independent, active participants</b> in our society.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -222,25 +241,24 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>One of the standards produced by the  World Wide Web Consortium is the <b>Web Content Accessibility Guidelines</b> - often referred to as &ldquo;WCAG&rdquo;.</p>
+            <p>The World Wide Web Consortium (W3C) develops <b>international standards for the World Wide Web</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The <b>Web Content Accessibility Guidelines (WCAG)</b> explain how to make web content more accessible to people with disabilities.</p>
+            <p>One of these standards is the <b>Web Content Accessibility Guidelines</b> - often referred to as &ldquo;WCAG&rdquo;.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <ul>
-              <li><b>WCAG 2.0</b>: Released in December 2008</li>
-              <li><b>WCAG 2.1</b>: Released June 2018</li>
-              <li><b>WCAG 2.2</b>: Due some time in 2023</li>
-              <li><b>WCAG 3.0</b>: Due some time 2024</li>
-            </ul>
+            <p>These guidelines explain how to make web content <b>more accessible to people with disabilities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The current standard is <b>WCAG 2.1</b>, but WCAG 2.2 will become the official standard soon.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>How WCAG 2.1 is structured:</h5>
-            <ul class="font-xs">
+            <ul class="font-sm">
               <li>4 Principles
                 <ul>
                   <li>13 Guidelines
@@ -260,15 +278,15 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The most important part of WCAG 2.1 is the <b>78 Success criteria</b>.</p>
+            <p>The most important part of these guidelines is the <b>78 Success Criteria</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>They are a series of <b>testable success criteria</b> that help determine if your website or web application can be considered &ldquo;accessible&rdquo;.</p>
+            <p>They are a series of <b>testable criteria</b> that help determine if your digital content can be considered &ldquo;accessible&rdquo;.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Each Success Criteria has a compliance level of either: <b>&ldquo;A&rdquo;, &ldquo;AA&rdquo;, or &ldquo;AAA&rdquo;</b>.</p>
+            <p>Each of the 78 Success Criteria has a compliance level of either: <b>&ldquo;A&rdquo;, &ldquo;AA&rdquo;, or &ldquo;AAA&rdquo;</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -281,11 +299,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Sites <b>must meet all &ldquo;A&rdquo; and &ldquo;AA&rdquo;</b> Success Criteria to be &ldquo;AA&rdquo; compliant.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This means websites and web apps <b>must comply with all 50 Success Criteria</b>.</p>
+            <p>In order to be &ldquo;AA&rdquo; compliant, sites <b>must meet all &ldquo;A&rdquo; and &ldquo;AA&rdquo;</b> Success Criteria - 50 criteria in total.</p>
           </section>
 
 <!--  –––––––––––––––––––––––––
@@ -301,11 +315,11 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/" target="_blank">Understanding documents</a> provide <b>detailed explanations</b> for WCAG guidelines and success criteria.</p>
+            <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/" target="_blank">Understanding documents</a> provide <b>detailed explanations</b> for WCAG guidelines and Success Criteria.</p>
           </section> 
 
           <section data-background="#EDEBEB">
-            <p><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">How to Meet WCAG</a> provides <b>a quick reference guide</b> for WCAG success criteria and techniques.</p>
+            <p><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">How to Meet WCAG</a> provides <b>a quick reference guide</b> for WCAG Success Criteria and techniques.</p>
           </section>
 
 <!--  –––––––––––––––––––––––––
@@ -344,13 +358,13 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We're going to look at how a range different people <b>interact with the digital world</b>.</p>
+            <p>We're going to look at how a range of different people <b>interact with the digital world</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ol class="font-sm">
               <li><a href="#people-with-no-vision">People with no vision</a></li>
-              <li><a href="#people-with-low-vision">People with low vision</a></li>
+              <li><a href="#people-with-low-vision">People with low-vision</a></li>
               <li><a href="#people-with-reduced-colour">People with reduced colour vision</a></li>
               <li><a href="#people-with-limited-movement">People with limited movement</a></li>
               <li><a href="#people-with-different-learning">People with different learning or cognition</a></li>
@@ -390,7 +404,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB" id="people-with-low-vision">
-            <h4>2. People with low vision</h4>
+            <h4>2. People with low-vision</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -540,21 +554,16 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Disabilities and barriers</h4>
+            <h4>Disabilities may be complex</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Disabilities may vary</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span>Disabilities are often spectrums</li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span>Some people have multiple disabilities</li>
               <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span>Some disabilities change over time</li>
-              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span>Some disabilities change from day to day</li>
+              <li><span aria-hidden="true" class="icon icon-check-regular-aqua"></span><a href="https://www.tiktok.com/@josephakibler/video/7232428942383222059" target="_blank">Some disabilities change from day to day</a></li>
             </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Any of these people <b>could be your customers</b> today or tomorrow!</p>
           </section>
         </section>
 
@@ -566,56 +575,79 @@ SUB-SECTION
 
 
 
-        <section id="slide-accessibility-user-profiles">
+        <section id="slide-are-these-people-likely-to-use-your-site">
           <section data-background="#15828E">
-            <h2>Accessibility user profiles</h2>
+            <h2>Are these people likely to use your site?</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>How can we plan, design and build for <b>all these different types of disabilities</b>?</p>
+            <p>At this point, some of you <b>may be thinking</b>:</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>One solution is to create a set of <b>user profiles</b> that follow the broad categories we just reviewed.</p>
+            <h5><i>&ldquo;Some of these groups of people would never use our website!&rdquo;</i></h5>
           </section>
 
           <section data-background="#EDEBEB">
-            <ol class="font-sm">
-              <li>A person with no vision</li>
-              <li>A person with low vision</li>
-              <li>A person with reduced colour vision</li>
-              <li>A person with limited movement</li>
-              <li>A person with different learning or cognition</li>
-              <li>A person with reduced or no hearing</li>
-            </ol>
+            <p>A person who is blind may <b>make the key financial decisions</b> for their family and may access your site.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Accessibility user profiles <b>do not replace</b> accessibility training, testing or auditing.</p>
+            <p>A range of <b>non-blind people use screen readers</b> for reading content and navigating sites, and these people may access your site.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>However, they help teams to focus on <b>different types of people and their individual needs</b>.</p>
+            <p>Many people with mobility issues drive <b>modified vehicles</b>. These people may access your site.</p>
+            <p class="font-xs">
+              <a href="https://www.tiktok.com/@itssophandindy/video/7219205101020269826" target="_blank">Video 1</a> |
+              <a href="https://www.tiktok.com/@_bettydouglas_/video/7229691807515315483">Video 2</a>
+            </p>
+          </section>
+
+<!--
+          <section data-background="#EDEBEB">
+            <p>An insurance company found that people with disabilities who modified their vehicles were <b>likelier to purchase insurance than other groups</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>For example, how would each of these user profiles <b>engage and interact with the following scenarios</b>?</p>
+            <p>The insurance company also found that these people were <b>more loyal</b> to an insurance provider that offered accessible services.</p>
+          </section>
+-->
+
+          <section data-background="#EDEBEB">
+            <h4>Accessible digital products help everyone</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <ul class="font-sm">
-              <li>A user-journey <span class="font-xs success">(e.g. Finding and purchasing a car)</span></li>
-              <li>A process <span class="font-xs success">(e.g. Completing a filtering process)</span></li>
-              <li>A component <span class="font-xs success">(e.g. Choosing a date from a date picker)</span></li>
-            </ul>
+            <p>A <b>site built to be keyboard-accessible</b> could also help someone with a stroke, a broken arm or even someone holding a baby.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>These profiles have the greatest impact when used during the <b>early stages</b> of design, development and testing processes.</p>
+            <p>A site that uses <b>well-structured headings</b> could also help people with reading difficulties or who have English as a second language.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>As a starting point, you could review the <a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles" target="_blank">Gov.UK accessibility user profiles</a>.</p>
+            <p>A site with <b>good colour contrast</b> could also help people who view your site in adverse lighting conditions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A site <b>built to allow for zoom and magnification</b> could also help people using devices of different screen sizes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A site that uses <b>captions for audio and videos</b> could also help people watching your videos in a loud environment.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A site that uses <b>simple, easy-to-understand processes</b> could also help people who are technically challenged.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A site that uses <b>plain language</b> could help lots of groups of people!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, we should aim to make all our products accessible as they are <b>more likely to help everyone</b>.</p>
           </section>
         </section>
 
@@ -651,48 +683,153 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Scenario 1: Judith, a keyboard-only user</h4>
+            <p>The aim is <b>not to shame anyone</b> about the current website. The object is to show you some different experiences.</p>
           </section>
 
           <section data-background="#EDEBEB">
+            <p>In some cases, you will be able to <b>do these activities along with me</b> if you want.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-judith">
+          <section data-background="#15828E">
+            <h2>Scenario 1: Judith, a keyboard-only user</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Judith has <b>Cerebral Palsy</b> and has no use of her hands.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we saw earlier, Judith uses a head-pointer and is a <b>keyboard-only user</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Judith also uses <a href="https://youtu.be/PM8lk60Nh6E?t=27" target="_blank">Sticky Keys</a> when she has to press <b>multiple keystrokes at once</b>.</p>
+          </section>
+
+           <section data-background="#EDEBEB">
+            <p>First off, let&rsquo;s make sure we <b>know all the main keystrokes</b> associated with interactive web elements.</p>
+          </section>
+
+           <section data-background="#EDEBEB">
+             <p>Let&rsquo;s use this <a href="https://intopia.github.io/exercise/" target="_blank">demo page</a> to <b>practice</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Moving through focusable elements</caption>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>      
+                <tr>
+                  <td><kbd>TAB</kbd></td>
+                  <td>Move to next focusable element</td>
+                </tr>
+                <tr>
+                  <td><kbd>SHIFT</kbd> + <kbd>TAB</kbd></td>
+                  <td>Move to previous focuable element</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Links and buttons</caption>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>ENTER</kbd></td>
+                  <td>Activate a link</td>
+                </tr>
+                <tr>
+                  <td><kbd>ENTER</kbd> or <kbd>SPACE</kbd></td>
+                  <td>Activate a button</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Checkboxes and radio buttons</caption>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>SPACE</kbd></td>
+                  <td>Check/Uncheck a checkbox</td>
+                </tr>
+                <tr>
+                  <td><kbd>SPACE</kbd></td>
+                  <td>Check/Uncheck current radio button</td>
+                </tr>
+                <tr>
+                  <td><kbd>&uarr;</kbd> or <kbd>&darr;</kbd></td>
+                  <td>Move focus and check next radio button in group</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Select (dropdown) menus</caption>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>SPACE</kbd></td>
+                  <td>View all options in a dropdown</td>
+                </tr>
+                <tr>
+                  <td><kbd>&uarr;</kbd> or <kbd>&darr;</kbd></td>
+                  <td>Navigate through dropdown options</td>
+                </tr>
+                <tr>
+                  <td><kbd>ENTER</kbd> or <kbd>SPACE</kbd></td>
+                  <td>Select a dropdown option</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ok, now we're <b>ready for the real exercise</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some tests to simulate Judith&rsquo;s experience:</h5>
             <ul class="font-sm">
               <li>Can she navigate through the site using a keyboard?</li>
               <li>Can she see every link, button or form control when they are in focus?</li>
               <li>Can she bypass menus to get to important content more easily??</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Scenario 2: Andrew, a screen-reader user</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="font-sm">
-              <li>Can he perform all key tasks on the site?</li>
-              <li>Can he navigate via headings easily and intuitively?</li>
-              <li>Are all interacting components clearly labelled?</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Scenario 3: Mary, a screen magnification user</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="font-sm">
-              <li>Can she magnify the overall layout without losing functionality?</li>
-              <li>Can she magnify the text-only without losing functionality?</li>
-              <li>Is any critical information displayed off-screen?</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Scenario 4: Joe, a user with short-term memory issues</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="font-sm">
-              <li>Can he log into the site without issues?</li>
             </ul>
           </section>
         </section>
@@ -705,53 +842,229 @@ SUB-SECTION
 
 
 
-        <section id="slide-accessibility-maturity">
+        <section id="slide-andrew">
           <section data-background="#15828E">
-            <h2>Accessibility maturity</h2>
+            <h2>Scenario 2: Andrew, a screen-reader user</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>An <b>accessibility-mature team</b> would include some or all of the following:</p>
+            <p>Andrew is blind and uses <b>various screen readers</b> to interact with digital products.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>1. All team members have a <b>clear understanding of the importance of accessibility</b>, including managers, product owners and business analysts.</p>
+            <p>I&rsquo;m going to use <b>VoiceOver</b> for this demonstration. This screen reader is available on any Apple product. So, you can play along if you have a Mac.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>2. <b>Inclusive user research and testing</b> conducted at key stages when planning and designing.</p>
+            <p>In order to work with VoiceOver, you need to understand <b>two keys on your keyboard</b>:</p>
+            <p><kbd>CONTROL</kbd> and <kbd>OPTION</kbd>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>3. <b>Accessibility training</b> across all key roles - including POs, IMs, BAs, designers, engineers, QAs/testers.</p>
+            <p>These keys are used together, along with <b>a range of other keys</b> to operate VoiceOver.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>4. A <b>robust design system</b> with accessible components and clear documentation.</p>
+            <p>They are referred to as the <b>&ldquo;VO keys&rdquo;</b>, or <b>&ldquo;VoiceOver keys&rdquo;</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>5. Regular <b>accessibility design reviews</b> as part of the design process.</p>
+            <p>A lot of the following instructions include <b>key combinations</b> such as:</p>
+            <p><kbd>VO</kbd> + <kbd>A</kbd>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>6. Accessibility as part of design file annotations - for clear communication between design to development.</p>
+            <p>This means pressing the <kbd>CONTROL</kbd> + <kbd>OPTION</kbd> + <kbd>A</kbd> keys <b>all at the same time</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>7. Rigorous <b>accessibility testing</b> across processes, features and screens before launch.</p>
+            <p>So, Let&rsquo;s start by <b>finding and pressing</b> these two keys on your keyboard.</p>
+            <p><kbd>CONTROL</kbd> and <kbd>OPTION</kbd>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>8. A range of <b>accessibility testing tools</b> in use as part of design, development and testing processes.</p>
+            <p>For the next part of this exercise, we will focus on <b>starting and stopping VoiceOver</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>9. Regular <b>accessibility audits</b> of products before and after launch.</p>
+            <p>It is very important to know how to stop VoiceOver as it will <b>suddenly start talking to you</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>10. Accessibility and inclusion are considered as part of all <b>procurement and hiring processes</b>.</p>
+            <h4>Starting and stopping VoiceOver</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol>
+              <li>Open <b>&ldquo;System Preferences&rdquo;</b>.</li>
+              <li>Click on the <b>&ldquo;Accessibility&rdquo;</b> icon.</li>
+              <li>From the sidebar, choose <b>&ldquo;VoiceOver&rdquo;</b>.</li>
+              <li>Turn toggle on.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>VoiceOver <b>can be quit</b> by either:</p>
+            <ol>
+              <li>Turn toggle off.</li>
+              <li>Mouse clicking the &ldquo;X&rdquo; icon in the top left corner of the VoiceOver panel.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Basic reading options</caption>
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Keys</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Start reading</td>
+                  <td><kbd>VO</kbd> + <kbd>A</kbd></td>
+                </tr>
+                <tr>
+                  <td>Stop Reading</td>
+                  <td><kbd>CONTROL</kbd></td>
+                </tr>
+                <tr>
+                  <td>Read next item</td>
+                  <td><kbd>VO</kbd> + <kbd>RIGHT ARROW</kbd></td>
+                </tr>
+                <tr>
+                  <td>Read previous item</td>
+                  <td><kbd>VO</kbd> + <kbd>LEFT ARROW</kbd></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some tests to simulate Andrew&rsquo;s experience:</h5>
+            <ul class="font-sm">
+              <li>Can he perform all key tasks on the site?</li>
+              <li>Can he navigate via headings easily and intuitively?</li>
+              <li>Are all interacting components clearly labelled?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-mary">
+          <section data-background="#15828E">
+            <h2>Scenario 3: Mary, a screen magnification user</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Mary has <b>low vision</b> and uses ZoomText to magnify the layout to navigate and read content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some tests to simulate Mary&rsquo;s experience:</h5>
+            <ul class="font-sm">
+              <li>Can she magnify the overall layout without losing functionality?</li>
+              <li>Can she magnify the text-only without losing functionality?</li>
+              <li>Is any critical information displayed off-screen?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-matt">
+          <section data-background="#15828E">
+            <h2>Scenario 4: Matt, a user with short-term memory issues</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Matt is a person who <b>experienced a traumatic brain injury</b> - which affects his short-term memory, especially performing complex tasks.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some tests to simulate Matt&rsquo;s experience:</h5>
+            <ul class="font-sm">
+              <li>Are there persistent labels to aid those with memory issues?</li>
+              <li>Are all processes clear and easy to understand?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-next">
+          <section data-background="#15828E">
+            <h2>What next?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, how do organisations move towards delivering <b>accessible products and services</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here are <b>10 things</b> that can help move your teams towards accessibility.</p>
+            <p class="font-sm">(You don&rsquo;t have to do all of these at once!)</p> 
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. Make sure all team members have a <b>clear understanding of the importance of inclusion and accessibility</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. Add <b>inclusive user research and testing</b> at key stages when planning and designing.</p>
+            <p class="font-sm">(Conduct testing with people with disabilities)</p> 
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. Conduct <b>accessibility training</b> for all key roles - including POs, IMs, BAs, designers, engineers, QAs/testers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4. Create a <b>robust design system</b> with accessible components and clear documentation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>5. Conduct regular <b>accessibility design reviews</b> as part of the design process.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>6. Make sure accessibility is included as part of <b>design file annotations</b> - for clear communication between design to development.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>7. Conduct <b>accessibility testing</b> during development and before products are released.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>8. Introduce <b>accessibility testing tools</b> to the design, development and testing processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>9. Conduct regular <b>accessibility audits</b> of products before and after launch.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>10. Ensure that accessibility and inclusion are part of all <b>procurement and hiring processes</b>.</p>
           </section>
         </section>
 
@@ -770,5 +1083,25 @@ SUB-SECTION
         </section>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
   </body>
 </html>
