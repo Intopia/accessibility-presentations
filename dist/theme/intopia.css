@@ -1184,6 +1184,15 @@ exercise-heading
   font-size: .7em;
 }
 
+.discussion-heading {
+  display:  inline-block;
+  background: #0E575D;
+  padding: .2em .4em;
+  margin: 0 0 .2em;
+  border-radius: .5em;
+  font-size: .7em;
+}
+
 /* ---------------------
 table-special
 -----------------------*/
