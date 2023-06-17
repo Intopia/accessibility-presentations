@@ -189,6 +189,44 @@ details a.exercise:hover {
   color: #666;
 }
 
+.exercise-heading {
+  display:  inline-block;
+  background: rgba(96, 67, 154, .3);
+  padding: .2em .4em;
+  margin: 0 0 .2em;
+  border-radius: .5em;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 2px solid #777;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid #999;
+  padding: .7em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table thead th,
+table thead td {
+  border-top: 2px solid #777;
+  border-bottom: 2px solid #777;
+}
+
+table th.right,
+table td.right {
+  text-align: right;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
 /* ---------------------
 small screen
 -----------------------*/
@@ -215,4 +253,3 @@ small screen
     font-size: 1em;
   }
 }
-

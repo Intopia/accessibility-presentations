@@ -1181,16 +1181,7 @@ exercise-heading
 
 .exercise-heading {
   display:  inline-block;
-  background: #0E575D;
-  padding: .2em .4em;
-  margin: 0 0 .2em;
-  border-radius: .5em;
-  font-size: .7em;
-}
-
-.discussion-heading {
-  display:  inline-block;
-  background: #0E575D;
+  background: rgba(0,0,0,.3);
   padding: .2em .4em;
   margin: 0 0 .2em;
   border-radius: .5em;
@@ -1223,3 +1214,46 @@ badge
   border-radius: .2em;
 }
 
+/* ---------------------
+user-story
+-----------------------*/
+
+.user-story {
+  border: 1px solid #666;
+  padding: 1.2em 1em 1em;
+  background: #fff;
+  margin: 0 0 1em;
+  box-shadow: 2px 2px 2px 0 #000;
+  position: relative;
+  font-size: .9em;
+}
+
+.user-story:before {
+  content: "User Story";
+  position: absolute;
+  left: -20px;
+  top: -25px;
+  font-size: .7em;
+  color: #fff;
+  background: #333;
+  padding: .3em;
+  text-transform: uppercase;
+}
+
+.user-story ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-story li {
+  margin: 0 0 .5em;
+}
+
+.user-story li:last-child {
+  margin: 0;
+}
+
+.user-story b {
+  color: #333;
+}
