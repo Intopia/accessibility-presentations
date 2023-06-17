@@ -1176,10 +1176,10 @@ caption for onscreen display of video captions
 }
 
 /* ---------------------
-exercise-heading
+activity-heading
 -----------------------*/
 
-.exercise-heading {
+.activity-heading {
   display:  inline-block;
   background: rgba(0,0,0,.3);
   padding: .2em .4em;

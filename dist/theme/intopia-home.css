@@ -179,17 +179,12 @@ content
   width: 200px;
 }
 
-details a.exercise:hover {
-  color: #000;
-  background: rgba(255,0,0,.2) !important;
-}
-
 .date { 
   font-size: .8em;
   color: #666;
 }
 
-.exercise-heading {
+.activity-heading {
   display:  inline-block;
   background: rgba(96, 67, 154, .3);
   padding: .2em .4em;
