@@ -1188,6 +1188,11 @@ activity-heading
   font-size: .7em;
 }
 
+li .activity-heading {
+  background: rgba(96, 67, 154, .2);
+  font-size: .9em;
+}
+
 /* ---------------------
 table-special
 -----------------------*/
