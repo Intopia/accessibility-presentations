@@ -68,8 +68,11 @@ h6 code {
 }
 
 h1 {
-  font-size: 2.4em;
-  line-height: 1;
+  display: block;
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 700;
+  padding-right: 1em;
 }
 
 h2 {
@@ -78,7 +81,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.2em;
+  font-size: 2.1em;
 }
 
 h4,
@@ -102,6 +105,17 @@ section.has-dark-background h2,
 section.has-dark-background h3,
 section.has-dark-background h4 {
   color: #fff;
+}
+
+.subtitle {
+  margin: 1em 0 0;
+  font-size: .8em;
+}
+
+.intopia-logo {
+  width: 200px;
+  display: inline-block;
+  margin: 0 0 .5em;
 }
 
 /* ---------------------
