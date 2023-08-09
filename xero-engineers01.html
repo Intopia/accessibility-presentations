@@ -1,0 +1,1421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Engineering Session 1: The accessibility tree, ARIA and accessible names | Developing for web accessibility</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>The accessibility tree, ARIA and accessible names</h1>
+          <div class="subtitle">Engineering Session 1</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introduction">
+          <section data-background="#EDEBEB">
+            <h3>What will we cover?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-the-accessibility-tree">Part 1: The accessibility tree</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-an-introduction-to-aria">Part 2: An introduction to ARIA</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-accessible-names">Part 3: Accessible names</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-the-accessibility-tree">
+          <section data-background="#C03C0C">
+            <h2>Part 1: The accessibility tree</h2>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-what-is-the-accessibility-tree">
+          <section data-background="#EDEBEB">
+            <h3>What is the accessibility tree?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Browsers use the <b>DOM and some CSS</b> (where relevant) to generate an Accessibility Tree.</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/puzzle.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessibility-diagram-tree01.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>This <b>accessibility tree</b> consists of information about specific HTML elements, including their:</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/tree.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name <span class="font-xs success">(e.g. &ldquo;Submit&rdquo;, &ldquo;Full name&rdquo;)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role <span class="font-xs success">(e.g. button, link, textbox)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>State <span class="font-xs success">(e.g. checked, expanded, disabled)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value <span class="font-xs success">(e.g. input from the user)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessibility-diagram-tree02.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p><b>Accessibility APIs</b> communicate this information from the accessibility tree to assistive technologies - such as screen readers.</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/cog.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessibility-diagram-tree03.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each browser supports different Accessibility APIs, which means they each <b>produce their own unique accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-viewing-the-accessibility-tree">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Viewing the accessibility tree</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <p>Go to the <a href="https://intopia.github.io/exercise/" target="_blank">All about mammals</a> page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will use the <b>Chrome browser</b> for this activity as it has very easy-to-use accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Finding the &ldquo;Accessibility&rdquo; tab</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 1: Opening Chrome Developer Tools</h5>
+            <ul class="font-sm">
+              <li>Right-click anywhere on the page and select &ldquo;Inspect&rdquo;.</li>
+              <li>This will open Chrome Developer Tools.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 2: Finding the &ldquo;Accessibility” tab</h5>
+            <ul class="font-sm">
+              <li>The &ldquo;Elements&rdquo; tab will be active by default.</li>
+              <li>This shows the DOM tree and &ldquo;Styles&rdquo; panel.</li>
+              <li>The &ldquo;Accessibility&rdquo; tab is to the right of &ldquo;Styles&rdquo;.</li>
+              <li>You may need to click the &ldquo;More tabs&rdquo; icon.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 3: Select the &ldquo;Accessibility&rdquo; tab</h5>
+            <ul class="font-sm">
+              <li>Select the &ldquo;Accessibility&rdquo; tab.</li>
+              <li>This tab displays:
+                <ul>
+                  <li>&ldquo;Accessibility Tree&rdquo;</li>
+                  <li>&ldquo;ARIA Attributes&rdquo;</li>
+                  <li>&ldquo;Computed Properties&rdquo;</li>
+                  <li>&ldquo;Source Order Viewer&rdquo;</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 4: Viewing &ldquo;Computed Properties&rdquo;</h5>
+            <p>We will spend most of our time exploring the &ldquo;Computed Properties&rdquo; window.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The activity</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Inspect the &ldquo;Find out more&rdquo; link</h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Find out more</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>link</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All important elements <b>must have names and roles</b>, so they can be understood by assistive technologies.</p>
+            <p class="font-xs">(We will look at accessible names in detail soon)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Inspect the image</h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>A common wombat standing on the forest floor</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>img</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. Inspect the &ldquo;Full name&rdquo; <code>&lt;input&gt;</code></h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Full name</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>textbox</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. Inspect the &ldquo;All about mammals&rdquo; heading</h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>role</code> and <code>level</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>heading</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Level: <i>1</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>5. Inspect the &ldquo;Land mammals&rdquo; table</h5>
+            <p>In the accessibility panel, find the <code>&lt;table&gt;</code> element&rsquo;s <code>name</code> and <code>role</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Land mammals</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>table</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Inside the table, all essential elements <b>also have roles</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>&lt;tr&gt;</code> role = <i>row</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>&lt;th&gt;</code> role = <i>columnheader</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>&lt;td&gt;</code> role = <i>gridcell</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>6. Inspect the &ldquo;Vombatus&rdquo; content</h5>
+            <p>Does this element provide any information in the accessibility panel:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span><i>Accessibility node not exposed</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some less important elements are <b>not exposed in the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>7. Inspect the &ldquo;Phone&rdquo; <code>&lt;input&gt;</code></h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>description</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Description: <i>Include area code</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Descriptions are used to <b>provide additional information</b> for some elements.</p>
+            <p class="font-xs">(We will look at accessible descriptions in detail soon)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>8. Inspect the &ldquo;Email&rdquo; <code>&lt;input&gt;</code></h5>
+            <p>Is this element defined as <code>required</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies <b>that the form control is required</b> and must be filled in before submitting the form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>9. Add text into the &ldquo;Email&rdquo; <code>&lt;input&gt;</code></h5>
+            <p>Does the element now have a <code>value</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value: <i>"abc@com.au"</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies what the user has added to the form field - <b>allowing the user to review the information</b> before submitting the form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>10. Select an option from the dropdown</h5>
+            <p>Select &ldquo;Aardvark&rdquo; from the &ldquo;Favourite mammal&rdquo; dropdown. Does the <code>&lt;select&gt;</code> element now have a <code>value</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value: <i>"Aardvark"</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>11. Check a checkbox</h5>
+            <p>Check &ldquo;Yes&rdquo; from the &ldquo;Bats&rdquo; checkbox group. Does the checkbox now have a <code>checked</code> status in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checked: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies that the form control <b>has been checked</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>12. Click the &ldquo;Submit&rdquo; button</h5>
+            <p>This will create some fake form errors. Inspect the &ldquo;Phone&rdquo; <code>&lt;input&gt;</code>. Is this element defined as <code>invalid</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Invalid user entry: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies that the form control <b>is currently invalid and needs to be resolved</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>13. Changing an element&rsquo;s role</h5>
+            <p>Add <code>role="button"</code> to the &ldquo;Classification&rdquo; heading in the DOM. What is the element&rsquo;s <code>role</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <code>button</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This shows how we can completely change the nature of an element <b>in the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><i>&ldquo;With great power comes great responsibility&rdquo;</i></p>
+            </div>
+            <p class="font-xs">Benjamin Franklin "Ben" Parker</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Lots of properties</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is a wide range of possible properties that can be presented in the accessibility tree, <b>depending on the element</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">Name:</span> [ accessible name as a text string ] 
+<span class="codeHighlight">Role:</span> [ pre-defined list of roles ]
+<span class="codeHighlight">Description:</span> [ description as a text string ]
+<span class="codeHighlight">Value:</span> [ current value as a text string ]
+<span class="codeHighlight">Required:</span> true | false
+<span class="codeHighlight">Expanded:</span> true | false
+<span class="codeHighlight">Checked:</span> true | false
+<span class="codeHighlight">Disabled:</span> true | false
+<span class="codeHighlight">Described by:</span> [element #id]
+<span class="codeHighlight">Labeled by:</span> [element #id]</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-an-introduction-to-aria">
+          <section data-background="#C03C0C">
+            <h2>Part 2: An introduction to ARIA</h2>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-what-is-aria">
+          <section data-background="#EDEBEB">
+            <h3>What is ARIA?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA is the abbreviation of <b>Accessible Rich Internet Applications</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA <b>defines ways to make websites and web apps more accessible</b> to people with disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>ARIA is:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A set of custom HTML attributes.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>These attributes add information to the accessibility tree.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>This information be used to help assistive technologies.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_blank">WAI-ARIA 1.2</a> became the <b>W3C Recommendation</b> on 06 June 2023.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-what-problems-is-aria-trying-to-solve">
+          <section data-background="#EDEBEB">
+            <h3>What problems is ARIA trying to solve?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>ARIA aims to solve two problems</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>Dynamically injected content.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>Non-native widgets/components.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA is like a <b>polyfill</b> between the HTML we have now and the HTML we wish we had or may soon have!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In fact, our aim is to <b>gradually avoid or even remove ARIA</b> as the HTML specification expands over time.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples of HTML expansion:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" target="_blank"><code>&lt;dialog&gt;</code></a> element and related <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-open" target="_blank"><code>open</code></a> attribute.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-inert-attribute" target="_blank"><code>inert</code></a> attribute.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element" target="_blank"><code>&lt;details&gt;</code></a> element.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The <a href="https://html.spec.whatwg.org/multipage/popover.html#the-popover-attribute"><code>popover</code></a> attribute.</li>
+            </ul>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-how-does-aria-work">
+          <section data-background="#EDEBEB">
+            <h3>Roles, states and properties</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA can be used to adjust how elements are <b>presented in the accessibility tree</b>.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Roles</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Properties</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>States</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>ARIA roles</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA roles can be used to <b>add or change the semantic meaning</b> of HTML elements in the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA roles are <b>HTML attributes</b> written as:</p>
+            <p><code>role="[role name]"</code></p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div <span class="codeHighlight">role="button"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">role="combobox"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">role="menu"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">role="application"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">role="banner"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">role="alert"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">role="dialog"</span>&gt;&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>ARIA properties</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA properties can be used to <b>provide additional information</b> to HTML elements in the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA properties are <b>HTML attributes</b> written as:</p>
+            <p><code>aria-[property]="[value]"</code></p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div <span class="codeHighlight">aria-controls="aaa"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-details="bbb"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-errormessage="ccc"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-owns="ddd"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-relevant="eee"</span>&gt;&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>ARIA states</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA states can be used to inform users of the <b>current state of elements</b> in the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA states are <b>HTML attributes</b> written as:</p>
+            <p><code>aria-[state]="[value]"</code></p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div <span class="codeHighlight">aria-busy="true"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-busy="false"</span>&gt;&lt;/div&gt; 
+
+&lt;div <span class="codeHighlight">aria-current="page"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-current="step"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-current="location"</span>&gt;&lt;/div&gt;
+
+&lt;div <span class="codeHighlight">aria-disabled="true"</span>&gt;&lt;/div&gt;
+&lt;div <span class="codeHighlight">aria-disabled="false"</span>&gt;&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>ARIA can&rsquo;t do everything!</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>Modify an element&rsquo;s visual appearance.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>Modify an element&rsquo;s behaviour.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>Add focusability to elements.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>Add keyboard functionality to elements.</li>
+            </ul>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-browser-support-for-aria">
+          <section data-background="#EDEBEB">
+            <h3>Support for ARIA</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we determine if ARIA is supported by <b>each of the different browsers and assistive technologies</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><a href="https://a11ysupport.io/" target="_blank">A11ySupport.io</a> documents how individual ARIA attributes are <b>supported across browsers</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><a href="https://russmaxdesign.github.io/accessible-forms/" target="_blank">HTML test cases</a> documents how individual HTML elements and ARIA attributes are <b>supported across some screen reader/browser combinations</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Where possible, you should conduct your own tests to <b>determine if the relevant ARIA attributes are supported</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-create-a-fake-checkbox">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Creating a fake checkbox</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>This is a demonstration of how ARIA can be used to make a poorly built component <b>more accessible</b>. It is not a recommended practice.</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/icons/circle-exclamation.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <p><a href="https://codepen.io/intopia-training/pen/dymYZWm" target="_blank">Creating a fake checkbox - start</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Imagine you have to make a checkbox group, but you have to to use <code>&lt;div&gt;</code> elements <b>instead of native checkboxes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As you will see:</p>
+            <ul>
+              <li><b>Some basic JavaScript</b> is already in place.</li>
+              <li><b>Keyboard focus</b> is in place via <code>tabindex="0"</code>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, this widget is completely <b>inaccessible to assistive technologies</b>. Let&rsquo;s look at it in the accessibility panel.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>The elements have <b>no role defined</b>.</li>
+              <li>The elements have <b>no checked state defined</b>.</li>
+              <li>The <code>&lt;h3&gt;</code> heading is <b>not programmatically associated</b> with the checkbox group.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 1:</h5>
+            <p>Add <code>role="checkbox"</code> to each of the fake checkboxes.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  class="checkbox"
+  tabindex="0"
+  <span class="codeHighlight">role="checkbox"</span>
+&gt;
+  Lettuce
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  class="checkbox"
+  tabindex="0"
+  <span class="codeHighlight">role="checkbox"</span>
+&gt;
+  Tomato
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  class="checkbox"
+  tabindex="0"
+  <span class="codeHighlight">role="checkbox"</span>
+&gt;
+  Mustard
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 2:</h5>
+            <ul>
+              <li>Add <code>aria-checked="true"</code> to the first fake checkbox.</li>
+              <li>Add <code>aria-checked="false"</code> to other fake checkboxes.</li>
+            </ul>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  class="checkbox"
+  tabindex="0"
+  role="checkbox"
+  <span class="codeHighlight">aria-checked="true"</span>
+&gt;
+  Lettuce
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  class="checkbox"
+  tabindex="0"
+  role="checkbox"
+  <span class="codeHighlight">aria-checked="false"</span>
+&gt;
+  Tomato
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  class="checkbox"
+  tabindex="0"
+  role="checkbox"
+  <span class="codeHighlight">aria-checked="false"</span>
+&gt;
+  Mustard
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we inspect any of the fake checkboxes in the accessibility tree, <b>they now have roles and states</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/exercise-checkbox-01.png" alt="Fake checkbox name, role and state">
+            <aside class="notes">But what are these checkboxes for? What do they want to know about lettuce, tomato and mustard? How can we tell if they have anything to do with each other?</aside>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 3:</h5>
+            <p>Add <code>role="group"</code> to the parent container so that we can create a fake <code>&lt;fieldset&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  <span class="codeHighlight">role="group"</span>
+&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 4:</h5>
+            <p>Add <code>aria-labelledby="group-label"</code> to the parent container so we can give it an accessible name.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div
+  role="group"
+  <span class="codeHighlight">aria-labelledby="group-label"</span>
+&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 5:</h5>
+            <p>Add <code>id="group-label"</code> to the <code>&lt;h3&gt;</code> element. Now it will operate like a fake <code>&lt;legend&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;h3 <span class="codeHighlight">id="group-label"</span>&gt;Choose some toppings&lt;/h3&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we inspect the parent container in the accessibility tree, <b>it now has an accessible name and a role</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/exercise-checkbox-02.png" alt="Accessible name and role">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Review the Activity:</h5>
+            <p><a href="https://codepen.io/intopia-training/pen/qBoOPPZ" target="_blank">Creating a fake checkbox - finished</a>.</p>
+          </section>
+        </section>
+
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessible-names">
+          <section data-background="#C03C0C">
+            <h2>Part 3: Accessible names</h2>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-what-are-accessible-names">
+          <section data-background="#EDEBEB">
+            <h3>What are accessible names?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible names are short text strings that authors associate with an element to <b>provide assistive technology users with a label for the element</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible names have <b>two primary purposes</b> for assistive technologies users:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Convey the purpose or intent of the element.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Distinguish the element from other elements on the page.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible names are conveyed to assistive technologies <b>via the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Chrome&rsquo;s accessibility tree shows <b>all the possible options</b> that could be used to provide the accessible name.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessible-names-01.png" alt="Accessible name options">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Chrome also displays the <b>final computed accessible name</b> as a text string.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessible-names-02.png" alt="Accessible name as a string">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-aria-labelledby">
+          <section data-background="#EDEBEB">
+            <h3>The <code>aria-labelledby</code> attribute</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is where a primary element is <b>given a label</b> (another name for an accessible name) by a secondary element&rsquo;s text string.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;section <span class="codeHighlight">aria-labelledby="aaa"</span>&gt;
+  &lt;h3 <span class="codeHighlight">id="aaa"</span>&gt;Contact details&lt;/h3&gt;
+&lt;/section&gt;
+
+<span class="codeComment">Section accessible name: "Contact details"</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The secondary element <b>does not need to be a child</b> of the primary element.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;p <span class="codeHighlight">id="bbb"</span>&gt;Buy Lawn Mower&lt;/p&gt;
+&lt;button <span class="codeHighlight">aria-labelledby="bbb"</span>&gt;Buy&lt;/button&gt;
+
+<span class="codeComment">Button accessible name: "Buy Lawn Mower"</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>More than one label</b> can be applied to the primary element via space-separated values in the <code>aria-labelledby</code> attribute.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;p <span class="codeHighlight">id="ccc"</span>&gt;Buy Lawn Mower&lt;/p&gt;
+&lt;button <span class="codeHighlight">aria-labelledby="ccc ddd"</span>&gt;Buy&lt;/button&gt;
+&lt;p <span class="codeHighlight">id="ddd"</span>&gt;On special&lt;/p&gt;
+
+<span class="codeComment">Buttons accessible name: "Buy Lawn Mower On special"</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can even use the <b>text string from within the element itself</b> to create an <code>aria-labelledby</code> value.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;p <span class="codeHighlight">id="yyy"</span>&gt;Lawn Mower&lt;/p&gt;
+&lt;button id="xxx" <span class="codeHighlight">aria-labelledby="xxx yyy zzz"</span>&gt;Buy&lt;/button&gt;
+&lt;p <span class="codeHighlight">id="zzz"</span>&gt;On special&lt;/p&gt;
+
+<span class="codeComment">Buttons accessible name: "Buy Lawn Mower On special"</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An accessible name can be applied to an element via <code>aria-labelledby</code> <b>even if the element is hidden</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;p id="ccc" <span class="codeHighlight">style="display: none"</span>&gt;Buy now&lt;/p&gt;
+&lt;button aria-labelledby="ccc"&gt;Buy&lt;/button&gt;
+
+<span class="codeComment">Buttons accessible name: "Buy now"</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An element with an empty text string will <b>generate an empty accessible name</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-labelledby="xyz"</span>&gt;Hello world&lt;/button&gt;
+&lt;p <span class="codeHighlight">id="xyz"</span>&gt;&lt;/p&gt;
+
+<span class="codeComment">Buttons accessible name: ""</span></code></pre>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-adding-aria-labelledby">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Adding <code class="white">aria-labelledby</code></h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/dymYVVO" target="_blank">Adding aria-labelledby - start</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/live/XWEmPbZ" target="_blank">Adding aria-labelledby - finished</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 1: Adding a name to a section</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How could we <b>provide an accessible name</b> for the <code>&lt;nav&gt;</code> element using content from another element?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>aria-labelledby="aaa"</code> to the <code>&lt;nav&gt;</code> element:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;nav <span class="codeHighlight">aria-labelledby="aaa"</span>&gt;
+  &lt;h4&gt;About us&lt;/h4&gt;
+&lt;/nav&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>id="aaa"</code> to the <code>&lt;h4&gt;</code>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;nav aria-labelledby="aaa"&gt;
+  &lt;h4 <span class="codeHighlight">id="aaa"</span>&gt;About us&lt;/h4&gt;
+&lt;/nav&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Check the accessibility tree to see if the <code>&lt;nav&gt;</code> <b>now has an accessible name</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 2: Adding a complex name to a button</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The &ldquo;Buy&rdquo; button may not have <b>enough context for screen reader users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can <b>provide additional context</b> by using relevant information on the page to create an accessible name.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>aria-labelledby="xxx yyy zzz"</code> to the <code>&lt;button&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button
+  <span class="codeHighlight">aria-labelledby="xxx yyy zzz"</span>
+&gt;Buy&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>id="xxx"</code> to the <code>&lt;button&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button
+  <span class="codeHighlight">id="xxx"</span>
+  aria-labelledby="xxx yyy zzz"
+&gt;Buy&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>id="yyy"</code> to the <code>&lt;span&gt;</code> associated with &ldquo;Lawn Mower&rdquo; text.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;span <span class="codeHighlight">id="yyy"</span>&gt;Lawn Mower&lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>id="zzz"</code> to the <code>&lt;span&gt;</code> associated with &ldquo;On special&rdquo; text.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;span <span class="codeHighlight">id="zzz"</span>&gt;On special&lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Check the accessibility tree to see if the <code>&lt;button&gt;</code> <b>now has a complex accessible name</b>.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-aria-label">
+          <section data-background="#EDEBEB">
+            <h3>The <code>aria-label</code> attribute</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>aria-label</code> attribute provides a label <b>directly to the element itself</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Close and return"</span>&gt;
+  Close
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An element with an <code>aria-label</code> value that contains only a space character will <b>generate an empty accessible name</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label=" "</span>&gt;Hello world&lt;/button&gt;
+
+<span class="codeComment">Buttons accessible name: ""</span></code></pre>
+          </section>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-adding-aria-label">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Adding <code class="white">aria-label</code></h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/VwXvMMP" target="_blank">Adding aria-label - start</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/live/vYRNzpY" target="_blank">Adding aria-label - finished</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Adding an aria-label</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this example, the <code>&lt;button&gt;</code> element has a visible text label and an accessible name of &ldquo;Close&rdquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While the visible text label may provide enough context for sighted users, the accessible name <b>may not provide context for other users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, we may want to provide this element with a <b>meaningful accessible name</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <code>aria-label="Close and return to banking"</code> to the <code>&lt;button&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Close and return to banking"</span>&gt;
+  Close
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Check the accessibility tree to see if the <code>&lt;button&gt;</code> element <b>now has a new accessible name</b>.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-adding-accessible-names">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Reviewing accessible names</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://intopia.github.io/exercise/reviewing-accessible-names.html" target="_blank">Reviewing accessible names</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://intopia.github.io/exercise/reviewing-concatenated-accessible-name.html" target="_blank">Reviewing a concatenated accessible name</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-part-4-accessible-descriptions">
+          <section data-background="#C03C0C">
+            <h2>Part 4: Accessible descriptions</h2>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-accessible-descriptions">
+          <section data-background="#EDEBEB">
+            <h3>What are accessible descriptions?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>In some cases, accessible objects may need more than an accessible name to <b>provide additional context.</b></p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/tag.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, <b>help text or error messages</b> associated with individual form controls.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This additional information is referred to as an <b>accessible description</b> if it is exposed in the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible descriptions are <b>defined as text strings</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessible-description-01.png" alt="Accessible description in accessibility tree">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible names and descriptions are <b>two totally separate concepts</b>. They fill two different slots in the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessible-description-02.png" alt="Accessible name and accessible description in accessibility tree">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-aria-describedby">
+          <section data-background="#EDEBEB">
+            <h3>The <code>aria-describedby</code> attribute</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is where a primary element is <b>given a description</b> by a secondary elements text string.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="a"&gt;Phone&lt;/label&gt;
+&lt;input
+  id="a"
+  type="text"
+  aria-invalid="true"
+  <span class="codeHighlight">aria-describedby="i1"</span>
+&gt;
+&lt;p <span class="codeHighlight">id="i1"</span>&gt;Error: Number must include all 8 digits&lt;/p&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As with <code>aria-labelledby</code>, the secondary element <b>does not need to be a child</b> of the primary element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>More than one description</b> can be applied to the primary element. They need to be space-separated values in the aria-describedby attribute.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="a"&gt;Phone&lt;/label&gt;
+&lt;p <span class="codeHighlight">id="hint1"</span>&gt;Include an area code&lt;/p&gt;
+&lt;input
+  id="a"
+  type="text"
+  aria-invalid="true"
+  <span class="codeHighlight">aria-describedby="hint1 error1"</span>&gt;
+&lt;p <span class="codeHighlight">id="error1"</span>&gt;Error: Number must include all 8 digits&lt;/p&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section> 
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-adding-accessible-descriptions">        
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Adding accessible descriptions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/VwXvMyp" target="_blank">Adding accessible descriptions - start</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/live/NWYGLov" target="_blank">Adding accessible descriptions - finished</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 1</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Programmatically associate the <code>help-text</code> element with the <code>&lt;input&gt;</code> and <b>check the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="phone"&gt;Phone number&lt;/label&gt;
+&lt;span <span class="codeHighlight">id="aaa"</span>&gt;Make sure to include your area code&lt;/span&gt;
+&lt;input <span class="codeHighlight">aria-describedby="aaa"</span> id="phone" type="text"&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 2</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add a <code>title</code> attribute with a value of &ldquo;Ensure a valid email address&rdquo; to the <code>input</code> and <b>check the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="email"&gt;Email address&lt;/label&gt;
+&lt;input <span class="codeHighlight">title="Ensure a valid email address"</span> id="email" type="text"&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 3</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Programmatically associate the <code>help-text</code> and <code>error-message</code> elements with the <code>&lt;input&gt;</code>  and <b>check the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="name"&gt;Name&lt;/label&gt;
+&lt;span <span class="codeHighlight">id="yyy"</span>&gt;Add your full name&lt;/span&gt;
+&lt;input <span class="codeHighlight">aria-describedby="zzz yyy"</span> id="name" type="text"&gt;
+&lt;span <span class="codeHighlight">id="zzz"</span>&gt;Error: You must include a name&lt;/span&gt;</code></pre>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
