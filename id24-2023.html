@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ID24 - 2023 | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <h1>What makes an accessible date picker? Is it even possible?</h1>
+          <div class="subtitle">Inclusive Design 24</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-a-decision-tree">
+          <section data-background="#C03C0C">
+            <h2>A decision tree?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s assume your team wants to <b>use a date picker</b> as part of your website or design system.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Where would you <b>start</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We could start with a <b>fundamental user experience question</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><i>What is the best method of allowing users to enter a date quickly and easily?</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Is the date picker pattern the <b>best solution</b> for your key audiences?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Sometimes, people <b>jump straight into a solution</b> without asking these critical questions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And we often <b>bring our own biasses</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, I used to think that date pickers were <b>the work of Satan</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But, how might <b>two different people</b> interact with a date picker?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Andrew</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A person who is blind</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Uses a screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Wants the ability to type the date quickly</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Daniel</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A person who has mobility issues</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users face gestures and virtual keyboard </li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Wants the ability to click rather than type</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s assume the design team has decided that a date picker is <b>the desired component</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What next?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Native or non-native</b>? What about off-the-shelf or build-your-own?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I use a <b><a href="https://www.figma.com/file/ylTngTAdGZTOLGayloHFoe/TEMPLATE---A-decision-tree?type=whiteboard&node-id=704%3A397&t=Gwz8ET8ckXVZ1gfG-1" target="blank">component decision tree</a></b>, which can take you through various options.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-some-options">
+          <section data-background="#C03C0C">
+            <h2>Some options</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/russweakley/live/wvRrrLM" target="_blank">Native HTML solution</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/russweakley/live/dywVJKR" target="_blank">ARIA Authoring Practices Guide Date picker</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://designsystem.digital.gov/components/date-picker/" target="_blank">USWDS: Off the shelf solution</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://dequeuniversity.com/library/aria/date-picker" target="_blank">Deque University: Off the shelf solution</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But which solution is best? How could we <b>test each of these options</b> consistently and thoroughly?</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people">
+          <section data-background="#C03C0C">
+            <h2>People</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can start by looking at <b>different groups of people and their needs</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means you can focus on one user type and explore <b>how they may need to interact with the component</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These <b>groups of people</b> could include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>People with some sort of <b>cognitive impairment</b> or <b>neurodivergence</b>.</li>
+              <li>People with some sort of <b>colour vision deficiency</b>.</li>
+              <li>People with <b>low vision</b>.</li>
+              <li>People with <b>limited mobility</b>.</li>
+              <li>People with <b>limited or no sight</b>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. People with some sort of cognitive impairment or neurodivergence</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>We need to make sure:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The purpose of the component is clear.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any additional instructions are clear.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. People with some sort of colour vision deficiency</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>We need to make sure:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component has sufficient colour contrast.</li>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. People with low vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>We need to make sure:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The text and layout are understandable when scaled.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component works when viewed in low contrast.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. People with limited mobility</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>We need to make sure:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component is accessible for keyboard-only users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component is accessible for voice control users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus states are visible.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus order is intuitive.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>5. People with limited or no sight</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>We need to make sure:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component, and any relevant interactive elements have an accessible names.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All possible states and values are defined.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any dynamic content is announced at the appropriate time.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use this information to create a cohesive set of <b>accessibility unit tests</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-unit-tests">
+          <section data-background="#C03C0C">
+            <h2>Accessibility unit testing</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>&ldquo;Accessibility unit testing&rdquo; is a process where the smallest parts of a component are <b>individually and independently evaluated</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility unit tests are often based on <b>two concepts</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. How all aspects of the component are <b>presented to users</b> - either on screen or via assistive technologies.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. How users should be able to <b>interact with the component</b> to complete all relevant tasks.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These tests must include <b>all possible happy and unhappy paths</b> associated with the component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And there are <b>different methods that people use</b> to achieve these interactions - mouse, keyboard, assistive technologies etc.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each possible task needs to be <b>defined as a test</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And every test must be written as a statement where the only outcome is either <b>a pass or a fail</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each test must be <b>repeatable</b> so that it can be re-tested at a later date.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-an-example">
+          <section data-background="#C03C0C">
+            <h2>An example</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can now create a chart of <b>possible acessibility unit tests</b> for each of our different types of people.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will <b>start with</b> &ldquo;People with some sort of cognitive impairment or neurodivergence&rdquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the component has issues for these users, then there are fundamental UX issues and <b>the component should re re-designed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will then look at <b>design-related concepts</b> for:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with some sort of colour vision deficiency</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with low vision</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And finally, we will look at <b>more technical concepts</b> for:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with limited mobility</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with limited or no sight</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We should run <b>keyboard-only tests before screen reader tests</b>, as screen reader users need the same basic functionality with additional criteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s explore a <b>demo chart</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-which-solution-is-best">
+          <section data-background="#C03C0C">
+            <h2>Which solution is best?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>xxx</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-with-real-people">
+          <section data-background="#C03C0C">
+            <h2>Testing with real people</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility unit testing is <b>very important</b> when designing and building any new component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, these tests <p>never replace the imporance of testing with real people</p> with lived experience.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Try to include a diverse range of real people <b>as part of the design and development process</b>!</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
