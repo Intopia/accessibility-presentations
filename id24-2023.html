@@ -43,9 +43,41 @@
 
 
 
+        <section id="slide-whats-this-about">
+          <section data-background="#C03C0C">
+            <h2>What's this about?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At an event earlier this year I explored <b>accessibility unit testing</b>, and used date pickers as an example.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This presentation approaches the overall topic from a <b>different angle</b>.</p>
+          </section>
+
+
+          <section data-background="#EDEBEB">
+            <h5>We will cover:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>When date pickers are appropriate.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A decision tree for building any new component.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessibility unit testing for a range of date pickers.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
         <section id="slide-a-decision-tree">
           <section data-background="#C03C0C">
-            <h2>A decision tree?</h2>
+            <h2>Is a date picker the answer?</h2>
           </section>
 
           <section data-background="#EDEBEB">
@@ -73,15 +105,23 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>And we often <b>bring our own biasses</b>.</p>
+            <p>An example would be using a date picker for &ldquo;Date of birth&rdquo; without allowing users to <b>enter date information directly into the field</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>For example, I used to think that date pickers were <b>the work of Satan</b>.</p>
+            <p>For &ldquo;Date of birth&rdquo; information, standard input fields, dropdowns or even <a href="https://russmaxdesign.github.io/date-picker-input/" target="_blank">fieldsets</a> may be <b>easier for users</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But, how might <b>two different people</b> interact with a date picker?</p>
+            <p>I used to think that date pickers were <b>the work of Satan</b> and would avoid them at all costs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But we should always be <b>aware of our own biasses</b> when making these types of decisions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, I recently observed <b>two entirely different experiences</b> with date pickers:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -101,6 +141,20 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>Wants the ability to click rather than type</li>
             </ul>
           </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-a-decision-tree">
+          <section data-background="#C03C0C">
+            <h2>A decision tree?</h2>
+          </section>
 
           <section data-background="#EDEBEB">
             <p>Let&rsquo;s assume the design team has decided that a date picker is <b>the desired component</b>.</p>
@@ -115,29 +169,15 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>I use a <b><a href="https://www.figma.com/file/ylTngTAdGZTOLGayloHFoe/TEMPLATE---A-decision-tree?type=whiteboard&node-id=704%3A397&t=Gwz8ET8ckXVZ1gfG-1" target="blank">component decision tree</a></b>, which can take you through various options.</p>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-some-options">
-          <section data-background="#C03C0C">
-            <h2>Some options</h2>
+            <p>I use a <b><a href="https://www.figma.com/file/ylTngTAdGZTOLGayloHFoe/TEMPLATE---A-decision-tree?type=whiteboard&node-id=704%3A397&t=Gwz8ET8ckXVZ1gfG-1" target="blank">component decision tree</a></b>, which can be used to step through all possible options.</p>
           </section>
 
           <section data-background="#EDEBEB">
+            <h5>Three options:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/russweakley/live/wvRrrLM" target="_blank">Native HTML solution</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/russweakley/live/dywVJKR" target="_blank">ARIA Authoring Practices Guide Date picker</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://designsystem.digital.gov/components/date-picker/" target="_blank">USWDS: Off the shelf solution</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://dequeuniversity.com/library/aria/date-picker" target="_blank">Deque University: Off the shelf solution</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/russweakley/live/dywVJKR" target="_blank">ARIA Authoring Practices Guide Date Picker</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://designsystem.digital.gov/components/date-picker/" target="_blank">USWDS: Off-the-shelf solution</a></li>
             </ul>
           </section>
 
@@ -148,15 +188,16 @@
 
 
 
+
 <!--  –––––––––––––––––––––––––
 ******  SECTION ******
 ––––––––––––––––––––––––––  -->
 
 
 
-        <section id="slide-people">
+        <section id="slide-start-with-people">
           <section data-background="#C03C0C">
-            <h2>People</h2>
+            <h2>Start with people</h2>
           </section>
 
           <section data-background="#EDEBEB">
@@ -173,7 +214,7 @@
 
           <section data-background="#EDEBEB">
             <ol class="font-sm">
-              <li>People with some sort of <b>cognitive impairment</b> or <b>neurodivergence</b>.</li>
+              <li>People with some kind of <b>cognitive impairment</b> or <b>neurodivergence</b>.</li>
               <li>People with some sort of <b>colour vision deficiency</b>.</li>
               <li>People with <b>low vision</b>.</li>
               <li>People with <b>limited mobility</b>.</li>
@@ -182,7 +223,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>1. People with some sort of cognitive impairment or neurodivergence</h4>
+            <h4>1. People with some kind of cognitive impairment or neurodivergence</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -236,7 +277,7 @@
           <section data-background="#EDEBEB">
             <h5>We need to make sure:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The component, and any relevant interactive elements have an accessible names.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component and any interactive elements have accessible names.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>All possible states and values are defined.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Any dynamic content is announced at the appropriate time.</li>
             </ul>
@@ -281,7 +322,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>And there are <b>different methods that people use</b> to achieve these interactions - mouse, keyboard, assistive technologies etc.</p>
+            <p>People use <b>different methods to achieve these interactions</b> - mouse, keyboard and assistive technologies.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -295,6 +336,10 @@
           <section data-background="#EDEBEB">
             <p>Each test must be <b>repeatable</b> so that it can be re-tested at a later date.</p>
           </section>
+
+          <section data-background="#EDEBEB">
+            <p>This process is <b>extremely important when introducing new components into design systems</b>, so that you know these components are accessible.</p>
+          </section>
         </section>
 
 
@@ -305,13 +350,13 @@
 
 
 
-        <section id="slide-an-example">
+        <section id="slide-testing-some-data-pickers">
           <section data-background="#C03C0C">
-            <h2>An example</h2>
+            <h2>Testing some date pickers</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We can now create a chart of <b>possible acessibility unit tests</b> for each of our different types of people.</p>
+            <p>We can now create a chart of <b>possible accessibility unit tests</b> for each of our different types of people.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -319,7 +364,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>If the component has issues for these users, then there are fundamental UX issues and <b>the component should re re-designed</b>.</p>
+            <p>If the component has issues for these users, then there are fundamental UX issues, and <b>it should be redesigned</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -343,7 +388,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s explore a <b>demo chart</b>.</p>
+            <p>Let&rsquo;s <a href="https://docs.google.com/spreadsheets/d/1pu1lwCCRbmmUkczE_8zT7GUGfSASu9jUe7NKrgtlCiU/edit?usp=sharing" target="_blank">explore a demo chart</a>.</p>
           </section>
         </section>
 
@@ -379,11 +424,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Accessibility unit testing is <b>very important</b> when designing and building any new component.</p>
+            <p>Accessibility unit testing is <b>essential</b> when designing and building any new component.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>However, these tests <p>never replace the imporance of testing with real people</p> with lived experience.</p>
+            <p>However, these tests never replace <b>testing with real people</b> with lived experience.</p>
           </section>
 
           <section data-background="#EDEBEB">
