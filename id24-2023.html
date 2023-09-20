@@ -112,7 +112,7 @@
             <h5>Andrew</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>A person who is blind</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Uses screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Uses a range of different screen readers</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Wants the ability to type the date quickly</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Hates date pickers</li>
             </ul>
@@ -377,21 +377,145 @@
 
 
 
-        <section id="slide-which-date-picker-is-best">
+        <section id="slide-rating-issues-found">
           <section data-background="#C03C0C">
-            <h2>Which date picker is best?</h2>
+            <h2>Rating issues found</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>All three options have <b>strengths and weaknesses</b>. There is no perfect solution.</p>
+            <p>If we find issues, how do we <b>determine their severity</b>?</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In some ways, the <b>native solution is best</b> as it involves no additional scripting and is easy for any team to implement.</p>
+            <p>We can use the same categories that auditors use for accessibility issues - <b>critical, high, moderate, low</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>However, designers often prefer <b>consistency across different browsers</b>.</p>
+            <p>These rating define how the issue impacts one or more types of user’s <b>ability to accomplish a task</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table class="font-xxs">
+              <thead>
+                <tr>
+                  <th>Rating</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Critical</th>
+                  <td>Stops one or more types of users from completing a task.</td>
+                </tr>
+                <tr>
+                  <th>High</th>
+                  <td>
+                    <p>May cause serious problems or significant inconvenience to one or more types of users.</p>
+                    <p>There must be at least one method available that allows these users to complete the task - even if it requires additional time.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Moderate</th>
+                  <td>May cause problems or frustrations for one or more types of users.</td>
+                </tr>
+                <tr>
+                  <th>Low</th>
+                  <td>May be an inconvenience or irritation to one or more types of users.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any critical and high issues <b>would need to be resolved</b> before implementing the pattern.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-a-review-of-the-three-examples">
+          <section data-background="#C03C0C">
+            <h2>A review of the three examples</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The following high level review is <b>not meant to shame any of these solutions</b>. This is just for educational purposes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Native solution</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Implementation</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Very easy to implement, no need for JavaScript.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>UX Issues</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>OSX Safari presents current date as a hint, which could be confusing.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard issues</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>OSX Chrome does not allow focus to the icon.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Screen reader issues</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>OSX FireFox does not sent focus back to input, so selected date not announced.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>OSX Safari does not announce date options - all announced as &ldquo;Group&rdquo;.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>ARIA APG Date picker</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Implementation</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Very ugly, would need re-styling.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Screen reader issues</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>Focus not back to input, so selected date not announced.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>U.S. Web Design System Date Picker</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Screen reader issues</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-exclamation"></span>A lot of additional information is announced while moving throygh each date.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Overall</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As you can see, all three options have <b>strengths and weaknesses</b>. There is no perfect solution.</p>
           </section>
 
           <section data-background="#EDEBEB">
