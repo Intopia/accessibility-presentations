@@ -47,6 +47,7 @@
           <section data-background="#EDEBEB">
             <h5>What we will cover:</h5>
             <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Are date pickers the work of Satan?</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>When should you use a date picker?</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>A decision tree for building new components.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>How to conduct &ldquo;accessibility unit testing&rdquo; to determine if your date picker is accessible.</li>
@@ -54,6 +55,12 @@
           </section>
 
 
+          <section data-background="#EDEBEB">
+            <p>This presentation is <b>available online</b>.</p>
+            <p class="font-xs"><a href="https://bit.ly/3sX7efx" target="_blank">Inclusive Design 24 - Russ Weakley - 2023</a></p>
+          </section>
+
+<!--
           <section data-background="#EDEBEB">
             <h5>Some URLs:</h5>
             <ul class="icon-list font-xs">
@@ -65,6 +72,7 @@
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://bit.ly/3roDmYL" target="_blank">Date picker accessibility unit testing</a> <span class="font-xs success">(https://bit.ly/3roDmYL)</span></li>
             </ul>
           </section>
+-->
         </section>
 
 
@@ -105,7 +113,23 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>So, we need to be <b>careful about jumping into solution mode</b> too quickly.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>We should also be aware that some types of users <b>find date pickers challenging</b>, while others find them easy.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For many years, I have observed people <b>struggling with date pickers</b>, especially when the components were often extremely inaccessible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Which is why I always thought of date pickers as <b>the work of Satan</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, a recent experience <b>shifted my perspective</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -119,7 +143,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Daniel</h5>
+            <h5>Dan</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>A person who has mobility issues</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Users face gestures and virtual keyboard </li>
@@ -143,9 +167,10 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>If you decide that a date picker is the best option, the next challenge is <b>selecting the best way to build it</b>.</p>
+            <p>If you decide that a date picker is the best option, the next challenge is <b>determining the best way to build it</b>.</p>
           </section>
 
+<!--
           <section data-background="#EDEBEB">
             <h5>Which method should you use?</h5>
             <ul class="icon-list font-sm">
@@ -155,9 +180,10 @@
               <li><span aria-hidden="true" class="icon icon-circle-question"></span>Build-your-own?</li>
             </ul>
           </section>
+-->
 
           <section data-background="#EDEBEB">
-            <p>I use a <a href="https://bit.ly/44Tj6MR" target="blank">component decision tree</a>, which can be used to step through <b>all possible options for building new components</b>.</p>
+            <p>I use a <a href="https://bit.ly/44Tj6MR" target="blank">component decision tree</a>, which can be used to step through<b> some possible options for building new components</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -218,7 +244,8 @@
             <h5>We need to make sure:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>The purpose of the component is clear.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Any additional instructions are clear.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All content is written in plain language.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any additional instructions and error messages are clear.</li>
             </ul>
           </section>
 
@@ -229,7 +256,7 @@
           <section data-background="#EDEBEB">
             <h5>We need to make sure:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The component has sufficient colour contrast.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All aspects of the component have sufficient colour contrast.</li>
             </ul>
           </section>
 
@@ -241,7 +268,8 @@
             <h5>We need to make sure:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>The text and layout are understandable when scaled.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The component works when viewed in low contrast.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The text and layout are understandable when viewed via magification tools.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The component is operable and understandable when viewed in low contrast.</li>
             </ul>
           </section>
 
@@ -267,7 +295,7 @@
             <h5>We need to make sure:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>The component and any interactive elements have accessible names.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>All possible states and values are defined.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All possible states and values are made available to users.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Any dynamic content is announced at the appropriate time.</li>
             </ul>
           </section>
