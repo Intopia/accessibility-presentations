@@ -1,0 +1,106 @@
+/* ---------------------
+global
+-----------------------*/
+
+body {
+  margin: 0;
+  padding: 1.5em;
+  width: 45em;
+  color: #222;
+  background: #ffffff;
+  background-color: #ffffff;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+h1,
+h2 {
+  font-size: 2em;
+  margin: 0 0 .5em;
+  color: #C03C0C;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 2em 0 1em;
+}
+
+
+/* ---------------------
+table
+-----------------------*/
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-top: 2px solid #777;
+  border-bottom: 2px solid #777;
+}
+
+table caption {
+  font-weight: bold;
+  padding: 0 0 .5em;
+  text-align: left;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid #aaa;
+  padding: .5em 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  font-weight: 500;
+}
+
+table thead th,
+table thead td {
+  border-top: 2px solid #777;
+  border-bottom: 2px solid #777;
+}
+
+
+/* ---------------------
+links
+-----------------------*/
+
+a {
+  border-bottom: .1em solid;
+  text-decoration: none;
+}
+
+a:link,
+a:link code {
+  color: #0A7399;
+}
+
+a:visited,
+a:visited code {
+  color: #0A7399;
+}
+
+a:focus,
+a:focus code {
+  color: #fff;
+  background: #000;
+  outline: none;
+}
+
+a:hover,
+a:hover code {
+  color: #000;
+  background: transparent;
+}
+
+a:active,
+a:active code {
+  color: #a00;
+  background: transparent;
+}
