@@ -5,18 +5,18 @@ global
 body {
   margin: 0;
   padding: 1.5em;
-  width: 39em;
+  width: 40em;
   color: #222;
   background: #ffffff;
   background-color: #ffffff;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
   font-size: 1em;
   font-weight: normal;
 }
 
 h1 {
-  font-size: 2em;
-  margin: 0 0 .5em;
+  font-size: 2.4em;
+  margin: 0 0 1.5em;
   color: #C03C0C;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
   font-weight: 700;
@@ -24,9 +24,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0;
-  padding: .3em 0;
+  padding: .4em 0;
   color: #fff;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
   font-weight: 700;
@@ -34,7 +34,17 @@ h2 {
 }
 
 p {
-  margin: 0 0 .3em;
+  margin: 0;
+}
+
+ul.links {
+  margin: 0 0 3em;
+  padding: 0;
+  list-style: none;
+}
+
+.links li {
+  padding: .2em 0;
 }
 
 /* ---------------------
@@ -42,7 +52,7 @@ nav
 -----------------------*/
 
 nav {
-  margin: 2em 0 0;
+  margin: 0;
 }
 
 nav ul {
@@ -58,8 +68,8 @@ nav li {
 nav a,
 .nav-item {
   display: inline-block;
-  margin: 0;
-  padding: .4em .6em;
+  margin: 0 .2em 0 0;
+  padding: .4em 1em;
   border: 1px solid #555;
   background: #eee;
   border-bottom: none;
@@ -69,7 +79,19 @@ nav a,
 nav a[aria-current] {
   background: #555;
   color: #fff;
-  font-weight: bold;
+}
+
+nav a[aria-current]:focus {
+  background: #000;
+  outline: none;
+}
+
+nav a[aria-current]:hover {
+  background: #333;
+}
+
+nav a[aria-current]:active {
+  background: #a00;
 }
 
 /* ---------------------
@@ -134,31 +156,31 @@ classes
   margin: 0 0 0 .5em;
   border-radius: 1em;
   background: #eee;
-  padding: .3em .5em;
+  padding: .3em .8em .4em;
   font-size: .9em;
 }
 
 .new {
   color: #fff;
-  background: rgba(255, 50, 80, 1);
+  background: #C03C0C;
 }
 
 .levela {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(0, 0, 255, 0.2);
+  background: rgba(0, 0, 255, .2);
 }
 
 .levelaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(0, 255, 0, 0.3);
+  background: rgba(0, 255, 0, .3);
 }
 
 .levelaaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(255, 0, 155, .2);
+  background: rgba(255, 0, 0, .2);
 }
 
 /* ---------------------
@@ -170,31 +192,26 @@ a {
   text-decoration: none;
 }
 
-a:link,
-a:link code {
-  color: #0A7399;
+a:link {
+  color: #333;
 }
 
-a:visited,
-a:visited code {
-  color: #0A7399;
+a:visited {
+  color: #333;
 }
 
-a:focus,
-a:focus code {
+a:focus {
   color: #fff;
   background: #000;
   outline: none;
 }
 
-a:hover,
-a:hover code {
+a:hover{
   color: #000;
-  background: transparent;
+  background: #ddd;
 }
 
-a:active,
-a:active code {
+a:active {
   color: #a00;
   background: transparent;
 }
