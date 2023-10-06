@@ -7,8 +7,8 @@ body {
   padding: 1.5em;
   width: 40em;
   color: #222;
-  background: #ffffff;
-  background-color: #ffffff;
+  background: #EDEBEB;
+  background-color: #EDEBEB;
   font-family: 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
   font-size: 1em;
   font-weight: normal;
@@ -71,7 +71,7 @@ nav a,
   margin: 0 .2em 0 0;
   padding: .4em 1em;
   border: 1px solid #555;
-  background: #eee;
+  background: #fff;
   border-bottom: none;
   border-radius: .3em .3em 0 0;
 }
@@ -102,7 +102,7 @@ table {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
-  border-bottom: 2px solid #777;
+  background: #fff;
 }
 
 table caption {
@@ -125,8 +125,8 @@ table th {
 
 table thead th,
 table thead td {
-  border-top: 2px solid #777;
-  border-bottom: 2px solid #777;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
 }
 
 /* ---------------------
@@ -147,7 +147,7 @@ classes
 }
 
 .guidelines td {
-  background: #eee;
+  background: #efefef;
   font-weight: bold;
 }
 
