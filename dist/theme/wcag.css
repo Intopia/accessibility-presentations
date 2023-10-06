@@ -51,7 +51,7 @@ table caption {
 table th,
 table td {
   border-bottom: 1px solid #aaa;
-  padding: .5em 0;
+  padding: .7em;
   text-align: left;
   vertical-align: top;
 }
@@ -65,6 +65,54 @@ table thead td {
   border-top: 2px solid #777;
   border-bottom: 2px solid #777;
 }
+
+.principles td {
+  border-top: 10px solid #fff;
+  background: #555;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.guidelines td {
+  background: #eee;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0 .5em;
+  border-radius: 1em;
+  background: #eee;
+  padding: .3em .5em;
+  font-size: .9em;
+}
+
+.new {
+  background: rgba(255, 0, 255, 0.4);
+}
+
+.levela {
+  display: inline-block;
+  border-radius: 1em;
+  background: rgba(0, 0, 255, 0.2);
+}
+
+.levelaa {
+  display: inline-block;
+  border-radius: 1em;
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.levelaaa {
+  display: inline-block;
+  border-radius: 1em;
+  background: rgba(154, 67, 255, .3);
+}
+
+
+
+
 
 
 /* ---------------------
