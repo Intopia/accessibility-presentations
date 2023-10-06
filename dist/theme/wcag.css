@@ -5,12 +5,12 @@ global
 body {
   margin: 0;
   padding: 1.5em;
-  width: 45em;
+  width: 40em;
   color: #222;
   background: #ffffff;
   background-color: #ffffff;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
 }
 
@@ -44,11 +44,7 @@ nav p {
 nav a,
 .nav-item {
   display: inline-block;
-  margin: 0 .5em;
-}
-
-.nav-item {
-  font-weight: bold;
+  margin: 0 .3em;
 }
 
 /* ---------------------
@@ -87,6 +83,18 @@ table thead td {
   border-bottom: 2px solid #777;
 }
 
+/* ---------------------
+classes
+-----------------------*/
+
+.nav-item {
+  font-weight: bold;
+}
+
+.divider {
+  color: #aaa;
+}
+
 .principles td {
   border-top: 10px solid #fff;
   background: #555;
@@ -110,7 +118,8 @@ table thead td {
 }
 
 .new {
-  background: rgba(255, 0, 255, 0.4);
+  color: #fff;
+  background: rgba(255, 50, 80, 1);
 }
 
 .levela {
@@ -128,13 +137,8 @@ table thead td {
 .levelaaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(154, 67, 255, .3);
+  background: rgba(255, 0, 155, .2);
 }
-
-
-
-
-
 
 /* ---------------------
 links
