@@ -29,6 +29,27 @@ h2 {
   margin: 2em 0 1em;
 }
 
+/* ---------------------
+nav
+-----------------------*/
+
+nav {
+  margin: 2em 0;
+}
+
+nav p {
+  margin: 0;
+}
+
+nav a,
+.nav-item {
+  display: inline-block;
+  margin: 0 .5em;
+}
+
+.nav-item {
+  font-weight: bold;
+}
 
 /* ---------------------
 table
