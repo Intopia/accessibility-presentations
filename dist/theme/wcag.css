@@ -5,7 +5,7 @@ global
 body {
   margin: 0;
   padding: 1.5em;
-  width: 40em;
+  width: 42em;
   color: #222;
   background: #EDEBEB;
   background-color: #EDEBEB;
@@ -16,7 +16,7 @@ body {
 
 h1 {
   font-size: 2.4em;
-  margin: 0 0 1.5em;
+  margin: 0 0 1em;
   color: #C03C0C;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
   font-weight: 700;
@@ -24,27 +24,23 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  margin: 1.5em 0 0;
+  color: #555;
+}
+
+h2:first-child {
   margin: 0;
-  padding: .4em 0;
-  color: #fff;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
-  font-weight: 700;
-  line-height: 1;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin: 1.5em 0 .4em;
+  color: #555;
 }
 
 p {
   margin: 0;
-}
-
-ul.links {
-  margin: 0 0 3em;
-  padding: 0;
-  list-style: none;
-}
-
-.links li {
-  padding: .2em 0;
 }
 
 /* ---------------------
@@ -70,13 +66,15 @@ nav a,
   display: inline-block;
   margin: 0 .2em 0 0;
   padding: .4em 1em;
-  border: 1px solid #555;
+  border: 1px solid #aaa;
   background: #fff;
   border-bottom: none;
   border-radius: .3em .3em 0 0;
 }
 
 nav a[aria-current] {
+  border: 1px solid #555;
+  border-bottom: none;
   background: #555;
   color: #fff;
 }
@@ -92,6 +90,25 @@ nav a[aria-current]:hover {
 
 nav a[aria-current]:active {
   background: #a00;
+}
+
+main {
+  margin: 0;
+  border-radius: 0 0 .5em .5em;
+  padding: 1.5em;
+  background: #fff;
+  border-top: 1px solid #555;
+}
+
+
+ul.criterion {
+  margin: 0 0 1em;
+  padding: 0;
+  list-style: none;
+}
+
+ul.criterion li {
+  padding: .5em .5em .5em 0;
 }
 
 /* ---------------------
@@ -120,7 +137,13 @@ table td {
 }
 
 table th {
-  font-weight: 500;
+  font-size: 1.2em;
+  padding: 1em .7em;
+  color: #fff;
+  background: #555;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-weight: 700;
+  line-height: 1;
 }
 
 table thead th,
@@ -153,16 +176,13 @@ classes
 
 .badge {
   display: inline-block;
-  margin: 0 0 0 .5em;
+  width: 2em;
+  text-align: center;
+  margin: 0 .5em 0 0;
   border-radius: 1em;
   background: #eee;
   padding: .3em .8em .4em;
-  font-size: .9em;
-}
-
-.new {
-  color: #fff;
-  background: #C03C0C;
+  font-size: .8em;
 }
 
 .levela {
@@ -183,6 +203,16 @@ classes
   background: rgba(255, 0, 0, .2);
 }
 
+.new {
+  color: #fff;
+  background: #C03C0C;
+  display: inline-block;
+  text-align: center;
+  margin: 0 0 0 .5em;
+  border-radius: 1em;
+  padding: .3em .8em .4em;
+  font-size: .8em;
+}
 /* ---------------------
 links
 -----------------------*/
