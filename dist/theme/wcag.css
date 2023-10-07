@@ -101,17 +101,6 @@ main {
   border-top: 1px solid #555;
 }
 
-
-ul.criterion {
-  margin: 0 0 2em;
-  padding: 0;
-  list-style: none;
-}
-
-ul.criterion li {
-  padding: .5em .5em .5em 0;
-}
-
 /* ---------------------
 table
 -----------------------*/
@@ -161,8 +150,15 @@ classes
   font-weight: bold;
 }
 
-.divider {
-  color: #aaa;
+
+ul.criterion {
+  margin: 0 0 2em;
+  padding: 0;
+  list-style: none;
+}
+
+ul.criterion li {
+  padding: .5em .5em .5em 0;
 }
 
 .principles td {
@@ -189,19 +185,19 @@ classes
 .levela {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(0, 0, 255, .2);
+  background: rgba(120, 200, 120, .4);
 }
 
 .levelaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(0, 255, 0, .3);
+  background: rgba(255, 180, 100, .5);
 }
 
 .levelaaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(255, 0, 0, .2);
+  background: rgba(255, 0, 150, .3);
 }
 
 .new {
@@ -214,6 +210,7 @@ classes
   padding: .3em .8em .4em;
   font-size: .8em;
 }
+
 /* ---------------------
 links
 -----------------------*/
