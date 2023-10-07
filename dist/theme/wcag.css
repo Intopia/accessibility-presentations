@@ -35,8 +35,9 @@ h2:first-child {
 
 h3 {
   font-size: 1.1em;
-  margin: 1.5em 0 .4em;
+  margin: 1.5em 0 .6em;
   color: #555;
+  font-weight: normal;
 }
 
 p {
@@ -102,7 +103,7 @@ main {
 
 
 ul.criterion {
-  margin: 0 0 1em;
+  margin: 0 0 2em;
   padding: 0;
   list-style: none;
 }
