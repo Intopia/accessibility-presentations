@@ -4,8 +4,8 @@ global
 
 body {
   margin: 0;
-  padding: 1.5em;
-  width: 42em;
+  padding: 2em;
+  max-width: 42em;
   color: #222;
   background: #EDEBEB;
   background-color: #EDEBEB;
@@ -49,48 +49,55 @@ nav
 -----------------------*/
 
 nav {
-  margin: 0;
+    margin: 2em 0;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+@media screen and (min-width: 599px) {
+  nav {
+    margin: 0;
+  }
 
-nav li {
-  display: inline;
-}
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-nav a,
-.nav-item {
-  display: inline-block;
-  margin: 0 .2em 0 0;
-  padding: .4em 1em;
-  border: 1px solid #aaa;
-  background: #fff;
-  border-bottom: none;
-  border-radius: .3em .3em 0 0;
-}
+  nav li {
+    display: inline;
+  }
 
-nav a[aria-current] {
-  border: 1px solid #555;
-  border-bottom: none;
-  background: #555;
-  color: #fff;
-}
+  nav a,
+  .nav-item {
+    display: inline-block;
+    margin: 0 .2em 0 0;
+    padding: .4em 1em;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-bottom: none;
+    border-radius: .3em .3em 0 0;
+  }
 
-nav a[aria-current]:focus {
-  background: #000;
-  outline: none;
-}
+  nav a[aria-current] {
+    border: 1px solid #555;
+    border-bottom: none;
+    background: #555;
+    color: #fff;
+  }
 
-nav a[aria-current]:hover {
-  background: #333;
-}
+  nav a[aria-current]:focus {
+    background: #000;
+    outline: none;
+  }
 
-nav a[aria-current]:active {
-  background: #a00;
+  nav a[aria-current]:hover {
+    background: #333;
+  }
+
+  nav a[aria-current]:active {
+    background: #a00;
+  }
+
 }
 
 main {
