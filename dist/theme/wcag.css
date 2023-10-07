@@ -185,19 +185,19 @@ ul.criterion li {
 .levela {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(120, 200, 120, .4);
+  background: #cae9c9;
 }
 
 .levelaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(255, 180, 100, .5);
+  background: #ffd9b3;
 }
 
 .levelaaa {
   display: inline-block;
   border-radius: 1em;
-  background: rgba(255, 0, 150, .3);
+  background: #ffcee8;
 }
 
 .new {
