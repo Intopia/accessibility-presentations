@@ -61,6 +61,15 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>Part 3: Landmarks (if time)</li>
             </ul>
           </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some tools</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://accessibilityinsights.io/downloads/" target="_blank">Chrome extension: Accessibility Insights for Web</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_blank">Chrome extension: Skip to Landmarks and Headings</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><span aria-hidden="true" class="icon icon-check"></span><a href="https://stringyland.github.io/bookmarklets/" target="_blank">Bookmarklet: Easy Checks headings checker</a></li>
+            </ul>
+          </section>
         </section>
 
 
@@ -161,6 +170,10 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
+            <p>While heading levels should be a design problem, it often <b>falls to engineers to resolve within layouts</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>You can use your <a href="https://xui.xero.com/18.4.1/section-fundamentals-typography.html#fundamentals-typography-21" target="_blank">Heading classes</a> to change the visual appearance of headings, while <b>maintaining heading hierarchy</b>.</p>
           </section>
         </section>
@@ -176,6 +189,10 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p>Every page should have an <code>&lt;h1&gt;</code> <b>near the start of the page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <code>&lt;h1&gt;</code> should be reserved for <b>the most important information on the page</b> - such as the site name of primary page heading.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -197,7 +214,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;p <span class="codeHighlight">class="heading"</span>&gt;Fake page heading&lt;/p&gt;</code></pre>
+<pre><code contenteditable="true">&lt;p <span class="codeHighlight">class="xui-heading-xlarge"</span>&gt;Fake page heading&lt;/p&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -238,10 +255,10 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <h5>Some example pages</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/cashflow#2" target="_blank">Business: Short-term cash flow projection</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/business-snapshot#2" target="_blank">Business: Business snapshot</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://reporting.xero.com/!!SzBJ/home" target="_blank">Accounting: Reports</a></li>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/cashflow#2" target="_blank">Business: Short-term cash flow projection</a> - 2 x H1</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/business-snapshot#2" target="_blank">Business: Business snapshot</a> - multiple H1</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://reporting.xero.com/!!SzBJ/home" target="_blank">Accounting: Reports</a> - 2 x H1 and no other headings (Favourites, Financial performance, Financial statements etc)</li>
             </ul>
           </section>
         </section>
@@ -504,7 +521,7 @@ SUB-SECTION
 SUB-SECTION
 ––––––––––––––––––––––––––  -->
 
-        <section id="slide-examples-in-the-wild">
+        <section id="slide-table-examples">
           <section data-background="#EDEBEB">
             <h3>Some examples</h3>
           </section>
@@ -715,6 +732,39 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p>Use HTML elements for landmarks rather than ARIA roles, as they have <b>built-in semantics and behaviour</b>.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-landmark-activity">
+          <section data-background="#EDEBEB">
+            <h3>An activity</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's <a href="https://intopia.github.io/exercise/reviewing-landmarks.html
+" target="_blank">look at a page</a> to see how all key landmarks work <b>with the accessibility tree</b>.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-landmark-examples">
+          <section data-background="#EDEBEB">
+            <h3>Some examples</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some example pages</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/dashboard" target="_blank">Dashboard</a> - Overuse of banner landmark - solvable with use of main</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/contacts/all" target="_blank">Contacts</a> - banner, 2x navigation (with labels), main</li>
+            </ul>
           </section>
         </section>
 
