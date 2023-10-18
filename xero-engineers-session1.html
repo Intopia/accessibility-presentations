@@ -46,6 +46,15 @@
 
         <section id="slide-introduction">
           <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design and HTML</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility</li>
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>Is everyone ok if we <b>record this session</b>?</p>
           </section>
 
@@ -202,8 +211,14 @@ SUB-SECTION
             <p>You can use your <a href="https://xui.xero.com/21.4.0/section-fundamentals-typography.html#fundamentals-typography-21" target="_blank">Heading classes</a> to change the visual appearance of headings, while <b>maintaining heading hierarchy</b>.</p>
           </section>
 
+          <section data-background="#222">
+<pre><code contenteditable="true">
+&lt;h3 <span class="codeHighlight">class="xui-heading-2xlarge"</span>&gt;...&lt;/h3&gt;
+  </code></pre>
+          </section>
+
           <section data-background="#EDEBEB">
-            <p>What should you do when headings are <a href="https://xui.xero.com/21.4.0/section-components-displayingdata-accordion.html" target="_blank">defined within components</a>?</p>
+            <p>What should you do when heading levels are <b>defined within components</b>, like the <a href="https://xui.xero.com/21.4.0/section-components-displayingdata-accordion.html" target="_blank">XUI Accordion</a>?</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -226,6 +241,10 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p>This <code>&lt;h1&gt;</code> should be reserved for <b>the most important information on the page</b> - such as the site name of primary page heading.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/there-can-be-only-one.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
@@ -336,56 +355,6 @@ SUB-SECTION
                 </tr>
               </tbody>
             </table>
-          </section>
-        </section>
-
-<!--  –––––––––––––––––––––––––
-SUB-SECTION
-––––––––––––––––––––––––––  -->
-
-        <section id="slide-the-caption-element">
-          <section data-background="#EDEBEB">
-            <h3>The <code>&lt;caption&gt;</code> element</h3>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The <code>&lt;caption&gt;</code> element <b>specifies a visible label for a table</b> and must come directly after the <code>&lt;table&gt;</code> element&rsquo;s start tag.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This element is important for screen readers as it <b>gives the table an accessible name</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;table&gt;
-  <span class="codeHighlight">&lt;caption&gt;</span>Table caption<span class="codeHighlight">&lt;/caption&gt;</span>
-&lt;/table&gt;</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Any heading elements can be placed inside the <code>&lt;caption&gt;</code> to <b>provide additional styling and semantics</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;table&gt;
-  &lt;caption&gt;
-    <span class="codeHighlight">&lt;h3&gt;Table caption&lt;/h3&gt;</span>
-  &lt;/caption&gt;
-&lt;/table&gt;</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The <code>aria-label</code> and <code>aria-labelledby</code> can be used to create <b>accessible names for your tables</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;table <span class="codeHighlight">aria-label="Business updates"</span>&gt;
-  ...
-&lt;/table&gt;</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Let's look at a <a href="https://codepen.io/russweakley/pen/VwqoZKg" target="_blank">demo codepen</a>.</p>
           </section>
         </section>
 
@@ -533,6 +502,56 @@ SUB-SECTION
                 </tr>
               </tbody>
             </table>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-the-caption-element">
+          <section data-background="#EDEBEB">
+            <h3>The <code>&lt;caption&gt;</code> element</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>&lt;caption&gt;</code> element <b>specifies a visible label for a table</b> and must come directly after the <code>&lt;table&gt;</code> element&rsquo;s start tag.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This element is important for screen readers as it <b>gives the table an accessible name</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;table&gt;
+  <span class="codeHighlight">&lt;caption&gt;</span>Table caption<span class="codeHighlight">&lt;/caption&gt;</span>
+&lt;/table&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any heading elements can be placed inside the <code>&lt;caption&gt;</code> to <b>provide additional styling and semantics</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;table&gt;
+  &lt;caption&gt;
+    <span class="codeHighlight">&lt;h3&gt;Table caption&lt;/h3&gt;</span>
+  &lt;/caption&gt;
+&lt;/table&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>aria-label</code> and <code>aria-labelledby</code> can be used to create <b>accessible names for your tables</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;table <span class="codeHighlight">aria-label="Business updates"</span>&gt;
+  ...
+&lt;/table&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's look at a <a href="https://codepen.io/russweakley/pen/VwqoZKg" target="_blank">demo codepen</a>.</p>
           </section>
         </section>
 

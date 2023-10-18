@@ -13,8 +13,12 @@
     <div class="reveal">
       <div class="slides">
 
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
         <section data-background="#EDEBEB">
-          <img style="width:200px" class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <img class="intopia-logo" style="width: 200px;" src="assets/img/logo-intopia.png" alt="Intopia">
           <h1>Headings, Tables, Landmarks</h1>
           <div class="subtitle">Engineers - Session 1</div>
         </section>
@@ -29,7 +33,12 @@
 
         <section id="slide-introduction">
           <section data-background="#EDEBEB">
-            <h3>Introduction</h3>
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design and HTML</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility</li>
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
@@ -37,12 +46,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>What will we cover?</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Part 1: Headings</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Part 2: Tables</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Part 3: Landmarks (if time)</li>
-            </ul>
+            <p>For all three topics, we will run through some slides, and then <b>review some existing examples from within your site</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Your input would be really valuable during these reviews - <b>questions, comments, suggestions</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -66,10 +74,6 @@
         <section id="slide-headings">
           <section data-background="#C03C0C">
             <h2>Part 1: Headings</h2>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>We will run through some quick slides, and then open up for discussions or questions around <b>heading use within your products</b>.</p>
           </section>
         </section>
 
@@ -96,8 +100,44 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
+            <h5>JAWS and NVDA</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th>Key/function</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>H</kbd></td>
+                  <td>Jump to next heading</td>
+                </tr>
+                <tr>
+                  <td><kbd>SHIFT</kbd> + <kbd>H</kbd></td>
+                  <td>Jump to previous heading</td>
+                </tr>
+                <tr>   
+                  <td><kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd></td>
+                  <td>Jump to next heading of that type</td>
+                </tr>
+                <tr>   
+                  <td><kbd>SHIFT</kbd> + <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd></td>
+                  <td>Jump to previous heading of that type</td>
+                </tr>
+                <tr>
+                  <td>Elements list popup</td>
+                  <td>View all headings</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+<!--
+          <section data-background="#EDEBEB">
             <iframe width="880" height="495" src="https://www.youtube.com/embed/JAbHQOfZG3s?enablejsapi=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
           </section>
+-->
 
           <section data-background="#EDEBEB">
             <p>For people with <b>limited movement</b>, heading help:</p>
@@ -144,11 +184,9 @@ SUB-SECTION
 
           <section data-background="#222">
 <pre><code contenteditable="true">&lt;h1&gt;<span class="codeComment">Site name or Page title</span>&lt;/h1&gt;
-    &lt;h2&gt;<span class="codeComment">Section</span>&lt;/h2&gt;
-        <s>&lt;h5&gt;Subsection&lt;/h5&gt;</s>
-        <s>&lt;h5&gt;Subsection&lt;/h5&gt;</s>
-    &lt;h2&gt;<span class="codeComment"><span class="codeComment">Section</span></span>&lt;/h2&gt;
-        <s>&lt;h5&gt;Subsection&lt;/h5&gt;</s>
+    <s>&lt;h5&gt;Subsection&lt;/h5&gt;</s>
+    <s>&lt;h5&gt;Subsection&lt;/h5&gt;</s>
+    <s>&lt;h5&gt;Subsection&lt;/h5&gt;</s>
   </code></pre>
           </section>
 
@@ -157,7 +195,21 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>You can use your <a href="https://xui.xero.com/18.4.1/section-fundamentals-typography.html#fundamentals-typography-21" target="_blank">Heading classes</a> to change the visual appearance of headings, while <b>maintaining heading hierarchy</b>.</p>
+            <p>You can use your <a href="https://xui.xero.com/21.4.0/section-fundamentals-typography.html#fundamentals-typography-21" target="_blank">Heading classes</a> to change the visual appearance of headings, while <b>maintaining heading hierarchy</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">
+&lt;h3 <span class="codeHighlight">class="xui-heading-2xlarge"</span>&gt;...&lt;/h3&gt;
+  </code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>What should you do when heading levels are <b>defined within components</b>, like the <a href="https://xui.xero.com/21.4.0/section-components-displayingdata-accordion.html" target="_blank">XUI Accordion</a>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In these cases, you just have to <b>work around these heading</b> as best you can until they are resolved within the system.</p>
           </section>
         </section>
 
@@ -176,6 +228,10 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p>This <code>&lt;h1&gt;</code> should be reserved for <b>the most important information on the page</b> - such as the site name of primary page heading.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/there-can-be-only-one.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
@@ -213,24 +269,6 @@ SUB-SECTION
 SUB-SECTION
 ––––––––––––––––––––––––––  -->
 
-        <section id="slide-heading-testing-tools">
-          <section data-background="#EDEBEB">
-            <h3>Some testing tools</h3>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Some tools</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://accessibilityinsights.io/downloads/" target="_blank">Chrome extension: Accessibility Insights for Web</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><span aria-hidden="true" class="icon icon-check"></span><a href="https://stringyland.github.io/bookmarklets/" target="_blank">Bookmarklet: Easy Checks headings checker</a></li>
-            </ul>
-          </section>
-        </section>
-
-<!--  –––––––––––––––––––––––––
-SUB-SECTION
-––––––––––––––––––––––––––  -->
-
         <section id="slide-heading-examples">
           <section data-background="#EDEBEB">
             <h3>Some examples</h3>
@@ -258,10 +296,6 @@ SUB-SECTION
           <section data-background="#C03C0C">
             <h2>Part 2: Tables</h2>
           </section>
-
-          <section data-background="#EDEBEB">
-            <p>You have a nice <a href="https://xui.xero.com/18.4.1/section-components-displayingdata-table.html" target="_blank">table component</a> we will look at, but some quick slides first.</p>
-          </section>
         </section>
 
 <!--  –––––––––––––––––––––––––
@@ -271,6 +305,10 @@ SUB-SECTION
         <section id="slide-a-quick-overview-of-basic-table-markup">
           <section data-background="#EDEBEB">
             <h3>A quick overview of basic table markup</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You have a nice <a href="https://xui.xero.com/21.4.0/section-components-displayingdata-table.html" target="_blank">table component</a> that uses all of the correct elements.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -304,52 +342,6 @@ SUB-SECTION
                 </tr>
               </tbody>
             </table>
-          </section>
-        </section>
-
-<!--  –––––––––––––––––––––––––
-SUB-SECTION
-––––––––––––––––––––––––––  -->
-
-        <section id="slide-the-caption-element">
-          <section data-background="#EDEBEB">
-            <h3>The <code>&lt;caption&gt;</code> element</h3>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The <code>&lt;caption&gt;</code> element <b>specifies a visible label for a table</b> and must come directly after the <code>&lt;table&gt;</code> element&rsquo;s start tag.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This element is important for screen readers as it <b>gives the table an accessible name</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;table&gt;
-  <span class="codeHighlight">&lt;caption&gt;</span>Table caption<span class="codeHighlight">&lt;/caption&gt;</span>
-&lt;/table&gt;</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Any heading elements can be placed inside the <code>&lt;caption&gt;</code> to <b>provide additional styling and semantics</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;table&gt;
-  &lt;caption&gt;
-    <span class="codeHighlight">&lt;h3&gt;Table caption&lt;/h3&gt;</span>
-  &lt;/caption&gt;
-&lt;/table&gt;</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The <code>aria-label</code> and <code>aria-labelledby</code> can be used to create <b>accessible names for your tables</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;table <span class="codeHighlight">aria-label="Business updates"</span>&gt;
-  ...
-&lt;/table&gt;</code></pre>
           </section>
         </section>
 
@@ -497,6 +489,56 @@ SUB-SECTION
                 </tr>
               </tbody>
             </table>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-the-caption-element">
+          <section data-background="#EDEBEB">
+            <h3>The <code>&lt;caption&gt;</code> element</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>&lt;caption&gt;</code> element <b>specifies a visible label for a table</b> and must come directly after the <code>&lt;table&gt;</code> element&rsquo;s start tag.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This element is important for screen readers as it <b>gives the table an accessible name</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;table&gt;
+  <span class="codeHighlight">&lt;caption&gt;</span>Table caption<span class="codeHighlight">&lt;/caption&gt;</span>
+&lt;/table&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any heading elements can be placed inside the <code>&lt;caption&gt;</code> to <b>provide additional styling and semantics</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;table&gt;
+  &lt;caption&gt;
+    <span class="codeHighlight">&lt;h3&gt;Table caption&lt;/h3&gt;</span>
+  &lt;/caption&gt;
+&lt;/table&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>aria-label</code> and <code>aria-labelledby</code> can be used to create <b>accessible names for your tables</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;table <span class="codeHighlight">aria-label="Business updates"</span>&gt;
+  ...
+&lt;/table&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's look at a <a href="https://codepen.io/russweakley/pen/VwqoZKg" target="_blank">demo codepen</a>.</p>
           </section>
         </section>
 
@@ -745,8 +787,8 @@ SUB-SECTION
           <section data-background="#EDEBEB">
             <h5>Some example pages</h5>
             <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/contacts/all" target="_blank">Contacts</a> - Good example! - banner, 2x navigation (with labels), main</li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/dashboard" target="_blank">Dashboard</a> - Overuse of banner landmark - solvable with use of main</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/contacts/all" target="_blank">Contacts</a> - banner, 2x navigation (with labels), main</li>
             </ul>
           </section>
         </section>
