@@ -55,6 +55,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>We also have the amazing <b>Kiya Doig</b> in the meeting, from the Accessibility team!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>Is everyone ok if we <b>record this session</b>?</p>
           </section>
 
@@ -515,11 +519,15 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The <code>&lt;caption&gt;</code> element <b>specifies a visible label for a table</b> and must come directly after the <code>&lt;table&gt;</code> element&rsquo;s start tag.</p>
+            <p>The <code>&lt;caption&gt;</code> element provides the table with:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A visible label - for sighted users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>An acccessible name - for assistive technologies.</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This element is important for screen readers as it <b>gives the table an accessible name</b>.</p>
+            <p>The <code>&lt;caption&gt;</code> element must come directly after the <code>&lt;table&gt;</code> element&rsquo;s start tag.</p>
           </section>
 
           <section data-background="#222">
@@ -529,7 +537,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Any heading elements can be placed inside the <code>&lt;caption&gt;</code> to <b>provide additional styling and semantics</b>.</p>
+            <p>Heading elements can be placed inside the <code>&lt;caption&gt;</code> to <b>provide additional styling and semantics</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -550,6 +558,15 @@ SUB-SECTION
 &lt;/table&gt;</code></pre>
           </section>
 
+          <section data-background="#222">
+<pre><code contenteditable="true">
+&lt;p <span class="codeHighlight">id="aaa"</span>&gt;A table caption&lt;/p&gt;
+&lt;table <span class="codeHighlight">aria-labelledby="aaa"</span>&gt;
+  ...
+&lt;/table&gt;</code></pre>
+          </section>
+
+
           <section data-background="#EDEBEB">
             <p>Let's look at a <a href="https://codepen.io/russweakley/pen/VwqoZKg" target="_blank">demo codepen</a>.</p>
           </section>
@@ -569,7 +586,6 @@ SUB-SECTION
             <ul class="icon-list font-xs">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/business-snapshot" target="_blank">Business snapshot: Largest operating expenses</a> - a good example</li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/AccountsReceivable/Search.aspx" target="_blank">Invoices</a> - lack of TH, dropdown arrow, empty cells</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/bills/list/all" target="_blank">Bills to pay</a> - button with no explanation, silence on action</li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/Accounts/Payable/PurchaseOrders/Search" target="_blank">Purchase orders</a> - not a table</li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/products-and-services" target="_blank">Products and services</a> - role=button on TH</li>
             </ul>
