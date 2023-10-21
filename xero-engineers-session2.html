@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Engineers - Session 2: Required fields and errors | Developing for web accessibility</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Required fields and errors</h1>
+          <div class="subtitle">Engineers - Session 2</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introduction">
+          <section data-background="#EDEBEB">
+            <p>As before, is everyone ok if we <b>record this session</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this session, we will run through some some quick slides, and then the rest of the session will be spent <b>looking at your forms</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Feel free to jump in any time with <b>questions, comments or suggestions</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Assistive technologies and forms</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your labels programmatically associated?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do you use fieldsets for radio and checkbox groups?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your instructions programmatically associated?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your required fields visually identifiable?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your required fields programmatically identifiable?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>What happens when a user submits a form with errors?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some tools</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://accessibilityinsights.io/downloads/" target="_blank">Chrome extension: Accessibility Insights for Web</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_blank">Chrome extension: Skip to Landmarks and Headings</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><span aria-hidden="true" class="icon icon-check"></span><a href="https://stringyland.github.io/bookmarklets/" target="_blank">Bookmarklet: Easy Checks headings checker</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-forms-and-assistive-technologies">
+          <section data-background="#EDEBEB">
+            <h3>Assistive technologies and forms</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It is important to understand <b>how screen readers operate</b>, especially when interacting for form elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The NVDA and JAWS screen readers have <b>two different modes</b>:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Browse mode</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Forms mode (JAWS)/Focus mode (NVDA)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>&lsquo;Browse mode&rsquo;</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>&lsquo;Browse mode&rsquo;</b> is used when navigating around and reading documents or web pages.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some keystrokes can be used as <b>navigation shortcuts</b> in &lsquo;Browse mode&rsquo;. For example, the letter <kbd>H</kbd> will take users to the next heading.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>&lsquo;Forms/Focus mode&rsquo;</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>&lsquo;Forms/Focus mode&rsquo;</b> is used when interacting with form fields that require user input.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When tabbing in &lsquo;browse mode&rsquo; and reaching an element requiring keyboard input, JAWS and NVDA <b>automatically switch to &lsquo;forms/focus mode&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>How do screen reader users navigate forms?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>many ways</b> these users may navigate through forms.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 1:</h5>
+            <p>Reading line-by-line through the form in &lsquo;Browse mode&rsquo; to understand the form&rsquo;s purpose.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 2</h5>
+            <p>Navigating via specific keystrokes (in JAWS and NVDA) to jump directly to form controls.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Task</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>F</kbd></td>
+                  <td>Next form field</td>
+                </tr>
+                <tr>
+                  <td><kbd>B</kbd></td>
+                  <td>Next button</td>
+                </tr>
+                <tr>
+                  <td><kbd>R</kbd></td>
+                  <td>Next radio button</td>
+                </tr>
+                <tr>
+                  <td><kbd>X</kbd></td>
+                  <td>Next checkbox</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>After using the <kbd>F</kbd> key to navigate to a form field, users can use <kbd>ENTER</kbd> to switch into &lsquo;Forms/Focus mode&rsquo; if they need to <b>type data into the field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 3</h5>
+            <p>Navigating via the <kbd>TAB</kbd> key, allowing the user to move to the next element that can receive focus - links, buttons, form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>&lsquo;Forms/Focus mode&rsquo; and form content</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is something to remember when a user navigates through a form <b>while in &lsquo;Forms/Focus mode&rsquo;</b>  (i.e. using <kbd>F</kbd> or <kbd>TAB</kbd> keys).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any content within the form that cannot receive focus or is not programmatically associated with a form field <b>will not be announced</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this reason, any information relevant to a form field must be <b>programmatically associated</b> with that field.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Label text</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Radio group and checkbox group headings</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form field instructions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form field error messages</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required field notifications</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Two form examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/live/OJvqyGj" target="_blank">Associated form information - start</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/live/oNQBqYg" target="_blank">Associated form information - finished</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-some-form-related-questions">
+          <section data-background="#EDEBEB">
+            <h3>Some form-related questions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some form examples</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://go.xero.com/app/!!SzBJ/contacts/add">Contacts > New Contact</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://payroll.xero.com/Employee/NZ/details?CID=!!SzBJ&type=employee">Parol > New employee</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any other form you'd like to review</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some questions</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your labels programmatically associated?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do you use fieldsets for radio and checkbox groups?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your instructions programmatically associated?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your required fields visually identifiable?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are your required fields programmatically identifiable?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>What happens when a user submits a form with errors?</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
