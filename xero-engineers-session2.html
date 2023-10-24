@@ -46,23 +46,21 @@
 
         <section id="slide-introduction">
           <section data-background="#EDEBEB">
-            <p>As before, is everyone ok if we <b>record this session</b>?</p>
+            <h5>Recording</h5>
+            <p>As before, is everyone ok if we record this session?</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Feel free to jump in any time with <b>questions, comments or suggestions</b>.</p>
+            <h5>Get involved</h5>
+            <p>Feel free to jump in any time with questions, comments or suggestions.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>For this session, we will start with an overview of <b>assistive technologies and forms</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>We'll then <b>review a range of your forms</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>We won't be using any tools today, just <b>the accessibility tree</b>.</p>
+            <h5>Today&rsquo;s agenda:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>An overview of assistive technologies and forms</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Review a range of your forms</li>
+            </ul>
           </section>
         </section>
 
@@ -237,10 +235,11 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>1. Are your labels programmatically associated?</h5>
+            <h5>1. Do all form fields have accessible names?</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Matching for and id values?</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Wrapped labels? </li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do they use matching for and id values?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do they rely on lesser methods, such as placeholders?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><a href="https://russmaxdesign.github.io/accessible-forms/accessible-name-input01.html" target="_blank">Test cases</a></li>
             </ul>
           </section>
 
@@ -256,31 +255,51 @@ SUB-SECTION
             <h5>3. Are your instructions programmatically associated?</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do your instructions generate an accessible description?</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>What about instructions associated with fieldsets?</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>4. Are your required fields visually/programmatically identifiable?</h5>
+            <h5>4. Are your required fields visually identifiable?</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do required fields have some sort of visual indicators?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do required fields have some sort of visual indicators?
+                <ul>
+                  <li>Some sort of symbol</li>
+                  <li>Required fields marked with (&lsquo;required&rsquo;)</li>
+                  <li>Optional fields marked with (&lsquo;optional&rsquo;)</li>
+                </ul>
+              </li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>If required fields are not all identified, is there an overall message?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. Are your required fields programmatically identifiable?</h5>
+            <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are required fields defined as <code>required</code> in the accessibility tree?</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>5. Are your error fields programmatically identifiable?</h5>
+            <h5>6. Are your error fields programmatically identifiable?</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-circle-question"></span>Do errors generate an accessible description?</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are error states defined as <code>invalid</code> in the accessibility tree?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are invalid fields defined as <code>invalid</code> in the accessibility tree?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are error states triggered via <code>onBlur</code> or when submitted?</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>6. What happens when a user submits a form with errors?</h5>
+            <h5>7. What happens when a user submits a form with errors?</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-circle-question"></span>Where does focus go?</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>How are users informed?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are users informed:
+                <ul>
+                  <li>That there are errors?</li>
+                  <li>The number of errors?</li>
+                  <li>How to navigate to each error?</li>
+                  <li></li>
+                </ul>
+              </li>
             </ul>
           </section>
         </section>
