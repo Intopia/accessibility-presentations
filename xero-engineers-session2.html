@@ -58,7 +58,7 @@
           <section data-background="#EDEBEB">
             <h5>Today&rsquo;s agenda:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-forms-and-assistive-technologies">An overview of assistive technologies and forms</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-screen-readers-and-forms">Screen readers and forms</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-lets-review-some-forms">Review a range of your forms</a></li>
             </ul>
           </section>
@@ -72,13 +72,33 @@
 
 
 
-        <section id="slide-forms-and-assistive-technologies">
+        <section id="slide-screen-readers-and-forms">
           <section data-background="#EDEBEB">
-            <h3>Assistive technologies and forms</h3>
+            <h3>Screen readers and forms</h3>
           </section>
 
           <section data-background="#EDEBEB">
             <p>It is important to understand <b>how screen readers operate</b>, especially when interacting with form elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The virtual buffer</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When a web page loads in the browser, screen readers analyze the content and create a linear version of the content - <b>the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Because this information does not exist outside the screen reader itself, it is often referred to as a <b>&lsquo;virtual document&rsquo; or a &lsquo;virtual buffer&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As the user navigates through this content using keystrokes, <b>the focal position is referred to as a &lsquo;virtual cursor&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Two modes</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -94,15 +114,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>&lsquo;Browse mode&rsquo;</b> is used when navigating around and reading documents or web pages.</p>
+            <p><b>&lsquo;Browse mode&rsquo;</b> is used when navigating through the virtual buffer to read documents or web pages.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <p>Some keystrokes can be used as <b>navigation shortcuts</b> in &lsquo;Browse mode&rsquo;. For example, the letter <kbd>H</kbd> will take users to the next heading.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>In this mode, users are interactiing with the <b>virtual buffered version of the page</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -114,8 +130,17 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>When tabbing in &lsquo;browse mode&rsquo; and reaching an element requiring keyboard input, JAWS and NVDA automatically* <b>switch to &lsquo;forms/focus mode&rsquo;</b>.</p>
+            <p>When tabbing in &lsquo;browse mode&rsquo; and reaching an element requiring keyboard input, JAWS and NVDA can automatically <b>switch to &lsquo;forms/focus mode&rsquo;</b>.</p>
             <p class="font-xxs">* Depending on user settings</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When tabbing in &lsquo;browse mode&rsquo; and reaching an element requiring keyboard input, JAWS and NVDA can automatically <b>switch to &lsquo;forms/focus mode&rsquo;</b>.</p>
+            <p class="font-xxs">* Depending on user settings</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Switching to &lsquo;forms/focus mode&rsquo; mode will cause the screen reader to <b>leave the virtual buffer</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -158,7 +183,7 @@
                   <td>Next button</td>
                 </tr>
                 <tr>
-                  <td><kbd>R</kbd></td>
+                  <td><kbd>R</kbd> (NVDA) or <kbd>A</kbd> (JAWS)</td>
                   <td>Next radio button</td>
                 </tr>
                 <tr>
