@@ -86,15 +86,33 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>When a web page loads in the browser, screen readers analyze the content and create a linear version of the content - <b>the accessibility tree</b>.</p>
+            <p>Browsers go through a series of steps when <b>creating web documents</b>:</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Because this information does not exist outside the screen reader itself, it is often referred to as a <b>&lsquo;virtual document&rsquo; or a &lsquo;virtual buffer&rsquo;</b>.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Construct the DOM</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Construct the CSSOM</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Construct the Render tree</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Layout the Render tree</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Paint the Render tree on screen</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>As the user navigates through this content using keystrokes, <b>the focal position is referred to as a &lsquo;virtual cursor&rsquo;</b>.</p>
+            <p>At some point in this process, browsers also <b>construct their version of the accessibility tree</b> - a simplified version of the DOM.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Screen readers analyze the accessibility tree and <b>create a linear version of this information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This information is then stored in a local <b>&lsquo;virtual document&rsquo; or a &lsquo;virtual buffer&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As the user navigates through this virtual buffer using keystrokes, <b>the focal position is referred to as a &lsquo;virtual cursor&rsquo;</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -312,7 +330,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>4. Are your required fields programmatically identifiable?</h5>
+            <h5>5. Are your required fields programmatically identifiable?</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are required fields defined as <code>required</code> in the accessibility tree?</li>
             </ul>
