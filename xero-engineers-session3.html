@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Engineers - Session 3: Building accessible components and layouts | Developing for web accessibility</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Building accessible components and layouts</h1>
+          <div class="subtitle">Engineers - Session 3</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introduction">
+          <section data-background="#EDEBEB">
+            <h5>Recording</h5>
+            <p>As before, is everyone ok if we record this session?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Get involved</h5>
+            <p>Feel free to jump in any time with questions, comments or suggestions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Today&rsquo;s agenda:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-what-is-a-component">What is a component?</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-is-your-component-accessible">Is your concept accessible?</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-start-with-people">Start with people!</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-people-with-a-cognitive-impairment-or-neurodivergence">1. People with a cognitive impairment or neurodivergence</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-people-with-a-colour-vision-deficiency">2. People with a colour vision deficiency</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-people-with-low-vision">3. People with low vision</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-people-with-limited-mobility">4. People with limited mobility</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-people-with limited-or-no-sight">5. People with limited or no sight</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-a-component">
+          <section data-background="#EDEBEB">
+            <h3>What is a component?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Components are <b>self-contained UI concepts</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Simple interactive component examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Links</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Buttons</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form controls and their associated labels</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Complex interactive component examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sortable tables</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accordions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Dropdown menus</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Date pickers</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-is-your-component-accessible">
+          <section data-background="#EDEBEB">
+            <h3>Is your concept accessible?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can you determine if the concept you are designing and building is <b>accessible</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This could include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A simple component</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A complex interactive component [link to xxx]</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A single process [link to xxx]</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A complex layout [link to xxx]</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will look at <b>a procedure</b> that can be used to check any of these concepts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Two extreme examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A complex interactive component [link to xxx]</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A complex layout [link to xxx]</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-start-with-people">
+          <section data-background="#EDEBEB">
+            <h3>Start with people!</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can start by looking at <b>different groups of people</b> and their needs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Using people means you can <b>focus on one user type</b> and explore how they may need to interact with the component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Five types of users:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with a cognitive impairment or neurodivergence.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with a colour vision deficiency.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with low vision <span class="font-xs success">(e.g. magnifier users)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with limited mobility <span class="font-xs success">(e.g. keyboard users)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with limited or no sight <span class="font-xs success">(e.g. screen reader users)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Why are the groups of people in this order?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We should always start with the most basic concepts: <b>can people understand the concept</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If not, there is no point in going deeper, as <b>your results will be polluted</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can then <b>review the design layer</b> - how the concept is perceived.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And finally, we can <b>review the technical aspects</b> - how assistive technologies can use the concept.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Why test keyboard users before screen reader users?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Screen reader users require the <b>same basic functionality as keyboard users</b> - with some additional criteria.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people-with-a-cognitive-impairment-or-neurodivergence">
+          <section data-background="#EDEBEB">
+            <h3>1. People with a cognitive impairment or neurodivergence</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Is the purpose of the component clear?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Is the component easy to use?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>If additional instructions are required, are they clear?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>If users make a mistake, can they quickly and easily recover?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Is there any complex language associated with the component?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Are there any animations or movements that could distract the user?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These questions are <b>UX problems</b>, not Engineering problems.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, designers <b>do not always consider</b> all of these questions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Then, it is <b>left up to engineers</b> to build complex components or layouts that should never exist.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people-with-a-colour-vision-deficiency">
+          <section data-background="#EDEBEB">
+            <h3>2. People with a colour vision deficiency</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Does the component:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Have sufficient colour contrast?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use alternative methods to display colour information?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These questions are UI problems, and should be resolved <b>within the XUI design system</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people-with-low-vision">
+          <section data-background="#EDEBEB">
+            <h3>3. People with low vision</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s meet <a href="https://www.youtube.com/watch?v=EEN79RRvKqE&ab_channel=LevelAccess" target="blank">Cammie</a>, a ZoomText user - who <b>sometimes inverts the screen colours</b> to make information easier to see.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Is the component operable</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>When the text is scaled to 400%.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When the overall layout is scaled to 400%.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When aspects of the component are magnified.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When displayed in low contrast.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When displayed in different viewport sizes.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These problems need to be solved by <b>designers and engineers</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The design should consider enlargement and magnification. Engineers must consider these problems <b>when building</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Magnification activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>How does the concept work when the overall layout is scaled to 400%?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How does the concept work when the text is scaled to 400%?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people-with-limited-mobility">
+          <section data-background="#EDEBEB">
+            <h3>4. People with limited mobility</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Sometimes, these people rely on <b>keyboard interactions</b> or <b>voice recognition software</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s meet <a href="https://www.youtube.com/watch?v=bWI1oI_f_rg&ab_channel=RussWeakley" target="blank">Judith</a>, a head-wand user - who also interacts with technology <b>via the equivalent of a keyboard interface</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard use activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Can all actions be executed using keystrokes only?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Are keystrokes intuitive for keyboard-only users?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Focus indicator activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>If focus is relevant, are all visible focus states clearly defined?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Focus order activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Does focus order follow a meaningful sequence?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Focus management activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Does the component need to receive focus?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Is focus managed into, within and out of the component?</li>
+            </ul>
+          </section>
+        </section>
+
+
+        <section id="slide-people-with limited-or-no-sight">
+          <section data-background="#EDEBEB">
+            <h3>5. People with limited or no sight</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Does the component, or interactive elements within, have meaningful accessible names?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Does the component have relevant roles, states and values defined?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Are dynamic content changes announced at the appropriate time?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Screen reader activity:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checking the accessible names.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checking roles.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checking states.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checking dynamic changes.</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
