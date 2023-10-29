@@ -612,13 +612,80 @@
 
           <section data-background="#EDEBEB">
             <h5>Accessing activity 4:</h5>
-            <p>Go to the <a href="https://russmaxdesign.github.io/accessible-forms/accessible-name-input01.html" target="_blank">Input accessible names</a> page.</p>
+            <p>Go to the <a href="https://intopia.github.io/exercise/testing-title.html" target="_blank">Testing the <code>title</code> attribute</a> page.</p>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>In &lsquo;Example 1&rsquo;, the <code>title</code> is the only accessible name option, and <b>will be used</b> as the accessible name.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In &lsquo;Example 2&rsquo;, there is a <code>&lt;label&gt;</code> present, so the <code>title</code> <b>will not be used</b> as the accessible name.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, as there is no other description available, the title <b>will be used</b> as the accessible description.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In &lsquo;Example 3&rsquo;, there is an <code>aria-describedby</code> present, so the <code>title</code> <b>will not be used</b> as the accessible description.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this example, the <code>title</code> has <b>lost both battles</b> - for accessible name and description.</p>
+          </section>
         </section>
 
 
 
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-the-sneaky-title-attribute">
+          <section data-background="#EDEBEB">
+            <h3>Wrapping up</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Just like any other testing tool, Chrome's accessibility tree is <b>not the absolute source of truth</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, it is powerful tool that allows you to <b>find out lots of accessibility-related information</b> about elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This includes <b>important information</b> such as:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Description</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It also includes <b>a range of possible states</b> such as:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Invalid</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Expanded</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checked</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Disabled</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you've never used it before, hopefully this session will give you <b>the confidence give it a go</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Time for any questions!</h4>
+          </section>
+        </section>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
