@@ -113,7 +113,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The Chrome browser has an excellent function called <b>&lsquo;Computed properties&rsquo;</b>, which exposes a range of accessibility information in one location.</p>
+            <p>The Chrome browser has an excellent function called <b>&lsquo;Computed properties&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This function presents <b>a range of accessibility information</b> in one location.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -425,11 +429,15 @@
 
         <section id="slide-using-aria-to-alter-the-accessibility-tree">
           <section data-background="#EDEBEB">
-            <h3>Using ARIA to alter accessibility tree</h3>
+            <h3>Using ARIA to alter the accessibility tree</h3>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>ARIA is a set of custom HTML attributes that <b>add information to the accessibility tree</b>. This information can be used to help assistive technologies.</p>
+            <p>ARIA is a set of custom HTML attributes that <b>add information to the accessibility tree</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This additional information can be used to help assistive technology users understand the <b>name, purpose or state</b> of elements.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -454,6 +462,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>We can use ARIA to <b>add semantics</b> to an elements that have none.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>2. Testing <code>role="combobox"</code></h5>
             <p>Check the <code>&lt;input&gt;</code> element&rsquo;s role in the accessibility tree:</p>
           </section>
@@ -463,6 +475,10 @@
             <ul class="icon-list">
               <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>combobox</i></li>
             </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use ARIA to <b>improve the semantics</b> of elements.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -478,6 +494,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>We can use ARIA to inform assistive technology users <b>when an element is expanded or collapsed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>4. Testing <code>aria-invalid</code></h5>
             <p>Check the <code>&lt;input&gt;</code> element&rsquo;s &lsquo;Invalid User Entry&rsquo; value in the accessibility tree:</p>
           </section>
@@ -487,6 +507,10 @@
             <ul class="icon-list">
               <li><span aria-hidden="true" class="icon icon-check"></span>Invalid User Entry: <i>true</i></li>
             </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use ARIA to inform assistive technology users <b>when an element is currently invalid</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -502,6 +526,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>We can use ARIA to <b>improve the accessible names</b> of elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>6. Testing <code>aria-live</code></h5>
             <p>Check the <code>&lt;div&gt;</code> element&rsquo;s &lsquo;Live region&rsquo; value in the accessibility tree:</p>
           </section>
@@ -513,6 +541,10 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>Atomic: <i>false</i></li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Relevant: <i>additions text</i></li>
             </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use ARIA to inform assistive technology users that a region <b>may contain dynamic content that may change over time</b>.</p>
           </section>
         </section>
 
@@ -547,7 +579,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The input has <b>five possible accessible names</b> applied.</p>
+            <p>Ths <code>&lt;input&gt;</code> element has <b>five possible accessible names</b> applied.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -561,15 +593,16 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The &lsquo;Computed Properties&rsquo; panel shows us <b>all possible names</b>. It also defines the winning name.</p>
+            <p>The &lsquo;Computed Properties&rsquo; panel shows us:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All possible names (from strongest to weakest).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Where the names come from (where relevant).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which one wins.</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This panel even shows the <b>order of accessible names</b>, from strongest (at the top) to weakest (at the bottom).</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>In this case, the winner is the <code>aria-labelledby</code> value of <b>&lsquo;Cat&rsquo;</b>.</p>
+            <p>In this case, the winning accessible name comes from the <code>aria-labelledby</code> value of <b>&lsquo;Cat&rsquo;</b>.</p>
           </section>
         </section>
 
@@ -623,17 +656,17 @@ Description: N/A
             <p>In &lsquo;Example 2&rsquo;, there is a <code>&lt;label&gt;</code> present, so the <code>title</code> <b>will not be used</b> as the accessible name.</p>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>However, as there is no other description available, the <code>title</code> <b>will be used</b> as the accessible description.</p>
+          </section>
+
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeHighlight">&lt;label for="name"&gt;Name&lt;/label&gt;</span>
 &lt;input id="name" type="text" title="Add your name"&gt;
 
 Name: Name
-Description: N/A
+Description: Add your name
 </code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>However, as there is no other description available, the <code>title</code> <b>will be used</b> as the accessible description.</p>
           </section>
 
           <section data-background="#EDEBEB">
