@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IAAP Accessibility Considerations Mini-series</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Using Chrome's accessibility tree for manual testing of HTML and ARIA</h1>
+          <div class="subtitle">IAAP Accessibility Considerations Mini-series</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h5>Acknowledgement of Country</h5>
+            <p class="font-sm">I&rsquo;d like to acknowledge the Traditional Owners of the lands on which we meet today, the Cammeraygal people of the Eora.</p>
+            <p class="font-sm">We pay our respects to Elders past and present, and extend that respect to all First Nations people present today.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-the-accessibility-tree">
+          <section data-background="#EDEBEB">
+            <h3>What is the accessibility tree?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Browsers use the <b>DOM and some CSS</b> (where relevant) to generate an Accessibility Tree.</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/puzzle.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img-developing/accessibility-diagram-tree01.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>This <b>accessibility tree</b> consists of information about specific HTML elements, including their:</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/tree.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name <span class="font-xs success">(e.g. &lsquo;Submit&rsquo;, &lsquo;Full name&rsquo;)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role <span class="font-xs success">(e.g. button, link, textbox)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>State <span class="font-xs success">(e.g. checked, expanded, disabled)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value <span class="font-xs success">(e.g. input from the user)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img-developing/accessibility-diagram-tree02.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p><b>Accessibility APIs</b> communicate this information from the accessibility tree to assistive technologies - such as screen readers.</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/cog.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img-developing/accessibility-diagram-tree03.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each browser supports different Accessibility APIs, which means they each <b>produce their own unique accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-chrome">
+          <section data-background="#EDEBEB">
+            <h3>Why Chrome?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will use the <b>Chrome browser</b> for this demonstration as it has very easy-to-use accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It also has a very good function called <b>&lsquo;Computed properties&rsquo;</b> which exposes all key information in one location.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-how-to-access-chromes-accessibility-tree">
+          <section data-background="#EDEBEB">
+            <h3>How access Chrome&rsquo;s accessibility tree</h3>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>Step 1: Opening Chrome Developer Tools</h5>
+            <ul class="font-sm">
+              <li>Right-click anywhere on the page and select &lsquo;Inspect&rsquo;.</li>
+              <li>This will open Chrome Developer Tools.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 2: Finding the &lsquo;Accessibility&rsquo; tab</h5>
+            <ul class="font-sm">
+              <li>The &lsquo;Elements&rsquo; tab will be active by default.</li>
+              <li>This shows the DOM tree and &lsquo;Styles&rsquo; panel.</li>
+              <li>The &lsquo;Accessibility&rsquo; tab is to the right of &lsquo;Styles&rsquo;.</li>
+              <li>You may need to click the &lsquo;More tabs&rsquo; icon.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 3: Select the &lsquo;Accessibility&rsquo; tab</h5>
+            <ul class="font-sm">
+              <li>Select the &lsquo;Accessibility&rsquo; tab.</li>
+              <li>This tab displays:
+                <ul>
+                  <li>&lsquo;Accessibility tree&rsquo;</li>
+                  <li>&lsquo;ARIA Attributes&rsquo;</li>
+                  <li>&lsquo;Computed Properties&rsquo;</li>
+                  <li>&lsquo;Source Order Viewer&rsquo;</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 4: Viewing &lsquo;Computed Properties&rsquo;</h5>
+            <p>We will spend most of our time exploring the &lsquo;Computed Properties&rsquo; window.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-diving-into-the-accessibility-tree">
+          <section data-background="#EDEBEB">
+            <h3>Diving into the accessibility tree</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing the activity:</h5>
+            <p>Go to the <a href="https://intopia.github.io/exercise/" target="_blank">All about mammals</a> page.</p>
+          </section>
+
+         <section data-background="#EDEBEB">
+            <h5>1. Inspect the &lsquo;Find out more&rsquo; link</h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Find out more</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>link</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All important elements <b>must have names and roles</b>, so they can be understood by assistive technologies.</p>
+            <p class="font-xs">(We will look at accessible names in detail soon)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Inspect the image</h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>A common wombat standing on the forest floor</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>img</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. Inspect the &lsquo;Full name&rsquo; <code>&lt;input&gt;</code></h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Full name</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>textbox</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. Inspect the &lsquo;What are mammals&rsquo; heading</h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>role</code> and <code>level</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>heading</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Level: <i>1</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>5. Inspect the &lsquo;Land mammals&rsquo; table</h5>
+            <p>In the accessibility panel, find the <code>&lt;table&gt;</code> element&rsquo;s <code>name</code> and <code>role</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Land mammals</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>table</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Inside the table, all essential elements <b>also have roles</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>&lt;tr&gt;</code> role = <i>row</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>&lt;th&gt;</code> role = <i>columnheader</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>&lt;td&gt;</code> role = <i>gridcell</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>6. Inspect the &lsquo;Vombatus&rsquo; content</h5>
+            <p>Does this element provide any information in the accessibility panel:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span><i>Accessibility node not exposed</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some less important elements are <b>not exposed in the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>7. Inspect the &lsquo;Phone&rsquo; <code>&lt;input&gt;</code></h5>
+            <p>In the accessibility panel, find the element&rsquo;s <code>description</code>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Description: <i>Include area code</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Descriptions are used to <b>provide additional information</b> for some elements.</p>
+            <p class="font-xs">(We will look at accessible descriptions in detail soon)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>8. Inspect the &lsquo;Email&rsquo; <code>&lt;input&gt;</code></h5>
+            <p>Is this element defined as <code>required</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies <b>that the form control is required</b> and must be filled in before submitting the form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>9. Add text into the &lsquo;Email&rsquo; <code>&lt;input&gt;</code></h5>
+            <p>Does the element now have a <code>value</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value: <i>"abc@com.au"</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies what the user has added to the form field - <b>allowing the user to review the information</b> before submitting the form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>10. Select an option from the dropdown</h5>
+            <p>Select &lsquo;Aardvark&rsquo; from the &lsquo;Favourite mammal&rsquo; dropdown. Does the <code>&lt;select&gt;</code> element now have a <code>value</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value: <i>"Aardvark"</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>11. Check a checkbox</h5>
+            <p>Check &lsquo;Yes&rsquo; from the &lsquo;Bats&rsquo; checkbox group. Does the checkbox now have a <code>checked</code> status in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Checked: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies that the form control <b>has been checked</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>12. Click the &lsquo;Submit&rsquo; button</h5>
+            <p>This will create some fake form errors. Inspect the &lsquo;Phone&rsquo; <code>&lt;input&gt;</code>. Is this element defined as <code>invalid</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Invalid user entry: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies that the form control <b>is currently invalid and needs to be resolved</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>13. Changing an element&rsquo;s role</h5>
+            <p>Add <code>role="button"</code> to the &lsquo;Classification&rsquo; heading in the DOM. What is the element&rsquo;s <code>role</code> in the accessibility panel?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <code>button</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This shows how we can completely change the nature of an element <b>in the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><i>With great power comes great responsibility</i></p>
+            </div>
+            <p class="font-xs">Benjamin Franklin &lsquo;Ben&rsquo; Parker</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Lots of properties</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is a wide range of possible properties that can be presented in the accessibility tree, <b>depending on the element</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">Name:</span> [ accessible name as a text string ] 
+<span class="codeHighlight">Role:</span> [ pre-defined list of roles ]
+<span class="codeHighlight">Description:</span> [ description as a text string ]
+<span class="codeHighlight">Value:</span> [ current value as a text string ]
+<span class="codeHighlight">Required:</span> true | false
+<span class="codeHighlight">Expanded:</span> true | false
+<span class="codeHighlight">Checked:</span> true | false
+<span class="codeHighlight">Disabled:</span> true | false
+<span class="codeHighlight">Described by:</span> [element #id]
+<span class="codeHighlight">Labeled by:</span> [element #id]</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-using-aria-to-alter-the-accessibility-tree">
+          <section data-background="#EDEBEB">
+            <h3>Using ARIA to alter accessibility tree</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA is the abbreviation of <b>Accessible Rich Internet Applications</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA <b>defines ways to make websites and web apps more accessible</b> to people with disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>ARIA is:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A set of custom HTML attributes.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>These attributes add information to the accessibility tree.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>This information be used to help assistive technologies.</li>
+            </ul>
+          </section>
+
+        </section>
+
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
