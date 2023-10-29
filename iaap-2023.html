@@ -66,14 +66,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>Browsers use the <b>DOM and some CSS</b> (where relevant) to generate an Accessibility Tree.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/puzzle.svg" alt="">
-              </div>
-            </div>
+            <p>Browsers use the <b>Document Object Model and the CSS Object Model</b> to generate an Accessibility Tree.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -81,14 +74,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>This <b>accessibility tree</b> consists of information about specific HTML elements, including their:</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/tree.svg" alt="">
-              </div>
-            </div>
+            <p>This <b>accessibility tree</b> consists of information about specific HTML elements, including their:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -105,14 +91,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p><b>Accessibility APIs</b> communicate this information from the accessibility tree to assistive technologies - such as screen readers.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/cog.svg" alt="">
-              </div>
-            </div>
+            <p><b>Accessibility APIs</b> communicate this information from the accessibility tree to assistive technologies - such as screen readers.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -124,14 +103,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>Any <b>questions or comments</b>?</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
-              </div>
-            </div>
+            <p>This will <b>make more sense</b> when we do the exercise very soon.</p>
           </section>
         </section>
 
@@ -143,17 +115,17 @@
 
 
 
-        <section id="slide-why-chrome">
+        <section id="slide-why-use-chromes-accessibility-tree">
           <section data-background="#EDEBEB">
-            <h3>Why Chrome?</h3>
+            <h3>Why use Chrome&rsquo;s accessibility tree?</h3>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We will use the <b>Chrome browser</b> for this demonstration as it has very easy-to-use accessibility tree.</p>
+            <p>The Chrome browser has very good function called <b>&lsquo;Computed properties&rsquo;</b> which exposes a range of accessibility information in one location.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>It also has a very good function called <b>&lsquo;Computed properties&rsquo;</b> which exposes all key information in one location.</p>
+            <p>However, you can see the accessibility tree in other browser,s such as <b>Firefox</b>.</p>
           </section>
         </section>
 
@@ -172,15 +144,24 @@
  
           <section data-background="#EDEBEB">
             <h5>Step 1: Opening Chrome Developer Tools</h5>
-            <ul class="font-sm">
-              <li>Right-click anywhere on the page and select &lsquo;Inspect&rsquo;.</li>
+            <ul>
+              <li>Right-click anywhere on the page.</li>
+              <li>Select &lsquo;Inspect&rsquo;.</li>
               <li>This will open Chrome Developer Tools.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
+            <h5>Alternatively, you can use:</h5>
+            <ul>
+              <li>Windows: <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>.</li>
+              <li>Mac: <kbd>Command</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>Step 2: Finding the &lsquo;Accessibility&rsquo; tab</h5>
-            <ul class="font-sm">
+            <ul>
               <li>The &lsquo;Elements&rsquo; tab will be active by default.</li>
               <li>This shows the DOM tree and &lsquo;Styles&rsquo; panel.</li>
               <li>The &lsquo;Accessibility&rsquo; tab is to the right of &lsquo;Styles&rsquo;.</li>
@@ -190,22 +171,23 @@
 
           <section data-background="#EDEBEB">
             <h5>Step 3: Select the &lsquo;Accessibility&rsquo; tab</h5>
-            <ul class="font-sm">
+            <ul>
               <li>Select the &lsquo;Accessibility&rsquo; tab.</li>
-              <li>This tab displays:
-                <ul>
-                  <li>&lsquo;Accessibility tree&rsquo;</li>
-                  <li>&lsquo;ARIA Attributes&rsquo;</li>
-                  <li>&lsquo;Computed Properties&rsquo;</li>
-                  <li>&lsquo;Source Order Viewer&rsquo;</li>
-                </ul>
-              </li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Step 4: Viewing &lsquo;Computed Properties&rsquo;</h5>
-            <p>We will spend most of our time exploring the &lsquo;Computed Properties&rsquo; window.</p>
+            <h5>This tab displays:</h5>
+            <ul>
+              <li>&lsquo;Accessibility tree&rsquo; panel</li>
+              <li>&lsquo;ARIA Attributes&rsquo; panel</li>
+              <li>&lsquo;Computed Properties&rsquo; panel</li>
+              <li>&lsquo;Source Order Viewer&rsquo; panel</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will spend most of our time exploring the <b>&lsquo;Computed Properties&rsquo;</b> panel.</p>
           </section>
         </section>
 
@@ -439,17 +421,6 @@
 <span class="codeHighlight">Described by:</span> [element #id]
 <span class="codeHighlight">Labeled by:</span> [element #id]</code></pre>
           </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>Any <b>questions or comments</b>?</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
-              </div>
-            </div>
-          </section>
         </section>
 
 
@@ -466,20 +437,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>ARIA is the abbreviation of <b>Accessible Rich Internet Applications</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>ARIA <b>defines ways to make websites and web apps more accessible</b> to people with disabilities.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>ARIA is:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A set of custom HTML attributes.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>These attributes add information to the accessibility tree.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>This information be used to help assistive technologies.</li>
-            </ul>
+            <p>ARIA is a set of custom HTML attributes that <b>add information to the accessibility tree</b>. This information be used to help assistive technologies.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -517,7 +475,7 @@
 
           <section data-background="#EDEBEB">
             <h5>3. Testing <code>aria-expanded</code></h5>
-            <p>Check the <code>&lt;button&gt;</code> element&rsquo;s &ldquo;Expanded&rdquo; state in the accessibility tree:</p>
+            <p>Check the <code>&lt;button&gt;</code> element&rsquo;s &lsquo;Expanded&rsquo; state in the accessibility tree:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -529,7 +487,7 @@
 
           <section data-background="#EDEBEB">
             <h5>4. Testing <code>aria-invalid</code></h5>
-            <p>Check the <code>&lt;input&gt;</code> element&rsquo;s &ldquo;Invalid User Entry&rdquo; value in the accessibility tree:</p>
+            <p>Check the <code>&lt;input&gt;</code> element&rsquo;s &lsquo;Invalid User Entry&rsquo; value in the accessibility tree:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -553,7 +511,7 @@
 
           <section data-background="#EDEBEB">
             <h5>6. Testing <code>aria-live</code></h5>
-            <p>Check the <code>&lt;div&gt;</code> element&rsquo;s &ldquo;Live region&rdquo; value in the accessibility tree:</p>
+            <p>Check the <code>&lt;div&gt;</code> element&rsquo;s &lsquo;Live region&rsquo; value in the accessibility tree:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -580,24 +538,84 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We can also use Chrome&rsquo;s accessiblity tree to see how names are generated for elements.</p>
+            <p>As we saw before, Chrome&rsquo;s accessiblity tree shows the <b>accessible name that is generated for each element</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The Computed properties area shows all possible names, where they come from, and which one wins.</p>
+            <p>The Computed properties area shows all possible names, where they come from, and <b>which one wins</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is very helpful when reviewing the accessibility of elements.</p>
+            <p>This is very helpful when <b>reviewing the accessibility of elements</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>Accessing activity 3:</h5>
             <p>Go to the <a href="https://russmaxdesign.github.io/accessible-forms/accessible-name-input01.html" target="_blank">Input accessible names</a> page.</p>
           </section>
+
+          <section data-background="#EDEBEB">
+            <p>The input has <b>five possible accessible names</b> applied.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>An <code>aria-labelledby</code> value of &lsquo;Cat&rsquo;.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>An <code>aria-label</code> value of &lsquo;Dog&rsquo;.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo;.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>title</code> value of &lsquo;Rabbit&rsquo;.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>placeholder</code> value of &lsquo;Fox&rsquo;.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The &lsquo;Computed properties&rsquo; panel shows us <b>all of the possible names</b>, and the winner.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This panel even shows the <b>order of accessible names</b>, from strongest (at the top) to weakest (at the bottom).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this case, the winner is the <code>aria-labelledby</code> value of <b>&lsquo;Cat&rsquo;</b>.</p>
+          </section>
         </section>
 
 
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-the-sneaky-title-attribute">
+          <section data-background="#EDEBEB">
+            <h3>The sneaky <code>title</code> attibute</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we saw before, the <code>title</code> can be used to <b>provide an accessible name</b> for some elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, it is very weak, and will often be <b>beaten by other methods</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But the <code>title</code> is <b>very sneaky</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If it loses the accessible name battle, it will try to <b>win the accessible description battle</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessing activity 4:</h5>
+            <p>Go to the <a href="https://russmaxdesign.github.io/accessible-forms/accessible-name-input01.html" target="_blank">Input accessible names</a> page.</p>
+          </section>
+
+        </section>
 
 
 
