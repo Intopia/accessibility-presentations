@@ -77,7 +77,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <img src="assets/img-developing/accessibility-diagram-tree01.png" alt="">
+            <img src="assets/img/accessibility-diagram-tree01.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
@@ -101,7 +101,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <img src="assets/img-developing/accessibility-diagram-tree02.png" alt="">
+            <img src="assets/img/accessibility-diagram-tree02.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
@@ -116,7 +116,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <img src="assets/img-developing/accessibility-diagram-tree03.png" alt="">
+            <img src="assets/img/accessibility-diagram-tree03.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
@@ -167,7 +167,7 @@
 
         <section id="slide-how-to-access-chromes-accessibility-tree">
           <section data-background="#EDEBEB">
-            <h3>How access Chrome&rsquo;s accessibility tree</h3>
+            <h3>How to access Chrome&rsquo;s accessibility tree</h3>
           </section>
  
           <section data-background="#EDEBEB">
@@ -223,7 +223,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Accessing the activity:</h5>
+            <h5>Accessing activity 1:</h5>
             <p>Go to the <a href="https://intopia.github.io/exercise/" target="_blank">All about mammals</a> page.</p>
           </section>
 
@@ -420,34 +420,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>13. Changing an element&rsquo;s role</h5>
-            <p>Add <code>role="button"</code> to the &lsquo;Classification&rsquo; heading in the DOM. What is the element&rsquo;s <code>role</code> in the accessibility panel?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Answer</h5>
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <code>button</code></li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This shows how we can completely change the nature of an element <b>in the accessibility tree</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p><i>With great power comes great responsibility</i></p>
-            </div>
-            <p class="font-xs">Benjamin Franklin &lsquo;Ben&rsquo; Parker</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <h4>Lots of properties</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There is a wide range of possible properties that can be presented in the accessibility tree, <b>depending on the element</b>:</p>
+            <p>There is a wide range of possible properties that can be presented in Chrome&rsquo;s accessibility tree, <b>depending on the element</b>:</p>
           </section>
 
           <section data-background="#222">
@@ -505,6 +482,88 @@
             </ul>
           </section>
 
+          <section data-background="#EDEBEB">
+            <h5>Accessing activity 2:</h5>
+            <p>Go to the <a href="https://intopia.github.io/exercise/" target="_blank">All about mammals</a> page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can see how ARIA attributes affects <b>Chrome's accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Testing <code>role="button"</code></h5>
+            <p>Check the <code>&lt;div&gt;</code> element&rsquo;s role in the accessibility tree:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>button</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Testing <code>role="combobox"</code></h5>
+            <p>Check the <code>&lt;input&gt;</code> element&rsquo;s role in the accessibility tree:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role: <i>combobox</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. Testing <code>aria-expanded</code></h5>
+            <p>Check the <code>&lt;button&gt;</code> element&rsquo;s &ldquo;Expanded&rdquo; state in the accessibility tree:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Expanded: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. Testing <code>aria-invalid</code></h5>
+            <p>Check the <code>&lt;input&gt;</code> element&rsquo;s &ldquo;Invalid User Entry&rdquo; value in the accessibility tree:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Invalid User Entry: <i>true</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>5. Testing <code>aria-label</code></h5>
+            <p>Check the <code>&lt;button&gt;</code> element&rsquo;s name in the accessibility tree:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name: <i>Dismiss</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>6. Testing <code>aria-live</code></h5>
+            <p>Check the <code>&lt;div&gt;</code> element&rsquo;s &ldquo;Live region&rdquo; value in the accessibility tree:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Answer</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Live region: <i>polite</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Atomic: <i>false</i></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Relevant: <i>additions text</i></li>
+            </ul>
+          </section>
         </section>
 
 
