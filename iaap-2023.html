@@ -32,8 +32,54 @@
 
         <section data-background="#EDEBEB">
           <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
-          <h1>Using Chrome's accessibility tree for manual testing of HTML and ARIA</h1>
+          <h1>Using Chrome&rsquo;s accessibility tree for manual testing of HTML and ARIA</h1>
           <div class="subtitle">IAAP Accessibility Considerations Mini-series</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-whats-this-all-about">
+          <section data-background="#EDEBEB">
+            <h3>What&rsquo;s this all about?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Chrome&rsquo;s accessibility tree is a powerful tool that allows us to inspect <b>accessibility-related information</b> about HTML elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This includes:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Description</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>States</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>User value</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This information can be used to <b>identify potential accessibility issues</b> directly within the browser.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Does the element have a meaningful name?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>How is the name being generated?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are instructions and errors programmatically associated with the element?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Are relevant states available? (i.e. checked, disabled, required, expanded, invalid)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But before we go any further, let&rsquo;s start with the <b>most obvious question</b>.</p>
+          </section>
         </section>
 
 
@@ -54,16 +100,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The accessibility tree consists of <b>information about specific HTML elements</b>, including their:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Name <span class="font-xs success">(e.g. &lsquo;Submit&rsquo;, &lsquo;Full name&rsquo;)</span></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Role <span class="font-xs success">(e.g. button, link, textbox)</span></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>State <span class="font-xs success">(e.g. checked, expanded, disabled)</span></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Value <span class="font-xs success">(e.g. input from the user)</span></li>
-            </ul>
+            <p>The accessibility tree consists of <b>information about specific HTML elements</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -97,19 +134,15 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>If other browsers have their own accessibility trees, <b>why focus on Google Chrome</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>The Chrome browser has an excellent function called <b>&lsquo;Computed properties&rsquo;</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <img src="assets/img/computed-properties.png" alt="Computed properties panel">
-          </section>
-
-          <section data-background="#EDEBEB">
             <p>This function presents <b>a range of accessibility information</b> in one location.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>However, you can see the accessibility tree in other browsers, such as <b>Firefox</b>.</p>
           </section>
         </section>
 
@@ -195,7 +228,7 @@
 
          <section data-background="#EDEBEB">
             <h5>1. Inspect the &lsquo;Find out more&rsquo; link</h5>
-            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>.</p>
+            <p>In the Computed Properties panel, find the element&rsquo;s <code>name</code> and <code>role</code>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -213,7 +246,7 @@
 
           <section data-background="#EDEBEB">
             <h5>2. Inspect the image</h5>
-            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
+            <p>In the Computed Properties panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -226,7 +259,7 @@
 
           <section data-background="#EDEBEB">
             <h5>3. Inspect the &lsquo;Full name&rsquo; <code>&lt;input&gt;</code></h5>
-            <p>In the accessibility panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
+            <p>In the Computed Properties panel, find the element&rsquo;s <code>name</code> and <code>role</code>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -239,7 +272,7 @@
 
           <section data-background="#EDEBEB">
             <h5>4. Inspect the &lsquo;What are mammals&rsquo; heading</h5>
-            <p>In the accessibility panel, find the element&rsquo;s <code>role</code> and <code>level</code>:</p>
+            <p>In the Computed Properties panel, find the element&rsquo;s <code>role</code> and <code>level</code>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -252,7 +285,7 @@
 
           <section data-background="#EDEBEB">
             <h5>5. Inspect the &lsquo;Land mammals&rsquo; table</h5>
-            <p>In the accessibility panel, find the <code>&lt;table&gt;</code> element&rsquo;s <code>name</code> and <code>role</code>:</p>
+            <p>In the Computed Properties panel, find the <code>&lt;table&gt;</code> element&rsquo;s <code>name</code> and <code>role</code>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -278,7 +311,7 @@
 
           <section data-background="#EDEBEB">
             <h5>6. Inspect the &lsquo;Vombatus&rsquo; content</h5>
-            <p>Does this element provide any information in the accessibility panel:</p>
+            <p>Does this element provide any information in the Computed Properties panel:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -294,7 +327,7 @@
 
           <section data-background="#EDEBEB">
             <h5>7. Inspect the &lsquo;Phone&rsquo; <code>&lt;input&gt;</code></h5>
-            <p>In the accessibility panel, find the element&rsquo;s <code>description</code>:</p>
+            <p>In the Computed Properties panel, find the element&rsquo;s <code>description</code>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -311,7 +344,7 @@
 
           <section data-background="#EDEBEB">
             <h5>8. Inspect the &lsquo;Email&rsquo; <code>&lt;input&gt;</code></h5>
-            <p>Is this element defined as <code>required</code> in the accessibility panel?</p>
+            <p>Is this element defined as <code>required</code> in the Computed Properties panel?</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -327,7 +360,7 @@
 
           <section data-background="#EDEBEB">
             <h5>9. Add text into the &lsquo;Email&rsquo; <code>&lt;input&gt;</code></h5>
-            <p>Does the element now have a <code>value</code> in the accessibility panel?</p>
+            <p>Does the element now have a <code>value</code> in the Computed Properties panel?</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -343,7 +376,7 @@
 
           <section data-background="#EDEBEB">
             <h5>10. Select an option from the dropdown</h5>
-            <p>Select &lsquo;Aardvark&rsquo; from the &lsquo;Favourite mammal&rsquo; dropdown. Does the <code>&lt;select&gt;</code> element now have a <code>value</code> in the accessibility panel?</p>
+            <p>Select &lsquo;Aardvark&rsquo; from the &lsquo;Favourite mammal&rsquo; dropdown. Does the <code>&lt;select&gt;</code> element now have a <code>value</code> in the Computed Properties panel?</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -355,7 +388,7 @@
 
           <section data-background="#EDEBEB">
             <h5>11. Check a checkbox</h5>
-            <p>Check &lsquo;Yes&rsquo; from the &lsquo;Bats&rsquo; checkbox group. Does the checkbox now have a <code>checked</code> status in the accessibility panel?</p>
+            <p>Check &lsquo;Yes&rsquo; from the &lsquo;Bats&rsquo; checkbox group. Does the checkbox now have a <code>checked</code> status in the Computed Properties panel?</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -371,7 +404,7 @@
 
           <section data-background="#EDEBEB">
             <h5>12. Click the &lsquo;Submit&rsquo; button</h5>
-            <p>This will create some fake form errors. Inspect the &lsquo;Phone&rsquo; <code>&lt;input&gt;</code>. Is this element defined as <code>invalid</code> in the accessibility panel?</p>
+            <p>This will create some fake form errors. Inspect the &lsquo;Phone&rsquo; <code>&lt;input&gt;</code>. Is this element defined as <code>invalid</code> in the Computed Properties panel?</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -425,7 +458,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This additional information can be used to help assistive technology users understand the <b>name, purpose or state</b> of elements.</p>
+            <p>This information can be used to help assistive technology users understand the <b>name, purpose or state</b> of elements.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -434,7 +467,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We can see how ARIA attributes affect <b>Chrome's accessibility tree</b>.</p>
+            <p>We can see how ARIA attributes affect <b>Chrome&rsquo;s accessibility tree</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -554,7 +587,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The Computed Properties area shows all possible names, where they come from, and <b>which one wins</b>.</p>
+            <p>The &lsquo;Computed Properties&rsquo; panel shows us:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All possible names (from strongest to weakest).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Where the names come from (where relevant).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which one wins.</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
@@ -577,15 +615,6 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>A <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo;.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>A <code>title</code> value of &lsquo;Rabbit&rsquo;.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>A <code>placeholder</code> value of &lsquo;Fox&rsquo;.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The &lsquo;Computed Properties&rsquo; panel shows us:</p>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>All possible names (from strongest to weakest).</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Where the names come from (where relevant).</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Which one wins.</li>
             </ul>
           </section>
 
@@ -699,11 +728,11 @@ Description: Include your full name
           </section>
 
           <section data-background="#EDEBEB">
-            <p>For example, Chrome does not accuruately <a href="https://codepen.io/russweakley/live/jOKvMWN" target="_blank">define the required state</a> for some of the <b>more recently form controls</b>.</p>
+            <p>For example, Chrome does not accurately <a href="https://codepen.io/russweakley/live/jOKvMWN" target="_blank">define the required state</a> for some of the <b>more recently form controls</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>While Chrome's accessibility tree is very useful, it <b>does not replace rigorouse accessibility testing</b>.</p>
+            <p>While Chrome&rsquo;s accessibility tree is very useful, it <b>does not replace rigorouse accessibility testing</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -725,32 +754,7 @@ Description: Include your full name
           </section>
 
           <section data-background="#EDEBEB">
-            <p>While Chrome&rsquo;s accessibility tree is perfect, it is a powerful tool that provides <b>lots of accessibility-related information</b> about elements.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This includes <b>important information</b> such as:</p>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Name</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Role</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Value</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Description</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>It also includes <b>a range of possible states</b>, such as:</p>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Invalid</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Required</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Expanded</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Checked</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Disabled</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>If you&rsquo;ve never used it before, hopefully, this session will give you <b>the confidence to give it a go</b>!</p>
+            <p>If you&rsquo;ve never used Chrome&rsquo;s accessbility tree, hopefully, this session will give you <b>the confidence and knowledge to give it a go</b>!</p>
           </section>
 
           <section data-background="#EDEBEB">
