@@ -183,6 +183,7 @@
 
           <section data-background="#EDEBEB">
             <p>Screen readers announce element properties <b>in the following order</b>:</p>
+            <p class="font-xxs">(The following examples have been simplified to explain the overall concepts)</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -743,21 +744,96 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This <code>&lt;input&gt;</code> element has <b>five possible accessible names</b> applied.</p>
+            <p>The examples on this page show <b>very poor accessible naming practices</b>. It is for educational purposes only.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 1</h5>
+            <p>The <code>&lt;input&gt;</code> element has five accessible names applied. But which one wins?</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>An <code>aria-labelledby</code> value of &lsquo;Cat&rsquo;.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>An <code>aria-label</code> value of &lsquo;Dog&rsquo;.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo;.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>title</code> value of &lsquo;Rabbit&rsquo;.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>placeholder</code> value of &lsquo;Fox&rsquo;.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>An <code>aria-labelledby</code> value of &lsquo;Cat&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>An <code>aria-label</code> value of &lsquo;Dog&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>title</code> value of &lsquo;Rabbit&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A <code>placeholder</code> value of &lsquo;Fox&rsquo;</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In this case, the winning accessible name comes from the <code>aria-labelledby</code> value of <b>&lsquo;Cat&rsquo;</b>.</p>
+            <p>The <code>&lt;input&gt;</code> element should have an accessible name of ‘Cat’ via the <code>aria-labelledby</code> attribute.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>The <code>aria-labelledby</code> value of &lsquo;Cat&rsquo; wins</b></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>An <code>aria-label</code> value of &lsquo;Dog&rsquo;</s></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo;</s></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>title</code> value of &lsquo;Rabbit&rsquo;</s></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>placeholder</code> value of &lsquo;Fox&rsquo;</s></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 2</h5>
+            <p>The <code>&lt;input&gt;</code> element should have an accessible name of ‘Dog’ via the <code>aria-label</code> attribute.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-labelledby</code> value present.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>The <code>aria-label</code> value of &lsquo;Dog&rsquo; wins</b></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo;</s></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>title</code> value of &lsquo;Rabbit&rsquo;</s></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>placeholder</code> value of &lsquo;Fox&rsquo;</s></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 3</h5>
+            <p>The <code>&lt;input&gt;</code> element should have an accessible name of ‘Fish’ via the <code>&lt;label&gt;</code> element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-labelledby</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-label</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>The <code>&lt;label&gt;</code> value of &lsquo;Fish&rsquo; wins</b></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>title</code> value of &lsquo;Rabbit&rsquo;</s></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><s>A <code>placeholder</code> value of &lsquo;Fox&rsquo;</s></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 4</h5>
+            <p>The <code>&lt;input&gt;</code> element should have an accessible name of ‘Rabbit’ via the <code>title</code> attribute.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-labelledby</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-label</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>&lt;label&gt;</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>The <code>title</code> value of &lsquo;Rabbit&rsquo; wins</b></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><s>A <code>placeholder</code> value of &lsquo;Fox&rsquo;</s></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 5</h5>
+            <p>The <code>&lt;input&gt;</code> element should have an accessible name of ‘Fox’ via the <code>placeholder</code> attribute.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+             <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-labelledby</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>aria-label</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>&lt;label&gt;</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>No <code>title</code> value present</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>The <code>placeholder</code> value of &lsquo;Fox&rsquo; wins</b></li>
+            </ul>
           </section>
         </section>
 
