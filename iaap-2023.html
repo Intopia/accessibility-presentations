@@ -706,6 +706,10 @@
           <section data-background="#EDEBEB">
             <p>We can use ARIA to inform assistive technology users that a region <b>may contain dynamic content that may change over time</b>.</p>
           </section>
+
+          <section data-background="#EDEBEB">
+            <p>Chrome&rsquo;s accessibiltiy tree can be used to show you any ARIA that has been applied, and <b>how it will impact HTML elements</b>.</p>
+          </section>
         </section>
 
 
@@ -872,19 +876,24 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In &lsquo;Example 1&rsquo;, the <code>title</code> is the only accessible name option and <b>will be used</b> as the accessible name.</p>
+            <h5>Example 1</h5>
+            <p>The <code>title</code> is the only accessible name option and will be used as the accessible name.</p>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;input type="text" <span class="codeHighlight">title="Add your name"</span>&gt;
-
-Name: Add your name
-Description: N/A
-</code></pre>
+<pre><code contenteditable="true">&lt;input type="text" <span class="codeHighlight">title="Add your name"</span>&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In &lsquo;Example 2&rsquo;, there is a <code>&lt;label&gt;</code> present, so the <code>title</code> <b>will not be used</b> as the accessible name.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Name</b>: "Add your name" - via the <code>title</code> attribute</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Description</b>: Not present</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 2</h5>
+            <p>There is a <code>&lt;label&gt;</code> present, so the <code>title</code> will not be used as the accessible name.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -893,15 +902,19 @@ Description: N/A
 
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeHighlight">&lt;label for="name"&gt;Name&lt;/label&gt;</span>
-&lt;input id="name" type="text" title="Add your name"&gt;
-
-Name: Name
-Description: Add your name
-</code></pre>
+&lt;input id="name" type="text" title="Add your name"&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In &lsquo;Example 3&rsquo;, there is an <code>aria-describedby</code> present, so the <code>title</code> <b>will not be used</b> as the accessible description.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Name</b>: "Name" - via the <code>&lt;label&gt;</code> element</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Description</b>: "Add your name" - via the <code>title</code> attribute</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 3</h5>
+            <p>There is an <code>aria-describedby</code> present, so the <code>title</code> will not be used as the accessible description.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -912,11 +925,14 @@ Description: Add your name
 <pre><code contenteditable="true">&lt;label for="name"&gt;Name&lt;/label&gt;
 <span class="codeHighlight">&lt;span id="aaa"&gt;Include your full name&lt;/span&gt;</span>
 &lt;input id="name" type="text" title="Add your name"
-aria-describedby="aaa"&gt;
+aria-describedby="aaa"&gt;</code></pre>
+          </section>
 
-Name: Name
-Description: Include your full name
-</code></pre>
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Name</b>: "Name" - via the <code>&lt;label&gt;</code> element</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Description</b>: "Include your full name" - via the <code>aria-describedby</code> attribute</li>
+            </ul>
           </section>
         </section>
 
@@ -948,6 +964,51 @@ Description: Include your full name
           <section data-background="#EDEBEB">
             <h5>Accessing activity 5:</h5>
             <p>Go to the <a href="https://intopia.github.io/exercise/testing-required.html" target="_blank">Testing the required attribute in Chrome</a> page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we inspect the <code>&lt;input type="email"&gt;</code>, the accessibility tree <b>correctly displays</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Required: true</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Invalid user entry: false</code></li>
+            </ul>
+          </section>
+
+
+
+
+
+          <section data-background="#EDEBEB">
+            <p>If we inspect the <code>&lt;input type="search"&gt;</code>, the accessibility tree <b>correctly displays</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><code>Required: Not exposed</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Invalid user entry: false</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And if we inspect the <code>&lt;input type="date"&gt;</code>, the accessibility tree <b>correctly displays</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><code>Required: Not exposed</code></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span><code>Invalid user entry: true</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Chrome&rsquo;s accessibility tree is <b>incorrectly displaying information</b> for a range of elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What does this tell us?</h4>
           </section>
 
           <section data-background="#EDEBEB">
