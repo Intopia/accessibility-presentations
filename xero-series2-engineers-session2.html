@@ -82,25 +82,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>The virtual buffer</h4>
+            <p>Browsers go through a series of steps when <b>creating web documents</b>, starting with the Document Object Model (DOM).</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Browsers go through a series of steps when <b>creating web documents</b>:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Construct the DOM</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Construct the CSSOM</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Construct the Render tree</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Layout the Render tree</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Paint the Render tree on screen</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>At some point in this process, browsers also <b>construct their version of the accessibility tree</b> - a simplified version of the DOM.</p>
+            <p>Browsers also <b>construct an accessibility tree</b> - a simplified version of the DOM.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -108,11 +94,52 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This information is then stored in a local <b>&lsquo;virtual document&rsquo; or a &lsquo;virtual buffer&rsquo;</b>.</p>
+            <p>This information is then stored locally as a <b>&lsquo;virtual document&rsquo;</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>As the user navigates through this virtual buffer using keystrokes, <b>the focal position is referred to as a &lsquo;virtual cursor&rsquo;</b>.</p>
+            <p>Screen reader users can navigate this virtual document using <b>a range of keystrokes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, JAWS and NVDA use the following keys to <b>find and navigate to headings</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <thead>
+                <tr>
+                  <th>Key/function</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>H</kbd></td>
+                  <td>Jump to next heading</td>
+                </tr>
+                <tr>
+                  <td><kbd>SHIFT</kbd> + <kbd>H</kbd></td>
+                  <td>Jump to previous heading</td>
+                </tr>
+                <tr>   
+                  <td><kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd></td>
+                  <td>Jump to next heading of that type</td>
+                </tr>
+                <tr>   
+                  <td><kbd>SHIFT</kbd> + <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd></td>
+                  <td>Jump to previous heading of that type</td>
+                </tr>
+                <tr>
+                  <td>Elements list popup</td>
+                  <td>View all headings</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As screen reader users navigate through this virtual document, <b>the focal position is referred to as a &lsquo;virtual cursor&rsquo;</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -132,11 +159,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>&lsquo;Browse mode&rsquo;</b> is used when navigating through the virtual buffer to read documents or web pages.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Some keystrokes can be used as <b>navigation shortcuts</b> in &lsquo;Browse mode&rsquo;. For example, the letter <kbd>H</kbd> will take users to the next heading.</p>
+            <p><b>&lsquo;Browse mode&rsquo;</b> is used when navigating through the virtual document to read the content.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -158,7 +181,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Switching to &lsquo;forms/focus mode&rsquo; mode will cause the screen reader to <b>leave the virtual buffer</b>.</p>
+            <p>Switching to &lsquo;forms/focus mode&rsquo; mode will cause the screen reader to <b>leave the virtual document</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">

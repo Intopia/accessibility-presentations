@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>XERO Series 2 - Engineering Session 2</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/theme/print.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-screen-readers-and-forms">
+          <section data-background="#EDEBEB">
+            <h3>Screen readers</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It is important to understand <b>how screen readers operate</b>, especially when interacting with form elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Browsers go through a series of steps when <b>rendering web documents</b>, starting with the creation of the Document Object Model.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The Document Object Model (DOM) defines <b>the logical structure of documents</b> and the way a document can be accessed and manipulated.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Browsers also <b>construct an accessibility tree</b> - a simplified version of the DOM.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>accessibility tree</b> consists of information about specific HTML elements, including their:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name <span class="font-xs success">(e.g. ‘Submit’, ‘Full name’)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role <span class="font-xs success">(e.g. button, link, textbox)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>State <span class="font-xs success">(e.g. checked, expanded, disabled)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value <span class="font-xs success">(e.g. input from the user)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Screen readers analyze the accessibility tree and <b>create a linear version of this information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This information is then stored locally as a <b>&lsquo;virtual document&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Screen reader users can navigate this virtual document using <b>a range of keystrokes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, JAWS and NVDA use the following keys to <b>find and navigate to headings</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <thead>
+                <tr>
+                  <th>Key/function</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>H</kbd></td>
+                  <td>Jump to next heading</td>
+                </tr>
+                <tr>
+                  <td><kbd>SHIFT</kbd> + <kbd>H</kbd></td>
+                  <td>Jump to previous heading</td>
+                </tr>
+                <tr>   
+                  <td><kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd></td>
+                  <td>Jump to next heading of that type</td>
+                </tr>
+                <tr>   
+                  <td><kbd>SHIFT</kbd> + <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd></td>
+                  <td>Jump to previous heading of that type</td>
+                </tr>
+                <tr>
+                  <td>Elements list popup</td>
+                  <td>View all headings</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As screen reader users navigate through this virtual document, <b>the focal position is referred to as a &lsquo;virtual cursor&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Two modes</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The NVDA and JAWS screen readers have <b>two different modes</b>:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Browse mode</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Forms mode (JAWS)/Focus mode (NVDA)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>&lsquo;Browse mode&rsquo;</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>&lsquo;Browse mode&rsquo;</b> is used when navigating through the virtual document to read the content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>&lsquo;Forms/Focus mode&rsquo;</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>&lsquo;Forms/Focus mode&rsquo;</b> is used when interacting with form fields that require user input.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When tabbing in &lsquo;browse mode&rsquo; and reaching an element requiring keyboard input, JAWS and NVDA can automatically <b>switch to &lsquo;forms/focus mode&rsquo;</b>.</p>
+            <p class="font-xxs">* Depending on user settings</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When tabbing in &lsquo;browse mode&rsquo; and reaching an element requiring keyboard input, JAWS and NVDA can automatically <b>switch to &lsquo;forms/focus mode&rsquo;</b>.</p>
+            <p class="font-xxs">* Depending on user settings</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Switching to &lsquo;forms/focus mode&rsquo; mode will cause the screen reader to <b>leave the virtual document</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some screen reader users prefer to <b>switch manually between these two modes</b>, so that they have more control over the experience.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>How do screen reader users navigate forms?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>many ways</b> these users may navigate through forms.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 1:</h5>
+            <p>Reading line-by-line through the form in &lsquo;Browse mode&rsquo; to understand the form&rsquo;s purpose.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 2</h5>
+            <p>Navigating via specific keystrokes (in JAWS and NVDA) to jump directly to form controls.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Task</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>F</kbd></td>
+                  <td>Next form field</td>
+                </tr>
+                <tr>
+                  <td><kbd>B</kbd></td>
+                  <td>Next button</td>
+                </tr>
+                <tr>
+                  <td><kbd>R</kbd> (NVDA) or <kbd>A</kbd> (JAWS)</td>
+                  <td>Next radio button</td>
+                </tr>
+                <tr>
+                  <td><kbd>X</kbd></td>
+                  <td>Next checkbox</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>After using the <kbd>F</kbd> key to navigate to a form field, users can use <kbd>ENTER</kbd> to switch into &lsquo;Forms/Focus mode&rsquo; if they need to <b>type data into the field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 3</h5>
+            <p>Navigating via a list of all form fields - e.g using the Elements List (NVDA and JAWS) or the Rotor (VoiceOver).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 4</h5>
+            <p>Navigating via the <kbd>TAB</kbd> key, allowing the user to move to the next element that can receive focus - links, buttons, form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>&lsquo;Forms/Focus mode&rsquo; and form content</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is something to remember when users <b>navigate through a form</b> using <kbd>F</kbd> or <kbd>TAB</kbd> keys.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any content within the form that cannot receive focus or is not programmatically associated with a form field <b>will not be announced</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this reason, any information relevant to a form field must be <b>programmatically associated</b> with that field.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Label text</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Radio group and checkbox group headings</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form field instructions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form field error messages</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required field notifications</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
