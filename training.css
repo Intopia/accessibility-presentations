@@ -79,6 +79,10 @@ ol {
   padding-left: 20px;
 }
 
+li {
+  margin: 0 0 .3em;
+}
+
 /* ---------------------
 Links
 ----------------------*/
@@ -160,6 +164,7 @@ header
 ----------------------*/
 
 header {
+  margin: 0 0 3em;
   padding: 4em 0;
   background: #d3420d;
   color: #fff;
@@ -201,7 +206,7 @@ header h1 {
 
 .pagination-heading {
   font-size: 1.2em;
-  margin: 3em 0 .5em;
+  margin: 0 0 .5em;
   color: #000;
 }
 
@@ -211,6 +216,9 @@ header h1 {
   list-style: none;
 }
 
+.intro {
+  font-size: 1.3em;
+}
 
 /* ---------------------
 button
