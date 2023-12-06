@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  margin: 2em 0 1em;
+  margin: 0 0 1em;
   color: #d3420d;
   font-size: 2em;
 }
@@ -60,6 +60,12 @@ h4 {
 
 p {
   margin: 0 0 2em;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #999;
 }
 
 /* ---------------------
@@ -107,7 +113,7 @@ Horizontal rules
 ----------------------*/
 
 hr {
-  margin: 1em 0 3em;
+  margin: 3em 0;
 }
 
 /* ---------------------
@@ -192,6 +198,19 @@ header h1 {
 .margin-bottom-half {
   margin-bottom: .8em;
 }
+
+.pagination-heading {
+  font-size: 1.2em;
+  margin: 3em 0 .5em;
+  color: #000;
+}
+
+.pagination-list {
+  margin: 1em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 /* ---------------------
 button
