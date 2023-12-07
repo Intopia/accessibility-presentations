@@ -120,6 +120,12 @@ hr {
   margin: 3em 0;
 }
 
+code {
+  font-size: 1em;
+  color: green;
+  font-family: monaco, courier, monospace;
+}
+
 /* ---------------------
 Tables
 ----------------------*/
