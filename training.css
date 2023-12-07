@@ -59,7 +59,7 @@ h4 {
 }
 
 p {
-  margin: 0 0 2em;
+  margin: 0 0 2.5em;
 }
 
 hr {
@@ -113,12 +113,8 @@ a:active {
 }
 
 /* ---------------------
-Horizontal rules
+code
 ----------------------*/
-
-hr {
-  margin: 3em 0;
-}
 
 code {
   font-size: 1em;
@@ -180,6 +176,11 @@ header h1 {
   color: #fff;
 }
 
+section {
+  margin: 3em 0;
+  padding:;
+}
+
 .header-biline {
   margin: .3em 0 0;
   font-size: 1.4em;
@@ -199,8 +200,14 @@ header h1 {
   background: rgba(0,180,0,.1);
 }
 
+.tick {
+  display: inline-block;
+  margin: 0 .3em 0 0;
+  color: #999;
+}
+
 .footnotes {
-  margin: 2em 0 1em;
+  margin: 2em 0 3em;
   padding: 0;
   list-style: none;
   font-size: .9em;
@@ -217,13 +224,20 @@ header h1 {
 }
 
 .pagination-list {
-  margin: 1em 0 0;
+  margin: 1em 0 2.5em;
   padding: 0;
   list-style: none;
 }
 
 .intro {
   font-size: 1.3em;
+}
+
+.list-no-bullets {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* ---------------------
