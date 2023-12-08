@@ -9,9 +9,9 @@ Gobal styles
 body {
   margin: 0;
   padding: 0;
-  font-size: 1em;
+  font-size: 21px;
   line-height: 1.4;
-  font-family: 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
 
 }
 
@@ -20,7 +20,7 @@ Paragraphs
 ----------------------*/
 
 p {
-  margin: 1em 0 1.5em;
+  margin: 0 0 2em;
   line-height: 1.5;
 }
 
@@ -33,8 +33,7 @@ h2,
 h3,
 h4 {
   line-height: 1.2;
-  font-weight: 600;
-  font-family: 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
 }
 
 h1 {
@@ -43,23 +42,21 @@ h1 {
 }
 
 h2 {
+  font-weight: 400;
   margin: 0 0 1em;
-  color: #d3420d;
-  font-size: 2em;
+  color: #147580;
+  font-size: 1.5em;
 }
 
 h3 {
+  font-weight: 700;
   margin: 1em 0 .5em;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 h4 {
   margin: 0 0 0.5em;
   font-size: 1em;
-}
-
-p {
-  margin: 0 0 2.5em;
 }
 
 hr {
@@ -75,7 +72,7 @@ Lists
 ul,
 ol {
   margin-top: .5em;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
   padding-left: 20px;
 }
 
@@ -196,7 +193,7 @@ section {
 
 .content {
   margin: 0 auto;
-  max-width: 40em;
+  max-width: 35em;
 }
 
 .content-wide {
@@ -246,6 +243,26 @@ section {
   margin-right: 0;
   padding: 0;
   list-style: none;
+}
+
+.trainer {
+  clear: both;
+}
+
+.trainer-image {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0 1em 1em 0;
+  border-radius: 150px;
+}
+
+.trainer-content {
+  overflow: hidden;
+}
+
+.trainer-heading {
+  margin: 0 0 .5em;
 }
 
 /* ---------------------
