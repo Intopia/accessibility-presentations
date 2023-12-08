@@ -43,7 +43,7 @@ h1 {
 
 h2 {
   font-weight: 400;
-  margin: 0 0 1em;
+  margin: 2em 0 1em;
   color: #147580;
   font-size: 1.6em;
 }
@@ -181,11 +181,6 @@ header h1 {
   color: #fff;
 }
 
-section {
-  margin: 3em 0;
-  padding:;
-}
-
 .header-biline {
   margin: .3em 0 0;
   font-size: 1.4em;
@@ -235,7 +230,7 @@ section {
 }
 
 .intro {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .list-no-bullets {
@@ -251,10 +246,10 @@ section {
 
 .trainer-image {
   float: left;
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   margin: 0 1em 1em 0;
-  border-radius: 150px;
+  border-radius: 140px;
 }
 
 .trainer-content {
@@ -264,6 +259,11 @@ section {
 .trainer-heading {
   margin: 0 0 .5em;
 }
+
+.small {
+  font-size: .9em;
+}
+
 
 /* ---------------------
 button
