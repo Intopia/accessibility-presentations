@@ -128,7 +128,7 @@ Tables
 
 table {
   border-collapse: collapse;
-  margin: 0;
+  margin: 1em 0;
   width: 100%;
   background: #fff;
 }
@@ -159,6 +159,14 @@ thead th {
 
 .width25 {  
   width: 25%;
+}
+
+.th-small {
+  display: block;
+  margin: .3em 0 0;
+  font-weight: normal;
+  font-size: .8em;
+  color: #333;
 }
 
 /* ---------------------
