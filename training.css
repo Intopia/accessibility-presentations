@@ -196,8 +196,12 @@ header h1 {
   max-width: 60em;
 }
 
-.green {
+.green-tint {
   background: rgba(0,180,0,.1);
+}
+
+.orange-tint {
+  background: rgba(211,66,13,.1);
 }
 
 .tick {
@@ -320,3 +324,43 @@ Hidden
   width: 1px !important;
   white-space: nowrap !important;
 }
+
+
+
+
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 21px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 15em;
+  border-width: 2px;
+  font-weight: 600;
+  white-space: normal;
+  outline: none;
+}
+
+.btn.brand {
+  background: #d3420d;
+  color: #fff;
+}
+
