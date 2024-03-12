@@ -1,0 +1,340 @@
+/* ---------------------
+Gobal styles
+----------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 40em;
+  margin: 0;
+  padding: 1em 2em 1.5em;
+  font-size: 1.2em;
+  line-height: 1.4;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+
+}
+
+/* ---------------------
+Paragraphs
+----------------------*/
+
+p {
+  margin: 0 0 1.5em;
+  line-height: 1.5;
+}
+
+/* ---------------------
+Headings
+----------------------*/
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: #d3420d;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+}
+
+h1 code,
+h2 code,
+h3 code {
+  color: #d3420d;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+h2 {
+  margin: 2em 0 1em;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin: 1em 0 .5em;
+  font-size: 1.1em;
+}
+
+h4 {
+  margin: 0 0 .5em;
+  font-size: 1em;
+}
+
+
+/* ---------------------
+Lists
+----------------------*/
+
+ul li,
+ol li {
+  margin-bottom: .5em;
+}
+
+/* ---------------------
+Links
+----------------------*/
+
+a:link {
+  color: #0A7399;
+  background: transparent;
+}
+
+a:visited {
+  color: #086D91;
+  background: transparent;
+}
+
+a:hover {
+  color: #007700;
+  background: transparent;
+}
+
+a:focus {
+  color: #fff;
+  background: #000;
+}
+
+a:active {
+  color: #AA0000;
+  background: transparent;
+}
+
+/* ---------------------
+Horizontal rules
+----------------------*/
+
+hr {
+  margin: 1em 0 3em;
+}
+
+/* ---------------------
+Pre and code
+----------------------*/
+
+pre {
+  font-size: 1em;
+  display: block;
+  background: #000;
+  color: #fff;
+  padding: 1em;
+  margin: 1em 0 36px;
+}
+
+code {
+  font-size: 1em;
+  color: green;
+  font-family: monaco, courier, monospace;
+}
+
+pre code {
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* ---------------------
+Tables
+----------------------*/
+
+table {
+  border-collapse: collapse;
+  margin: 2em 0;
+  width: 100%;
+  background: #fff;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0 0.5em;
+  font-size: 1.1em;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5em;
+  border: 1px solid #666;
+}
+
+/* ---------------------
+Forms
+----------------------*/
+
+form {
+  margin: 2em 0;
+  padding: 1em;
+  background: #eee;
+}
+
+
+fieldset {
+  border: 0;
+  margin: 2em 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.form-group {
+  margin: 0 0 1.5em;
+}
+
+.form-group-spaced {
+  margin: 0 0 2em;
+}
+
+.form-list {
+  margin: 0.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.label {
+  display: block;
+  margin: 0 0 0.3em;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #999;
+  font-size: 1em;
+  line-height: 1;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.input:focus {
+  outline: 2px solid #000;
+}
+
+.input:hover {
+  outline: 2px solid green;
+}
+
+.button,
+button {
+  display: inline-block;
+  padding: 0.75em 1em;
+  border: 0;
+  background: blue;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 0.2em;
+  font-size: 1em;
+  line-height: 1;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.button:focus,
+button:focus {
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+
+.button:hover,
+button:hover {
+  background: green;
+  color: #fff;
+}
+
+.button:active,
+button:active {
+  background: red;
+  color: #fff;
+}
+
+/* ---------------------
+Help and errors
+----------------------*/
+
+.help-text {
+  display: block;
+  margin: 0 0 0.3em;
+  font-style: italic;
+  color: #555;
+}
+
+.error-message {
+  display: block;
+  margin: 0;
+  padding: 0.3em 0 0;
+  font-style: italic;
+  color: red;
+}
+
+/* ---------------------
+Example
+----------------------*/
+
+.example {
+  margin: 2em 0;
+  padding: 1em;
+  background: #EDEBEB;
+}
+
+.example h2 {
+  margin: 0;
+}
+
+/* ---------------------
+Badge
+----------------------*/
+
+.badge {
+  display: inline;
+  color: #555;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.badge:after {
+  content: "";
+  display:block;
+  height: 0;
+}
+
+/* ---------------------
+footer links
+----------------------*/
+
+.footer-links {
+  margin: 5em 0 1em;
+  font-size: .8em;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 0 .3em;
+}
+
+/* ---------------------
+Hidden
+----------------------*/
+
+.sr-only,
+.hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
