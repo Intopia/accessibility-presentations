@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CBA: Screen readers and email - Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/theme/developer-exercises-master.css">
+
+  </head>
+  <body>
+    <img class="intopia-logo" style="width: 200px;" src="assets/img/logo-intopia.png" alt="Intopia">
+    <h1>CBA: Screen readers and email</h1>
+
+    <p class="subtitle">Russ Weakley and Neil Jarvis</p>
+
+    <p>I'd like to acknowledge the <b>Traditional Owners of the lands</b> on which I am presenting today.</p>
+
+    <p>In my case, this is the <a href="https://en.wikipedia.org/wiki/Cammeraygal" target="_blank">Cammeraygal people</a> of the Guringai tribe of the <a href="https://aiatsis.gov.au/explore/map-indigenous-australia" target="_blank">Eora nation</a>.</p>
+
+    <p>I'd like to pay my respects to <b>Elders past and present</b>, and extend that respect to all First Nations people present today.</p>
+
+    <p>I'm <b>Russ Weakley</b>, Head of inclusive Training at Intopia.</p>
+
+    <p>Today, <b>Neil Jarvis</b>, Business Development Consultant at Intopia, will be demonstrating different aspects of screen readers.</p>
+
+    <p>Neil is <b>Executive Director</b>, Access Innovation & Enterprise at the Royal New Zealand Foundation of the Blind.</p>
+
+    <p>Neil has worked extensively in the fields of <b>adaptive technology and digital access</b> for the past twenty years.</p>
+
+    <h2>What will we cover today?</h2>
+
+    <ul class="icon-list font-sm">
+      <li><span aria-hidden="true" class="icon icon-check"></span>What are screen readers?</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span>Basic navigation</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span>Navigating elements</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span>Navigating some HTML email examples</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span>Navigating your email application</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span>Reading and navigating a real HTML email</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span>Questions</li>
+    </ul>
+
+    <h2>What are screen readers?</h2>
+
+    <p>Screen readers are assistive technologies that help specific groups of people to <b>access digital content</b>.</p>
+
+    <p>They are useful for people who have <b>no vision, limited vision, or learning disabilities</b>.</p>
+
+    <p>Screen readers are designed to <b>convert web page content</b> into either of the following:</p>
+
+    <ul class="icon-list">
+      <li><span aria-hidden="true" class="icon icon-check"></span><b>Synthesised speech</b> so that users can listen to the content.</li>
+      <li><span aria-hidden="true" class="icon icon-check"></span><b>Braille</b> so that users can read the content as braille output.</li>
+    </ul>
+
+    <p>Since the majority of screen reader users don’t use a mouse, almost all screen readers use a <b>wide variety of keyboard commands</b> to carry out different tasks.</p>
+
+    <p>There is a common misconception that screen readers <b>&lsquo;read what’s on the screen&rsquo;</b>.</p>
+
+    <p>In reality, screen readers interact with a version of the page source code, referred to as <b>the Accessibility Tree</b>.</p>
+
+    <p>Another common misconception is that screen readers are <b>only used by people who are fully blind</b>.</p>
+
+    <p>In fact, lots of different types of people use screen readers including <b>People with reduced vision, and some people with dyslexia</b>.</p>
+
+    <h2>Types of screen readers?</h2>
+
+    <p>There are a <b>wide range of screen readers</b> across different operating systems, including the following:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Operating System</th>
+          <th>Screen Reader</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Windows</td>
+          <td>Microsoft Narrator</td>
+        </tr>
+        <tr>
+          <td>Windows</td>
+          <td>JAWS - Job Access With Speech</td>
+        </tr>
+        <tr>
+          <td>Windows</td>
+          <td>NVDA - NonVisual Desktop Access</td>
+        </tr>
+        <tr>
+          <td>Apple OSX/iOS</td>
+          <td>Voice Over</td>
+        </tr>
+        <tr>
+          <td>Android</td>
+          <td>TalkBack</td>
+        </tr>
+        <tr>
+          <td>Web-based</td>
+          <td>ChromeVox - Chrome Screen Reader</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>There are also applications such as <b>ZoomText Fusion</b>, which combines ZoomText and JAWS into one application.</p>
+
+    <h2>Most popular screen readers?</h2>
+
+    <p>A <a href="https://webaim.org/projects/screenreadersurvey10/" target="_blank">2023 Screen Reader survey</a> by WebAim showed the following results for Primary desktop/laptop screen reader:</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th scope="col">Response</th>
+          <th scope="col"># of respondents</th>
+          <th scope="col">% of respondents</th>
+        </tr>
+        <tr>
+          <th scope="row">JAWS</th>
+          <td>619</td>
+          <td>40.5%</td>
+        </tr>
+        <tr>
+          <th scope="row">NVDA</th>
+          <td>577</td>
+          <td>37.7%</td>
+        </tr>
+        <tr>
+          <th scope="row">VoiceOver</th>
+          <td>148</td>
+          <td>9.7%</td>
+        </tr>
+        <tr>
+          <th scope="row">Dolphin SuperNova</th>
+          <td>57</td>
+          <td>3.7%</td>
+        </tr>
+        <tr>
+          <th scope="row">ZoomText/Fusion</th>
+          <td>41</td>
+          <td>2.7%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>How screen reader users navigate</h2>
+
+    <p>Screen reader users navigate around web pages <b>in different ways depending on their need</b>. This includes:</p>
+
+    <h5>1. Reading the page from top to bottom</h5>
+    <p>This is done by allowing the screen reader to announce all content on the page.</p>
+
+    <h5>2. Skimming through content</h5>
+    <p>This is done by skimming over content, jumping onto the next line before the current line has finished being announced.</p>
+
+    <h5>3. Keyboard shortcuts</h5>
+    <p>Using keyboard shortcuts to navigate around the page, via Headings, Links, Forms, Buttons, Tables, Landmarks, Lists and more.</li>
+    </ul>
+
+    <h5>4. Elements lists</h5>
+    <p>Most common screen readers will allow users to present a list of elements, that allow users to review before selecting.</p>
+
+    <p>Element lists can include headings, links, lists, tables, forms, buttons, landmarks and more.</p>
+
+    <h5>5. Search</h5>
+    <p>Search for specific information within the page using either:</p>
+    <ul>
+      <li>Browser-based search functionality.</li>
+      <li>Specific search functionality within the screen reader.</li>
+    </ul>
+
+    <h5>6. Focusable elements</h5>
+    <p>Using <kbd>TAB</kbd> keystrokes to navigate around the website or web app via focusable elements. This is most commonly used in forms.</p>
+
+    <h2>Common pain points</h2>
+
+    <h3>Keyboard-only pain points:</h3>
+
+    <h5>1. Lack of keyboard-only access</h5>
+    <p>Users cannot access key site functionality without full keyboard access.</p>
+
+    <h5>2. Inability to bypass blocks</h5>
+    <p>Users cannot quickly navigate to locations in web pages, and have to listen to every focusable element announced..</p>
+
+    <h3>Screen reader pain points:</h3>
+
+    <h5>1. Lack of semantic markup</h5>
+    <p>Cannot navigate via headings, landmarks.</p>
+
+    <h5>2. Lack of intuitive accessible name</h5>
+    <p>Cannot understand the purpose of the component.</p>
+
+    <h5>3. Lack of accessible form markup</h5>
+    <p>Cannot complete forms without effort.</p>
+
+    <h5>4. Not informated of changes</h5>
+    <p>Some part of the content or UI has dynamically changed, but the assistive technology has not been informed.</p>
+
+    <h2>A screen reader in action?</h2>
+
+    <p>We're going to <a href="https://intopia.github.io/exercise/" target="_blank">look at a page about Wombats</a>, while Neil demonstrates various aspects of screen readers.</p>
+
+    <p>We'll then look at a good and bad example of HTML emails.</p>
+    <ul class="font-sm">
+      <li><a href="example1.html">Example 1 - good</a></li>
+      <li><a href="example4.html">Example 4 - bad</a></li>
+    </ul>
+
+  </body>
+</html>
