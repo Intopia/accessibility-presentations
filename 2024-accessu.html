@@ -88,334 +88,28 @@
 
 
 
-        <section id="slide-two-areas-of-focus">
+        <section id="slide-what-is-a-character-counter-widget">
           <section data-background="#C03C0C">
-            <h2>&lsquo;Are the components accessible?&rsquo;</h2>
+            <h2>What is a character counter widget?</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Part of my role over the years has focussed on <b>helping teams build and test</b> a wide range of UI components.</p>
+            <p>Character counters helps users know <b>how much text they can enter</b> when there is a limit on the number of characters.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The term <b>&lsquo;components&rsquo;</b> (sometimes referred to as widgets) means any self-contained UI concept.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>I mainly focussed on components that involved <b>user interaction</b>.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/bullseye-pointer.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This could mean <b>simple components</b> such as:</p>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Links.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Buttons.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Form controls and their associated labels.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>But most of my time was spent on <b>complex components</b> such as:</p>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Sortable tables.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Accordions.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Dropdown menus.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Date pickers.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>In the earlier days, I would conduct basic accessibility testing on each component, but there were <b>some underlying problems in my approach</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>My testing process <b>lacked rigour</b>, and I did not provide <b>detailed documentation</b> of my test results.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>At one point, a manager <b>asked me the following question</b>:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p><i>Are all the components in the design system accessible? Can you guarantee it?</i></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>This was a <b>wake-up call</b> that led my to change the way I tested and documented components.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-exclamation.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>For this presentation, I&rsquo;ll share how I conducted <b>&lsquo;accessibility unit testing&rsquo; </b> on individual components.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/memo-circle-check.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>As we&rsquo;ll see a bit later, this process can also help when <b>designing or developing</b> new components.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/check.svg" alt="">
-              </div>
-            </div>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-what-is-accessibility-unit-testing">
-          <section data-background="#C03C0C">
-            <h2>What is accessibility unit testing?</h2>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>&lsquo;accessibility unit testing&rsquo; is a process where the smallest parts of a component are <b>individually and independently evaluated</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The aim of accessibility unit testing is not to make broad, sweeping statements such as <b>&lsquo;this component is accessible&rsquo;</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Instead, the aim is to test the accessibility of <b>all aspects of the component</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This process provides teams with a detailed understanding about <b>all possible accessibility issues</b> associated with the component.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Accessibility unit testing is typically conducted when reviewing:</p>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>An <b>existing component</b> within the system.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A <b>new component</b> to be added to the system</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Accessibility unit tests are often based on <b>two concepts</b>:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>1. How all aspects of the component are <b>presented to users</b> - either on screen or via assistive technologies.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>2. How users should be able to <b>interact with the component</b> to complete all relevant tasks.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>These tests must include <b>all possible happy and unhappy paths</b> associated with the component.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>A <b>happy path</b> is the error-free path users take to complete a task.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/face-smile.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>An <b>unhappy path</b> is where users may encounter errors or issues that stop them from completing the task.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/face-confused.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>Let&rsquo;s use an example of a <b>date picker</b> - one of the most painful components ever conceived!</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/calendar-days.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>A <b>high-level task</b> might be something like:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can successfully add a date using the date picker.</p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>But <b>numerous small interactions</b> associated with this overall task should be tested.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>And there are <b>different methods that people use</b> to achieve these interactions - mouse, keyboard, assistive technologies etc.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Each of these needs to be <b>defined as a test</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>For example, what tests would be needed to determine if the date picker overlay <b>could be closed via keystrokes only</b>?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The <kbd>ESC</kbd> key can be used to close the date picker overlay: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When the <kbd>ESC</kbd> key is triggered, focus returns to the date field: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>These are <b>two separate tests</b>, because a date picker may allow users to close the the overlay using <kbd>ESC</kbd>, but send focus to the wrong location.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>An unhappy path could be where the date-picker question is required, but the user <b>does not enter a date value</b> for the field.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>What tests would be needed to determine if users <b>could identify the field as required</b> before deciding whether to enter data?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>A visual means of identifying that the field is required is present: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>Users can programmatically determine that the field is required (e.g. via <code>required</code> or <code>aria-required="true"</code>): <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>And what tests would be needed to <b>determine if the field is accessible</b> once it is in a state of error?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The form field uses methods other than colour alone to visually identify that it is in a state of error: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When the field is in a state of error, an error message is presented on screen: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The error message provides advice on how to fix the problem: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The error message is presented in close proximity to the field in a state of error: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The error message is programmatically associated with the field (e.g. as part of the <code>&lt;label&gt;</code> or via <code>aria-describedby</code>): <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>As you can see, every test must be written as a statement where the only outcome is either <b>a pass or a fail</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Tests <b>do not have to be tasks</b>. A test may relate to how aspects of the component are presented to users.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Each test must be <b>repeatable</b> so that it can be re-tested at a later date.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>These tests may need to be performed in <b>complex combinations</b> of different assistive technologies, browsers and operating systems.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>Each of these different test combinations must be <b>documented separately</b>.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/align-left.svg" alt="">
-              </div>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The end result should be a document that <b>defines the following</b>:</p>
+            <p>Ideally, these components provide users with <b>live feedback</b> to inform them about the following:</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The <b>test</b>.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The <b>environment</b> in which the task was performed.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The <b>result of the test</b> within the environment.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How many characters are left.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When they have reached the character limit.</li>
             </ul>
           </section>
-
+ 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s look at an example of an <b>autocomplete component</b> from the last design system I worked on.</p>
-            <p class="font-sm">(I&rsquo;m going to open a strange spreadsheet now).</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>Before we look at how to create these tasks, any <b>questions or comments</b>?</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
-              </div>
-            </div>
+            <p>The <a href="https://designsystem.digital.gov/components/character-count/" target="_blank">USWDS character counter</a> is a <b>great example</b>.</p>
           </section>
         </section>
 
@@ -433,38 +127,53 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>How could you create <b>a complex series of tests</b> for any component?</p>
+            <p>When creating any new component, it is important to understand how <b>it could impact different types of users</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>You can start by looking at <b>different groups of people and their needs</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This means you can focus on one user type and explore <b>how they may need to interact with the component</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>These <b>groups of people</b> could include:</p>
+            <p>I like to group people based on <b>similar needs</b>:</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ol class="font-sm">
-              <li>People with some sort of <b>cognitive impairment</b> or <b>neurodivergence</b>.</li>
-              <li>People with some sort of <b>colour vision deficiency</b>.</li>
-              <li>People with <b>low vision</b>.</li>
-              <li>People with <b>limited mobility</b>.</li>
-              <li>People with <b>limited or no sight</b>.</li>
-              <li>People with <b>limited or no hearing</b>.</li>
+              <li>People with <b>varied learning or cognition</b>.</li>
+              <li>People with <b>reduced colour vision</b>.</li>
+              <li>People with <b>reduced vision</b>.</li>
+              <li>People with <b>reduced movement</b>.</li>
+              <li>People with <b>no vision</b>.</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>For each group, there are some <b>high levels questions</b> that can be asked for any component to help determine possible tests.</p>
+            <h4>The order?</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>1. People with some sort of cognitive impairment or neurodivergence</h4>
+            <p>I prefer to start with people with <b>varied learning or cognition</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the component does not work for these people, it has <b>fundamental content or UX issues</b> that need to be fixed before conducting any other testing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I then focus on the people with <b>reduced colour vision</b> and <b>reduced vision</b> for all visual aspects of the component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And then focus on people with <b>reduced movement</b> and <b>no vision</b> for the more technical aspects of the component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Some common questions?</h4>
+          </section>
+     
+          <section data-background="#EDEBEB">
+            <p>For each group, there are some <b>common questions</b> that can be asked for any component to help determine possible tests.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. People with varied learning or cognition</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -479,7 +188,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>2. People with some sort of colour vision deficiency</h4>
+            <h4>2. People with reduced colour vision</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -510,7 +219,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>4. People with limited mobility</h4>
+            <h4>4. People with reduced movement</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -530,7 +239,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5. People with limited or no sight</h4>
+            <h4>5. People with no vision</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -550,209 +259,98 @@
         </section>
 
 
-
 <!--  –––––––––––––––––––––––––
 ******  SECTION ******
 ––––––––––––––––––––––––––  -->
 
 
 
-        <section id="slide-creating-tests-from-each-question">
+        <section id="slide-what-makes-an-accessible-character-counter">
           <section data-background="#C03C0C">
-            <h2>Creating tests from each question</h2>
+            <h2>What makes an accessible character counter?</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The next step is to break down each question into <b>a series of individual tests</b>.</p>
+            <p>What about when people are interacting with a <b>character counter</b>?</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In some cases, the question <b>can almost become the test</b>. For example:</p>
+            <h4>All users:</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Question:</h5>
-            <p><i>Does the component have an accessible name?</i></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test 1:</h5>
-            <div class="text-example">
-              <p>The component provides an accessible name: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test 2:</h5>
-            <div class="text-example">
-              <p>The accessible name is meaningful (e.g. describes the purpose of the element): <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>In other cases, you may need <b>multiple tests associated with a question</b>. For example:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Question:</h5>
-            <p><i>Can all actions be executed using keystrokes only?</i></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This question may need a <b>wide range of individual tests</b>, depending on the complexity of the component.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Let&rsquo;s <b>dive a bit deeper into tests</b> that could be used to determine the accessibility of a <a href="https://dequeuniversity.com/library/aria/date-picker" target="_blank">date picker</a>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>For simplicity, we will focus on <b>people with limited mobility</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>How would someone who uses a keyboard-only need to <b>interact with this component</b>?</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can manually enter a date without using the date picker overlay: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can navigate to the date picker icon: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can trigger the date picker overlay using <kbd>ENTER</kbd> and <kbd>SPACEBAR</kbd>: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When the date picker icon is triggered, focus moves to the date picker overlay: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>But which part of the date picker overlay should <b>receive focus</b>?</p>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The date picker overlay container?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The current date?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The close button?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The previous or next month buttons?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The overall component is easy to use and understand</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are persistent</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback on the number of characters remaining</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback when character number reached</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>You may need to do a <a href="https://russmaxdesign.github.io/accessible-forms/#onsubmit" target="_blank">lot of testing</a> before deciding on <b>the best solution</b>.</p>
+            <h4>All sighted users:</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Ideally, you should also <b>test with real users</b> to find out their preferences and expectations.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The form control has a visible text label</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is not a significant issue for keyboard users but becomes <b>very important for screen reader users</b> as they require additional context!</p>
+            <h4>People with varied learning or cognition</h4>
+          </section>
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are clearly written and presented</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The users can navigate through dates using all variations of <kbd>ARROW</kbd> keys: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <h4>People with reduced vision</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The users can navigate to previous or next month dates using all variations of <kbd>ARROW</kbd> keys: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All important information is aligned to the left to avoid being missed when enlarged</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can select a date using <kbd>ENTER</kbd> and <kbd>SPACEBAR</kbd>: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <h4>People with reduced vision and reduced colour vision</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When a date is selected, the date picker overlay closes: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All aspects of the component have acceptable colour contrast (avoid placeholders)</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When a date is selected, focus returns to the form field: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <h4>People with reduced movement</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When focus returns to the form field, the chosen date is injected into the field: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All functionality is keyboard accessible</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus states are clearly visible</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus order is intuitive</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can <kbd>TAB</kbd> to the &lsquo;Close&rsquo; button: <span class="badge">PASS/FAIL</span></p>
-            </div>
+            <h4>People with no vision</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When the &lsquo;Close&rsquo; button is selected, focus returns to the form field: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can close the date picker overlay using the <kbd>ESC</kbd> key: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When the <kbd>ESC</kbd> key is trigged selected, focus returns to the form field: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>The user can <kbd>TAB</kbd> to the previous and next month buttons: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <div class="text-example">
-              <p>When the previous or next buttons are triggered, the Month title and date table updates: <span class="badge">PASS/FAIL</span></p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>These are just some examples of unit tests that could be <b>conducted using keyboard-only</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>We could then use <b>the same process</b> for other uses, such as &lsquo;People with limited or no sight&rsquo;.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Screen readers must be given <b>additional context for each interaction</b> - name, role, states, values etc.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The names and roles must also <b>clearly define the purpose</b> of the element.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>I always run keyboard-only tests <b>before screen reader tests</b>, as screen reader users need the same basic functionality with additional criteria.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The form control has an accessible name</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are programmatically associated with the form control</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback on the number of characters remaining</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback when character number reached</li>
+            </ul>
           </section>
         </section>
-
 
 
 <!--  –––––––––––––––––––––––––
@@ -761,24 +359,191 @@
 
 
 
-        <section id="slide-after-the-tasks-are-finished">
+        <section id="slide-marking-up-the-basic-character-counter">
           <section data-background="#C03C0C">
-            <h2>After the tasks are finished?</h2>
+            <h2>Marking up the basic character counter</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We need to determine if each test can be <b>conducted using a single browser</b> or if multiple browsers are required.</p>
+            <p>What are the <b>visual aspects</b> of this component?</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We also need to determine if any <b>assistive technologies are required</b> for any tests and if these need to be conducted across multiple browser options.</p>
+            <img src="assets/img/accessu-2024-01.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We can then <b>create a testing spreadsheet</b> and begin testing!</p>
+            <img src="assets/img/accessu-2024-02.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessu-2024-03.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessu-2024-04.png" alt="">
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 1:</h5>
+            <p>Add a <code>&lt;label&gt;</code>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">&lt;label&gt;Add a comment&lt;/label&gt;</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 2:</h5>
+            <p>Add the instructions:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label&gt;Add a comment&lt;/label&gt;
+<span class="codeHighlight">&lt;span&gt;Enter up to 100 characters&lt;/span&gt;</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 3:</h5>
+            <p>Add the <code>&lt;textarea&gt;</code>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label&gt;Add a comment&lt;/label&gt;
+&lt;span&gt;Enter up to 100 characters&lt;/span&gt;
+<span class="codeHighlight">&lt;textarea&gt;&lt;/textarea&gt;</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 4:</h5>
+            <p>Programatically associated the label with the <code>&lt;textarea&gt;</code> using matching <code>for</code> and <code>id</code> values:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label <span class="codeHighlight">for="b1"</span>&gt;Add a comment&lt;/label&gt;
+&lt;span&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea <span class="codeHighlight">id="b1"</span>&gt;&lt;/textarea&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 5:</h5>
+            <p>Programatically associated the instructions with the <code>&lt;textarea&gt;</code> using matching <code>aria-describedby</code> and <code>id</code> values:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
+&lt;span <span class="codeHighlight">id="a1"</span>&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea <span class="codeHighlight">aria-describedby="a1"</span> id="b1"&gt;&lt;/textarea&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 6:</h5>
+            <p>Add an on-screen message character count message:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
+&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
+<span class="codeHighlight">&lt;span&gt;27 characters left&lt;/span&gt;</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The character value would be <b>dynamically updated using JavaScript</b> as each character is added.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The problem is that this would be <b>too verbose for screen reader users</b> - possibly announcing information as they are typing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, we need to <b>hide this information from screen readers</b> and provide them with less verbose updates.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 7:</h5>
+            <p>We can make sure this information is not presented to screen readers using <code>aria-hidden="true"</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
+&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
+&lt;span <span class="codeHighlight">aria-hidden="true"</span>&gt;27 characters left&lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 8:</h5>
+            <p>We could then add a screen reader-only message that will be less verbose.</p>
+          </section>
+
+           <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
+&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
+&lt;span aria-hidden="true"&gt;27 characters left&lt;/span&gt;
+<span class="codeHighlight">&lt;span&gt;30 characters left&lt;/span&gt;</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Step 8:</h5>
+            <p>This information can be hidden off-screen so that it is only available to screen readers.</p>
+          </section>
+
+           <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
+&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
+&lt;span aria-hidden="true"&gt;27 characters left&lt;/span&gt;
+<span class="codeHighlight">&lt;span class="hidden"&gt;30 characters left&lt;/span&gt;</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But how do we make this information <b>&lsquo;less verbose&rsquo;</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>two ways</b> to tackle the problem:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Option 1:</h5>
+            <p>We can set this message with <code>aria-live="polite"</code> so that the character count is announced at the next gracefull opportunity.</p>
+          </section>
+
+           <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
+&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
+&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
+&lt;span aria-hidden="true"&gt;27 characters left&lt;/span&gt;
+&lt;span <span class="codeHighlight">aria-live="polite"</span>
+  class="hidden"&gt;30 characters left&lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Option 2:</h5>
+            <p>We could use JavaScript Debounce to announce the character count after a pause in user typing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What is debounce?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Debouncing is a programming technique that helps to improve the performance of web applications by limiting the frequency of function calls.</em></p>
+            </div>
+            <p class="font-xxs"><a href="https://dev.to/jeetvora331/javascript-debounce-easiest-explanation--29hc" target="_blank">DEV.TO</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>A review? </h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s review the <a href="https://designsystem.digital.gov/components/character-count/" target="_blank">USWDS character counter</a> using a screen reader.</p>
           </section>
         </section>
-
 
 
 <!--  –––––––––––––––––––––––––
@@ -787,72 +552,90 @@
 
 
 
-        <section id="slide-circling-back-to-design-and-development">
+        <section id="slide-reviewing-our-checklist">
           <section data-background="#C03C0C">
-            <h2>Circling back to design and development</h2>
+            <h2>Reviewing our checklist?</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>As mentioned earlier, this overall concept can also be used to help <b>design and development new components</b>:</p>
+            <p>Let&rsquo;s recap the questions from before, so that we can now <b>determine the accessibility of our component</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Teams can ask themselves the <b>following three questions</b>:</p>
+            <h4>All users:</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>1. What <b>different types of users</b> may interact with the component.</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-1.svg" alt="">
-              </div>
-            </div>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The overall component is easy to use and understand</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are persistent</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback on the number of characters remaining</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback when character number reached</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>2. How are all aspects of the component <b>presented to these users</b>?</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-2.svg" alt="">
-              </div>
-            </div>
+            <h4>All sighted users:</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>3. What are all the ways that these users <b>may need to interact with the component</b> to complete a task?</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-3.svg" alt="">
-              </div>
-            </div>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The form control has a visible text label</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>If these three questions are considered, you are much more likely to have <b>an accessible component</b>!</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/circle-check.svg" alt="">
-              </div>
-            </div>
+            <h4>People with varied learning or cognition</h4>
+          </section>
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are clearly written and presented</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <div class="col-container">
-              <div class="col-75">
-                <p>And finally, try to include a <b>diverse range of real users</b> as part of the design and development process!</p>
-              </div>
-              <div class="col-25">
-                <img class="icon-soft" src="assets/icons/universal-access.svg" alt="">
-              </div>
-            </div>
+            <h4>People with reduced vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All important information is aligned to the left to avoid being missed when enlarged</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>People with reduced vision and reduced colour vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All aspects of the component have acceptable colour contrast (avoid placeholders)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>People with reduced movement</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>All functionality is keyboard accessible</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus states are clearly visible</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus order is intuitive</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>People with no vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The form control has an accessible name</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are programmatically associated with the form control</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback on the number of characters remaining</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback when character number reached</li>
+            </ul>
           </section>
         </section>
 
