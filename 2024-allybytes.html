@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A11ybytes Sydney 2024: The joys of focus management and announcing changes</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>The joys of focus management and announcing changes</h1>
+          <div class="subtitle">A11ybytes Sydney 2024</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-setting-the-scene">
+          <section data-background="#C03C0C">
+            <h2>Setting the scene</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s imagine <b>two people</b> interacting with your web site or web application.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Mary, who has reduced movement and uses a keyboard equivalent and no mouse.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Hassan, who is blind and uses a screen reader.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For Mary and Hassan, <b>focus management</b> is important.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Good focus management helps them <b>know what they have to do next</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Focus management also helps them <b>understand what changes may have occurred</b> in the UI.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If focus management is poorly managed, it can cause <b>confusion or frustration</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For Hassan, <b>announcing all changes</b> is also important.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Especially when <b>buttons are used to trigger a UI change</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>There is nothing worse than clicking on something and then hearing silence. I have no idea what just happened.</em></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s look at how <b>four different scenarios</b> could affect Mary and Hassan.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By the way, I will be <b>asking for your answers</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I know it is late. It&rsquo;s cold. You&rsquo;d rather be at home <b>in bed watching Netflix</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, I have some <b>incentives</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The first person who answers correctly in each case <b>wins a Freddo frog</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-scenario-1-a-form-error">
+          <section data-background="#C03C0C">
+            <h2>Scenario 1: A form error</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Image that Mary and Hassan have attempted to submit a form, but <b>the form contains errors</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As soon as the submit button is <b>activated</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Where should focus go?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>two acceptable answers</b> to this question.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>simple forms</b>, focus should go to the first error within the form.</p>
+            <p class="font-xs">* Forms with only two questions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>more complex forms</b>, focus should go to an error message above the form</p>
+            <p class="font-xs">* Forms with more than two questions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Story time</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some time ago, I observed Hassan trying to <b>resolve multiple errors</b> in a complex form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Initially, he was taken to the <b>first invalid field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When he resolved an error, he hit the <kbd>B</kbd> key to take them <b>directly to the submit button</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It took several cycles of this process to realise <b>the form had multiple errors</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If he has been sent to an error message above the form, he would have <b>known the exact number of error messages</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What should be announced?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For simple forms:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The accessible name of the form control.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The role of the form control.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The current state of the form control (via <code>aria-invalid="true"</code>).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any relevant error message (via <code>aria-describedby</code>).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For larger forms:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Content that informs the user that errors have occurred and provides the number of errors.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-scenario-2-a-toast-popup">
+          <section data-background="#C03C0C">
+            <h2>Scenario 2: A toast popup</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Image that Mary and Hassan have <b>successfully completed a process</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A toast notification <b>animates into view from the bottom of the screen</b> for a short period of time before disappearing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Where should focus go?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, toast notifications are for information that <b>does not require user input</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this reason, focus should <b>not go to the toast notification</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Story time</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Recently, I observed Mary <b>interacting with a web app</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When the toast popup appeared, her focus <b>suddenly shifted to the toast notification</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This was <b>disconcerting</b> as she was in the middle of doing a different task.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Even worse, she then had to <b>navigate back to her previous location</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What should be announced?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the information is displayed on-screen, it is important enough to be <b>made available to all users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, the information could be announced <b>at the next graceful opportunity</b> – using <code>aria-live="polite"</code>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-scenario-3-a-date-is-selected-from-a-date-picker-popup">
+          <section data-background="#C03C0C">
+            <h2>Scenario 3: A Date is selected from a date picker popup</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Image Mary and Hassan have navigated through a date pickup popover and <b>selected a date</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When they <b>activate the date selection</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Where should focus go?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Focus should return to the <b>input</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What should be announced?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When focus returns to the input, the <b>date value should be injected</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, the following should be announced:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The accessible name of the form control.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The role of the form control.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The current value of the form control (i.e. the chosen date).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Story time</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I recently observed Hassan <b>interacting with a date picker</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>After choosing a date, <b>focus was sent to the date picker icon</b> rather than the input.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Hassan had no feedback to tell him the date <b>had been successfully stored</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>He <b>repeated the process several times</b> until he discovered the date had been correctly injected into the form field.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If focus had been sent to the input, he would have <b>immediately known the process was successful</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-scenario-4-the-user-has-just-re-sorted-the-row-order-in-a-sortable-table">
+          <section data-background="#C03C0C">
+            <h2>Scenario 4: A sortable table</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Imagine that Mary and Hassan are <b>navigating a sortable table</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They decide to <b>re-sort the table</b> based on one of the column headers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When this <b>action is triggered</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Where should focus go?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Focus should <b>remain on the button</b> that triggered the action.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What should be announced?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><em>Gimme your answer!</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Remember, we never want Hassan to <b>click something and have silence</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Hassan should be <b>informed that the column has now been re-sorted</b>, and its current order (e.g. ascending, descending etc.)</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
