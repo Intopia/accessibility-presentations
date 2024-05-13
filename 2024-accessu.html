@@ -177,7 +177,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>If the component does not work for these people, it has <b>fundamental content or UX issues</b> that must be fixed before conducting other testing.</p>
+            <p>If the component does not work for these people, it has fundamental <b>content or UX issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These issues should be addressed <b>before conducting any other testing</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -218,7 +222,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Sighted users:</h4>
+            <h4>Sighted users</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -326,13 +330,24 @@
             <p>For this example, <b>we will not cover</b> detailed JavaScript solutions, we&rsquo;ll focus on the markup.</p>
           </section>
 
+
+          <section data-background="#EDEBEB">
+            <h5>Play along:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/XWwJYeN" target="_blank">Creating an accessible character counter - start</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/mdYyKBG" target="_blank">Creating an accessible character counter - finished</a></li>
+            </ul>
+          </section>
+
           <section data-background="#EDEBEB">
             <h5>Step 1:</h5>
             <p>Add a <code>&lt;label&gt;</code>:</p>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeHighlight">&lt;label&gt;Add a comment&lt;/label&gt;</span></code></pre>
+<pre><code contenteditable="true"><span class="codeHighlight">&lt;label class="label"&gt;
+  Add a comment
+&lt;/label&gt;</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -341,8 +356,12 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label&gt;Add a comment&lt;/label&gt;
-<span class="codeHighlight">&lt;span&gt;Enter up to 100 characters&lt;/span&gt;</span></code></pre>
+<pre><code contenteditable="true">&lt;label class="label"&gt;
+  Add a comment
+&lt;/label&gt;
+<span class="codeHighlight">&lt;span class="help-text"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -351,9 +370,14 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label&gt;Add a comment&lt;/label&gt;
-&lt;span&gt;Enter up to 100 characters&lt;/span&gt;
-<span class="codeHighlight">&lt;textarea&gt;&lt;/textarea&gt;</span></code></pre>
+<pre><code contenteditable="true">&lt;label class="label"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+<span class="codeHighlight">&lt;textarea class="input"&gt;
+&lt;/textarea&gt;</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -362,9 +386,14 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label <span class="codeHighlight">for="b1"</span>&gt;Add a comment&lt;/label&gt;
-&lt;span&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea <span class="codeHighlight">id="b1"</span>&gt;&lt;/textarea&gt;</code></pre>
+<pre><code contenteditable="true">&lt;label class="label" <span class="codeHighlight">for="b1"</span>&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" <span class="codeHighlight">id="b1"</span>&gt;
+&lt;/textarea&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -373,9 +402,14 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span <span class="codeHighlight">id="a1"</span>&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea <span class="codeHighlight">aria-describedby="a1"</span> id="b1"&gt;&lt;/textarea&gt;</code></pre>
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" <span class="codeHighlight">id="a1"</span>&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" <span class="codeHighlight">aria-describedby="a1"</span>&gt;
+&lt;/textarea&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -384,10 +418,17 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
-<span class="codeHighlight">&lt;span&gt;27 characters left&lt;/span&gt;</span></code></pre>
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
+&lt;/textarea&gt;
+<span class="codeHighlight">&lt;span class="character-text"&gt;
+  27 characters left
+&lt;/span&gt;</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -403,10 +444,17 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
-<span class="codeHighlight">&lt;span&gt;5 characters over the limit&lt;/span&gt;</span></code></pre>
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
+&lt;/textarea&gt;
+&lt;span class="character-text"&gt;
+  <span class="codeHighlight">5 characters over the limit</span>
+&lt;/span&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -427,10 +475,17 @@
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
-&lt;span <span class="codeHighlight">aria-hidden="true"</span>&gt;27 characters left&lt;/span&gt;</code></pre>
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
+&lt;/textarea&gt;
+&lt;span class="character-text" <span class="codeHighlight">aria-hidden="true"</span>&gt;
+  27 characters left
+&lt;/span&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -438,12 +493,21 @@
             <p>We could then add a screen reader-only message that will be less verbose.</p>
           </section>
 
-           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
-&lt;span aria-hidden="true"&gt;27 characters left&lt;/span&gt;
-<span class="codeHighlight">&lt;span&gt;27 characters left&lt;/span&gt;</span></code></pre>
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
+&lt;/textarea&gt;
+&lt;span class="character-text" aria-hidden="true"&gt;
+  27 characters left
+&lt;/span&gt;
+<span class="codeHighlight">&lt;span&gt;
+  27 characters left
+&lt;/span&gt;</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -451,12 +515,21 @@
             <p>This information can be hidden off-screen so it is only available to screen readers.</p>
           </section>
 
-           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
-&lt;span aria-hidden="true"&gt;27 characters left&lt;/span&gt;
-<span class="codeHighlight">&lt;span class="hidden"&gt;27 characters left&lt;/span&gt;</span></code></pre>
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
+&lt;/textarea&gt;
+&lt;span class="character-text" aria-hidden="true"&gt;
+  27 characters left
+&lt;/span&gt;
+&lt;span <span class="codeHighlight">class="hidden"</span>&gt;
+  27 characters left
+&lt;/span&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -483,13 +556,21 @@
             <p>We can also set this message with <code>aria-live="polite"</code> so that the information is announced at the next graceful opportunity.</p>
           </section>
 
-           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="b1"&gt;Add a comment&lt;/label&gt;
-&lt;span id="a1"&gt;Enter up to 100 characters&lt;/span&gt;
-&lt;textarea aria-describedby="a1" id="b1"&gt;&lt;/textarea&gt;
-&lt;span aria-hidden="true"&gt;27 characters left&lt;/span&gt;
-&lt;span <span class="codeHighlight">aria-live="polite"</span>
-  class="hidden"&gt;27 characters left&lt;/span&gt;</code></pre>
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
+&lt;/textarea&gt;
+&lt;span class="character-text" aria-hidden="true"&gt;
+  27 characters left
+&lt;/span&gt;
+&lt;span class="hidden" <span class="codeHighlight">aria-live="polite"</span>&gt;
+  27 characters left
+&lt;/span&gt;</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
