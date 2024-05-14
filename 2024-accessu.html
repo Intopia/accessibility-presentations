@@ -117,18 +117,19 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Ideally, these components provide people with <b>live feedback</b> to inform them about two things:</p>
+            <p>Ideally, these components provide people with <b>live feedback</b> to inform them about the following information:</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>How many characters are left.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>When they have exceeded the character limit.</li>
-            </ul>
+            <p>1. How many characters <b>they have currently typed</b> or remain before they reach the limit.</p>
           </section>
  
           <section data-background="#EDEBEB">
-            <p>What are the <b>visual aspects</b> of this component?</p>
+            <p>2. When they <b>reach or exceed</b> the character limit.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Visual aspects?</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -349,13 +350,67 @@
             <p>For this example, <b>we will not cover</b> detailed JavaScript solutions, we&rsquo;ll focus on the markup.</p>
           </section>
 
-
           <section data-background="#EDEBEB">
             <h5>Play along:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/XWwJYeN" target="_blank">Creating an accessible character counter - start</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://codepen.io/intopia-training/pen/mdYyKBG" target="_blank">Creating an accessible character counter - finished</a></li>
             </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Viewing the accessibility tree</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At times during this activity, I will be <b>showing you the accessibility tree</b> using the Chrome browser.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>This <b>accessibility tree</b> consists of information about specific HTML elements, including their:</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/tree.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Name <span class="font-xs success">(e.g. ‘Submit’, ‘Full name’)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Role <span class="font-xs success">(e.g. button, link, textbox)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>State <span class="font-xs success">(e.g. checked, expanded, disabled)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Value <span class="font-xs success">(e.g. input from the user)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p><b>Accessibility APIs</b> communicate this information from the accessibility tree to assistive technologies - such as screen readers.</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/cog.svg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each browser supports different Accessibility APIs, which means they each <b>produce their own unique accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s have a <a href="https://intopia.github.io/exercise/" target="_blank">quick look</a> at the <b>accessibility tree in Chome</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Let&rsquo;s begin the activity</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At each step, I will <b>copy and paste the code example</b> into chat.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -416,6 +471,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>The <code>&lt;textarea&gt;</code> should now have an <b>accessible name</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>Step 5:</h5>
             <p>Programmatically associated the instructions with the <code>&lt;textarea&gt;</code> using matching <code>aria-describedby</code> and <code>id</code> values:</p>
           </section>
@@ -429,6 +488,46 @@
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" <span class="codeHighlight">aria-describedby="a1"</span>&gt;
 &lt;/textarea&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>&lt;textarea&gt;</code> should now have an <b>accessible description</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Sidenote: the <code>maxlength</code> attribute</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some people like to use the <code>maxlength</code> attribute here, to <b>limit the maximum number of characters</b> that users can type into the field.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label class="label" for="b1"&gt;
+  Add a comment
+&lt;/label&gt;
+&lt;span class="help-text" id="a1"&gt;
+  Enter up to 100 characters
+&lt;/span&gt;
+&lt;textarea class="input" id="b1" aria-describedby="a1"
+  <span class="codeHighlight">maxlength="100"</span>&gt;
+&lt;/textarea&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I prefer not to use this method as it will <b>suddenly stop adding chracters</b> when the maximum character length has been reached.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It will also <a href="https://codepen.io/russweakley/pen/rNgVWeV" target="_blank">stop announcing character input to screen readers</a>, which may be confusing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instead, we will let users keep typing, but inform them that they have <b>exceeded the maximum number of characters</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img src="assets/img/accessu-2024-05.png" alt="">
           </section>
 
           <section data-background="#EDEBEB">
@@ -477,11 +576,19 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <h4>We have a problem!</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>The problem is that changing this message with each keystroke would be <b>too verbose for screen reader users</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <p>This dynamic information would be <b>announced over the top of</b> user interaction announcements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These people may not be able to hear <b>what characters they are typing</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -505,6 +612,10 @@
 &lt;span class="character-text" <span class="codeHighlight">aria-hidden="true"</span>&gt;
   27 characters left
 &lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This element will now <b>be unavailable</b> in the accessibility tree.</p>
           </section>
 
           <section data-background="#EDEBEB">
