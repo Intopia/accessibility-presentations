@@ -229,27 +229,23 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>2. The component is <b>easy to use</b>.</p>
+            <p>2. All labels, instructions and error messages are <b>meaningful</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>3. All labels, instructions and error messages are <b>meaningful</b>.</p>
+            <p>3. All labels, instructions and error messages are <b>persistent</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>4. All labels, instructions and error messages are <b>persistent</b>.</p>
+            <p>4. If users make a mistake, they can <b>recover quickly</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>5. If users make a mistake, they can <b>recover quickly</b>.</p>
+            <p>5. Users are provided with feedback on <b>the number of characters remaining</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>6. Users are provided with feedback on <b>the number of characters remaining</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>7. Users are provided with feedback <b>when the character number has been exceeded</b>.</p>
+            <p>6. Users are provided with feedback <b>when the character number has been exceeded</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -473,7 +469,7 @@
   Add a comment
 &lt;/label&gt;
 <span class="codeHighlight">&lt;span class="help-text"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;</span></code></pre>
           </section>
 
@@ -487,7 +483,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 <span class="codeHighlight">&lt;textarea class="input"&gt;
 &lt;/textarea&gt;</span></code></pre>
@@ -503,7 +499,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" <span class="codeHighlight">id="b1"</span>&gt;
 &lt;/textarea&gt;</code></pre>
@@ -523,7 +519,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" <span class="codeHighlight">id="a1"</span>&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" <span class="codeHighlight">aria-describedby="a1"</span>&gt;
 &lt;/textarea&gt;</code></pre>
@@ -546,10 +542,10 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"
-  <span class="codeHighlight">maxlength="100"</span>&gt;
+  <span class="codeHighlight">maxlength="50"</span>&gt;
 &lt;/textarea&gt;</code></pre>
           </section>
 
@@ -579,7 +575,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
 &lt;/textarea&gt;
@@ -605,7 +601,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
 &lt;/textarea&gt;
@@ -644,7 +640,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
 &lt;/textarea&gt;
@@ -667,7 +663,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
 &lt;/textarea&gt;
@@ -689,7 +685,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
 &lt;/textarea&gt;
@@ -730,7 +726,7 @@
   Add a comment
 &lt;/label&gt;
 &lt;span class="help-text" id="a1"&gt;
-  Enter up to 100 characters
+  Enter up to 50 characters
 &lt;/span&gt;
 &lt;textarea class="input" id="b1" aria-describedby="a1"&gt;
 &lt;/textarea&gt;
@@ -778,15 +774,9 @@
           <section data-background="#EDEBEB">
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>The purpose of the component is clear.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The component is easy to use.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are meaningful.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>All labels, instructions and error messages are persistent.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>If users make a mistake, they can quickly and easily recover.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>If users make a mistake, they can recover quickly.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback on the number of characters remaining.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback when the character number has been exceeded.</li>
             </ul>
@@ -858,11 +848,6 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>The form control has an accessible name.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>The form control has a meaningful role.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>All relevant labels, instructions and error messages are programmatically associated with the form control.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback on the number of characters remaining - at appropriate times.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Users are provided with feedback when the character number has been exceeded - at appropriate times.</li>
             </ul>
