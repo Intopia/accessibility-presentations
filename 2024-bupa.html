@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BUPA Around the Grounds: Intro to accessibility</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-intro">
+          <section data-background="#EDEBEB">
+            <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+            <h1>Intro to accessibility</h1>
+            <div class="subtitle">BUPA Around the Grounds</div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+         <section id="slide-legal-responsibilities">
+          <section data-background="#EDEBEB">
+            <h3>Legal responsibilities</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All public-facing digital products in Australia are <b>required to comply</b> with the <a href="http://www.comlaw.gov.au/Series/C2004A04426" target="_blank">Disability Discrimination Act 1992</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>The Disability Discrimination Act 1992 (DDA) makes it unlawful to discriminate against a person, in many areas of public life... because of their disability.</em></p>
+              <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/disability-discrimination" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Australian public-facing digital products <b>must also conform to</b> WCAG 2.0 AA via the Australian Human Rights Commission <a href="http://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014" target="_blank">Advisory Notes</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>All existing non-government websites and web content should comply with WCAG 2.0 to a minimum level of AA conformance by December 31 2013.</em></p>
+              <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/world-wide-web-access-disability-discrimination-act-advisory-notes-ver#transition" target="_blank">Source</a></p>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-wcag">
+          <section data-background="#EDEBEB">
+            <h3>What is WCAG?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The World Wide Web Consortium (W3C) develops <b>international standards for the World Wide Web</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One of these standards is the <b>Web Content Accessibility Guidelines</b> - often called &lsquo;WCAG&rsquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These guidelines explain how to make web content <b>more accessible to people with disabilities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The current standard is <b>WCAG 2.2</b>, launched on 5 October 2023.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Success Criteria</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG 2.2 contains <b>87 unique Success Criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are a series of <a href="https://intopia.github.io/accessibility-presentations/wcag22.html" target="_blank">testable criteria</a> that help determine if your digital content <b>can be considered &lsquo;accessible&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each of these Success Criteria has a compliance level of: <b>&lsquo;A&rsquo;, &lsquo;AA&rsquo;, or &lsquo;AAA&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In order to be &lsquo;AA&rsquo; compliant, sites <b>must meet all &lsquo;A&rsquo; and &lsquo;AA&rsquo;</b> Success Criteria - 56 criteria in total.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-its-about-people">
+          <section data-background="#EDEBEB">
+            <h3>It&rsquo;s about people</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In late 2020 I worked at an insurance company (<b>that shall not bev named</b>).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Someone in upper management <b>asked a question</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><i>Do people with disabilities likely to use our products?</i></p>
+          </section>
+          <section data-background="#EDEBEB">
+            <p>To try and give this person some perspective, I <b>interviewed 5 different people</b>, to ask them about their lives, and needs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All of them do their own <b>banking, shopping, insurance renewals</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All of them talked about some key desires: <b>independance and privacy</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They all talked about how they wanted to be able to <b>do their own</b> shopping, banking, insurance.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And all of them talked about <b>being frustrated when they needed help </b>to complete any of these processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility is about being able to <b>give people the freedom and independance</b> - regardless of the product or service.</p>
+          </section>
+        </section>
+
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
