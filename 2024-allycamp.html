@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A11yCamp 2024: Dive into Inclusive Design</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Dive into Inclusive Design</h1>
+          <div class="subtitle">A11yCamp 2024:</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h3>Acknowledgement of Country</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&rsquo;d like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We pay our respects to <b>Elders past and present</b>, and extend to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, I am on the lands of the <a href="https://www.sydneyharbourhighline.org.au/aboriginal-heritage/" target="_blank">Cammeraygal people</a> of the Eora Nation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you know the traditional owners of the land that you are on today, <b>please feel free to share in chat</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introductions">
+          <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-code"></span>1995: Web Design and HTML</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2003: Accessibility</li>
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>2012: Component libraries and Design systems</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of these slides will be provided after the session - including all links to videos.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Questions during the session?</h5>
+            <p>I'm happy to take questions any time - via chat etc. There will also time at the end for QA.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What will we cover?</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-what-is-wcag">What is WCAG?</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-why-should-you-care-about-accessibility">Why should you care about accessibility?</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-inclusive-language">Inclusive language</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-lets-meet-some-people">Let&rsquo;s meet some people</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-accessibility-user-profiles">Accessibility user profiles</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-wcag">
+          <section data-background="#EDEBEB">
+            <h3>What is WCAG?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <a href="https://www.w3.org/" target="_blank">World Wide Web Consortium</a> (W3C) develops <b>international standards for the World Wide Web</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One of these standards is the <b>Web Content Accessibility Guidelines</b> - often called &lsquo;WCAG&rsquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These guidelines explain how to make web content <b>more accessible to people with disabilities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The current standard is <b>WCAG 2.2</b>, launched on 5 October 2023.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Success Criteria</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG 2.2 contains <b>87 unique Success Criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are a series of <a href="https://intopia.github.io/accessibility-presentations/wcag22.html" target="_blank">testable criteria</a> that help determine if your digital content <b>can be considered &lsquo;accessible&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each of these Success Criteria has a compliance level of: <b>&lsquo;A&rsquo;, &lsquo;AA&rsquo;, or &lsquo;AAA&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In order to be &lsquo;AA&rsquo; compliant, sites <b>must meet all &lsquo;A&rsquo; and &lsquo;AA&rsquo;</b> Success Criteria - 56 criteria in total.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level A</h5>
+            <p class="font-sm">Your team MUST satisfy these checkpoints. Otherwise, one or more groups will find it impossible to access information in the document.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level AA</h5>
+            <p class="font-sm">Your team SHOULD satisfy these checkpoints. Otherwise, one or more groups will find it difficult to access information.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level AAA</h5>
+            <p class="font-sm">Your team MAY address these checkpoints, Otherwise, one or more groups will find it somewhat difficult to access information.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Important WCAG documents</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/TR/WCAG22/" target="_blank">Web Content Accessibility Guidelines 2.2</a></h5>
+            <p class="font-sm">Recommendations for making web content more accessible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2" target="_blank">How to Meet WCAG (Quick Reference)</a></h5>
+            <p class="font-sm">A quick reference to WCAG requirements and techniques.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/WAI/WCAG22/Understanding/" target="_blank">All WCAG 2.2 Understanding Docs</a></h5>
+            <p class="font-sm">Detailed explanations for each WCAG success criteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/WAI/WCAG22/Techniques/" target="_blank">Techniques for WCAG 2.2</a></h5>
+            <p class="font-sm">Examples of ways to meet WCAG.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/" target="_blank">What's New in WCAG 2.2</a></h5>
+            <p class="font-sm">A list of all changes in WCAG 2.2.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>A tool to help?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://not-checklist.intopia.digital/" target="_blank">Accessibility Not-Checklist</a> (BETA)</h5>
+            <p>Sort and filter WCAG criteria and best practices by roles and topics.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#EDEBEB">
+            <h3>Why should you care about accessibility?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ol>
+              <li>Legal responsibilities</li>
+              <li>Reputation</li>
+              <li>Improved user experience</li>
+              <li>Commercial incentives</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Legal responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All public-facing digital products in Australia are <b>required to comply</b> with the <a href="http://www.comlaw.gov.au/Series/C2004A04426" target="_blank">Disability Discrimination Act 1992</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Australian public-facing digital products <b>must also conform to</b> WCAG 2.0 AA via the Australian Human Rights Commission <a href="http://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014" target="_blank">Advisory Notes</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples of legal cases</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>2019, USA: <a href="https://www.prometsource.com/blog/supreme-court-marks-new-era-web-accessibility" target="_blank">Guillermo Robles v. Domino&rsquo;s Pizza</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2015, Australia: <a href="https://mediaaccess.org.au/latest_news/news/coles-web-accessibility-case-settled" target="_blank">Gisele Mesnage v. Coles</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2000, Australia: <a href="https://humanrights.gov.au/our-work/disability-rights/bruce-lindsay-maguire-v-sydney-organising-committee-olympic-games">Bruce Maguire v. SOCOG</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While there are financial risks associated with legal actions, the possible <b>damage to an organisation&rsquo;s reputation</b> is far more significant.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Domino&rsquo;s will likely forever be remembered as the brand that argued against the basic rights of a blind man - and lost.</em></p>
+              <p class="font-xs"><a href="https://www.agiledrop.com/blog/7-reasons-why-accessibility-good-business" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Improved user experience</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Features intended for people with disabilities often <b>improve the user experience for many other groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ramps</b> designed for wheelchair users also aid parents with prams, people with trollies and anyone with mobility issues.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>SMS texting</b> was invented by Finnish inventors to help deaf people to communicate without speaking.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Captions</b> designed for people with hearing loss also help everyone better understand and concentrate on video content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Commercial incentives</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Do you know the <b>percentage of people</b> who have some form of disability in Australia?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some stats</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Australia: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank">21.4% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>New Zealand: <a href="https://www.stats.govt.nz/information-releases/labour-market-statistics-disability-june-2020-quarter" target="_blank">24.3% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>USA: <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">26% of the population</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These estimates are known to be low, as people:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not identify themselves as having a disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not want to disclose information on their disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not be aware that they have a disability.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Bottom line?</h5>
+            <p>Can you afford to alienate potential or existing customers due to inaccessible products and services?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-inclusive-language">
+          <section data-background="#EDEBEB">
+            <h3>Inclusive language</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Inclusive language</b> is an integral part of recognising and respecting diversity.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Identity-first language (IFL)</h5>
+            <p>Based on the idea that a person&rsquo;s disability is part of their identity.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Disabled person&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Blind person&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Wheelchair user&rsquo;</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>People-first language (PFL)</h5>
+            <p>Based on the idea that a person is not defined by their disability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Person with a disability&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Person who is blind&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Person who uses a wheelchair&rsquo;</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some community-driven exceptions</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Deaf person&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Autistic person&rsquo;</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Always ask people their preferences</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People may have their own preferences regarding identity.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Some people may not identify as having a disability at all.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Avoid ableist language</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid using language that frames people with disabilities as <b>people to be pitied or ridiculed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Abelist words</caption>
+              <thead>
+                <tr>
+                  <th>Instead of:</th>
+                  <th>Try this:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Stupid, retarded, dumb, etc</td>
+                  <td>Ignorant, uninformed</td>
+                </tr>
+                <tr>
+                  <td>Crazy, insane, nuts, psycho, etc.</td>
+                  <td>Wild, bizarre, outrageous</td>
+                </tr>
+                <tr>
+                  <td>Lame</td>
+                  <td>Boring, unexciting</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Abelist idioms</caption>
+              <thead>
+                <tr>
+                  <th>Instead of:</th>
+                  <th>Try this:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&lsquo;Blind leading the blind&rsquo;</td>
+                  <td>Uninformed leading the uninformed?</td>
+                </tr>
+                <tr>
+                  <td>&lsquo;Blindspot&rsquo;</td>
+                  <td>Something missed?</td>
+                </tr>
+                <tr>
+                  <td>&lsquo;Falling on deaf ears&rsquo;</td>
+                  <td>Not listening or absorbing?</td>
+                </tr>
+                <tr>
+                  <td>&lsquo;Tone-deaf&rsquo;</td>
+                  <td>Inconsiderate</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <caption>Negative phrases</caption>
+              <thead>
+                <tr>
+                  <th>Instead of:</th>
+                  <th>Try this:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Suffers from...</td>
+                  <td>Lives with...</td>
+                </tr>
+                <tr>
+                  <td>Confined to a wheelchair</td>
+                  <td>Uses a wheelchair</td>
+                </tr>
+                <tr>
+                  <td>Wheelchair-bound</td>
+                  <td>Uses a wheelchair</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Avoid sensationalisation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid treating regular people with disabilities as <b>&lsquo;brave&rsquo; or &lsquo;inspirational&rsquo;</b> for simply existing and going about their daily lives.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of sensationalisation</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>&lsquo;He is so brave&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>&lsquo;She is an inspiration&rsquo;</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Only mention when relevant</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A person&rsquo;s disability should <b>only be mentioned if relevant to the context</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Is the term &lsquo;disability&rsquo; ok?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some people prefer to be referred to as <b>&lsquo;differently-abled&rsquo;</b>. Others prefer the term <b>&lsquo;disabled&rsquo;</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As before, <b>ask the individual for their preferences</b> where possible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Listen to people</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-caret-right"></span><a href="https://www.tiktok.com/@kelseylindell/video/7247506692815179054" target="_blank">How to talk about disability 101</a> <span class="success font-xs">(First 64 secs)</span></li>
+              <li><span aria-hidden="true" class="icon icon-circle-caret-right"></span><a href="https://www.tiktok.com/@tara_shett/video/7281728337679011115" target="_blank">What we call ourselves</a> <span class="success font-xs">(Full 34 secs)</span></li>
+              <li><span aria-hidden="true" class="icon icon-circle-caret-right"></span><a href="https://www.tiktok.com/@makeithappen.curefa/video/7238022482861509934" target="_blank">Just say disabled!</a> <span class="success font-xs">(Full 53 secs)</span></li>
+              <li><span aria-hidden="true" class="icon icon-circle-caret-right"></span><a href="https://www.tiktok.com/@kateisrare/video/7252370525262040362?q=saying%20disabled&t=1701139462218" target="_blank">There is nothing wrong with saying disabled</a> <span class="success font-xs">(Full 20 secs)</span></li>
+              <li><span aria-hidden="true" class="icon icon-circle-caret-right"></span><a href="https://www.tiktok.com/@philayana/video/7196824860524350725" target="_blank">This is your sign to just say disabled</a> <span class="success font-xs">(Full 52 secs)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>&lsquo;<b>Demystifying Disability</b> - What to Know, What to Say, and How to Be an Ally&rsquo;, by Emily Ladau.</p>
+              </div>
+              <div class="col-25">
+                <img src="assets/img/demystifying.jpg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Avoid terms like &lsquo;normal&rsquo;</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Don&rsquo;t use the word <b>&lsquo;normal&rsquo;</b> to describe a person without a disability.</p> 
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It&rsquo;s <b>normal for some people to have disabilities</b>, whether permanent or temporary, congenital or acquired. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm icon-list">
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Non-sighted people&rsquo; and &lsquo;Sighted people&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Deaf people&rsquo; and &lsquo;Hearing people&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Neurodiverse&rsquo; and &lsquo;Neurotypical&rsquo;</li>
+              <li><span aria-hidden="true" class="icon icon-comments"></span>&lsquo;Person with a disability&rsquo; and &lsquo;Person without a disability&rsquo;</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <h5>Discussion</h5>
+                <p>Any thoughts or comments to share?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-lets-meet-some-people">
+          <section data-background="#EDEBEB">
+            <h3>Let&rsquo;s meet some people</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We&rsquo;re going to look a range of different people and how they <b>interact with the digital world</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><a href="#people-with-no-vision">People with no vision</a></li>
+              <li><a href="#people-with-low-vision">People with reduced vision</a></li>
+              <li><a href="#people-with-reduced-colour">People with reduced colour vision</a></li>
+              <li><a href="#people-with-limited-movement">People with reduced movement</a></li>
+              <li><a href="#people-with-different-learning">People with varied learning or cognition</a></li>
+              <li><a href="#people-with-reduced-hearing">People with reduced or no hearing</a></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-no-vision">
+            <h4>1. People with no vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>A keyboard - without a mouse</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille devices</a> <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-low-vision">
+            <h4>2. People with reduced vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>System settings <span class="font-xs success">(e.g. magnification, font size, spacing, colour)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Browser-based page zoom <span class="font-xs success">(e.g. increase to 400%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Increase text-size only <span class="font-xs success">(e.g. increase text to 200%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a> <span class="font-xs success">(e.g. ZoomText)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-colour">
+            <h4>3. People with reduced colour vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB" >
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Good colour contrast</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Readable fonts</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The ability to magnify or zoom content</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The ability to customise the UI</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-limited-movement">
+            <h4>4. People with reduced movement</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head pointer</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Sip and puff</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/XB4cjbYywqg?t=12" target="_blank">Head switch</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=kJKQmTumFP0&amp;t=55s" target="_blank">Voice recognition software</a> <span class="font-xs success">(e.g. Dragon NaturallySpeaking)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-different-learning">
+            <h4>5. People with varied learning or cognition</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;Text-to-speech&rsquo; and &lsquo;Speech-to-text&rsquo; software</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen masking software <span class="font-xs success">(e.g. Read&Write)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Spelling and grammar software <span class="font-xs success">(e.g. Grammarly, MS Word)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-hearing">
+            <h4>6. People with reduced or no hearing</h4>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Transcript - text version in separate document</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Captions - synchronised text presented within media</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sign language translations</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Disabilities are varied and complex</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Disabilities may be <b>spectrums</b> - such as ADHD, ASD, Fetal Alcohol Spectrum Disorder.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some people have <b>multiple disabilities or conditions</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some disabilities <b>change over time</b> such as:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Deteriorating eye sight or hearing.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Improved functionality after a stroke.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Changes due to different treatment or medication.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Changes from day to day.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any of these people <b>could be your customers</b> today or tomorrow!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-user-profiles">
+          <section data-background="#EDEBEB">
+            <h3>Accessibility user profiles</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we plan, design and build for <b>all the different types of disabilities</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One solution is to create a set of <b>user profiles</b> that follow the broad categories we just reviewed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>A person with no vision</li>
+              <li>A person with low vision</li>
+              <li>A person with reduced colour vision</li>
+              <li>A person with limited movement</li>
+              <li>A person with varied learning or cognition</li>
+              <li>A person with reduced or no hearing</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Claudia</h5>
+              <div class="col-container font-xs">
+                <div class="col-33 font-xs">
+                  <h6>Key info:</h6>
+                  <p>Claudia is a 54-year-old social worker with low vision.</p>
+                </div>
+                <div class="col-33 font-xs">
+                  <h6>Devices and technology:</h6>
+                  <p>Claudia uses ZoomText, a large monitor and a high-visibility keyboard.</p>
+                  <p>She changes default colours to increase contrast.</p>
+                  <p>She uses the ‘speech to text’ feature on her smartphone.</p>
+                </div>
+                <div class="col-33 font-xs">
+                  <h6>Frustrations:</h6>
+                  <p>Claudia tends to forget to scroll horizontally when using ZoomText. </p>
+                  <p>She sometimes misses form fields or help text when they’re next to each other rather than stacked.</p>
+                  <p>She hates it when pop-up boxes appear off-screen, as she needs to scroll to find and close the pop-up.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>They allow teams to focus on:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People rather than compliance.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Different types of people and their individual needs.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>One profile at a time.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>When should these profiles be used?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These profiles have the greatest impact when used during the <b>early stages</b> of design, development and testing processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A user-journey <span class="font-xs success">(e.g. Getting an insurance quote)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A process <span class="font-xs success">(e.g. Making a payment)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A page <span class="font-xs success">(e.g. Filling in a form)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A component <span class="font-xs success">(e.g. Choosing a date from a date picker)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As a starting point, you could review the <a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles" target="_blank">Gov.UK accessibility user profiles</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
