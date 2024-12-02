@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Benevolent Society: Introduction to digital accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Introduction to digital accessibility</h1>
+          <div class="subtitle">Benevolent Society</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#C03C0C">
+            <h2>Why should you care about accessibility?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ol>
+              <li>Legal responsibilities</li>
+              <li>Reputation</li>
+              <li>Improved user experience</li>
+              <li>Commercial incentives</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Legal responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All public-facing digital products in Australia are <b>required to comply</b> with the <a href="http://www.comlaw.gov.au/Series/C2004A04426" target="_blank">Disability Discrimination Act 1992</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Australian public-facing digital products <b>must also conform to</b> WCAG 2.0 AA via the Australian Human Rights Commission <a href="http://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014" target="_blank">Advisory Notes</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples of legal cases</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>2019, USA: <a href="https://www.prometsource.com/blog/supreme-court-marks-new-era-web-accessibility" target="_blank">Guillermo Robles v. Domino&rsquo;s Pizza</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2015, Australia: <a href="https://mediaaccess.org.au/latest_news/news/coles-web-accessibility-case-settled" target="_blank">Gisele Mesnage v. Coles</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2000, Australia: <a href="https://humanrights.gov.au/our-work/disability-rights/bruce-lindsay-maguire-v-sydney-organising-committee-olympic-games">Bruce Maguire v. SOCOG</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While there are financial risks associated with legal actions, the possible <b>damage to an organisation&rsquo;s reputation</b> is far more significant.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Domino&rsquo;s will likely forever be remembered as the brand that argued against the basic rights of a blind man - and lost.</em></p>
+              <p class="font-xs"><a href="https://www.agiledrop.com/blog/7-reasons-why-accessibility-good-business" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Improved user experience</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Features intended for people with disabilities often <b>improve the user experience for many other groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ramps</b> designed for wheelchair users also aid parents with prams, people with trollies and anyone with mobility issues.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Similarly, <b>curb cuts</b> started as solutions to make curbs more accessible to disabled World War II veterans - now useful for any wheels.</p>
+            <p class="font-xs"><a href="https://www.carleton.edu/accessibility-resources/newsletter/curb-cuts-a-brief-history/" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Text-to-speech</b> (TTS) was originally designed to assist individuals with disabilities, but it quickly gained popularity as a reading aid for anyone.</p>
+            <p class="font-xs"><a href="https://speechify.com/blog/history-of-text-to-speech-voice-synthesis/" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>SMS texting</b> was invented by Finnish inventors to help deaf people to communicate without speaking - now used by everyone.</p>
+            <p class="font-xs"><a href="https://www.synergishr.com/6-technologies-inspired-by-the-deaf/" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Captions</b> designed for people with hearing loss also help everyone better understand and concentrate on video content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Commercial incentives</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Do you know the <b>percentage of people</b> who have some form of disability in Australia?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some stats</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Australia: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank">21.4% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>New Zealand: <a href="https://www.stats.govt.nz/information-releases/labour-market-statistics-disability-june-2020-quarter" target="_blank">24.3% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>USA: <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">26% of the population</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These estimates are known to be low, as people:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not identify themselves as having a disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not want to disclose information on their disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not be aware that they have a disability.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Bottom line?</h5>
+            <p>Can you afford to alienate potential or existing customers due to inaccessible products and services?</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-wendy-aaaron">
+          <section data-background="#C03C0C">
+            <h2>Wendy and Aaron</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Wendy and Aaron, would you like to <b>introduce yourselves</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Wendy and Aaron, would you like to <b>introduce yourselves</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Are there any <b>assistive technologies</b> you use?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>What things frustrate you most in the <b>digital world</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>What things frustrates you most in the <b>physical world</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Has your lived experience <b>helped within the Benevolent Society</b>?</p>
+            <ul class="font-sm">
+              <li>Internal learning and development</li>
+              <li>Diversity action plan</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Anything you would people to be <b>aware of</b>?</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
