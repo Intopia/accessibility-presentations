@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Brighte: Introduction to digital accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Introduction to digital accessibility</h1>
+          <div class="subtitle">Brighte</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h3>Acknowledgement of Country</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&rsquo;d like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We pay our respects to <b>Elders past and present</b>, and extend to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, I am on the lands of the <a href="https://www.sydneyharbourhighline.org.au/aboriginal-heritage/" target="_blank">Cammeraygal people</a> of the Eora Nation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you know the traditional owners of the land that you are on today, <b>please feel free to share in chat</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introductions">
+          <section data-background="#EDEBEB">
+            <h3>Introductions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon  icon-check"></span>1993 - 2003: Web designer</li>
+              <li><span aria-hidden="true" class="icon  icon-check"></span>2003 - 2020: Front end to Design systems</li>
+              <li><span aria-hidden="true" class="icon  icon-check"></span>2000 - 2025: Accessibility specialist</li>
+              <li><span aria-hidden="true" class="icon  icon-check"></span>Passionate about  accessibility since 2003</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Andrew Downie:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon  icon-check"></span>Psychologist with a postgraduate diploma in education</li>
+              <li><span aria-hidden="true" class="icon  icon-check"></span>Adaptive specialist helping students at TAFE for 25 years</li>
+              <li><span aria-hidden="true" class="icon  icon-check"></span>Now working at UTS</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of these slides will be provided after the session - including all links to videos.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What will we cover?</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Different people and their assistive tecvhnologies</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Andrew demo of screen reader</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-lets-meet-some-people">
+          <section data-background="#EDEBEB">
+            <h3>Who could be visiting your digital products?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><a href="#people-with-no-vision">People with no vision</a></li>
+              <li><a href="#people-with-low-vision">People with reduced vision</a></li>
+              <li><a href="#people-with-reduced-colour">People with reduced colour vision</a></li>
+              <li><a href="#people-with-limited-movement">People with reduced movement</a></li>
+              <li><a href="#people-with-different-learning">People with varied learning or cognition</a></li>
+              <li><a href="#people-with-reduced-hearing">People with reduced or no hearing</a></li>
+            </ol>
+          </section>
+
+
+          <section data-background="#EDEBEB" id="people-with-no-vision">
+            <h4>1. People with no vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>A keyboard - without a mouse</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille devices</a> <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The ability to navigate using the keyboard only</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Well-structured content <span class="font-xs success">(e.g. headings, lists, tables)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Alternatives for visual content <span class="font-xs success">(e.g. images, video)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Clearly labelled interactive components <span class="font-xs success">(e.g. links, buttons)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-low-vision">
+            <h4>2. People with reduced vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>System settings <span class="font-xs success">(e.g. magnification, font size, spacing, colour)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Browser-based page zoom <span class="font-xs success">(e.g. increase to 400%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Increase text-size only <span class="font-xs success">(e.g. increase text to 200%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a> <span class="font-xs success">(e.g. ZoomText)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Good colour contrast</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Readable fonts</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The ability to magnify or zoom content</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The ability to customise colours</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-colour">
+            <h4>3. People with reduced colour vision (colour blindness)</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Good colour contrast</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://cdpn.io/pen/debug/mdzKrBJ" target="_blank">Information that is conveyed using methods other than colour-alone</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-limited-movement">
+            <h4>4. People with reduced movement</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head pointer</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Sip and puff</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/XB4cjbYywqg?t=12" target="_blank">Head switch</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=04Rhnt4J2b4&amp;t=30s" target="_blank">Eye or head tracking software</a> <span class="font-xs success">(e.g. Dynavox, Apple)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=kJKQmTumFP0&amp;t=55s" target="_blank">Voice recognition software</a> <span class="font-xs success">(e.g. Dragon NaturallySpeaking)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The ability to navigate using the keyboard only</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Efficient methods of navigating content</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://intopia.github.io/exercise/testing-focus-indication.html" target="_blank">Clear and visible focus states</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Enough time to complete tasks</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-different-learning">
+            <h4>5. People with varied learning or cognition</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Content that is clearly written and presented</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Help to avoid mistakes</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Limited distractions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Processes that do not rely on memory</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-hearing">
+            <h4>6. People with reduced or no hearing</h4>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>May need:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Transcript - text version in separate document</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Captions - synchronised text presented within media</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sign language translations</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-andrew-demo">
+          <section data-background="#EDEBEB">
+            <h3>Andrew demo</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We'll be using the <a href="https://uat.commbank.brighte.site/" target="_blank">UAT CommBank site</a> for this demo.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
