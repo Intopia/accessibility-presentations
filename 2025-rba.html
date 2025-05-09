@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RBA - Introduction to digital accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Introduction to digital accessibility</h1>
+          <div class="subtitle">RBA</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#EDEBEB">
+            <h3>Why should you care about accessibility?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ol>
+              <li>Legal responsibilities</li>
+              <li>Reputation</li>
+              <li>Improved user experience</li>
+              <li>Commercial incentives</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Legal responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All public-facing digital products in Australia are <b>required to comply</b> with the <a href="http://www.comlaw.gov.au/Series/C2004A04426" target="_blank">Disability Discrimination Act 1992</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <a href="https://humanrights.gov.au/our-work/disability-rights/publications/guidelines-equal-access-digital-goods-and-services" target="_blank">Guidelines on Equal Access to Digital Goods and Services</a> explain your <b>legal obligations</b> under the Disability Discrimination Act.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Organisations should conform with WCAG 2.2 at a minimum Level AA and consider appropriate Level AAA success criteria such as video transcripts, audio contrast, clear links and section headings.</em></p>
+              <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/chapter-3-standards-and-guidelines-digital-accessibility" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples of legal cases</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>2019, USA: <a href="https://equidox.co/blog/robles-v-dominos-pizza-explained-no-published-guidelines-doesnt-mean-no-standards/" target="_blank">Guillermo Robles v. Domino&rsquo;s Pizza</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2015, Australia: <a href="https://mediaaccess.org.au/latest_news/news/coles-web-accessibility-case-settled" target="_blank">Gisele Mesnage v. Coles</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2000, Australia: <a href="https://humanrights.gov.au/our-work/disability-rights/bruce-lindsay-maguire-v-sydney-organising-committee-olympic-games">Bruce Maguire v. SOCOG</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While there are financial risks associated with legal actions, the possible <b>damage to an organisation&rsquo;s reputation</b> is far more significant.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some news about the Coles case</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.smh.com.au/national/coles-to-make-online-shopping-site-more-accessible-following-disability-discrimination-case-20150218-13ig1g.html" target="_blank">Sydney Morning Herald</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.abc.net.au/news/2014-11-05/blind-woman-launches-court-action-against-coles-over-its-website/5869874" target="_blank">ABC News</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://consumersfederation.org.au/court-case-launched-against-coles-on-website-disability-discrimination-claims/" target="_blank">Consumer Federation of Australia</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Domino&rsquo;s will likely forever be remembered as the brand that argued against the basic rights of a blind man - and lost.</em></p>
+              <p class="font-xs"><a href="https://www.agiledrop.com/blog/7-reasons-why-accessibility-good-business" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Improved user experience</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Features intended for people with disabilities often <b>improve the user experience for many other groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ramps</b> designed for wheelchair users also aid parents with prams, people with trollies and anyone with mobility issues.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Similarly, <b>curb cuts</b> started as solutions to make curbs more accessible to disabled World War II veterans - now useful for any wheels.</p>
+            <p class="font-xs"><a href="https://www.carleton.edu/accessibility-resources/newsletter/curb-cuts-a-brief-history/" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>SMS texting</b> was invented by two Finns to help deaf people communicate without speaking - now used by everyone.</p>
+            <p class="font-xs"><a href="https://www.synergishr.com/6-technologies-inspired-by-the-deaf/" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Captions</b> designed for people with hearing loss also help everyone better understand and concentrate on video content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Commercial incentives</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Do you know the <b>percentage of people</b> who have some form of disability in Australia?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some stats</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Australia: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank">21.4% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>New Zealand: <a href="https://www.stats.govt.nz/information-releases/labour-market-statistics-disability-june-2020-quarter" target="_blank">24.3% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>USA: <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">26% of the population</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These estimates are known to be low, as people:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not identify themselves as having a disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not want to disclose information on their disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not be aware that they have a disability.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Bottom line?</h5>
+            <p>Can you afford to alienate potential or existing customers due to inaccessible products and services?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-lets-meet-some-people">
+          <section data-background="#EDEBEB">
+            <h3>Let&rsquo;s meet some people</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We&rsquo;re going to look at a range of different people and how they <b>interact with the digital world</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><a href="#people-with-no-vision">People with no vision</a></li>
+              <li><a href="#people-with-low-vision">People with reduced vision</a></li>
+              <li><a href="#people-with-reduced-colour">People with reduced colour vision</a></li>
+              <li><a href="#people-with-limited-movement">People with reduced movement</a></li>
+              <li><a href="#people-with-different-learning">People with varied learning or cognition</a></li>
+              <li><a href="#people-with-reduced-hearing">People with reduced or no hearing</a></li>
+              <li><a href="#people-with-affected-speech">People with affected or no speech</a></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-no-vision">
+            <h4>1. People with no vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Blindness</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.aihw.gov.au/getmedia/753886ff-066c-4a54-b795-e900e339400a/agtaehd-c03.pdf.aspx#:~:text=Definitions%20of%20legal%20blindness%20used,or%20a%20combination%20of%20visual" target="_blank">Legally blind</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><i>A person is considered legally blind if they can’t see at six metres what someone with regular vision can see at 60 metres, or if their field of vision is less than 20 degrees in diameter.</i></p>
+              <p class="font-xxs"><a href="https://www.disabilityaustraliahub.com.au/legally-blind/" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>A keyboard - without a mouse</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille devices</a> <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-low-vision">
+            <h4>2. People with reduced vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Cataract" target="_blank">Cataract</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Glaucoma" target="_blank">Glaucoma</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Diabetic_retinopathy" target="_blank">Diabetic retinopathy</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Macular_degeneration" target="_blank">Macular degeneration</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>System settings <span class="font-xs success">(e.g. magnification, font size, spacing, colour)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Browser-based page zoom <span class="font-xs success">(e.g. increase to 400%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Increase text-size only <span class="font-xs success">(e.g. increase text to 200%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a> <span class="font-xs success">(e.g. ZoomText)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-colour">
+            <h4>3. People with reduced colour vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Colour vision deficiency</b> (CVD) or Colour blindness, is the decreased ability to see colour or differences in colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Green-deficient <i class="font-xs success">(Deuteranomaly)</i> and Green-Blind <i class="font-xs success">(Deuteranopia)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Red-deficient <i class="font-xs success">(Protanomaly)</i> and Red-Blind <i class="font-xs success">(Protanopia)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Blue-deficient <i class="font-xs success">(Tritanomaly)</i> and Blue-Blind <i class="font-xs success">(Tritanopia)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Blue Cone Monochromacy <i class="font-xs success">(Achromatomaly)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Monochromacy <i class="font-xs success">(Achromatopsia)</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Colour identification apps <span class="font-xs success">(e.g. Seeing AI, TapTapSee, Color Inspector)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Specialised software <span class="font-xs success">(e.g. Visolve)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Color-Corrective Glasses: <span class="font-xs success">(e.g. EnChroma)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-limited-movement">
+            <h4>4. People with reduced movement</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include traumatic injuries:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Spinal cord injuries that affect the upper body</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Loss or damage to limb(s)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include full-body conditions:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Arthritis" target="_blank">Arthritis</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Spina_bifida" target="_blank">Spina Bifida</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Cerebral_palsy" target="_blank">Cerebral Palsy</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Multiple_sclerosis" target="_blank">Multiple Sclerosis</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Muscular_dystrophy" target="_blank">Muscular Dystrophy</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include arm &amp; hand conditions:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Osteoarthritis" target="_blank">Osteoarthritis</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Trigger_finger" target="_blank">Trigger Finger</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Rheumatoid_arthritis" target="_blank">Rheumatoid Arthritis</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Boutonniere_deformity" target="_blank">Boutonnière Deformity</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Dupuytren%27s_contracture" target="_blank">Dupuytren Contracture</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include other motor-related conditions:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Chorea" target="_blank">Chorea</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Tremor" target="_blank">Tremors</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Myoclonus" target="_blank">Myoclonus</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Dystonia" target="_blank">Dystonia</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Tic_disorder" target="_blank">Tic disorders</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head pointer</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Sip and puff</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/7Cly3vDZYqs?si=7h0sfSdJMnF48taD&t=67" target="_blank">Head switch</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=04Rhnt4J2b4&amp;t=30s" target="_blank">Eye or head tracking software</a> <span class="font-xs success">(e.g. Dynavox, Apple)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=kJKQmTumFP0&amp;t=55s" target="_blank">Voice recognition software</a> <span class="font-xs success">(e.g. Dragon NaturallySpeaking)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-different-learning">
+            <h4>5. People with varied learning or cognition</h4>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>May include intellectual disabilities:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Down_syndrome" target="_blank">Down Syndrome</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Fragile_X_syndrome" target="_blank">Fragile X Syndrome</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Phenylketonuria" target="_blank">Phenylketonuria</a> <span class="font-xs success">(PKU)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Prader%E2%80%93Willi_syndrome" target="_blank">Prader-Willi Syndrome</a> <span class="font-xs success">(PWS)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Fetal_alcohol_spectrum_disorder" target="_blank">Fetal Alcohol Spectrum Disorder</a> <span class="font-xs success">(FASD)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include neurodiverse conditions:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Dyslexia" target="_blank">Dyslexia</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Dyscalculia" target="_blank">Dyscalculia</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Autism_spectrum" target="_blank">Autism Spectrum Disorder/Condition</a> <span class="font-xs success">(ASD, ASC)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" target="_blank">Attention Deficit Hyperactivity Disorder</a> <span class="font-xs success">(ADHD)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Developmental_coordination_disorder" target="_blank">Developmental Coordination Disorder/Dyspraxia</a> <span class="font-xs success">(DCD)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include processing differences:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Aphasia" target="_blank">Aphasia</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Language_disorder" target="_blank">Language Disorders</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Auditory_processing_disorder" target="_blank">Auditory processing disorders</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Sensory_processing_disorder" target="_blank">Sensory processing disorders</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://en.wikipedia.org/wiki/Nonverbal_learning_disorder" target="_blank">Non-Verbal Learning Disabilities</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include memory impairments:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.dementia.org.au/about-dementia/what-is-dementia" target="_blank">Dementia</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.alz.org/alzheimers-dementia/what-is-alzheimers" target="_blank">Alzheimer disease</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Limited short-term memory</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Missing long-term memory</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;Text-to-speech&rsquo; and &lsquo;Speech-to-text&rsquo; software</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/N_ShtAT9i-Y?t=19" target="_blank">Screen masking software</a> <span class="font-xs success">(e.g. Read&Write)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Spelling and grammar software <span class="font-xs success">(e.g. Grammarly, MS Word)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-hearing">
+            <h4>6. People with reduced or no hearing</h4>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Hard of Hearing</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Deaf</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Transcript - text version in separate document</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Captions - synchronised text presented within media</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sign language translations</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-affected-speech">
+            <h4>7. People with affected or no speech</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.asha.org/public/speech/disorders/stuttering/" target="_blank">Stuttering</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://psychologydictionary.org/cluttering-tachyphemia/" target="_blank">Cluttering</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.asha.org/public/speech/disorders/dysarthria/" target="_blank">Dysarthria</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.asha.org/practice-portal/clinical-topics/selective-mutism/" target="_blank">Selective Mutism</a></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.nidcd.nih.gov/health/apraxia-speech" target="_blank">Apraxia of speech</a> <span class="font-xs success">(AOS)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Disabilities are varied and complex</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Disabilities may be <b>spectrums</b> - such as ADHD, ASD, Fetal Alcohol Spectrum Disorder.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some people have <b>multiple disabilities or conditions</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some disabilities <b>change over time</b> such as:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Deteriorating eyesight or hearing.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Improved functionality after a stroke.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Changes due to different treatments or medications.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some disabilities <a href="https://www.tiktok.com/@josephakibler/video/7232428942383222059" target="_blank">may change</a> <b>from day to day</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Temporary or situational conditions</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Making digital products accessible for people with disabilities also <b>benefits others</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, some people may experience <b>temporary or situational barriers</b> that are similar to the symptoms of disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of temporary barriers:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A broken arm.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Temporary hearing loss.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Concussion.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of situational barriers:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Unable to see a screen due to sunlight.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Unable to hear video or audio material due to a local noise.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Unable to use a mouse while holding a baby.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Your customers</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any of these people <b>could be your customers</b> today or tomorrow!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
