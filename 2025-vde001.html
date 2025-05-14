@@ -2,186 +2,116 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Introduction to digital accessibility | Intopia</title>
+    <title>Screen reader demo - Victoria Department of Education</title>
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/intopia.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
+    <style>
+      body {
+        max-width: 30em;
+        margin: 0;
+        padding: 2em;
+        font-size: 1.2em;
+        font-family: helvetica, arial, sans-serif;
+        line-height: 1.2;
+        color: #000;
+        background: #fff;
+      }
+
+      h1 { margin: 0 0 1em; }
+
+      h2, h3 { margin: 2em 0 .5em; }
+      p {
+        margin: 2em 0; 
+        line-height: 1.5;
+      }
+
+    </style>
   </head>
   <body>
-    <div class="reveal">
-      <div class="slides">
 
-        <div class="menu">
-          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
-        </div>
+            <h1>Screen reader demo - Victoria Department of Education</h1>
 
-        <section data-background="#EDEBEB">
-          <div class="instructions">
-            <h3 class="instructions-heading">Slide instructions</h3>
-            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
-            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
-            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
-            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
-            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
-          </div>
-        </section>
+            <p>Hi, my name is Russ Weakley, head of training at Intopia.</p>
 
-        <section data-background="#EDEBEB">
-          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
-          <h1>Introduction to digital accessibility</h1>
-          <div class="subtitle">Victoria Department of Education</div>
-        </section>
+            <p>And with me is Andrew Downie. Would you like to introduce yourself Andrew?</p>
 
+            <p>Andrew will start by demonstrating the NVDA screen reader on a <a href="https://intopia.github.io/exercise/">simple demo site</a>.</p>
 
+            <p>The aim is to show you how screen reader users navigate and interact with pages.</p>
 
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
+            <p>He will then demonstrate NVDA with the <a href="https://desi--situat.sandbox.my.site.com/studentsvictoria/s/" target="_blank">Primary School Nursing Program form</a> on the VicStudents site.</p>
 
+            <p>The aim is not to criticise but to show you some possible issues and areas for improvement.</p>
 
+            <p>And also give you a deeper understanding of screen readers in general.</p>
 
-        <section id="slide-people-and-assistive-technologies">
-          <section data-background="#EDEBEB">
-            <p>First off, Andrew will <b>demonstrate the NVDA screen reader</b> on a simple demo site  - to show you how screen readers navigate and interact with pages.</p>
-          </section>
+            <p>While Andrew is getting set up, I'm going to briefly talk about how people and different types of assistive technologies.</p>
 
-          <section data-background="#EDEBEB">
-            <p>He will then go through one of your forms to talk about issues and pain points.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The aim is not to criticise but to offer constructive feedback.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Before I hand over, I would like to talk about how different people <b>interact with the digital world</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <h5>People with no vision may use:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille devices</a> <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
-            </ul>
-          </section>
 
-          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+              <li>Refreshable braille devices <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
+            </ul>
+
             <h5>People with reduced vision may use:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-hand"></span>System settings <span class="font-xs success">(e.g. magnification, font size, spacing, colour)</span></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span>Browser-based page zoom <span class="font-xs success">(e.g. increase to 400%)</span></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span>Increase text-size only <span class="font-xs success">(e.g. increase text to 200%)</span></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a> <span class="font-xs success">(e.g. ZoomText)</span></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
-            </ul>
-          </section>
 
-          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>System settings <span class="font-xs success">(e.g. magnification, font size, spacing, colour)</span></li>
+              <li>Browser-based page zoom <span class="font-xs success">(e.g. increase to 400%)</span></li>
+              <li>Increase text-size only <span class="font-xs success">(e.g. increase text to 200%)</span></li>
+              <li>Screen magnifier software <span class="font-xs success">(e.g. ZoomText)</span></li>
+              <li>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+
+            <h5>People with reduced colour vision may use:</h5>
+
+            <ul class="font-sm">
+              <li>Colour identification apps <span class="font-xs success">(e.g. Seeing AI, TapTapSee, Color Inspector)</span></li>
+              <li>Specialised software <span class="font-xs success">(e.g. Visolve)</span></li>
+              <li>Color-Corrective Glasses: <span class="font-xs success">(e.g. EnChroma)</span></li>
+            </ul>
+
             <h5>People with reduced movement may use:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head pointer</a></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Sip and puff</a></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/7Cly3vDZYqs?si=7h0sfSdJMnF48taD&t=67" target="_blank">Head switch</a></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=kJKQmTumFP0&amp;t=55s" target="_blank">Voice recognition software</a> <span class="font-xs success">(e.g. Dragon NaturallySpeaking)</span></li>
+
+            <ul class="font-sm">
+              <li>Head pointer</li>
+              <li>Sip and puff devices</li>
+              <li>Head switches</li>
+              <li>Eye or head tracking software <span class="font-xs success">(e.g. Dynavox, Apple Head Tracking)</span></li>
+              <li>&lsquo;Speech-to-text&rsquo; software <span class="font-xs success">(e.g. Dragon NaturallySpeaking, Apple Dictation, Windows Voice Access)</span></li>
             </ul>
-          </section>
-          <section data-background="#EDEBEB">
+
             <h5>People with varied learning or cognition may use:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;Text-to-speech&rsquo; software</li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;&lsquo;Speech-to-text&rsquo; software</li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/N_ShtAT9i-Y?t=19" target="_blank">Screen masking software</a> <span class="font-xs success">(e.g. Read&Write)</span></li>
-              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
-            </ul>
-          </section>
 
-          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>&lsquo;Text-to-speech&rsquo; software <span class="font-xs success">(e.g. Microsoft Immersive Reader, Apple Spoken Content)</span></li>
+              <li>&lsquo;Speech-to-text&rsquo; software <span class="font-xs success">(e.g. Dragon NaturallySpeaking, Apple Dictation, Windows Voice Access)</span></li>
+              <li>Screen masking software <span class="font-xs success">(e.g. Read&Write)</span></li>
+              <li>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+
             <h5>People with reduced or no hearing may use:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Transcript - text version in separate document</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Captions - synchronised text presented within media</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Sign language translations</li>
-            </ul>
-          </section>
 
-          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>Hearing aids</li>
+              <li>Hearing or induction loops</li>
+              <li>&lsquo;Speech-to-text&rsquo; software <span class="font-xs success">(e.g. Dragon NaturallySpeaking, Apple Dictation, Windows Voice Access)</span></li>
+              <li>Text messaging and instant messaging apps</li>
+            </ul>
+
             <h5>Disabilities are varied and complex</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Some people have multiple disabilities or conditions.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Disabilities may be spectrums.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Some disabilities change over time.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Some disabilities change from day to day.</li>
+
+            <ul class="font-sm">
+              <li>Some people have multiple disabilities or conditions.</li>
+              <li>Disabilities may be spectrums.</li>
+              <li>Some disabilities change over time.</li>
+              <li>Some disabilities change from day to day.</li>
             </ul>
-          </section>
-        </section>
 
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-accessibility-user-profiles">
-          <section data-background="#EDEBEB">
-            <h3>Over to Andrew!</h3>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Andrew will now look at two pages - a <a href="https://intopia.github.io/exercise/" target="_blank">demo site</a> and <a href="https://desi--situat.sandbox.my.site.com/studentsvictoria/s/" target="_blank">one of your forms</a>.</p>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-questions">
-          <section data-background="#C03C0C">
-            <h2>Questions or discussion?</h2>
-          </section>
-        </section>
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-
-    <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
-      Reveal.initialize({
-        hash: true,
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'none',
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealNotes ]
-      });
-    </script>
+            <p>Andrew will now begin the demo, starting with our simple page.</p>
 
   </body>
 </html>
