@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ING: Introduction to digital accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Introduction to digital accessibility</h1>
+          <div class="subtitle">ING</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h3>Acknowledgement of Country</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&rsquo;d like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We pay our respects to <b>Elders past and present</b>, and extend to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, I am on the lands of the <a href="https://www.sydneyharbourhighline.org.au/aboriginal-heritage/" target="_blank">Cammeraygal people</a> of the Eora Nation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you know the traditional owners of the land that you are on today, <b>please feel free to share in chat</b>.</p>
+          </section>
+
+<!--
+          <section data-background="#EDEBEB">
+            <h5>Aotearoa</h5>
+            <p>I would also like to acknowledge the <i>Tangata Whenua</i> (people of the land) of <i>Aotearoa</i> (New Zealand).</p>
+          </section>
+-->
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introductions">
+          <section data-background="#EDEBEB">
+            <h3>Introductions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>1995 - 2003: Web designer</li>
+              <li><span aria-hidden="true" class="icon icon-code"></span>2003 - 2020: Front end to Design systems</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2020 - 2025: Accessibility specialist</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Passionate about  accessibility since 2003</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of the slides and any other associated resources will be provided after the session.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What will we cover?</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Why should you care about accessibility?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessibility user profiles</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessibility in the workplace</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Providing workplace adjustments</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Questions and discussions</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#EDEBEB">
+            <h3>Why should you care about accessibility?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ol>
+              <li>Legal responsibilities</li>
+              <li>Reputation</li>
+              <li>Improved user experience</li>
+              <li>Commercial incentives</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Legal responsibilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are three key resources for understanding and meeting <b>digital accessibility obligations in Australia</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-xs">
+              <li>The Disability Discrimination Act 1992</li>
+              <li>The Australian Human Rights Commission’s Digital Access Guidelines</li>
+              <li>The AS EN 301 549 Accessibility Standard</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. All public-facing digital products in Australia are <b>required to comply</b> with the &lsquo;Disability Discrimination Act 1992&rsquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>It is unlawful for a person who, whether for payment or not, provides goods or services, or makes facilities available, to discriminate against another person on the ground of the other person’s disability.</em></p>
+              <p class="font-xs"><a href="https://www.legislation.gov.au/C2004A04426/latest/versions" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. The <b>Australian Human Rights Commission</b> recently released the <a href="https://humanrights.gov.au/our-work/disability-rights/publications/guidelines-equal-access-digital-goods-and-services" target="_blank">Guidelines on Equal Access to Digital Goods and Services</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These guidelines help organisations understand how to <b>meet their obligations</b> under the Disability Discrimination Act.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They offer <b>practical advice</b> on making websites, apps, and other digital services accessible to people with disability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Organisations should conform with WCAG 2.2 at a minimum Level AA and consider appropriate Level AAA success criteria such as video transcripts, audio contrast, clear links and section headings.</em></p>
+              <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/chapter-3-standards-and-guidelines-digital-accessibility" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. The <b>AS EN 301 549 Accessibility Standard</b> defines accessibility requirements for ICT products and services.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This standard covers:</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Websites and mobile apps</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Software and operating systems</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Computers, tablets, and smartphones</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Self-service kiosks, ATMs, ticket machines</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Digital documents (e.g. PDFs, Word files)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Online platforms and cloud services</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This standard supports legal compliance with the <b>Disability Discrimination Act 1992 (DDA)</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A number of legal cases have highlighted what can happen when organisations <b>fail to meet these responsibilities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>2019, USA: <a href="https://equidox.co/blog/robles-v-dominos-pizza-explained-no-published-guidelines-doesnt-mean-no-standards/" target="_blank">Guillermo Robles v. Domino&rsquo;s Pizza</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2015, Australia: <a href="https://jec.org.au/disability-rights/disability-discrimination/coles-agrees-to-make-online-shopping-site-more-accessible/" target="_blank">Gisele Mesnage v. Coles</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2000, Australia: <a href="https://www.w3.org/WAI/business-case/archive/socog-case-study" target="_blank">Bruce Maguire v. SOCOG</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Reputation</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Legal action can be costly, but the <b>damage to an organisation’s reputation</b> could be even worse.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>No organisation wants to end up in the <b>headlines for the wrong reasons</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Domino&rsquo;s will likely forever be remembered as the brand that argued against the basic rights of a blind man - and lost.</em></p>
+              <p class="font-xs"><a href="https://www.agiledrop.com/blog/7-reasons-why-accessibility-good-business" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Coles has agreed to improve its online shopping website so that it can be more easily accessed by blind people, after being taken to court for alleged disability discrimination.</em></p>
+              <p class="font-xs"><a href="https://www.smh.com.au/national/coles-to-make-online-shopping-site-more-accessible-following-disability-discrimination-case-20150218-13ig1g.html" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Improved user experience</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Features designed for people with disabilities often improve the user experience for <b>many other groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Inclusive design also supports people with <b>temporary or situational constraints</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of temporary constraints:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Temporary hearing loss - affecting ability to hear audio.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Eye infection - affecting vision.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sprained wrist - affecting ability to type.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Migraine - affecting ability to focus or read.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of situational constraints:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Bright sunlight – hard to see the screen.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Noisy caf&eacute; – hard to hear video or audio.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Holding a baby – unable to use a mouse.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Wearing gloves – unable to use a touchscreen.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Commercial incentives</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Do you know the <b>percentage of people</b> who have some form of disability in Australia?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some stats</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Australia: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank">21.4% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>New Zealand: <a href="https://www.stats.govt.nz/information-releases/labour-market-statistics-disability-june-2020-quarter" target="_blank">24.3% of the population</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>USA: <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">26% of the population</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These estimates are known to be low, as people:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not identify themselves as having a disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not want to disclose information on their disability.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>May not be aware that they have a disability.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So the real number is likely higher — <b>about 1 in 5 Australians</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Why should you care?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Accessible products will help:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Reduce legal risk.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Attract more visitors.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Improve customer experience.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Position your organisation as an inclusive, caring brand.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-user-profiles">
+          <section data-background="#EDEBEB">
+            <h3>Accessibility user profiles</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we plan, design and build for <b>all the different types of disabilities</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One solution is to create a set of <b>user profiles</b> that follow the broad categories we just reviewed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>A person with <b>no vision</b></li>
+              <li>A person with <b>low vision</b></li>
+              <li>A person with <b>reduced colour vision</b></li>
+              <li>A person with <b>limited movement</b></li>
+              <li>A person with <b>varied learning or cognition</b></li>
+              <li>A person with <b>reduced or no hearing</b></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Claudia</h5>
+              <div class="col-container font-xs">
+                <div class="col-33 font-xs">
+                  <h6>Key info:</h6>
+                  <p>Claudia is a 54-year-old social worker with low vision.</p>
+                </div>
+                <div class="col-33 font-xs">
+                  <h6>Devices and technology:</h6>
+                  <p>Claudia uses ZoomText, a large monitor and a high-visibility keyboard.</p>
+                  <p>She changes default colours to increase contrast.</p>
+                  <p>She uses the ‘speech to text’ feature on her smartphone.</p>
+                </div>
+                <div class="col-33 font-xs">
+                  <h6>Frustrations:</h6>
+                  <p>Claudia tends to forget to scroll horizontally when using ZoomText. </p>
+                  <p>She sometimes misses form fields or help text when they’re next to each other rather than stacked.</p>
+                  <p>She hates it when pop-up boxes appear off-screen, as she needs to scroll to find and close the pop-up.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>They allow teams to focus on:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People rather than compliance.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Different types of people and their individual needs.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>One profile at a time.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>These profiles should not replace:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Expert reviews</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessibility audits</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Inclusive user research and testing</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>When should these profiles be used?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These profiles have the most significant impact when used during the <b>early stages</b> of design, development and testing processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, how would each of these user profiles <b>engage and interact with the following scenarios</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A user-journey <span class="font-xs success">(e.g. Getting an insurance quote)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A process <span class="font-xs success">(e.g. Making a payment)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A page <span class="font-xs success">(e.g. Filling in a form)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A component <span class="font-xs success">(e.g. Choosing a date from a date picker)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>An example scenario:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Imagine each of these 6 profiles interacting with a date picker. Would any of them have <b>specific needs</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-center">
+              <img src="assets/img/date-picker.png" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A person with varied learning or cognition</h5>
+            <p>Do they understand the purpose of the field from the label, instructions and UI?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A person with low vision</h5>
+            <p>Can they interact with the field if viewed in high contrast or magnified?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A person with limited movement</h5>
+            <p>Can they interact with all features within the date picker using keyboard-only?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A person with no vision</h5>
+            <p>Will each aspect be correctly announced to screen readers?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Resources:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As a starting point, you could review the <a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles" target="_blank">Gov.UK accessibility user profiles</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-in-the-workplace">
+          <section data-background="#EDEBEB">
+            <h3>Accessibility in the workplace</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Technology</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ensure digital tools meet accessibility standards</b> (e.g. WCAG 2.2, EN 301 549) across software, intranets, and internal systems.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Provide assistive technologies</b> such as screen readers, speech-to-text, magnifiers, and alternative input devices.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Offer accessible communication platforms</b> that support captions, transcripts, keyboard navigation, and screen reader compatibility.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Test internal systems for compatibility</b> with assistive tech during procurement and onboarding phases.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ensure IT support staff are trained in accessibility needs</b>, including how to support users with different disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Use accessible document templates</b> (Word, PDF, presentations) and train staff to use them correctly.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Enable flexibility in tech setups</b>, including adjustable font sizes, contrast settings, and input methods.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Allow admin access to staff laptops where relevant</b>, as some users need to customise their entire digital experience (e.g. installing specialist software or accessibility tools).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Physical Facilities</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Provide step-free access</b> to all areas including entrances, workspaces, meeting rooms, kitchens, and toilets.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Install accessible signage</b> with clear text, tactile elements, and good contrast.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ensure accessible toilets and changing facilities are available</b>, not used as storage, and regularly maintained.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Offer height-adjustable desks and adaptable workstations</b> for varied physical needs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ensure lighting and acoustics support a range of sensory needs</b>, including quiet spaces and non-fluorescent lighting options.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Maintain clear walkways and accessible emergency exits</b>, with alarms that include visual and tactile alerts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Provide inclusive meeting spaces</b> with accessible seating arrangements and hearing support systems (like induction loops).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Provide quiet spaces</b> where people can decompress, supporting neurodivergent staff and others with sensory sensitivities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Avoid hot-desking where relevant</b>, as some staff need consistent seating, specific desk setups, or environmental adjustments.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-providing-workplace-adjustments">
+          <section data-background="#EDEBEB">
+            <h3>Providing workplace adjustments</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here are some steps to help create for a more <b>inclusive, accessible workplace</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Normalise adjustment conversations</b> by regularly asking, “What do you need to do your best work?” in a private, respectful way.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Create a simple adjustments process</b> that’s well-communicated and easy to use, with clear steps and quick responses.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Ensure managers are trained</b> to recognise when adjustments might be needed and how to respond supportively and legally.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Offer flexibility</b> in working arrangements, including remote work, flexible hours, or alternative communication methods.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Give employees choice and control in tech and tools</b>, such as selecting accessible software or hardware configurations.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Involve individuals in the decision-making</b>, rather than assuming what will work best for them.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Make adjustments proactive, not reactive</b>, by building accessibility into default workspaces, tools, and processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Maintain confidentiality and psychological safety</b> around adjustments, ensuring privacy and no fear of stigma.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Review adjustments regularly</b> in check-ins or performance reviews, especially if roles, locations, or tools change.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Create feedback loops</b> so staff can suggest improvements or flag inaccessible tools, facilities, or practices.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Collaborate with facilities, IT, and HR</b> to ensure adjustments are joined-up across systems and spaces.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Document and share success stories</b> (with permission) to normalise adjustments and demonstrate organisational commitment.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
