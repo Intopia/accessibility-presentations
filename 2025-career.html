@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CareER: Accessibility lunch and learn | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Accessibility lunch and learn</h1>
+          <div class="subtitle">CareER</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introductions">
+          <section data-background="#EDEBEB">
+            <h3>Introductions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>My name is <b>Russ Weakley</b>, head of training at Intopia.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Today's topics:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Legal responsibilities in different countries</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>What is the scope of digital accessibility?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People’s access needs and technology use</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-are-your-legal-responsibilities">
+          <section data-background="#EDEBEB">
+            <h3>Legal responsibilities in different countries</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Australia</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are three key resources for understanding and meeting <b>digital accessibility obligations in Australia</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-xs">
+              <li>The Disability Discrimination Act 1992</li>
+              <li>The Australian Human Rights Commission’s Digital Access Guidelines</li>
+              <li>The AS EN 301 549 Accessibility Standard</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. All public-facing digital products in Australia are <b>required to comply</b> with the &lsquo;Disability Discrimination Act 1992&rsquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>It is unlawful for a person who, whether for payment or not, provides goods or services, or makes facilities available, to discriminate against another person on the ground of the other person’s disability.</em></p>
+              <p class="font-xs"><a href="https://www.legislation.gov.au/C2004A04426/latest/versions" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. The <b>Australian Human Rights Commission</b> recently released the <a href="https://humanrights.gov.au/our-work/disability-rights/publications/guidelines-equal-access-digital-goods-and-services" target="_blank">Guidelines on Equal Access to Digital Goods and Services</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These guidelines help organisations understand how to <b>meet their obligations</b> under the Disability Discrimination Act.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They offer <b>practical advice</b> on making websites, apps, and other digital services accessible to people with disability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Organisations should conform with WCAG 2.2 at a minimum Level AA and consider appropriate Level AAA success criteria such as video transcripts, audio contrast, clear links and section headings.</em></p>
+              <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/chapter-3-standards-and-guidelines-digital-accessibility" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. The <b>AS EN 301 549 Accessibility Standard</b> defines accessibility requirements for ICT products and services.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This standard covers:</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Websites and mobile apps</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Software and operating systems</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Computers, tablets, and smartphones</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Self-service kiosks, ATMs, ticket machines</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Digital documents (e.g. PDFs, Word files)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Online platforms and cloud services</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This standard supports legal compliance with the <b>Disability Discrimination Act 1992 (DDA)</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>USA</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At the national level the <b>Americans with Disabilities Act</b> (ADA) applies to private and Government sites.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.ada.gov/resources/disability-rights-guide/#rehabilitation-act" target="_blank">Guide to Disability Rights Laws</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is also <b>Section 508 of the Rehabilitation Act</b> that applies to ICT in the Federal Government.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.access-board.gov/ada/" target="_blank">About the ADA Accessibility Standards</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.section508.gov/manage/laws-and-policies/" target="_blank">IT Accessibility Laws and Policies</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At the <b>State level</b> there are also various requirements.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://blog.usablenet.com/digital-accessibility-regulation-in-2023-an-update" target="_blank">Digital Accessibility Regulation in 2023: An Update</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.section508.gov/manage/laws-and-policies/state/" target="_blank">Section 508 by state</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Canada</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><a href="https://www.ontario.ca/page/about-accessibility-laws" target="_blank">The Accessibility for Ontarians with Disabilities Act, 2005</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Under the Information and Communications Standards, organizations must make their websites, including  web-based apps, accessible.</em></p>
+
+              <p><em>Organizations  must do so by making their websites compliant with Web Content Accessibility Guidelines (WCAG) 2.0, Level AA.</em></p>
+
+              <p><em>This international standard gives web developers guidelines on how to make their webpages accessible to computer users with disabilities. From: AODA Requirement for Ontario Websites</em></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The European Union</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>EU Accessibility Act 2025</b> is a landmark law that mandates a few everyday products and services to be easily accessible for specially-abled individuals.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://ec.europa.eu/social/main.jsp?catId=1202" target="_blank">European accessibility act</a></li>
+            </ul>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <p>The EU and all Member States made this initiative upon ratifying the United Nations Convention on <b>the Rights of Persons with Disabilities</b>.</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <p>With a <b>deadline set for June 28, 2025</b>, companies must act promptly to ensure compliance with the European Accessibility Act.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Declaring conformance includes:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Publishing an accessibility statement on your website</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Completing a VPAT, VPAT 2.5 Rev EU (November 2023)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Referencing the VPAT in the accessibility statement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Must be provided in the language of each EU member state where the product is available</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Must be continuously maintained</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>The accessibility statement must cover:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The functionality of the digital product</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How accessibility is managed within an organization, such as:
+                <ul>
+                  <li>Implementing accessibility training for employees</li>
+                  <li>Monitoring accessibility on an ongoing basis</li>
+                  <li>The names of enforcement authorities to which users can file accessibility complaints</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The United Kingdom</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One of the key pieces of web accessibility legislation in the UK is the <b>Equality Act 2010 (EQA)</b>.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.siteimprove.com/glossary/uk-accessibility-laws/" target="_blank">Overview of UK website accessibility laws</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Under the wide-ranging EQA, UK goods and service providers have a legal obligation not to discriminate against people – <b>including disability</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Intopia <b>does not have expertise</b> in the following countries:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>China</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><a href="http://wza.isc.org.cn/bztx/bzjd/fw/index.html" target="_blank">Information technology</a> - Technical requirements and testing methods for accessibility of Internet content (Ministry of Industry and Information Technology)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>From what we understand, China prohibits businesses and government agencies from <b>discriminating against individuals on the basis of disability</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The Law doesn’t include technical criteria for web accessibility, and it <b>doesn’t mention WCAG</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, China does have technical standards for web accessibility, and those standards are based on an <b>early version of WCAG</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Hong Kong</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><a href="https://www.digitalpolicy.gov.hk/en/our_work/" target="_blank">Guidelines on Dissemination of Information through Government Websites</a>, a publication of the Office of Government Chief Information Officer, Government of Hong Kong.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Those guidelines focus on Government websites only, and use <b>WCAG 2.0 Level AA.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>A common theme?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Most countries require some level of <b>WCAG compliance</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-wcag">
+          <section data-background="#EDEBEB">
+            <h3>What is the scope of digital accessibility?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Digital accessibility</b> generally includes:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Websites and web Applications</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Mobile Apps (Native & Hybrid)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Digital Documents</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Video & Multimedia</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>E-commerce & Booking Systems</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Email & Digital Marketing</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Learning Management Systems (LMS)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Software applications</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Physical accessibility</b> generally includes:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Buildings & Entrances</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Transport Systems</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Kiosks & ATMs</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Facilities & Amenities</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Signage</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Emergency Systems</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Footpaths and Streetscapes</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Parks and Outdoor Spaces</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, in some cases, the information presented on-screen for Kiosks & ATMs <b>could also be classified as digital information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility features such as colour contrast, structure, labels, target size, gestures etc <b>would all be relevant</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is especially relevant for <b>touch screen interfaces</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people-and-assistive-technologies">
+          <section data-background="#EDEBEB">
+            <h3>People’s access needs and technology use</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We generally focus on the following <b>broad categories of disabilities</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>People with no vision</li>
+              <li>People with reduced vision</li>
+              <li>People with reduced colour vision</li>
+              <li>People with reduced movement</li>
+              <li>People with varied learning or cognition</li>
+              <li>People with reduced or no hearing</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Assistive technologies</b> used by these different groups can include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Refreshable braille devices <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Head pointers</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Mouthsticks</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sip and puff devices</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Head switches</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Eye or head tracking software</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>&lsquo;Text-to-speech&rsquo; software <span class="font-xs success">(e.g. Microsoft Immersive Reader)</span></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>&lsquo;Speech-to-text&rsquo; software <span class="font-xs success">(e.g. Dragon NaturallySpeaking)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Motor Impairments</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Motor impairments encompass a range of conditions affecting movement and coordination.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Exact global figures are challenging to determine, as there is no way to track users and their technologies.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Vision Impairments</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Over 2.2 billion people globally have some form of vision impairment.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>At least 1 billion of these cases could have been prevented or are yet to be addressed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Projections indicate that by 2050, the number of people with sight loss will increase to over 1.7 billion.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Hearing Impairments</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>More than 1.5 billion people (nearly 20% of the global population) live with hearing loss.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Of these, 430 million have disabling hearing loss.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By 2050, this number is expected to rise to over 700 million. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Memory Impairments (Dementia)</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As of 2020, over 55 million people worldwide were living with dementia.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This number is projected to reach 78 million by 2030 and 139 million by 2050. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Neurodiversity (e.g., Autism, ADHD, Dyslexia)</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Approximately 15–20% of the global population is considered neurodivergent.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Dyslexia affects around 9–12% of people worldwide.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Autism spectrum disorder (ASD) is estimated to affect 1–3% of the global population.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Screen Reader Usage</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>According to WebAIM's Screen Reader User Survey #10 (2024), which included 1,539 respondents:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>NVDA: Used by 65.6% of respondents.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>JAWS: Used by 60.5% of respondents.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>VoiceOver (macOS/iOS): Used by 43.9% of respondents.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Narrator (Windows): Used by 37.3% of respondents.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>ZoomText and Magnification Tools</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the same WebAIM survey, 7.5% of respondents reported using ZoomText/Fusion.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Additionally, a survey by Vision Australia found that users relying on zoom text and magnification tools reported more difficulty using websites compared to those using screen readers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Motor Skill Assistive Technologies</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While specific global usage statistics for motor skill assistive technologies are limited, the UK Government's 2016 assistive technology survey provides some insights:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Screen Magnifier: Used by 30% of respondents.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Screen Reader: Used by 29% of respondents.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Speech Recognition: Used by 18% of respondents.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Readability Tools: Used by 15% of respondents.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="col-container">
+              <div class="col-75">
+                <p>Any <b>questions or comments</b>?</p>
+              </div>
+              <div class="col-25">
+                <img class="icon-soft" src="assets/icons/circle-question.svg" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
