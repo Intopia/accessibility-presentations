@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 02 Accessible Videos</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section data-background="#EDEBEB">
+          <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+          <h2>Accessible Video</h2>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-why-are-images-important">
+
+          <section data-background="#EDEBEB">
+            <p>Video is a fantastic tool for delivering information and holding user attention.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But when we create content that requires a particular sense to acquire information, such as hearing or vision, we need to provide an alternative means of getting the same information. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Common media alternatives for videos include captions, transcripts, and audio descriptions. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Providing alternative formats means a person can choose the format that's right for them. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We also need to take some other design considerations, like audio quality and visual clarity, into consideration for accessibility.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-captions">
+          <section data-background="#EDEBEB">
+            <h3>Captions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Captions are a synchronized text version of all audio information needed to understand content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Captions should contain all spoken dialogue, as well as all other important information such as relevant sounds (like a phone ringing) or music cues.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When media is live, captions are produced in real time by professional real time captioners.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For pre-recorded content, there are two types of captions. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The first is closed captions. These can be turned on and off by people who are watching the video. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The second is open captions, which are burned into the media file and thus always on. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We recommend closed captions, as they are more easily customisable and can be turned off by people who don’t need or want them.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As well as people who are Deaf or hard of hearing, captions can benefit a range of other people. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This can include people with audio processing delays, non-native speakers, and people watching video with no sound.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Controls for turning captions on and off should be easy to find and use in the media player for all users. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ensure your media player controls pass colour contrast and can be easily seen and understood. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Test your media player to make sure these controls are accessible by all inputs, such as keyboard and voice control, and remain available at all levels of zoom. </p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-transcripts">
+          <section data-background="#EDEBEB">
+            <h3>Transcripts</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A transcript is a text version of audio and/or visual information needed to understand content. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It should contain all spoken content, as well as ideally any other audio or visual information required to understand the video. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This might include the sound of a phone ringing, the description of a painting, or the transcription of text that appears on screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Transcripts are useful for people who are Deaf or hard of hearing, blind, Deafblind, or who have cognitive or visual limitations. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, there are many more people who will use transcripts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These might include people short on time, people looking for a verbatim quote, or people translating the video into another language.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When providing a transcript, we must ensure it is located in close proximity to the media it relates to, is labelled clearly, and is in an accessible format.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And when a video has no sound, we should identify this somewhere on the page in close proximity to the video.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That way, people will know to look for the transcript straight away if needed.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-audio-description">
+          <section data-background="#EDEBEB">
+            <h3>Audio description</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An alternative to providing a description of visual information in a transcript is to provide that description as an audio track.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This practice is usually called audio description. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Audio description benefits people who are blind or have reduced vision, or who aren’t looking at the video for any reason.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Audio description can be provided in two ways.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The first method is an audio narration.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A narrator will describe relevant visual information in gaps in the video audio.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is usually provided as a separate audio track, but may also be integrated into the main video, or provided as a separate video. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We should let viewers know where and how any separate audio description is available, in close proximity to the video.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The second method is to integrate audio description into the video content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, a presenter naturally describes what a viewer will see on screen, as part of the presentation. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means a separate audio track is unnecessary.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-sign-language-translation">
+          <section data-background="#EDEBEB">
+            <h3>Sign language translation</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You may also be asked to provide a sign language translation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This involves a sign language interpreter either included as part of the video, or as a small overlay on-screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Sign language interpreters must be large enough to be seen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ensure enough space in the frame is left for their inclusion if you know you will be providing this alternative.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Keep in mind that sign language is local. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An ASL (American Sign Language) interpretation for example may not be usable in another country.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-other-considerations">
+          <section data-background="#EDEBEB">
+            <h3>Other considerations</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As well as media alternatives, when creating video we need to keep several audio and visual considerations in mind for accessibility.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For audio, we need to ensure all audio is high quality so it can be easily discerned. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We want to ensure any background music or noise is at a low decibel.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This helps people with hearing or cognitive impairments to more easily understand the foreground audio. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Background audio should preferably be at least 20 decibels lower than foreground audio, or able to be turned off.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any speech should be even-paced and clear, and should use plain language.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For visual content, we need to consider readability of text, such as our font and font size.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We must ensure any colours used pass colour contrast, and that we don’t use colour alone to convey meaning. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s also important that we avoid causing migraines and seizures.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Do not use flashing or strobing content, or warn viewers if this is included.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-conclusion">
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible video doesn’t just benefit people with disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many people watch video with the sound off, in a second language, or while distracted and not looking at the screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When reviewing your videos, ask yourself, “Do I need all senses to understand what this video is about?”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Particularly consider how someone with no hearing or no vision watching your content would experience it.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Will the alternatives provided meet their needs?</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

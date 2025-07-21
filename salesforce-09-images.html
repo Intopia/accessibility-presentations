@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 09 Accessible Images</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section data-background="#EDEBEB">
+          <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+          <h2>Accessible Images</h2>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-why-are-images-important">
+          <section data-background="#EDEBEB">
+            <h3>Why are images important?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is a common misconception that images make digital content <b>less accessible</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But in fact, <b>images can be incredibly helpful</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Especially when they are <b>used with purpose and described well</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Images can improve understanding, support navigation, and <b>help communicate key messages</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They are especially useful for people with <b>language, processing, or memory impairments</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Visuals support recognition over recall, which can <b>reduce cognitive load</b>.</p>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-four-types-of-images">
+          <section data-background="#EDEBEB">
+            <h3>Four types of images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>four common types of images</b> used in digital content, and each has different accessibility requirements:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Type 1: Decorative images</li>
+              <li>Type 2: Informative images</li>
+              <li>Type 3: Functional images</li>
+              <li>Type 4: Complex images</li>
+            </ul>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section id="slide-type-1-decorative-images">
+          <section data-background="#EDEBEB">
+            <h3>Type 1: Decorative images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Decorative images <b>don&rsquo;t convey important content</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If they were removed, <b>the meaning of the page</b> would stay the same.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The following image contains text that <b>also appears on screen nearby</b>. This is an example of a decorative image.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="img-center">
+              <img src="assets/img/de-image4.png" class="img-width-900" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>From an accessibility perspective, decorative images <b>should be hidden from assistive technologies</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This can be achieved using a <b>null (or empty) alt attribute</b> like this:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;img src="a.png" <span class="codeHighlight">alt=""</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid leaving out the alt attribute entirely, as some screen readers <b>may announce the file name instead</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the following code example, there is <b>no alt attribute provided</b> at all:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;img src="a.png"</span>&gt;</code></pre>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-type-2-informative-images">
+          <section data-background="#EDEBEB">
+            <h3>Type 2: Informative images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are the <b>most common type of image</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Informative images <b>convey important information</b> that supports the content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They <b>must include alternative text</b> that expresses the meaning or purpose of the image, not just what it looks like.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an <b>example</b> of an imformative image beside a news article:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-center">
+              <img src="assets/img/image-informative.png" class="img-width-700" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And here is a <b>code example</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;img src="a.jpg"
+  <span class="codeHighlight">alt="
+    Emma Bombonato, manager of 
+    environmental sustainability 
+    standing in front of the
+    Sydney Opera House"</span>
+&gt;</code></pre>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-type-3-functional-images">
+          <section data-background="#EDEBEB">
+            <h3>Type 3: Functional images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Functional images are used <b>inside interactive elements</b>, such as links or buttons.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The alternative text <b>must describe the action or destination</b> — not the visual appearance.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an <b>example</b>, where an icon is positioned inside a button, in the top right corner of a modal dialog:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-center">
+              <img src="assets/img/image-functional.png" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the following bad code example, the <b>visual appearance of the image is described</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;
+  &lt;img src="a.png" <span class="codeHighlight">alt="Cross icon"</span>&gt;
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Describing the image itself does not help the user <b>understand what it will do</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the following good code example, the <b>action is described</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;
+  &lt;img src="a.png" <span class="codeHighlight">alt="Dismiss"</span>&gt;
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Logos used as links should <b>also have functional alt text</b> — such as “Company name home.”</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an example of the <b>Salesforce logo</b>, which may be positioned inside a link:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-center">
+              <img src="assets/img/Salesforce.com_logo.svg"  class="img-width-600" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And here is the <b>code example</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;a href="#"&gt;
+  &lt;img src="logo.png" <span class="codeHighlight">alt="Salesforce home"</span>&gt;
+&lt;/a&gt;</code></pre>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-type-4-complex-images">
+          <section data-background="#EDEBEB">
+            <h3>Type 4: Complex images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These include <b>charts and graphs, maps, diagrams, and infographics</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They need <b>two types of description</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>First, they need <b>a short alt text using the alt attribute</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This should identify the <b>image and the location of the longer description</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And second, they need <b>a longer text description</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This can be provided <b>either on the same page or via a link nearby</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an example of a <b>complex diagram</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-center">
+              <img src="assets/img/image-complex.png" class="img-width-700" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And here is the <b>code example</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;img src="a.png"
+  alt="Venn diagram depicting content
+  category relationships. 
+  <span class="codeHighlight">Detailed description below.</span>"
+&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid placing long descriptions <b>inside the alt attribute</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Screen readers <b>will read the whole thing aloud</b>, which can be overwhelming and difficult to remember or interpret.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The longer description <b>can appear</b> in the following locations:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>In surrounding text on the same page</li>
+              <li>In a visible caption</li>
+              <li>Or on a separate page linked near the image</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-alt-text-and-captions">
+          <section data-background="#EDEBEB">
+            <h3>Alt text vs captions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Alt text provides an alternative for people <b>who cannot see the image</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, screen reader users or <b>people with low bandwidth</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Captions provide <b>visible context for everyone</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid <b>duplicating content in both</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the caption and alt text are the same, <b>screen reader users will hear the same information twice</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an example of an image <b>with a caption nearby</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-center">
+              <img src="assets/img/info-image3.jpg" class="img-width-700" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And here is difference between the <b>alt text and caption</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li><b>Alt text</b>: “Empty Virgin Australia airline counter”</li>
+              <li><b>Caption</b>: “Ticket revenue had dried up amid coronavirus travel bans.”</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-images-that-contain-text">
+          <section data-background="#EDEBEB">
+            <h3>Images that contain text</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Images that contain text need to be treated as <b>informative images</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Images that include readable text must <b>include that same text in the alt attribute</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Otherwise, screen reader users will <b>miss important aspects of the message</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an example of an image that <b>contains some text</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="img-center">
+              <img src="assets/img/image-text1.png" class="img-width-500" alt="">
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And here is the <b>code example</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;img src="a.png"
+  alt="<span class="codeHighlight">Cartoon featuring 
+    influential women ascending 
+    stairs. Text reads 
+    'We rise by lifing others. 
+    The female lead'.</span>"
+&gt;</code></pre>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-images-that-contain-bilingual-text">
+          <section data-background="#EDEBEB">
+            <h3>Images with bilingual text</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When an image contains text in more than one language, <b>include both versions in the alt text</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an example of an image with <b>bilingual text</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="img-center">
+              <img src="assets/img/image-bilingual.png" alt=""><br>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And here is the <b>code example</b>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;img src="museum-logo.png"
+  alt="<span class="codeHighlight">Museum of New Zealand.
+  Te Papa Tongarewa</span>"&gt;</code></pre>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-alt-text-is-contextual">
+          <section data-background="#EDEBEB">
+            <h3>Alt text is contextual</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Alt text depends on <b>the context of the image</b> — why it’s there and what it’s meant to convey.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is a a photo of <b>Harvard Stadium</b> with a person running up some steps.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="img-center">
+              <img src="assets/img/image-context1.jpg" class="img-width-700" alt="">
+            </div>
+          </section>
+
+
+          <section data-background="#EDEBEB">
+            <p>On a <b>general page</b>, the alt text may be:</p>
+            <p><i>“A nearly empty Harvard Stadium.”</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On a <b>track try-outs page</b>, the alt text may be:</p>
+            <p><i>“Harvard Stadium with a man running up stone steps.”</i></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On a <b>renovations page</b>, the alt text may be:</p>
+            <p><i>“Harvard Stadium with cracked concrete pillars.”</i></p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-writing-good-alt-text">
+          <section data-background="#EDEBEB">
+            <h3>Tips for writing effective alt text</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here are some tips to <b>help write effective alt text</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. Think about the image’s <b>purpose and context</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. Be concise, but <b>clear and meaningful</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. Use plain, <b>direct language</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4. Put the most <b>important information first</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>5. Screen readers already announce <b>that something is an image</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, avoid phrases like “image of” or “picture of” unless it’s a specific content type like a graph or comic <b>where this affects meaning</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-how-long-should-alt-text-be">
+          <section data-background="#EDEBEB">
+            <h3>How long should alt text be?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There’s <b>no official character limit</b> for alt text in HTML.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The old 125-character myth comes from <b>outdated screen reader behavior</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Alt text should be <b>as long as it needs to be</b> to convey meaning — but no longer.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If lengthy detail is needed, use <b>a longer description elsewhere</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some platforms or content management systems <b>may impose character limits</b> — so check your tools.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-conclusion">
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When in doubt, ask yourself: “What would someone miss <b>if they couldn’t see this image</b>?”</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That’s the story your alt text <b>needs to tell</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
