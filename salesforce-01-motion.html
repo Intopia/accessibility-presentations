@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 01 Accessible motion in design</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Accessible motion in design</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When used well, animation can <b>improve the user experience</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It helps guide attention, provides feedback on user actions, and <b>shows that the interface is responding</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It supports context changes — <b>like loading new content</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It also <b>helps users build a mental model</b> of where things go, even when they move off screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Salesforce page, the <b>tile enlarges slightly</b> when the mouse hovers over it. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is a helpful indicator that a component is <b>interactive</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/plus/ </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Notes: Small example of helpful motion is the slight enlargement of a tile when mouse hovers over it, as on home page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But motion <b>isn’t always helpful</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For some people, motion can cause <b>discomfort, disorientation, dizziness, nausea or headaches</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In some cases, it could trigger <b>serious health issues</b> like migraines or seizures.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For many people, <b>motion can be distracting</b>, especially when they’re trying to read or focus on a task.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Who Is Affected</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Motion can affect <b>more users than you might expect</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>People with vestibular disorders, migraines, or epilepsy may <b>react physically to certain effects</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Those with ADHD or autism can be <b>easily distracted by movement</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And people who read more slowly may <b>struggle if content moves away too quickly</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Things to Avoid</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Avoid long animations</b>. Keep it under five seconds.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Long animations can delay interaction, frustrate users, or <b>contribute to motion sickness</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Avoid large or sweeping animations</b>, especially when objects move across a lot of screen space. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This kind of motion can be disorienting, especially for people with <b>balance or sensory sensitivities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Be cautious with <b>splash animations or background videos</b>, particularly when they autoplay or cover the entire screen. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These can feel <b>overwhelming</b> and hard to ignore.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Additionally, background animation <b>must not create visibility issues for viewers</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any content laid over a background animation must be <b>tested for colour contrast</b> against the background at its lowest contrast point.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Salesforce page, <b>moving video appears as a background behind splash text</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This may be difficult for people who are <b>sensitive to motion</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, the video has a pause button which <b>allows a user to pause the movement</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/dreamforce/ </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Notes: Example is of video behind text. Use the moving logo grid on salesforce.com.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid effects like <b>parallax scrolling or looping animations</b> that keep moving without stopping. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Constant motion can be <b>tiring or distracting</b> for many users.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Watch out for motion that goes in a <b>different direction than the user is scrolling</b> — like horizontal sliding while scrolling down the page. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That mismatch can feel <b>jarring and confusing</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And finally, avoid anything that flashes quickly, starts moving automatically, or <b>doesn’t give users a way to pause or stop it</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These kinds of effects can be inaccessible and even <b>unsafe for some people</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Making Motion Accessible</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Only use motion when it <b>adds real value</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Animation should <b>serve a purpose</b>, such as showing feedback, reinforcing a state change, or guiding attention. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid adding motion <b>purely for decoration</b>, as it can create distractions without helping the user.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Salesforce page, there is a <b>looping piece of video</b> at the top of the page. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is <b>no way to pause or remove</b> this animation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example of looping part of video: https://www.salesforce.com/news/stories/video/gen-z-ai-agent-financial-perspectives/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Keep animations <b>short</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Keep it under five seconds so as not to delay interaction, frustrate users, or <b>contribute to motion sickness</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Make movements <b>small and subtle</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Large, sweeping gestures are <b>more likely to be disorienting</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instead, use <b>gentle fades, short transitions, or minimal shifts in position</b> to create the effect you need.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Salesforce page, large spinning tiles may <b>disorient or discomfort motion-sensitive viewers</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Problematic example: https://www.salesforce.com/dreamforce/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Notes: See the way the tiles spin under ‘Big names, bigger ideas’ section.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Never rely on motion to <b>complete a task</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If important content is only visible through animation, or an action only works by dragging or swiping with animation, <b>that creates a barrier</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The experience must always <b>work without animation</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid motion that <b>starts automatically</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let users <b>trigger it themselves</b>, especially for anything more than a quick transition. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <b>gives people more control</b> over their experience and reduces the chance of surprise or discomfort.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Always <b>respect user preferences</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many people set their operating system to <b>reduce motion</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By using the <code>prefers-reduced-motion</code> media query in your styles, you can <b>automatically tone down or remove animation</b> for those who’ve asked for it. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But don’t assume that all users affected by motion will have the <b>Reduced Motion setting on</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many people affected by motion <b>don’t know the Reduced Motion setting exists</b>, or choose not to have it on. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It is not a <b>green light</b> to use motion as we please.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For motion that loads automatically, give users a <b>visible option to pause or disable motion</b> in your interface. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This feature, <b>such as a pause button</b>, should be an appropriate visual and target size, should meet colour contrast requirements, and should be keyboard accessible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Reference: prefers-reduced-motion implementation tips from web.dev | implementation tips from MDN web docs</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And finally, test your designs with <b>motion turned off</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This helps ensure that your interface is <b>still understandable, usable, and accessible</b> without animation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Motion can be <b>a powerful tool in design</b> — but only when it’s used with care. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By keeping it purposeful, gentle, and optional, we can make digital experiences <b>more inclusive for everyone</b>.</p>
+          </section> 
+
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

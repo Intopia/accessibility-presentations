@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 05 Designing accessibly with colour</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Designing accessibly with colour</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Our priority with visual design is to ensure that information is <b>one, easy to perceive, and two, easy to understand</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Colour plays a <b>major role</b> in visual design.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It can support your brand message, grab a person's attention, or <b>influence their mood</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But not everyone can <b>see colour in the same way</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We want to ensure colour has <b>appropriate contrast</b>, and <b>isn’t relied on to convey information</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We also want our visual designs to be <b>customisable</b> for those whose needs aren’t met by our designs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Colour contrast</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Using colours with good contrast benefits people who have <b>reduced contrast sensitivity</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Contrast refers to the difference in <b>brightness between the foreground or primary colour</b>, and the background or adjacent colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>People may have <b>difficulty with contrast sensitivity</b> because of:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>An eye condition.</li>
+              <li>A cognitive condition (such as migraines).</li>
+              <li>The environment (such as low light or glare).</li>
+              <li>As a result of the natural aging process. </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When we measure the contrast between two colours, the contrast is expressed <b>as a ratio along a range between 1:1 and 21:1</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, if we measure the contrast of white on white, <b>the contrast ratio is 1:1</b>. This is the lowest possible contrast ratio.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These colours would be <b>impossible to see against each other</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By comparison, if we measure the contrast of black on white, <b>the contrast ratio is 21:1</b> - the highest possible contrast ratio. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG sets a minimum contrast ratio that colour must meet <b>in order to be considered generally perceivable</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>meaningful text</b>, this is:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>              
+              <li><b>4.5:1 for regular font</b> <span class="font-xs">(smaller than 24px, or 19px bold)</span></li>
+              <li><b>3:1 for large font</b> <span class="font-xs">(equal to or larger than 24px, or 19px bold)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <b>does not apply to</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>              
+              <li>Text that is part of programmatically inactive components.</li>
+              <li>Decorative elements.</li>
+              <li>Logos.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Meaningful non-text visual information must have <b>a colour contrast of at least: 3:1</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This includes:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Graphics.</li>
+              <li>Icons.</li>
+              <li>States (focus, hover, checked, selected etc).</li>
+              <li>Outlines for user interface components (borders for form fields and buttons).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Non-text contrast <b>exceptions</b> include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Logos.</li>
+              <li>Default browser elements.</li>
+              <li>Programmatically disabled components.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let’s do some quick tests <b>on this Salesforce page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The heading text featured on this page has <b>appropriate contrast</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Although the border of the Start button has low contrast, the ‘Start’ text has appropriate contrast, <b>the component passes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The pause button on the animated header image has <b>too low contrast</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While contrast increases when the component is hovered over, this <b>does not benefit people looking for this button</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: Good page to test https://trailhead.salesforce.com/today</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Unique backgrounds and foregrounds</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When testing colour contrast between the foreground and background, this <b>includes text that is laid over an image</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If an image contains multiple colours, <b>any significant swatches of colour must be tested separately</b> against the text.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, check out this ‘Nothing here yet’ banner. We must text the <b>white text against each major part of the background</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So while the text passes contrast against the blue sky, w<b>e run into problems when comparing it to the face of our mascot</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/plus/mylist</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Gradients represent a <b>unique challenge for colour contrast</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Measurements of contrast between all points of low contrast is <b>required at multiple viewport sizes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is because gradients in foreground text <b>will likely scale differently</b> on a desktop viewport compared to a mobile browser viewport.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Contrast for image backgrounds can often be improved by adding a <b>semi-transparent overlay on the image to lighten its colour and improve contrast</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Alternatively, text <b>surrounded by a drop shadow</b> will have increased contrast.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If a tile changes colour due to receiving focus, <b>both colours must be tested against the text</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Colour and meaning</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Because some people cannot perceive all colours, or perceive colours differently, <b>colour should never be used as the only visual means</b> of:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Conveying information.</li>
+              <li>Indicating or prompting an action.</li>
+              <li>Distinguishing a visual element.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The following are a few examples of <b>where we commonly see this occur</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Forms may use colour as the only means to <b>indicate required fields</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Status updates may use <b>using colour to signal essential content</b> – i.e if something passes or fails.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Links could have <b>underlines turned off</b> so that colour is the only method of distinguishing links from surrounding text.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Charts and diagrams <b>may use colour</b> as the only means of communicating key information.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These examples aren't good practice, as anyone who cannot distinguish the colour <b>may miss out on receiving that information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on the Trailhead Academy course selection page, <b>colourful document icons convey what stream the course corresponds to</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This information is <b>not conveyed in any other way</b> on this page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Problematic example: The document icons on the course options on https://trailheadacademy.salesforce.com/home have different colours but no other indication of what that means (I think it refers to roles - see https://trailheadacademy.salesforce.com/catalog) </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To prevent this happening, we <b>should not use colour as the sole method</b> to convey information.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This doesn’t mean don’t use colour at all – but that we should <b>include a secondary way of conveying the same information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example: i<b>nclude a text label of “required”</b> as well as using colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Include <b>text or symbols in a status update</b> as well as colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ensure <b>links have underlines</b> as well as colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Provide <b>text labels</b> to identify data on charts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On this Salesforce pricing table, a green tick has been used to <b>indicate a product’s inclusion</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This uses <b>two different methods of conveying the same information</b>, colour and symbol.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/sales/pricing/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use tables to demonstrate use of <b>colour and symbols together</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Customization</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can improve content accessibility for many users by <b>following these general guidelines</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, many of our users may <b>still need unique settings</b> to make text more accessible to them.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, they may want to <b>change text size, colour, or even font</b>, to make it easier for them to read.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To support this, we <b>should use real text</b> whenever possible , not text embedded in images.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When a user applies custom settings to a page, such as turning on High Contrast Mode, they <b>need every part of the page to respond to that setting</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When text is provided as an image, it <b>cannot be customised</b> and will not respond to any user settings. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means the text may be <b>difficult or impossible for a person to read</b>, and could also trigger migraines or visual disturbances.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In instances where we must provide text embedded in an image (such as an infographic or chart), we can support these users by p<b>roviding the same information as a real text alternative</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means that all the information in the image <b>can be customized and read through a secondary means</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, these statistics on the Salesforce website are real text. <b>This means a user can change their appearance to suit their needs</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: See big statistics tiles near bottom of https://www.salesforce.com/customer-stories/agentforce-for-HR-IT/</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Colour is a <b>significant consideration</b> in accessible design. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ensuring everyone can perceive and understand our content will <b>greatly improve our accessibility</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We also want to <b>support user customisation</b>, for when a user needs to make a few extra tweaks.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

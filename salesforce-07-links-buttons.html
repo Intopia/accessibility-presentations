@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 07 Accessible links and buttons</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Accessible links and buttons</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Links are a navigation tool for users <b>moving between or within pages</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use a link to <b>connect two resources</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Buttons should <b>trigger an action on a page</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use a button to enable a user to <b>perform a programmable action</b>, such as submitting a form or opening a dialog.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Both links and buttons need to be <b>designed and implemented in a clear and accessible manner</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This makes it easy for all users to <b>take the action they require</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Well-implemented links and buttons <b>can make interactions simpler and more efficient</b> for people with low or no vision, reduced mobility, or varied cognition.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Visual appearance</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When designing both links and buttons, there are <b>several accessibility considerations</b> to take into account.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Colour is <b>an important factor</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Links must have a contrast ratio of <b>4.5:1</b> (for small text) or <b>3:1</b> (for large text) against their background. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Active buttons (without a text label) must have a contrast ratio of <b>3:1</b> against their background.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All links and buttons must show a <b>visual focus indicator</b> when in focus. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This focus indicator must also have appropriate colour contrast (<b>3:1</b>).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://intopia.github.io/exercise/salesforce-testing-link-button.html</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Notes: Notice the focus styles as I focus on the link and button.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All links and buttons must be <b>visually distinguishable from surrounding non-link text</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That means <b>something other than colour</b> to indicate they’re interactive.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This could be an <b>underline for a link</b>, or a chevron for a button.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If possible, combine elements going to the <b>same location into the same link</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Salesforce page, each tile has three separate link components that <b>all go to the same place</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Bundling these together provides a <b>clearer and more efficient</b> user experience.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Problematic example: https://www.salesforce.com/communications/sales-software/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Notes: Under ‘Learn new skills…’ each tile has three separate links to the same place.</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h3>Visible text labels</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A visible text label is a label that is <b>presented on-screen as text</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Visible labels can include the <b>contents of links and buttons</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, for a link that uses the link text Intopia Home, <b>“Intopia Home” is the visible label</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For a button that reads “Save”, <b>this is the visible label</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each element should have a unique, accessible label that <b>distinguishes it from other elements on the page</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That means two things:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. Buttons that perform the same action, or links that go to the same location, <b>should have the same or similar names</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. Buttons that perform different actions, or links that go to different locations, <b>should have different names</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Links that open in a new window or tab <b>should have visual and programmatic indicators</b>, so users know before clicking on them.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Links that point to a file or destination in a non-HTML format (e.g. MS Word, PDF, plain text, etc.) <b>should indicate the type of file or destination</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, these links should also <b>indicate the size of the file</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It should be clear to a user what a link or button will do if it is activated.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Check out this <b>‘Become a sponsor’ link</b>. When activated, it opens a blank email. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This action is <b>not made clear by the link text</b>, which means a user may not understand what has happened.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Problematic example: ‘Become a sponsor’ near bottom of https://www.salesforce.com/dreamforce/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Images that function as links should be given alt text that indicates <b>where the link will go</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, the logos on this page have the alt text format of <b>“company name, consultant overview”</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This makes it <b>clear where each image link is going</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/communications/sales-software/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>The aria-label attribute</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Sometimes, we need to <b>add extra context</b> to how a link or button will be interpreted by assistive technologies. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can do this by using the <code>aria-label</code> attribute.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An <code>aria-label</code> will provide an <b>accessible, alternative label</b> for assistive technologies. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, it can be used to <b>distinguish between links with the same link text</b> (e.g. “Read more”).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It can also add extra information about <b>how a button works</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An <b>aria-label</b> is applied <b>directly to the element itself</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Save"</span>&gt;
+  Save
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An <b>aria-label</b> will <b>not affect what is presented</b> as the visible text label. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A visible text label and accessible name <b>should always match at least partially</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://intopia.github.io/exercise/salesforce-testing-aria-label.html</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Note: If we listen to the button announced by VoiceOver, we can hear the word “Dismiss” announced.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is an example where the accessible name <b>almost matches the visible text label</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Save current work"</span>&gt;
+  Save
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the following example, the <b>aria-label</b> attribute has been used to give the button an accessible name that is <b>entirely different to the visible text label</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Add to cart"</span>&gt;
+  Save
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://intopia.github.io/exercise/salesforce-testing-aria-label-bad.html</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Note: If we listen to the button announced by VoiceOver, we can hear the words "Add to cart" announced.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A mismatch between the visible text label and the accessible name <b>could confuse some types of users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It will also result in barriers for <b>users of voice recognition technology</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Since <code>aria-label</code> content is only presented to assistive technologies, <b>consider making important information visible for all users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use an <code>aria-label</code> when:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. Sighted-users are getting information that <b>non-sighted users are not</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. There is <b>no better way to convey this information</b> through a visible label.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Following these guidelines will make links and buttons <b>easy to use for more people</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

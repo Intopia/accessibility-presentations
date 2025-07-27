@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 06 Accessible forms for designers</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Accessible forms for designers</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Forms are everywhere</b> — signing up, logging in, contacting support, making a payment.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If a form isn’t accessible, it can <b>stop someone from completing a task entirely</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Designing better forms <b>helps everyone</b>, especially people using screen readers, keyboard navigation, or with cognitive differences.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Use Clear, Visible Labels</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All form controls <b>need to have a visible label</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>That includes</b>: text inputs, radio buttons, checkboxes, dropdowns, and text areas.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Labels help people <b>identify the purpose of each field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When labels are clear, people <b>make fewer errors</b> and complete forms more confidently.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Good labels should be short, descriptive, and written in plain, familiar language.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use them <b>consistently</b> across your product.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Position labels <b>close to the form field</b> — either above or to the left, depending on your layout.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For radio buttons and checkboxes, the label usually sits to the right.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this registration flow, all labels are <b>clearly written, associated, and easy to see</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: Use ‘Register for free’ flow at https://www.salesforce.com/plus</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Avoid using placeholder text <b>as a substitute for labels</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Placeholder text often has poor contrast and <b>disappears when users type</b> — which means they can’t refer back to the instructions later.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Always use <b>persistent</b>, well-placed, and clearly written labels.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They make forms easier for everyone.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Use Fieldset and Legend for Grouped Options</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There may be times when we need <b>a short, descriptive label above</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>              
+              <li>A group of form questions.</li>
+              <li>A group of radio buttons.</li>
+              <li>Or a group of checkboxes.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While this descriptive information is often referred to as another label, they are <b>technically called a 'legend'</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A legend provides <b>a caption for a group of form controls</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When correctly marked up, legends provide <b>additional and important context</b> for the group to screen reader users.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As focus moves to the first form control in the group, <b>the legend is announced</b> along with the label.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the following example, screen readers would announce the first field as: <b>"Delivery address. Address, edit."</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As a designer, it is important to <b>describe a legend correctly</b> in our annotations.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This will allow our engineers to <b>apply the appropriate markup</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Provide Helpful Instructions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instructions can take two formats.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The first is <b>form level instructions</b> that are applied to the entire form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And the second one is <b>field level instructions</b> which are applied to individual form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Form level instructions help people to understand <b>whether this form is right for them</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They help them understand <b>what fields they'll need to fill in</b>, and any instructions or requirements that apply to the entire form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An example would be where <b>all fields were identified as mandatory</b>, unless otherwise marked.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Field level instructions indicate any restrictions or requirements that <b>apply to an individual form field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The help users understand if a field is <b>required or optional</b>, or that a specific format is needed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, in this registration form, the field level instructions are used to inform people <b>how many questions the form has</b>, and what steps to follow.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/form/signup/freetrial-salesforce-starter/?d=pb</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The field level instructions <b>indicating what the form is about</b> and how many questions it contains.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For any instructions, we want to use <b>plain language</b> and an easy to see format.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, an asterisk is <b>commonly used to mark fields as required</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, it can easily be <b>missed by people with low or no vision</b>, or misunderstood by people with varied cognition.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instead, we recommend <b>being clear and explicit</b>, such as marking required fields with a red 'required' in parentheses.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For specific formats, any requirements or restrictions should be <b>made clear to eliminate doubt or confusion</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this example, the <b>date of birth field has the instruction text “DD/MM/YY”</b>, indicating the date format.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And the Account name field has the instruction text which says, <b>“This can be your username or email”</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As with labels, it's important that any instructions are <b>persistent and not included as placeholder text</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That way, they can always be <b>referred to as needed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The same goes for not including <b>instructions as error messages</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, in this same Salesforce form, there is <b>no indication of what is a required field</b> until an error occurs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, we want to let users know this information <b>before they trigger an error</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/form/signup/freetrial-salesforce-starter/?d=pb</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Required Fields</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Designers need to make sure required fields are <b>clearly identified</b> — not just with color.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>four methods</b> that can be used to visually identify required fields:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 1: Asterisk symbol on required fields</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The asterisk symbol can be used to <b>visually define required fields</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If this method is used, a <b>key needs to be presented at the top of the form </b>to help explain the symbols.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, the asterisk is a <b>small indicator that can be missed</b> by users with poor eyesight.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 2: (Required) wording on required fields</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The word ‘(Required)’ can be used to <b>visually define required fields</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="name"&gt;
+  Full name
+  <span class="codeHighlight">&lt;span&gt;(Required)&lt;/span&gt;</span>
+&lt;/label&gt;
+&lt;input type="text" id="name" required&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This additional content can be <b>styled in a different colour</b> to make it stand out.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 3: ‘All fields required’ statement</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If all fields in the form are required, users can be presented with a statement such as: <b>‘All fields in the form below are required’</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This message <b>must be placed before the form</b> so that assistive technology users can read this information before entering the form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Using this method, individual form fields <b>do not have to be visually identified as ‘Required’</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 4: ‘All fields required unless marked optional’ statement</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If most of the form fields are required, <b>you could flag optional fields only</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A message would need to be presented before the form along the lines of: <b>‘All fields in the form below are required unless marked OPTIONAL’</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Then, all optional fields <b>would need a visual flag</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Make Errors Easy to Find and Fix</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If someone makes a mistake, <b>help them fix it quickly</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Show errors clearly, using both <b>accessible color and text</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Place the message <b>near the field that needs attention</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Tell the user <b>what went wrong and how to fix it</b>, like “Email address is missing the @ symbol.”</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This Salesforce sign-up form uses clear error messages that tell the user directly how to fix the error, and are easy to see due to the use of colour and symbols.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/au/form/signup/sales-ee/?d=topnav2-btn-ft</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Remember: <b>do not programmatically disable the submit control</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Users may need to rely on being able to submit in order to <b>trigger validation errors</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Be Careful with Placeholders</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The placeholder text <b>isn’t a label</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s low contrast, <b>disappears as you type</b>, and can confuse users.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This can present issues for people with <b>memory or cognitive issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some patterns <b>move the placeholder text out of the form field</b> when a user begins to type, such as on this form.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is a <b>better practice than regular placeholders</b>, but is less ideal than persistent label.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The text is still low contrast, and the <b>movement may confuse users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/au/form/signup/sales-ee/?d=topnav2-btn-ft</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use placeholder text <b>only for short examples</b> — and never for essential instructions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible forms are <b>just good design</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Clear labels, helpful feedback, and consistent structure <b>make forms easier for everyone to use</b> — with or without a disability.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

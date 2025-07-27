@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 03 Understanding ARIA</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Understanding ARIA</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>What is ARIA?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA stands for <b>Accessible Rich Internet Applications</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It helps make websites and web apps <b>more accessible to people using assistive technologies.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA is a set of attributes that <b>add roles, states, and properties to the accessibility tree</b>, helping assistive technologies interpret complex or custom UI elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The current version is <b>WAI-ARIA 1.2</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>What problems is ARIA trying to solve?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA aims to solve <b>two key problems</b> in accessibility:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Dynamic content updates</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When content changes via JavaScript, <b>assistive technologies often aren’t notified</b> unless ARIA is used to communicate those changes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Custom UI components</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many modern interfaces use non-native elements (like custom dropdowns or modals) that <b>don’t expose the right semantics to assistive technologies</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA helps <b>fill in the missing information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA is like a polyfill between the HTML we have now and <b>the HTML we wish we had</b> — or may soon have!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In fact, our aim is to <b>gradually avoid or even remove ARIA</b> as HTML and browser support improves over time.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Roles, states and properties</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA attributes are broken down into three categories: <b>roles, properties and states</b>.</li>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>ARIA roles</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA roles can be used to <b>add or change the semantic meaning of HTML elements</b> in the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA roles are <b>HTML attributes</b> written as:</p>
+            <p><code>role="[role name]"</code></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let’s look at <b>two examples</b> of how we could add a role to an element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Using role="button"</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add <code>role="button"</code> to the <code>&lt;div&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div <span class="codeHighlight">role="button"</span>&gt;&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: <a href="https://intopia.github.io/exercise/salesforce-testing-role-button.html" target="_blank">https://intopia.github.io/exercise/salesforce-testing-role-button.html</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we look at the <b>first element</b> in the accessibility tree, we can see that it has a role of <code>generic</code>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we look at the <b>second element</b> in the accessibility tree, we can see that it has a role of <code>button</code>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We should <b>avoid adding ARIA roles unnecessarily</b>, and use native HTML elements like <code>&lt;button&gt;</code> whenever possible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Native elements are better supported and come with <b>built-in keyboard and accessibility features</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Using role="combobox"</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add <code>role="combobox"</code> to an <code>&lt;input&gt;</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This will <b>change the element’s role</b> from <code>textbox</code> to <code>combobox</code> in the accessibility tree. </p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;input <span class="codeHighlight">role="combobox"</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This new role provides <b>additional context to assistive technologies</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It will help them understand that the element <b>behaves like a dropdown or autocomplete widget</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>ARIA properties</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA properties provide <b>additional information about HTML elements</b> to the accessibility tree.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA properties are <b>HTML attributes</b> written as:</p>
+            <p><code>aria-[property]="[value]"</code></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let’s look at <b>two examples</b> of how ARIA properties could be used.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Using aria-label</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <code>&lt;button&gt;</code> <b>contains an "X" symbol</b> to indicate that it will close or dismiss something. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, it has <b>no accessible name</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add an <code>aria-label="Dismiss"</code> to the <code>&lt;button&gt;</code>, so that we can <b>give it a meaningful accessible name</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Dismiss"</span>&gt;X&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: <a href="https://intopia.github.io/exercise/salesforce-testing-aria-label.html" target="_blank">https://intopia.github.io/exercise/salesforce-testing-aria-label.html</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we <b>check the element’s name in the accessibility tree</b>, we can see that it now has a name of “Dismiss.”</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we <b>listen to the button announced by VoiceOver</b>, we can hear the word “Dismiss” announced.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>DEMO</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This attribute is useful when you need to <b>give an element a name or enhance it for assistive technologies</b> - especially when there’s no visible label.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Using aria-live</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add <code>aria-live="polite"</code> to elements. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this case, the <code>aria-live</code> attribute is applied to the <code>&lt;div&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div <span class="codeHighlight">aria-live="polite"</span>&gt;
+  Hello, I am some dynamically inserted content!
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This tells assistive technologies that the element is a <b>live region</b> — a place where content might change without the user interacting.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>polite</code> value means screen readers <b>will wait until the user is idle</b> before announcing the change.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Using aria-describedby</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add <code>aria-describedby="info"</code> to the <code>&lt;input&gt;</code> and <b>link it to a description elsewhere on the page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s helpful for <b>providing hints, guidance, or error messages</b> that should be read after the element’s accessible name.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this case, we are linking the instructions to the <code>&lt;input&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="username"&gt;Username&lt;/label&gt;
+
+&lt;span <span class="codeHighlight">id="info"</span>&gt;Your username must be at
+least 8 characters long.&lt;/span&gt;
+
+&lt;input id="username" <span class="codeHighlight">aria-describedby="info"</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: <a href="https://intopia.github.io/exercise/salesforce-testing-aria-describedby.html" target="_blank">https://intopia.github.io/exercise/salesforce-testing-aria-describedby.html</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If I check the element’s name in the accessibility tree, we can see that it <b>now has a description</b> of “Your username must be at least 8 characters long”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we listen to the input announced by VoiceOver, we can hear the label announced - “Username” <b>as well as the instructions</b> - “Your username must be at least 8 characters long”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>DEMO</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>ARIA states</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA states are used to <b>inform users about the current status or condition of elements</b> in the accessibility tree. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Unlike ARIA properties that describe permanent characteristics, <b>states are dynamic</b> - they change as the user interacts with the page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These changes are usually <b>managed with JavaScript</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA states are <b>HTML attributes</b> written as:</p>
+            <p><code>aria-[state]="[value]"</code></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let’s look at <b>two examples</b> of how ARIA states could be used.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Using aria-expanded</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add <code>aria-expanded="true"</code> to the <code>&lt;button&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-expanded="true"</span>&gt;&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This attribute is typically added or updated <b>when the button is triggered</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, when it opens a <b>menu or a collapsible panel</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It informs assistive technology users that the element controlled by the button is <b>currently expanded</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Using aria-invalid</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can add <code>aria-invalid="true"</code> to the <code>&lt;input&gt;</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="password"&gt;Password&lt;/label&gt;
+&lt;input id="password" <span class="codeHighlight">aria-invalid="true"</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This state is usually applied <b>some time after the user enters invalid data in the input</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It notifies assistive technologies that <b>the field has an error and requires correction</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: <a href="https://intopia.github.io/exercise/salesforce-testing-aria-invalid.html" target="_blank">https://intopia.github.io/exercise/salesforce-testing-aria-invalid.html</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we <b>check the element in the accessibility tree</b>, we can see that it now has a a state of “Invalid user entry: true”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we <b>listen to the input announced by VoiceOver</b>, we can hear the label announced - “Name” as well as the state - “Invalid”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>DEMO</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>ARIA can’t do everything!</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s important to understand <b>what ARIA does not do</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA is <b>not a fix-all tool</b>; it only enhances accessibility by communicating semantic information to assistive technologies. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Specifically, ARIA <b>does not do any of the following</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Modify an element’s <b>visual appearance</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA <b>won’t change how something looks on screen</b>. You still need CSS for styling.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Modify an element’s <b>behavior</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA <b>doesn’t add or change how elements behave</b>; that’s controlled by your HTML, JavaScript, or other scripting.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <b>focusability to elements</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If an element isn’t natively focusable, ARIA won’t make it focusable. <b>You need to use proper HTML or tabindex for keyboard focus</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Add <b>keyboard functionality to elements</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA <b>doesn’t automatically enable keyboard interactions</b>. You must implement keyboard event handlers yourself.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Support for ARIA</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How can we determine if ARIA is supported by <b>each of the different browsers and assistive technologies</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>A11ySupport.io</b> site is a great resource that documents support for individual ARIA attributes across major browsers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>HTML test cases</b> site show how various HTML elements and ARIA attributes behave in different screen reader and browser combinations.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>ARIA support can vary</b> depending on browser and assistive technology versions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this reason, it’s always best to <b>test your own implementations</b> in the environments your users rely on.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>ARIA can be a very powerful and effective tool to help improve accessibility, <b>as long as it used well</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
