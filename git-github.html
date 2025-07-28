@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A quick intro to Git and GitHub</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+        <section>
+
+          <section data-background="#EDEBEB">
+            <div class="instructions">
+              <h3 class="instructions-heading">Slide instructions</h3>
+              <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+              <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+              <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+              <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+              <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+            <h1>A quick intro to Git and GitHub</h1>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>1. Why Use Version Control?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Avoids messy file naming: <code>file-v3-final.doc</code>.</li>
+              <li>Maintains a complete history of every change.</li>
+              <li>Enables collaboration without overwriting work.</li>
+              <li>Makes bug tracking and rollback easy.</li>
+              <li>Encourages experimentation with branching.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>2. What Is Git?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Git is a <b>version control tool</b> that helps developers save different versions of their work over time.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Git is widely used in modern software development to <b>keep track of code changes</b>, collaborate with others, and avoid losing work.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Git <b>works on your local machine</b> and doesn’t require an internet connection for day-to-day tasks like saving changes or creating branches.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Key features:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Stores complete snapshots of a project.</li>
+              <li>Works locally on your machine.</li>
+              <li>Every user has the full history.</li>
+              <li>Enables safe experimentation.</li>
+              <li>Efficient and fast.</li>
+              <li>Flexible and widely supported.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>3. Why Developers Use Git</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Maintains a detailed history of changes.</li>
+              <li>Makes it easy to revert to previous versions.</li>
+              <li>Allows multiple developers to work safely on the same project.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>4. Core Git Concepts</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4.1 Basic actions</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li><b>Repository</b>: A project folder tracked by Git.</li>
+              <li><b>Pull</b>: Get changes from a shared project and bring them into your local version.</li>
+              <li><b>Push</b>: Send your saved changes back to the shared project.</li>
+              <li><b>Commit</b>: A saved version of your changes with a message.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4.2 Branching and merging</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li><b>Branch</b>: A separate copy of your code to test or add features.</li>
+              <li><b>Merge</b>: Combine changes from one branch into another.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4.3. Copying projects</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li><b>Clone</b>: Copy a Git project from another location (often from GitHub).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>5. What Is GitHub?</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>GitHub is a <b>cloud-based platform</b> for hosting Git repositories.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It provides a <b>central place for the code</b> — one source of truth.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>GitHub makes it <b>easier to collaborate</b>, especially on large or distributed teams. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It tracks who changed <b>what, when, and why</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Key features:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>Supports both public and private projects.</li>
+              <li>Enables global collaboration.</li>
+              <li>Provides detailed history and tracking.</li>
+              <li>Visualises contributions and activity.</li>
+              <li>Offers tools for managing projects, not just code.</li>
+              <li>Works as a central source of truth for teams.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>6. Common GitHub Features</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>6.1 Pull Requests:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Propose code changes.</li>
+              <li>Review, comment, and approve before merging.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>6.2. Issues:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Report bugs or suggest features.</li>
+              <li>Assign, label, and track progress.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>6.3. Discussions & Wikis:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>For team Q&A and documentation</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>7. Common tools</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Developers can use <b>Git in many ways</b>: through the terminal, inside their code editor, or through dedicated apps.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>7.1. Command Line / Terminal</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Most common and powerful way to use Git.</li>
+              <li>Commands like git status, git add, git commit, etc.</li>
+              <li>Works on macOS, Windows (via Git Bash), and Linux.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>7.2. Integrated Development Environments (IDEs) and Editors</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>VS Code</b>: A popular code editor with built-in Git features like commits, branches, and file comparisons.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>JetBrains IDEs</b>: Powerful Git integration with visual tools for commits, logs, branches, and merges.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Eclipse</b>: Includes Git support via the EGit plugin.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Xcode (macOS)</b>: Offers built-in Git source control features for Apple developers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>7.3. Standalone Git GUIs (Graphical User Interfaces)</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>GitHub Desktop</b>: Simple tool for cloning, committing, branching, and syncing GitHub projects.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Sourcetree (by Atlassian)</b>: Visual Git and Mercurial tool, great for managing branches and resolving conflicts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>GitKraken</b>: Cross-platform Git client with a visual commit history and drag-and-drop merges.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Tower</b>: Professional-grade Git client with visual features and GitFlow support.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>7.4. Online Platforms</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These platforms are web-based and allow users to view and sometimes edit code, track changes, and collaborate on development.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>GitHub</b>: View code, commits, branches, pull requests, and use in-browser editing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>GitLab</b>: Self-hosted or cloud-based Git platform, popular for DevOps pipelines.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Bitbucket</b>: Atlassian’s Git service with Jira integration.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h2>8. FAQ</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.1. Do I need to know Git if I’m not a developer?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Not necessarily. But understanding how Git and GitHub work can help you collaborate better with developers — especially if you're involved in review or testing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.2. What’s the difference between Git and GitHub again?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Git is the tool used to save versions of code on your computer. GitHub is an online platform where teams share that code and work together.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.3. Can I break something by looking at a GitHub repository?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>No. Just viewing a repository or reading code won’t cause any changes. You need permission to make edits or suggestions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.4. What is a “commit message”?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s a short note a developer writes when they save a change, explaining what was updated or why.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.5. Why are there so many branches?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Branches let developers try out new features or fixes without affecting the main project. It keeps things safe and organised.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.6. Can GitHub be used for things other than code?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Yes! Some teams use it to manage documentation, design files, or even plain text projects — especially when they want version history or collaboration.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.7. Is GitHub only for open-source projects?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Not at all. Many private teams and companies use GitHub to manage internal projects that the public never sees.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.8. How do people review each other’s work?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They usually create a pull request, which shows the proposed changes. Others can then comment, request improvements, or approve the update before it goes live.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.9. What does “pull” mean?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>“Pull” means getting the latest version of a project from GitHub so that your local copy is up to date.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>8.10. Can I try GitHub without installing anything?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Yes! You can create a GitHub account and explore public repositories or even edit files in your browser without needing to install Git.</p>
+          </section>
+
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
