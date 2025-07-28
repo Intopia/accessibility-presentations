@@ -27,8 +27,11 @@
       <div class="slides">
 
 
-        <section>
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
 
+        <section>
           <section data-background="#EDEBEB">
             <div class="instructions">
               <h3 class="instructions-heading">Slide instructions</h3>
@@ -44,7 +47,9 @@
             <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
             <h1>A quick intro to Git and GitHub</h1>
           </section>
+        </section>
 
+        <section>
           <section data-background="#EDEBEB">
             <h2>1. What is Git?</h2>
           </section>
@@ -71,9 +76,15 @@
               <li>Flexible and widely supported.</li>
             </ul>
           </section>
+        </section>
 
+        <section>
           <section data-background="#EDEBEB">
             <h2>2. Why developers use Git</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>History</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -81,31 +92,77 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Git makes it easy to <b>revert to previous versions</b> of files, folders etc.</p>
+            <p>Git makes it easy to <b>go back to earlier versions of files or folders</b> — like a time machine for your project.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Git allows <b>multiple people to work safely on the same project</b> - even in the same file.</p>
+            <p>You can <b>scroll back through saved points</b>, pick one that worked, and go back to it if needed.</p>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>Here are some <b>commands that developers may use</b> to "move through time".</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git log</code>: view a list of past changes and commit messages.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git revert</code>: undo a specific change by creating a new “reversal” commit.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git reset</code>: move the project back to a previous state (used carefully).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Multiple people, same files</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Git allows <b>multiple people to safely work on the same project at the same time</b> — even in the same file.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Everyone works on <b>their own copy</b> of the project.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When they're ready, they can save their changes and <b>combine them back into the main version</b> using Git.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If two people change the same part of a file, <b>Git will flag a conflict</b> and ask someone to review and choose which version to keep.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This makes collaboration <b>safe and organised</b>, without accidentally overwriting each other's work.</p>
+          </section>
+        </section>
+
+        <section>
           <section data-background="#EDEBEB">
             <h2>3. Core Git concepts</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Repository</b>: A project folder tracked by Git.</p>
+            <h5>Repository</h5>
+            <p>A folder where all the files and history of a project are stored and tracked by Git.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Pull</b>: Get changes from a shared project and bring them into your local version.</p>
+            <h5>Pull</h5>
+            <p>Get the latest changes from a shared online project and bring them into your local version.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Push</b>: Send your saved changes back to the shared project.</p>
+            <h5>Push</h5>
+            <p>Send your locally saved changes back to the shared project.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Branch</b>: A separate copy of your code to test or add features.</p>
+            <h5>Branch</h5>
+            <p>A separate copy of the project where you can safely test new ideas or make changes.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -113,7 +170,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Commit</b>: A saved version of your changes with a message.</p>
+            <p>Branches are like a safe testing space where nothing breaks the main version until you're ready.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Commit</h5>
+            <p>A saved snapshot of your changes, usually with a short message describing what you did.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -121,11 +183,13 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Commit message</b>: A short note developers write when they commit and push change.</p>
+            <h5>Commit message</h5>
+            <p>A short note to explain what has changed when making a commit and pushing changes.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Merge</b>: Combine changes from one branch into another.</p>
+            <h5>Merge</h5>
+            <p>Combine changes from a working branch back into the main project, so everyone's work comes together in one place.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -133,9 +197,72 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Clone</b>: Copy a Git project from another location - often from GitHub to your local machine.</p>
+            <h5>Clone</h5>
+            <p>Making a full copy of a Git project from another location onto your own computer - often from GitHub to your local machine.</p>
+          </section>
+        </section>
+
+
+
+
+        <section>
+          <section data-background="#EDEBEB">
+            <h2>4. A quick demo</h2>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>I'm going to give you <b>a quick demo of Git</b>, using my local terminal.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, I am using an app called <a href="https://iterm2.com/" target="_blank">iTerm2</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>cd [drag folder]</code> - change to the folder I need.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git status</code> - shows me what has changed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git diff</code> - compares what has changed to what was there before.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git branch</code> - shows me all branches, and which branch I am in.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git branch test</code> - create a new branch called "test".</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git checkout test</code> - switch to this new branch.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git branch main</code> - switch back to the main branch.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git log --oneline</code> - shows what’s happened so far as a timeline.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>q</code> - quit the log and return to command line.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>git log --oneline --graph</code> - shows a visual representation of the timeline.</p>
+          </section>
+        </section>
+
+
+
+
+        <section>
           <section data-background="#EDEBEB">
             <h2>4. What is GitHub?</h2>
           </section>
@@ -165,13 +292,15 @@
               <li>Visualises contributions and activity.</li>
             </ul>
           </section>
+        </section>
 
+        <section>
           <section data-background="#EDEBEB">
             <h2>5. Common GitHub features</h2>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5.1. Code view</h4>
+            <h4>Code view</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -199,7 +328,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5.2. Pull requests</h4>
+            <h4>Pull requests</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -228,7 +357,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5.3. Issues</h4>
+            <h4>Issues</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -261,7 +390,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5.4. Discussions</h4>
+            <h4>Discussions</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -277,7 +406,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5.5. Actions</h4>
+            <h4>Actions</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -293,7 +422,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>5.6. Wiki</h4>
+            <h4>Wiki</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -307,7 +436,9 @@
           <section data-background="#EDEBEB">
             <p>Here are the <b>WAI-ARIA</b> <a href="https://github.com/w3c/aria/wiki" target="_blank">wiki</a>.</p>
           </section>
+        </section>
 
+        <section>
           <section data-background="#EDEBEB">
             <h2>6. Common tools</h2>
           </section>
@@ -365,7 +496,9 @@
               <li>Bitbucket</li>  
             </ul>
           </section>
+        </section>
 
+        <section>
           <section data-background="#EDEBEB">
             <h2>7. FAQ</h2>
           </section>
@@ -403,6 +536,7 @@
             <h2>Questions?</h2>
           </section>
         </section>
+
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
