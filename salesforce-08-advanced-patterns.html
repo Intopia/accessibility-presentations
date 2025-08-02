@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 08 Advanced patterns </title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Advanced patterns</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this video, we will explore some <b>common advanced patterns</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These include <b>carousels</b>, <b>tab panels</b>, <b>accordions</b> and <b>sticky components</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Carousels</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Carousels create many <b>potential accessibility barriers</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A <b>carousel</b> should have the following:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Visible components with <b>appropriate target size</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A <b>visible</b> focus indicator.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A <b>progress indicator</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the carousel auto-rotates, a <b>‘pause’ button</b> should be provided.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Accessibility considerations</b> for carousels include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can a screen reader tell which slide is currently in focus, and <b>hear all relevant content</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Is the focus order <b >logical</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can a keyboard user <b>reach all content</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can a touch screen user <b>reach all content</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can the movement of the carousel <b>be paused</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use the <b>&lt;button&gt;</b> element for <b>interactive components</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Semantic support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Wrap the carousel in a <code>&lt;section&gt;</code> element with an <code>aria-label</code> so that it can be <b>identified as a distinct section</b> of the page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ensure each slide has appropriate alt text or <code>aria-label</code> to <b>identify which slide it is</b>, as well as its content if needed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Apply <code>aria-hidden</code> to any slides not currently in focus, <b>so they are not announced.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the carousel auto-rotates, apply <code>aria-live</code> to ensure <b>dynamic changes are announced</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Prevent focus from <b>going to any off-screen slides</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Check out this <b>automatically scrolling carousel</b> on the Agentforce page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When focus enters the carousel, the tiles are individually focusable, but <b>movement doesn’t pause</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means the focus indicator is off screen and <b>impossible to follow</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/au/agentforce/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On this Field Service Management page, the carousel is <b>easier to use</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Although the scrolling arrows are not keyboard accessible, the carousel tiles <b>move with keyboard focus</b>, ensuring the focused tile remains on screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Note how a screen reader announces each tile as <b>belonging to a group of seven</b>, making the size of the carousel clear.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/service/field-service-management/</p>
+          </section>
+
+
+ 
+
+
+          <section data-background="#EDEBEB">
+            <h3>Tab panels</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Over the years, developers have used <b>a range of different methods</b> for the tab mechanisms, including:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Headings</li>
+              <li>Links </li>
+              <li>Buttons </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These days, <b>buttons</b> are the preferred method.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, each <b>tab panel</b> should have a <code>&lt;button&gt;</code> element to reveal the tab.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Accessibility considerations</b> for tab panels include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Is the focus order <b>logical</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can a keyboard user <b>reach all content</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can a screen reader <b>hear all relevant content</b> when opened?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the past, the <b>most common method</b> of navigating between tabs was via <kbd>TAB</kbd> keystrokes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, the <b>most common method used today</b> is using left and right <kbd>ARROW</kbd> keys.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Navigation <b>from the tablist the the tabpanels</b> should be done by <kbd>TAB</kbd> keystrokes</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Salesforce marketing page, the <b>in-page tabs are accessible</b> by using the keyboard <kbd>ARROW</kbd> keys.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Once a tab is selected with <kbd>ENTER</kbd>, <b>focus can enter the tab panel</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/marketing/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Semantic support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>tablist</code> role identifies the element that serves as the <b>parent container for a set of tabs</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div <span class="codeHighlight">role="tablist"</span>&gt;
+  &lt;button role="tab"&gt;Panel name&lt;/button&gt;
+&lt;/div&gt;
+&lt;div role="tabpanel"&gt;
+  Panel information
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each <code>&lt;button&gt;</code> inside the <code>tablist</code> should be given a role of <code>tab</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>tab</code> role indicates an interactive element that, when activated, <b>displays its associated tabpanel</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div role="tablist"&gt;
+  &lt;button <span class="codeHighlight">role="tab"</span>&gt;Panel name&lt;/button&gt;
+&lt;/div&gt;
+&lt;div role="tabpanel"&gt;
+  Panel information
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And finally, <b>each panel</b> that is revealed or hidden below should have a role of <code>tabpanel</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>tabpanel</code> is a <b>container for the resources</b> of layered content associated with a <code>tab</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;div role="tablist"&gt;
+  &lt;button role="tab"&gt;Panel name&lt;/button&gt;
+&lt;/div&gt;
+&lt;div<span class="codeHighlight"> role="tabpanel"</span>&gt;
+  Panel information
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Accordions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An <b>accordion</b> should have the following:</p>
+          </section> 
+
+          <section data-background="#EDEBEB">
+            <p>A header that <b>explains what’s inside</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A panel which <b>contains the related content</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A <b>visual indicator</b> which shows if the panel is expanded or collapsed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Accessibility considerations</b> for accordions include the following:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Is it <b>keyboard accessible</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Is it clear to a screen reader whether the panel is <b>expanded or collapsed</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Is the visual indicator <b>in close proximity</b> to the header text (preferably on the left)?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All focusable elements <b>can be reached</b> by <kbd>TAB</kbd>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When the header element receives focus, use <kbd>ENTER</kbd> or <kbd>SPACEBAR</kbd> to <b>open it</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Semantic support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>trigger</b> should be a <code>&lt;button&gt;</code> element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These buttons are often <b>wrapping in a heading</b> <code>&lt;hn&gt;</code> element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Panel content</b> should be in a <code>&lt;div&gt;</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>aria-expanded</code> attribute should be applied as <code>true</code> <b>when the accordion is expanded</b> and <code>false</code> when it is closed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This will <b>indicate the state of the panel</b> to assistive technologies.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Have a look at this accordion on the <b>Salesforce analytics page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each panel is <b>accessible by keyboard</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A screen reader announces when a panel is <b>expanded or collapsed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/analytics/</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Sticky components</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility considerations for <b>sticky components</b> include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Can the sticky component receive focus, and <b>is the focus order logical</b> on the page?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Does the sticky component <b>prevent other elements from receiving focus</b>, or obscure the focus indicator?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Where in the page order is the <b>sticky component announced</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When a page is reflowed or viewed via a small viewport, does the sticky component <b>obscure page content</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All <b>focusable elements</b> can be reached by <kbd>TAB</kbd>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Support:</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on this Dreamforce page, we have <b>a sticky countdown clock and a sticky Agentforce button</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When we test the page at 400%, the sticky content becomes large, and obscures parts of the page, <b>making it difficult to read</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is <b>no way</b> to remove this content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This sticky component is also a link, which means it <b>needs to receive keyboard focus.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It currently receives focus <b>after the main banner</b>, but before the component actually appears visually.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It would be very difficult for a user to <b>understand where focus has gone</b>, and access this link.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/dreamforce/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We test the <b>WCAG Reflow criterion</b> at 1280 x 1040, at up to 400% zoom.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But people may be accessing your site at <b>many different sizes and magnifications</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It's a good idea to check that it doesn't break <b>under other conditions</b>.</p>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Following these suggestions will make your advanced patterns <b>easy to use for more people</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

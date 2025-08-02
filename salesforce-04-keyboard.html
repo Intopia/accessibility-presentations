@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 04 Testing for keyboard accessibility</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2 style="font-size: 250%;">Testing for keyboard accessibility</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Introduction</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some of our users primarily operate their devices with a <b>keyboard or keyboard alternative</b> (like a switch device).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This might include people with <b>limited physical ability</b> who cannot use a mouse, or <b>people who are blind</b> and use a screen reader. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It can also include <b>power users</b>, and people <b>experiencing technical issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We need to ensure that all functionality is available using <b>standard keystrokes</b> for all the different types of people who may need it.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Keyboard use</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Most native elements already have <b>built-in keyboard operability</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>“Native” means using HTML elements for their <b>intended semantic purpose</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Examples of <b>native elements</b> could include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>              
+              <li>Links</li>
+              <li>Buttons</li>
+              <li>Inputs</li>
+              <li>Select (dropdown) menus</li>
+              <li>Textareas</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On the other hand, ‘Non-native’ implies using HTML elements in a manner that <b>deviates from their intended purpose</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Examples of <b>non-native elements</b> could include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Modal windows</li>
+              <li>Date pickers</li>
+              <li>Autocomplete dropdown menus</li>
+              <li>Accordions</li>
+              <li>Complex navigation menus</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Keyboard access</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Every page should be <b>accessible via the keyboard</b> - without having to use the mouse. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You should be able to use <b>the following keystrokes</b> to navigate and interact with page elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>Use <kbd>Tab</kbd> to move forward.</li>
+              <li>Use <kbd>Shift</kbd> + <kbd>Tab</kbd> to move back.</li>
+              <li>Use <kbd>Enter</kbd> to trigger a link.</li>
+              <li>Use <kbd>Enter</kbd> or <kbd>Spacebar</kbd> to trigger a button.</li>
+              <li>Use <kbd>Escape</kbd> to close modals and dropdowns.</li>
+              <li>Use <kbd>Arrow</kbd> keys to navigate through menus, radio button groups and dropdowns.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on the Salesforce news page, we can use the <kbd>TAB</kbd> key to <b>access each focusable element</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use <kbd>Enter</kbd> to <b>trigger a link</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use <kbd>Spacebar</kbd> to <b>open a dropdown menu</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And <kbd>Arrow</kbd> or <kbd>Tab</kbd> keys to access each item inside the menu.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can use <kbd>Escape</kbd> to <b>move out of the menu</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example to use: https://www.salesforce.com/news/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Have a go on a <b>page of your choice</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You should <b>see your focus indicator</b> moving through the page. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Take note of the <b>following</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How easy is it <b>to see</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>How <b>logical is the order</b> in which it moves? </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>How many times</b> do you have to key to get to the content you want?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’ll look <b>more into these ideas</b> as we go.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Focus order</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>three related concepts</b> when it comes to a page order:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. <b>Source order</b>, or the order in which HTML markup is written.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. <b>Visual reading order</b>, or the order in which a sighted user would naturally read the page contents.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. And <b>keyboard focus order</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Keyboard focus order is the <b>order of interactive page elements</b>, such as links and form controls, when accessed by the keyboard.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can determine the keyboard focus order by <b>tabbing through elements</b> on a web page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Keyboard-focusable items should receive focus in a <b>sequential manner that is intuitive and predictable</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We must ensure that people using keystrokes to navigate can <b>always predict where focus will go</b> as they move through the page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let’s <b>check the focus order</b> on the Salesforce pricing page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Focus order is <b>managed in a logical way on this page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Every component is reachable by keyboard <b>in the order we would expect</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This popup chat window <b>floats independently of the page</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That means it correctly appears <b>as the very last item</b> in the page’s focus order.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Interestingly, when we reach the page footer, our focus goes <b>below the chat window into the footer region</b>, before we reach it. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While this is unavoidable, it <b>could be jarring for some users</b>, who might assume the window doesn’t receive focus at all.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example to use: https://www.salesforce.com/sales/pricing/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we go TAB through this page, you will see that the chat window is <b>the last item on the page in focus order </b> - even though it appears above the final footer information. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This could be <b>confusing</b> for people who rely on the keyboard or a keyboard alternative to navigate.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Focus indicators</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A <b>focus indicator</b> lets a person know which element on the screen has focus.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A <b>good</b> focus indicator:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. <b>Is consistent and clear</b> – it should be the same on all pages across a product.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. <b>Does not rely on colour alone</b> – it should be identifiable by more than just a colour change (for example a border, underline, or chevron).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. <b>Has good contrast</b> – it should have a contrast ratio of at least 3:1 against adjacent colours.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let’s have a <b>look at the focus indicator</b> on the Salesforce news page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we begin to tab through the page, the focus indicator is <b>clear and easy to see</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It has <b>appropriate weight and colour contrast</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, when focused on the carousel navigation bar, <b>the focus indicator shrinks</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It is <b>very difficult</b> to see.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When we reach the ‘View all episodes’ component in the CIO Conversations section, <b>the focus indicator goes missing altogether</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We still have focus, and can activate the link, <b>but we cannot see where we are</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Use: https://www.salesforce.com/news</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Focus management</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When content dynamically changes, we want to keep the focus logical for both <b>sighted and non-sighted users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, <b>when a modal window is triggered</b>, we should set focus to one of the following:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>The modal window container,</li>
+              <li>The first heading inside the modal window,</li>
+              <li>Or the first interactive element inside the modal window.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The best solution may <b>depend on the circumstances</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, when users try to submit simple forms with errors, we should <b>send focus to the first field in error</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For more complex forms, we should <b>send focus to an error message above the form</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://intopia.github.io/exercise/salesforce-testing-onsubmit-simple.html</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://intopia.github.io/exercise/salesforce-testing-onsubmit-complex.html</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Single page apps</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Single-page web applications <b>change the content on the page as you interact with it</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They do this without needing to <b>load a whole new page each time</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instead, it updates the current page with new information, making everything <b>feel faster and smoother</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One common problem with these pages is that developers <b>may not send focus to an intuitive location</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This could be confusing for keyboard and screen reader users as they <b>may not understand what has happened</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, we want focus to be <b>sent to the main page heading</b> each time the page content updates.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Check out this <b>demo of a single page app</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we submit each step, notice that focus <b>moves to the page heading</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This allows assistive technology users to <b>orientate themselves as the page refreshes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://intopia.github.io/exercise/salesforce-testing-focus-management.html</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are also times when we may want to <b>avoid sending focus to a specific location</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An example could be a <b>simple toast notification</b> that pops up for 5 seconds and tells us our information has been saved. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In these circumstances, we <b>do not need to shift focus at all</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Another example occurs on the <b>Salesforce marketing page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These cards each contain <b>three interactive elements</b>: the image, the header, and the call to action.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To reduce keystrokes, the image has been <b>removed from the focus order</b>, as it goes to the same location as the other links.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Example: https://www.salesforce.com/marketing/</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Regardless of the scenario, our focus management system is <b>designed to be adaptable</b>, ensuring an efficient and logical experience for all users.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Testing keyboard is a <b>fairly straightforward process</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’re looking for behaviour that is <b>logical, predictable, intuitive, and efficient</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Remember, just because something can be accessed, doesn’t make it <b>easy to access</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If a keyboard user cannot easily guess the page order, or must use 85 tabs to reach the submit button, <b>we are not providing a usable experience</b>.</p>
+          </section>
+
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

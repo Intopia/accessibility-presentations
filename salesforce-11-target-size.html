@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 11 Target size</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2>Target size</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Targets</b> are the parts of the screen that respond to user input.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This might be with a <b>mouse, head-wand, stylus, or by touch</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Creating targets with accessibility in mind will make it easier for users<b> to complete tasks and navigate through your product</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Larger target size benefits <b>a range of people with disabilities</b>. This might include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. People with difficulty with <b>fine motor control</b> (who may find larger targets easier to select).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. People with <b>low vision</b> (when used along with larger visible targets).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But <b>everyone benefits from large targets</b>, whether they use a touch device or a mouse. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This could include someone <b>using a device one handed</b>, or using it while walking where it is harder to keep the device steady.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG 2.2 AA recommends a minimum target size of <b>24 x 24 px</b>, but this is significantly smaller than standard industry recommendations.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Touch target sizes feature in <b>Google’s Material Design guidelines</b> and <b>Apple's Human Interface Guidelines</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These specs recommend that <b>touch targets be at least</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>48 x 48 px (Google)</li>
+              <li>44 x 44 px (Apple)</li>              
+            </ul>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <p>This is in line with WCAG 2.2 AAA, which recommends meeting <b>44 x 44 px</b>.</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Padding</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Touch targets can extend <b>beyond the visual bounds</b> of a component. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, a button may visually appear to be 32 x 32 CSS pixels but with padding, the <b>touch target is 44 x 44 pixels</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It is also good practice to have <b>a small amount of space between targets</b> to prevent overlap. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>BBC Mobile Accessibility Guidelines</b> recommends a minimum of 1 pixel, although a bit more is preferable.</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Target design</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Target visual design should consider <b>colour and visibility</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Targets are part of a website’s UI, which means they should meet a <b>3:1 minimum colour contrast ratio</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Targets should be <b>positioned in close proximity</b> to any relevant labels or information to improve their usability for people with low vision or cognitive differences.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, on an accordion, <b>a chevron icon</b> helps to indicate that the accordion is interactive. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is the target a user will <b>click to expand the accordion</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>What if that icon <b>sits away from the text</b> that identifies the accordion?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Anyone who can’t view the text and the icon in the same field of vision is <b>not going to get that information together</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, we want the target <b>closer to the label text</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Have a look at this <b>Pause button</b> on the Trailhead site. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are a large 48 by 48 pixels, which makes them <b>highly visible and easier to use</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Other buttons on the page have <b>similarly large sizes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Comparatively, this pause button on the Dreamforce page is <b>around 30 by 30 pixels</b>. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It meets the minimum requirements, <b>but not the recommended size for ease of use</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Larger target sizes, with clear and visible target design, will assist users to <b>more efficiently and easily complete tasks</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

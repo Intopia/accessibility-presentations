@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Salesforce - 10 Consistent Help, Redundant Entry, Accessible Authentication</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h2, h3, h4, h5, b {
+        color: rgb(3, 45, 96);
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+        <section>
+          <section data-background="#EDEBEB">
+            <img style="width: 100px;" src="https://trailhead.salesforce.com/assets/trailhead-logo-no-text-a2df2574a49d32f9c6633a09d7bfabec743f88d43a76258cc185e709d3b917c4.svg" alt="">
+            <h2 style="font-size: 200%;">Consistent Help, Redundant Entry, Accessible Authentication</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In 2023, WCAG 2.2 introduced a handful of <b>new success criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are three criteria that fall under the principle of <b>making products “Understandable”</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Consistent Help</li>
+              <li>Redundant Entry</li>
+              <li>Accessible Authentication (Minimum and Enhanced versions)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's <b>explore these three criteria</b> to see how they intend to make interacting with our digital platforms easier for more people.</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Consistent Help</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When users are completing a task on our site or app, we need to <b>ensure that they can find help consistently</b> when they need it.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is particularly important for people with <b>cognitive variations or vision impairments</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If a person can't get the help they need, they might <b>make a mistake or abandon what they're trying to do</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They may also be forced to <b>seek assistance</b> from other people.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This may involve sharing personal information, which could be a <b>security or privacy risk</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Success Criterion 3.2.6 Consistent Help</b> mandates that any help mechanism must be in a consistent location across your product.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This includes the <b>visual location</b> as well as the <b>location for assistive technologies</b> like screen readers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This applies to <b>any mechanism of help</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Whether it’s <b>finding a phone number or email address</b>, accessing a contact form, reading an FAQ page, or activating a chatbot.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, a website offers <b>help links to a contact form</b> and social media channels.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These links are in the footer, which means they're <b>consistently located across the site</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By providing this consistency, we make it easier for customers to <b>locate the help they need in a timely manner</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On the Salesforce website, the ‘Contact Us’ feature <b>remains in the top right corner</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The ‘Support’ menu is accessed from the global nav, <b>which is always accessible</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is also <b>Agentforce</b> that appears at the bottom on page load.</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Redundant Entry</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>What is <b>Success Criterion 3.3.7 Redundant Entry</b> about?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Making sure a person doesn't have to <b>manually enter the same information more than once</b> while they're completing a process.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This will reduce both the <b>mental and physical effort</b> for users.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s particularly important for people with <b>limited cognitive or physical energy</b>, or with limited memory, focus, or dexterity.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A common example of repeated information is when a person is asked for a <b>billing and shipping address</b> at checkout.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Often, a person's billing and shipping address <b>are the same</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are a few methods we can use to <b>prevent redundant entry</b> and reduce the effort required:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. Allow <b>copy-paste</b> on the form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. Allow people to fill in information from a <b>drop-down list</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. Enable <b>autofill</b> to complete the information.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4. Provide a <b>‘Copy information in x field’</b> mechanism (such as a ‘Billing address is same as shipping address’ checkbox).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We <b>do not need to prevent redundant entry</b> in the following scenarios:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. Information related to <b>security</b> (such as a password).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. Information that has <b>expired and needs re-entry</b> (such as a credit card).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. And information that must be re-entered for the <b>purpose of the exercise</b> (such as a game).</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Accessible Authentication</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Authentication asks people to prove their identity in <b>multiple ways to improve security</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Success Criterion 3.3.8 Accessible Authentication (Minimum)</b> will ensure login methods are accessible and easy to use, as well as secure.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On salesforce.com today, the <b>TBID</b> is used for authentication.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This stands for <b>"Trusted Broker ID"</b> authentication.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Generally, this should mean that we do not have to <b>create our own authentication solution</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you do, please <b>carefully review</b> the following guidance.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>An accessible login method doesn't require people to <b>remember, transcribe, or solve information without help</b>.</p>
+          </section> 
+
+          <section data-background="#EDEBEB">
+            <p>These are considered cognitive function tests, and they can make logging in <b>very difficult for some people</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’ll go through <b>each example now</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Remember</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>People with cognitive variations may have trouble <b>remembering non-personal information</b>, including usernames and passwords.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We should enable mechanisms to <b>assist people with recall</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <b>might</b> include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Allowing them to copy-paste in a password.</li>
+              <li>Or allowing autofill on the form.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Transcribe</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>People with cognitive and learning disorders, vision impairments or physical impairments <b>may struggle to accurately and easily transcribe information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Transcription is a common feature of <b>two factor authentication</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, when a user is given a code that they must <b>manually input into a verification text field</b>, or a word-based CAPTCHA to transcribe.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We should <b>avoid transcription</b> where possible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If we must use it, we should allow users to enter the data <b>in a way that does not involve transcription</b>, such as:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Selecting it from a series of options, or</li>
+              <li>Copy and pasting the required information (including across devices).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Solve</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Puzzles</b> are often used in CAPTCHA-based authentication.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These methods require a person to <b>solve a math equation, drag a shape into place, or match two items</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, many kinds of people may have trouble solving puzzles, due to their <b>cognition, vision, or dexterity</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Because of this, most kinds of puzzles are <b>not permitted under this criterion</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>two kinds of puzzle that are acceptable</b> under the “Minimum” (AA) version of this criterion:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. <b>Object recognition</b>, such as selecting all cars in a set of images.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. <b>Personal content recognition</b>, where a person can upload their own non-text content, like a photo, and then identify it from a set of options.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If necessary, Salesforce can use Google reCAPTCHA, which is <b>an acceptable ‘object recognition’ puzzle</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Keep in mind this type of CAPTCHA isn't going to work for <b>people with no or limited vision</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, an alternative that meets this criterion <b>will still be necessary</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Authentication alternatives</h5>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Now that we've broken down our main requirements, we can also consider providing <b>an alternative login method</b> that is not a cognitive function test.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some <b>examples</b> include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>1. <b>Hardware authentication devices</b>, such as a YubiKey.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>2. <b>Authentication with your device</b>, such as a fingerprint or facial scan.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>3. Allowing personal information <b>like an email</b> as an alternative to a username.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>4. Responding to a security notification on a <b>second device</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Salesforce uses <b>anti-bot features</b> to reduce the need to implement any CAPTCHA or authentication puzzles at all.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can find out more about this by contacting the <b>Digital Marketing Technology team</b>.</p>
+          </section>
+
+
+
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These new WCAG 2.2 criteria are intended to <b>reduce the barriers</b> between our users and completing a task online.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>By working with them, we can assist users to <b>better understand and interact with digital products</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
