@@ -171,7 +171,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5><a href="#slide-elements-and-structure">Section 3: Elements and sstructure</a></h5>
+            <h5><a href="#slide-elements-and-structure">Section 3: Elements and structure</a></h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-headings">9. Testing headings</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-buttons">10. Testing buttons</a></li>
@@ -312,7 +312,7 @@
             <h5>Test: Measure</h5>
             <ol class="font-sm">
               <li>Take screenshots in light and dark mode (if available).</li>
-              <li>Use a colour picker to sample the border/indicator and the adjacent or underlying background colour background.</li>
+              <li>Use a colour picker to sample the border/indicator and the adjacent or underlying background colour, including pressed/selected/focused states.</li>
               <li>Measure the contrast ratio.</li>
               <li><b>Check</b>: do components and states meet the required ratio? Ignore disabled components.</li>
             </ol>
@@ -396,8 +396,8 @@
             <ol class="font-sm">
               <li>Turn on Increase Contrast (iOS) or High contrast text (Android, if available).
                 <ul>
-                  <li>iOS: Settings → Accessibility → Display & Text Size → Increase Contrast</li>
-                  <li>Android: Settings → Accessibility → Display size and text → High contrast text</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; Display & Text Size &rarr; Increase Contrast</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; Display size and text &rarr; High contrast text</li>                  
                 </ul>
               </li>
               <li><b>Check</b>: In both light and dark modes, are text, icons, and component boundaries easier to see with this setting enabled?</li>
@@ -444,8 +444,8 @@
             <ol class="font-sm">
               <li>Turn on Colour inversion:
                 <ul>
-                  <li>iOS: Settings → Accessibility → Display & Text Size → Smart Invert</li>
-                  <li>Android: Settings → Accessibility → Colour inversion</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; Display & Text Size &rarr; Smart Invert</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; Colour inversion</li>                  
                 </ul>
               </li>
               <li><b>Check</b>: Do text, icons, and images remain easy to see and correctly displayed (not “negative” or distorted)?</li>
@@ -492,8 +492,8 @@
             <ol class="font-sm">
               <li>Enable dark mode:
                 <ul>
-                  <li>iOS: Settings → Display &amp; Brightness → Appearance: Dark (or Control Center)</li>
-                  <li>Android: Settings → Display → Dark theme</li>
+                  <li>iOS: Settings &rarr; Display &amp; Brightness &rarr; Appearance: Dark (or Control Center)</li>
+                  <li>Android: Settings &rarr; Display &rarr; Dark theme</li>
                 </ul>
               </li>
             </ol>
@@ -504,7 +504,8 @@
               <li><b>Check legibility</b>: Is all text comfortably readable?</li>
               <li><b>Check non-text contrast</b>: Are borders, dividers, states, and icons distinguishable from backgrounds?</li>
               <li><b>Check assets</b>: Do logos/illustrations render correctly?</li>
-              <li><b>Check colours</b>: Do colours chosen for dark backgrounds still meet contrast needs for text/icons.</li>
+              <li><b>Check colours</b>: Do colours chosen for dark backgrounds still meet contrast needs for text/icons?</li>
+              <li><b>Check states</b>: Are selected/focused/disabled states still clearly distinguishable in dark mode?</li>
             </ol>
           </section>
 
@@ -560,8 +561,8 @@
             <ol class="font-sm">
               <li>Increase text size:
                 <ul>
-                  <li>iOS: Settings → Accessibility → Display & Text Size → Larger Text → turn on Larger Accessibility Sizes, then drag the slider near maximum (Dynamic Type)</li>
-                  <li>Android: Settings → Accessibility → Display size and text → Font size → set to largest</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; Display & Text Size &rarr; Larger Text &rarr; turn on Larger Accessibility Sizes, then drag the slider near maximum (Dynamic Type)</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; Display size and text &rarr; Font size &rarr; set to largest</li>                  
                 </ul>
               </li>
               <li><b>Check</b>: Is any content truncated, overlapping, or cut off?</li>
@@ -607,8 +608,8 @@
             <ol class="font-sm">
               <li>Ensure device rotation is enabled:
                 <ul>
-                  <li>iOS: Control Center → Portrait Orientation Lock → Off</li>
-                  <li>Android: Settings → Auto-rotate → On</li>                  
+                  <li>iOS: Control Center &rarr; Portrait Orientation Lock &rarr; Off</li>
+                  <li>Android: Settings &rarr; Auto-rotate &rarr; On</li>                  
                 </ul>
               </li>
               <li>Rotate the device between portrait and landscape.</li>
@@ -672,12 +673,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check – General</h5>
+            <h5>Test: Tool check &ndash; General</h5>
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>                  
                 </ul>
               </li>
               <li>Swipe through elements.</li>
@@ -686,9 +687,9 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check – iOS</h5>
+            <h5>Test: Tool check &ndash; iOS</h5>
             <ol class="font-sm">
-              <li>In Settings → Accessibility → VoiceOver → Rotor, ensure Headings is enabled.</li>
+              <li>In Settings &rarr; Accessibility &rarr; VoiceOver &rarr; Rotor, ensure Headings is enabled.</li>
               <li>Activate the Rotor by placing two fingers on the screen and twisting as if turning a dial.</li>
               <li>Select Headings, then swipe up or down to navigate.</li>
               <li><b>Check</b>: Are headings available and in the correct order?</li>
@@ -696,23 +697,14 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check - Android</h5>
+            <h5>Test: Tool check &ndash; Android</h5>
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>Android: Change Navigation granularity to Headings</li>
+                  <li>Android: Change Navigation granularity to Headings (swipe up or down until you hear “Headings”)</li>
                 </ul>
               </li>
               <li><b>Check</b>: Can you move directly between headings using up/down gestures?</li>
-            </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test: Tool check – Android</h5>
-            <ol class="font-sm">
-              <li>With TalkBack on, change Navigation granularity to Headings (swipe up or down until you hear “Headings”).</li>
-              <li>Swipe up or down to move between headings.</li>
-              <li><b>Check</b>: Can you navigate directly between headings, and are they in the correct order?</li>
             </ol>
           </section>
 
@@ -760,12 +752,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check – Screen reader</h5>
+            <h5>Test: Tool check &ndash; Screen reader</h5>
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>                  
                 </ul>
               </li>
               <li>Swipe through the interface.</li>
@@ -774,12 +766,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check - Voice control</h5>
+            <h5>Test: Tool check &ndash; Voice control</h5>
             <ol class="font-sm">
               <li>Turn on voice control:
                 <ul>
-                  <li>iOS: Turn on Voice Control: Settings → Accessibility → Voice Control</li>
-                  <li>Android: Turn on Voice Access: Settings → Accessibility → Voice Access</li>                  
+                  <li>iOS: Turn on Voice Control: Settings &rarr; Accessibility &rarr; Voice Control</li>
+                  <li>Android: Turn on Voice Access: Settings &rarr; Accessibility &rarr; Voice Access</li>                  
                 </ul>
               </li>
               <li>Say &ldquo;Tap Shop online&rdquo;</li>
@@ -827,8 +819,8 @@
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>
                 </ul>
               </li>
             </ol>
@@ -883,12 +875,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check (screen reader with focus highlight)</h5>
+            <h5>Test: Tool check &ndash; Screen reader with focus highlight</h5>
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>                  
                 </ul>
               </li>
               <li>Ensure the focus highlight is visible.</li>
@@ -899,7 +891,7 @@
           <section data-background="#EDEBEB">
             <ol class="font-sm" start="4">
               <li><b>Check</b>: As you swipe through the page, is everything in the expected visual order?</li>
-              <li><b>Check</b>: As you swipe through modals, groups or forms, is the internal order is logical?</li>
+              <li><b>Check</b>: As you swipe through modals, groups or forms, is the internal order logical?</li>
               <li><b>Check</b>: As you swipe through sticky elements, do they appear in the expected order?</li>
             </ol>
           </section>
@@ -960,7 +952,7 @@
           <section data-background="#EDEBEB">
             <h5>Test: Quick check</h5>
             <ol class="font-sm">
-              <li>Check: If any animation auto-plays for longer than 5 seconds alongside other content, is there a clear Pause / Stop / Hide control?</li>
+              <li><b>Check</b>: If any animation auto-plays for longer than 5 seconds alongside other content, is there a clear Pause / Stop / Hide control?</li>
             </ol>
           </section>
 
@@ -969,20 +961,25 @@
             <ol class="font-sm">
               <li>Turn on reduced motion:
                 <ul>
-                  <li>iOS: Settings → Accessibility → Motion → Reduce Motion</li>
-                  <li>Android: Settings → Accessibility → Display size and text → Remove animations (availability varies by device; some users rely on Developer options to disable animation scales)</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; Motion &rarr; Reduce Motion</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; Display size and text &rarr; Remove animations (availability varies by device; some users rely on Developer options to disable animation scales)</li>                  
                 </ul>
               </li>
-              <li>Check: Do auto-playing and interaction animations stop, reduce, or switch to simpler transitions (e.g., cross-fade instead of parallax)?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="2">
+              <li><b>Check</b>: When ‘Reduce Motion’/‘Remove animations’ is enabled, do auto-playing and interaction-triggered animations stop or reduce/simplify?</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.2.2 Pause, Stop, Hide — Moving/auto-updating content > 5s shown with other content provides a pause/stop/hide.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.3.1 Three Flashes or Below Threshold — No content flashes more than three times per second above threshold. (Relevance: seizure safety.)</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>AAA: 2.3.3 Animation from Interactions — Animations triggered by user actions can be disabled unless essential.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html" target="_blank">SC 2.2.2: Pause, Stop, Hide (Level A)</a></b>: Fewer users are distracted by content that updates or moves.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG20/Understanding/three-flashes-or-below-threshold" target="_blank">SC 2.3.1: Three Flashes or Below Threshold (Level A)</a></b>: Content does not trigger seizures.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html" target="_blank">SC 2.3.3: Animation from Interactions (Level AAA)</a></b>: Users are not harmed or distracted by motion.</li>
             </ul>
           </section>
         </section>
@@ -1017,8 +1014,8 @@
           <section data-background="#EDEBEB">
             <h5>Test: Quick check</h5>
             <ol class="font-sm">
-              <li>Tap the button.</li>
-              <li>Check: Does the tiny modal (popover/dialog) appear adjacent to the button and within the current viewport?</li>
+              <li>Trigger the action.</li>
+              <li><b>Check</b>: Does the modal/popover/dialog/notification appear adjacent to the trigger mechanism and within the current viewport?</li>
             </ol>
           </section>
 
@@ -1027,12 +1024,12 @@
             <ol class="font-sm">
               <li>Turn on magnification:
                 <ul>
-                  <li>iOS: Settings → Accessibility → Zoom → On</li>
-                  <li>Android: Settings → Accessibility → Magnification → On</li>
+                  <li>iOS: Settings &rarr; Accessibility &rarr; Zoom &rarr; On</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; Magnification &rarr; On</li>
                 </ul>
               </li>
-              <li>Press the button. </li>
-              <li>Check: with magnification enabled, does the notification appear near the button so it is easy to find?</li>
+              <li>Trigger the action.</li>
+              <li><b>Check</b>: with magnification enabled, does the modal/popover/dialog/notification appear near the trigger mechanism so it is easy to find?</li>
             </ol>
           </section>
 
@@ -1076,18 +1073,18 @@
             <h5>Test: Quick check</h5>
             <ol class="font-sm">
               <li>Open Google Maps.</li>
-              <li>Check: Can you pinch to zoom in/out? (complex, multi-point gesture)</li>
-              <li>Check: Can you double-tap to zoom in? (simple, single-pointer)</li>
-              <li>Check: Is there a single-tap control to zoom out?</li>
+              <li><b>Check</b>: Can you pinch to zoom in/out? (complex, multi-point gesture)</li>
+              <li><b>Check</b>: Can you double-tap to zoom in? (simple, single-pointer)</li>
+              <li><b>Check</b>: Is there a single-tap control to zoom out?</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
-            <ol class="font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.5.1 Pointer Gestures — Functionality that uses multipoint or path-based gestures (like pinch or drag) is also operable with a single pointer without path-based movement, unless essential.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>AA (supports): 2.5.7 Dragging Movements (WCAG 2.2) — If dragging is required, provide a single-pointer alternative (e.g., tap/click arrows).</li>
-            </ol>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html" target="_blank">SC 2.5.1: Pointer Gestures (Level A)</a></b>: Let users operate touchscreens with one finger and reduced gestures.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html" target="_blank">SC 2.5.7: Dragging Movements (Level AA)</a></b>: Don&rdquo;t rely on dragging for user actions.</li>
+            </ul>
           </section>
         </section>
 
@@ -1132,9 +1129,10 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Quick check</h5>:
+            <h5>Test: Quick check</h5>
             <ol class="font-sm">
-              <li>Check: Is the purpose of the input clear from a visible label next to the field? (Avoid using placeholder text as the only label.)</li>
+              <li><b>Check</b>: Is the purpose of the input clear from a visible label next to the field?</li>
+              <li><b>Check</b>: Are placeholders avoided for labels and important instructions?</li>
             </ol>
           </section>
 
@@ -1143,21 +1141,21 @@
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>                  
                 </ul>
               </li>
               <li>Swipe to move focus to the input.</li>
-              <li>Check: Is the label announced with the input (for example, “Name, text field”), and does it match the visible label?</li>
+              <li><b>Check</b>: Is the label announced with the input, and does it match the visible label?</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 1.3.1 Info and Relationships — Labels are programmatically associated with form fields.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 3.3.2 Labels or Instructions — Inputs include clear labels or instructions.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — Inputs expose the correct role (e.g., “text field”) and an accessible name.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html" target="_blank">SC 3.3.2: Labels or Instructions (Level A)</a></b>: Users know what information to enter.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">SC 4.1.2: Name, Role, Value (Level A)</a></b>: People using assistive technology understand all components.</li>
             </ul>
           </section>
         </section>
@@ -1191,8 +1189,8 @@
           <section data-background="#EDEBEB">
             <h5>Test: Quick check</h5>
             <ol class="font-sm">
-              <li>Check: Are the instructions visible and next to the field (not placeholder-only)</li>
-              <li>Check: Do the instructions clearly state the required format or rules.</li>
+              <li><b>Check</b>: Are the instructions visible and next to the field (not placeholder-only)</li>
+              <li><b>Check</b>: Do the instructions clearly state the required format or rules.</li>
             </ol>
           </section>
 
@@ -1201,21 +1199,21 @@
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>                  
                 </ul>
               </li>
               <li>Swipe to move focus to the input.</li>
-              <li>Check: Are the label and instructions announced together with the input (for example, “Phone number, text field. Must be exactly 10 digits.”)?</li>
+              <li><b>Check</b>: Are the label and instructions announced together with the input?</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 3.3.2 Labels or Instructions — Provide instructions when user input is required.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 1.3.1 Info and Relationships — Instructions are programmatically associated with the field.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — Field exposes role and an accessible name/description.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html" target="_blank">SC 3.3.2: Labels or Instructions (Level A)</a></b>: Users know what information to enter.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">SC 4.1.2: Name, Role, Value (Level A)</a></b>: People using assistive technology understand all components.</li>
             </ul>
           </section>
         </section>
@@ -1247,17 +1245,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Quick check 1</h5>
+            <h5>Test: Quick check</h5>
             <ol class="font-sm">
-              <li>Check: Is the error message visible and placed next to the specific field (not only at the top of the form)?</li>
-              <li>Check: Does the message clearly state what’s wrong and how to fix it.</li>
-            </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test: Quick check 2</h5>
-            <ol class="font-sm">
-              <li>Check: is colour used as the only cue for the error state?</li>
+              <li><b>Check</b>: Is the error message visible and placed next to the specific field (not only at the top of the form)?</li>
+              <li><b>Check</b>: Does the message clearly state what’s wrong and how to fix it.</li>
+              <li><b>Check</b>: Is colour used as the only cue for the error state?</li>
             </ol>
           </section>
 
@@ -1266,23 +1258,23 @@
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>                  
                 </ul>
               </li>
               <li>Swipe to move focus to the input.</li>
-              <li>Check: Is the error announced together with the input.</li>
+              <li><b>Check</b>: Is the error announced together with the input.</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 3.3.1 Error Identification — Errors are clearly indicated in text.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 3.3.3 Error Suggestion — Provide guidance on how to correct the input.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 1.3.1 Info and Relationships — Error text is programmatically associated with the field.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — The field exposes role/name; updates are conveyed.</li>
-            </ul>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html" target="_blank">SC 3.3.1: Error Identification (Level A)</a></b>: Users know an error exists and what is wrong.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html" target="_blank">SC 3.3.3: Error Suggestion (Level AA)</a></b>: Users get suggestions on how to resolve errors.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html" target="_blank">SC 3.3.2: Labels or Instructions (Level A)</a></b>: Users know what information to enter.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li> 
+             </ul>
           </section>
         </section>
 
@@ -1329,31 +1321,64 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Quick check</h5>:
+            <h4>Note on target size:</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG 2.2 – 2.5.8 Target Size (Minimum): A target is at least <b>24 × 24 CSS px</b> (24 × 24 pt on iOS, 24 × 24 dp on Android).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Or there is enough spacing that a 24-px diameter circle centred on the target <b>does not intersect any other target</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, you should <b>aim for larger target sizes where practical</b>: 44 × 44 pt (iOS) or 48 × 48 dp (Android).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>&ldquo;Hit slop&rdquo; or &ldquo;Expanded hit area&rdquo;</h5>
+            <p>The invisible tappable padding added around a control so it’s easier to tap.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
             <ol class="font-sm">
-              <li>Check: Do the buttons (including icon buttons) look large enough to tap accurately, with clear space between them?</li>
+              <li>Identify the smallest or most crowded buttons on the screen.</li>
+              <li>Tap each three times at normal speed without zooming.</li>
+              <li><b>Check</b>: Can you activate the intended button without hitting a nearby button by accident?</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>Test: Measure</h5>
             <ol class="font-sm">
-            <li>Take a screenshot.</li>
-            <li>Measure the tap target area (not just the visible icon) in a design tool.</li>
-            <li>Check: Is each target area ≥ 24 × 24 (CSS px / logical px: iOS pt, Android dp)?</li>
-            <li>If a target is smaller than 24 × 24:
-              <ul>
-                <li>Check spacing: Could you place a 24-px diameter circle centred on that target without intersecting any adjacent target?</li>
-              </ul>
-            </li>
+              <li>Take a screenshot.</li>
+              <li>In your editor, insert two overlays (use the provided PNGs at your device scale, e.g., 24@1x / 48@2x / 72@3x):
+                <ul>
+                  <li>24 × 24 square (size check)</li>
+                  <li>24-px diameter circle (spacing check)</li>                  
+                </ul>
+              </li>
+              <li>For each button/target, centre the overlays on the tappable area (icon plus any invisible padding / hit slop).</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="3">
+              <li><b>Size check</b>: Does the target meet or exceed the 24 × 24 square in both width and height?</li>
+            </ol>
+            <p>If not:</p>
+            <ol class="font-sm" start="4">
+              <li><b>Spacing check</b>: Does the 24-px circle overlap any neighbouring target?</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>- AA: 2.5.8 Target Size (Minimum) — Targets are ≥ 24 × 24 CSS px, or smaller targets have sufficient spacing (a 24-px diameter circle centred on each does not intersect another target). (Exceptions apply, e.g., inline text links, essential controls.)</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>AAA: 2.5.5 Target Size (Enhanced) — ≥ 44 × 44 CSS px.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank">SC 2.5.8: Target Size (Minimum) (Level AA)</a></b>: Make controls easier to activate.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" target="_blank">SC 2.5.5: Target Size (Level AAA)</a></b>: Controls can be operated more easily, especially on touch screens.</li>
             </ul>
           </section>
         </section>
@@ -1390,21 +1415,28 @@
             <ol class="font-sm">
               <li>Turn on a screen reader:
                 <ul>
-                  <li>iOS: Settings → Accessibility → VoiceOver</li>
-                  <li>Android: Settings → Accessibility → TalkBack</li>
+                  <li>iOS: Settings &rarr; Accessibility &rarr; VoiceOver</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; TalkBack</li>
                 </ul>
               </li>
               <li>Trigger the modal (tap the button).</li>
-              <li>Check focus management:</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="3">
+              <li><b>Check</b>: When the modal is triggered, focus moves inside the modal (e.g., on the modal title or first actionable element).</li>
+              <li><b>Check</b>: When the modal is open, focus cannot move to background content. </li>
+              <li><b>Check</b>: When the modal is closed, focus returns to the trigger button.</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
-            <ol class="font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.4.3 Focus Order — Focus moves in a meaningful order</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.1.1 Keyboard & 2.1.2 No Keyboard Trap — Modal is operable with a keyboard and does not trap the user in the overall app</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 2.4.7 Focus Visible (and supports 2.4.11 Focus Not Obscured) — The focused element is visibly indicated and not hidden/obscured.</li>
+            <ol class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" target="_blank">SC 2.4.3: Focus Order (Level A)</a></b>: Keyboard users navigate content in a correct order.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank">SC 2.1.1: Keyboard (Level A)</a></b>: Everything can be done with a keyboard except freehand movements.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html" target="_blank">SC 2.4.7: Focus Visible (Level AA)</a></b>: Users know which element has keyboard focus.</li>
             </ol>
           </section>
         </section>
@@ -1430,8 +1462,42 @@
           <section data-background="#EDEBEB">
             <h5>Audiences affected</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced motion</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>People who rely on a hardware keyboard or alternative input devices that emulate keyboard input</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Navigating through the page</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use <kbd>TAB</kbd> / <kbd>SHIFT</kbd> + <kbd>TAB</kbd> to move focus through interactive elements.</li> 
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use <kbd>ARROW</kbd> keys when components support internal navigation.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Navigating menus &amp; dropdowns</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Open with <kbd>ENTER</kbd>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Move with <kbd>UP ARROW </kbd> and <kbd>DOWN ARROW</kbd>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Select with <kbd>ENTER</kbd>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Close with <kbd>ESC</kbd>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Navigating radio groups</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Move within the group with <kbd>ARROW</kbd> keys.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Select with <kbd>SPACE</kbd>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Interacting with links and buttons</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Activate links with <kbd>ENTER</kbd>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Activate buttons with <kbd>SPACE</kbd> or <kbd>ENTER</kbd>.</li>
             </ul>
           </section>
 
@@ -1439,47 +1505,25 @@
             <h5>Test: Tool check</h5>
             <ol class="font-sm">
               <li>Connect an external hardware keyboard (Bluetooth or USB).</li>
-              <li>iOS only, recommended: Enable Full Keyboard Access: Settings → Accessibility → Keyboard → Full Keyboard Access → On.</li>
-              <li>4. Check: All controls are operable via keyboard alone (no touch required).</li>
-              <li>Check: Focus is visible and follows a logical order (no unexpected jumps).</li>
-              <li>Check: There is no keyboard trap — you can move focus away or close pop-ups using keyboard commands.</li>
+              <li>iOS: Enable Full Keyboard Access: Settings &rarr; Accessibility &rarr; Keyboard &rarr; Full Keyboard Access &rarr; On.</li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
-            <ol class="font-sm">
-              <li>Use <kbd>TAB</kbd> / <kbd>SHIFT</kbd> + <kbd>TAB</kbd> to move focus through interactive elements</li>
-              <li>Use <kbd>ARRON </kbd> keys when components support internal navigation.</li>
+            <ol class="font-sm" start="4">
+              <li><b>Check</b>: All controls are operable via keyboard alone (no touch required).</li>
+              <li><b>Check</b>: Focus is visible and follows a logical order (no unexpected jumps).</li>
+              <li><b>Check</b>: There is no keyboard trap — you can move focus away or close pop-ups using keyboard commands.</li>
             </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Menus &amp; dropdowns</h5>
-            <p>Open with Enter (or Alt+Down where applicable), move with Up/Down, select with Enter, close with Esc (or Back on Android).</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Radio groups</h5>
-            <p>Move within the group with Arrow keys; select with Space.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Links and buttons</h5>
-            <p>Activate links with Enter. Activate buttons with Space or Enter.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Dialogs/Modals</h5>
-            <p>Open via keyboard; close with Esc (iOS often supports Esc or Cmd + .), or Back on Android.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.1.1 Keyboard — All functionality works with a keyboard.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.1.2 No Keyboard Trap — Focus can move away from any component.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.4.3 Focus Order — Focus moves in a meaningful order.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 2.4.7 Focus Visible — The focused element is clearly indicated.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank">SC 2.1.1: Keyboard (Level A)</a></b>: Everything can be done with a keyboard except freehand movements.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html" target="_blank">SC 2.1.2: No Keyboard Trap (Level A)</a></b>: Keyboard users don't get stuck.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" target="_blank">SC 2.4.3: Focus Order (Level A)</a></b>: Keyboard users navigate content in a correct order.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html" target="_blank">SC 2.4.7: Focus Visible (Level AA)</a></b>: Users know which element has keyboard focus.</li>
             </ul>
           </section>
         </section>
@@ -1511,21 +1555,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test: Tool check</h5>
-            <ol class="font-sm">
-              <li>Turn on voice control:
-                <ul>
-                  <li>iOS: Settings → Accessibility → Voice Control → ensure Show Names (or Show Numbers) is on.</li>
-                  <li>Android: Settings → Accessibility → Voice Access. (You can say “Show labels” or “Show numbers.”)</li>
-                </ul>
-              </li>
-              <li>Check: All controls are operable by voice alone (no touch needed).</li>
-              <li>Check: Speaking the visible label reliably activates the correct element.</li>
-            </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test common interactions using visible labels</h5>
+            <h5>Common interactions using visible labels</h5>
             <ul class="icon-list font-sm">        
               <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap Voice control”</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap Voice access”</li>
@@ -1535,7 +1565,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Test common interactions using numbers</h5>
+            <h5>Common interactions using numbers</h5>
             <ul class="icon-list font-sm">        
               <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Show numbers”</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap [number]</li>
@@ -1543,11 +1573,25 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <h5>Test: Tool check</h5>
+            <ol class="font-sm">
+              <li>Turn on voice control:
+                <ul>
+                  <li>iOS: Settings &rarr; Accessibility &rarr; Voice Control &rarr; ensure Show Names (or Show Numbers) is on.</li>
+                  <li>Android: Settings &rarr; Accessibility &rarr; Voice Access. (You can say “Show labels” or “Show numbers.”)</li>
+                </ul>
+              </li>
+              <li><b>Check</b>: All controls are operable by voice alone (no touch needed).</li>
+              <li><b>Check</b>: Speaking the visible label reliably activates the correct element.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>WCAG requirements</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 2.5.3 Label in Name — The accessible name includes the visible label text so commands like “Tap X” work.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — Controls expose a programmatic name and role.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>A (supports): 1.3.1 Info and Relationships — Controls are correctly identified/associated so names map to the right elements.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html" target="_blank">SC 2.5.3: Label in Name (Level A)</a></b>: The visual label for controls is a trigger for speech activation.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">SC 4.1.2: Name, Role, Value (Level A)</a></b>: People using assistive technology understand all components.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li>
             </ul>
           </section>
         </section>
