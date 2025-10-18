@@ -1,0 +1,1591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Testing mobile accessibility for Teams</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Testing mobile accessibility for teams</h1>
+          <div class="subtitle">Session 1</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-types-and-tools">
+          <section data-background="#C03C0C">
+            <h2>Introduction</h2>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>The aim of this course</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The aim of this course is to give you <b>a range of simple accessibility tests</b> that you can perform on your apps.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These simple tests will help you determine <b>whether your products are accessible</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The course covers <b>22 accessibility topics</b>, each showing you how to run a range of simple tests — from quick visual reviews to settings and tool-based tests.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You <b>won’t need any complex tools</b> such as Android Accessibility Scanner or Xcode.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All tests <b>can be done manually</b> or <b>by using built-in system settings</b> on iOS or Android devices.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Types of tests</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we explore each topic, there will be one or more tests you can do. These fall into <b>four categories</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test type 1: Quick check</h5>
+            <p>By eye only.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test type 2: Settings check</h5>
+            <p>Toggle an OS or app setting, then check by eye.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test type 3: Measure</h5>
+            <p>Take a screenshot and use a colour picker or contrast checker.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test type 4: Tool check</h5>
+            <p>Use the keyboard or an accessibility tool such as a screen reader or voice control.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These checks will help you <b>identify and fix common accessibility issues</b> early in the process.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Who this helps</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’ll focus on the following broad categories of <b>disability and user needs</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with <b>no vision</b></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with <b>reduced vision</b></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with <b>reduced colour vision</b></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with <b>reduced movement</b></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with <b>varied learning or cognition</b></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with <b>reduced or no hearing</b></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Using WCAG</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will also briefly review WCAG criteria <b>that are relevant to each topic</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG applies to native mobile apps via <a href="https://www.w3.org/WAI/standards-guidelines/wcag/non-web-ict/" target="_blank">WCAG2ICT</a>, which <b>maps WCAG 2 to non-web software</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introduction">
+          <section data-background="#EDEBEB">
+            <h3>What will we cover?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="#slide-visuals-and-colour">Section 1: Visual and colour</a></h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-text-colour-contrast">1. Testing text colour contrast</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-non-text-colour-contrast">2. Testing non-text colour contrast</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-use-of-colour">3. Testing use of colour</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-increase-colour-contrast-mode">4. Testing increase contrast mode</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-smart-invert-mode">5. Testing smart invert mode</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-dark-mode">6. Testing dark mode</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="#slide-text-size-and-layout">Section 2: Text size and layout</a></h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-dynamic-text-resizing">7. Testing dynamic text resizing</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-screen-orientation">8. Testing screen orientation</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="#slide-elements-and-structure">Section 3: Elements and sstructure</a></h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-headings">9. Testing headings</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-buttons">10. Testing buttons</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-images">11. Testing images</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-navigation-order">12. Testing navigation order</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="#slide-motion-and-sensory">Section 4: Motion and sensory</a></h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-reduced-motion">13. Testing reduced motion</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-proximity">14. Testing proximity</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-gestures">15. Testing gestures</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="#slide-forms-and-interaction">Section 5: Forms and interaction</a></h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-form-labels">16. Testing form labels</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-form-instructions">17. Testing form instructions</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-form-errors">18. Testing form errors</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="#slide-input-and-focus">Section 6: Input and focus</a></h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-touch-target-size">19. Testing touch target size</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-focus-management">20. Testing focus management</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-keyboard">21. Testing keyboard</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-testing-voice-control">22. Testing voice control</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-visuals-and-colour">
+          <section data-background="#C03C0C">
+            <h2><span class="checklist-heading">Section 1</span><br>Visual and colour</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-text-colour-contrast">
+          <section data-background="#EDEBEB">
+            <h3>1. Testing text colour contrast</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether text has sufficient colour contrast for readability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced colour vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li><b>Check</b>: readability of the text. Is the text comfortably readable without strain?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Measure</h5>
+            <ol class="font-sm">
+              <li>Take screenshots in light and dark mode (if available).</li>
+              <li>Use a colour picker to sample text and background.</li>
+              <li>Measure the contrast ratio.</li>
+              <li><b>Check</b>: does the text meet the required ratio?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">SC 1.4.3 Contrast (Minimum) (Level AA)</a></b>: The visual presentation of text and images of text has a sufficient contrast ratio of 4.5:1 normal, 3:1 large.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html" target="_blank">SC 1.4.6 Contrast (Enhanced) (Level AAA)</a></b>: The visual presentation of text and images of text has a contrast ratio of at least 7:1 normal, 4.5:1 large.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-non-text-colour-contrast">
+          <section data-background="#EDEBEB">
+            <h3>2. Testing non-text colour contrast</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether key interface components and their states have sufficient colour contrast to be distinguishable.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced colour vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li><b>Check</b>: visibility of borders and state indicators (e.g. active, focused, hovered, selected). Are they easy to see in each state?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Measure</h5>
+            <ol class="font-sm">
+              <li>Take screenshots in light and dark mode (if available).</li>
+              <li>Use a colour picker to sample the border/indicator and the adjacent or underlying background colour background.</li>
+              <li>Measure the contrast ratio.</li>
+              <li><b>Check</b>: do components and states meet the required ratio? Ignore disabled components.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html" target="_blank">SC 1.4.11 Non-text Contrast (Level AA)</a></b>: The visual presentation of the following have a contrast ratio of at least 3:1.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-use-of-colour">
+          <section data-background="#EDEBEB">
+            <h3>3. Testing use of colour</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether colour is used as the only way of conveying important information, prompts, or feedback.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced colour vision</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li><b>Check</b>: Is there at least one additional cue besides colour to indicate the information or state (e.g. icon, text message, pattern, change in shape)?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html" target="_blank">SC 1.4.1: Use of Color (Level A)</a></b>: Color is not the only way of distinguishing information.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-increase-colour-contrast-mode">
+          <section data-background="#EDEBEB">
+            <h3>4. Testing increase contrast mode</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether text and interface elements remain clear and distinguishable when system contrast settings are increased.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on Increase Contrast (iOS) or High contrast text (Android, if available).
+                <ul>
+                  <li>iOS: Settings → Accessibility → Display & Text Size → Increase Contrast</li>
+                  <li>Android: Settings → Accessibility → Display size and text → High contrast text</li>                  
+                </ul>
+              </li>
+              <li><b>Check</b>: In both light and dark modes, are text, icons, and component boundaries easier to see with this setting enabled?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>No direct criterion.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-smart-invert-mode">
+          <section data-background="#EDEBEB">
+            <h3>5. Testing smart invert mode</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether text, images, and interface elements remain clear and usable when system colour inversion settings are enabled.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced colour vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People sensitive to brightness or glare</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on Colour inversion:
+                <ul>
+                  <li>iOS: Settings → Accessibility → Display & Text Size → Smart Invert</li>
+                  <li>Android: Settings → Accessibility → Colour inversion</li>                  
+                </ul>
+              </li>
+              <li><b>Check</b>: Do text, icons, and images remain easy to see and correctly displayed (not “negative” or distorted)?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>No direct criterion.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-dark-mode">
+          <section data-background="#EDEBEB">
+            <h3>6. Testing dark mode</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether text, icons, and components remain clear and usable when the system (or app) is set to dark mode.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision (glare sensitivity, low-contrast issues)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People sensitive to brightness or who prefer darker themes for comfort</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People using devices in low-light environments</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Enable dark mode:
+                <ul>
+                  <li>iOS: Settings → Display &amp; Brightness → Appearance: Dark (or Control Center)</li>
+                  <li>Android: Settings → Display → Dark theme</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="2">
+              <li><b>Check legibility</b>: Is all text comfortably readable?</li>
+              <li><b>Check non-text contrast</b>: Are borders, dividers, states, and icons distinguishable from backgrounds?</li>
+              <li><b>Check assets</b>: Do logos/illustrations render correctly?</li>
+              <li><b>Check colours</b>: Do colours chosen for dark backgrounds still meet contrast needs for text/icons.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>No direct criterion.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-text-size-and-layout">
+          <section data-background="#C03C0C">
+            <h2><span class="checklist-heading">Section 2</span><br>Text size and layout</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-dynamic-text-resizing">
+          <section data-background="#EDEBEB">
+            <h3>7. Testing dynamic text resizing</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether text remains clear, readable, and functional when system font sizes are increased.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Increase text size:
+                <ul>
+                  <li>iOS: Settings → Accessibility → Display & Text Size → Larger Text → turn on Larger Accessibility Sizes, then drag the slider near maximum (Dynamic Type)</li>
+                  <li>Android: Settings → Accessibility → Display size and text → Font size → set to largest</li>                  
+                </ul>
+              </li>
+              <li><b>Check</b>: Is any content truncated, overlapping, or cut off?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank">SC 1.4.4: Resize Text (Level AA)</a></b>: Text can be enlarged.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" target="_blank">SC 1.4.10: Reflow (Level AA)</a></b>: Content can be enlarged without increasing line length.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-screen-orientation">
+          <section data-background="#EDEBEB">
+            <h3>8. Testing screen orientation</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether content remains clear, readable, and functional when the device orientation changes between portrait and landscape.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Ensure device rotation is enabled:
+                <ul>
+                  <li>iOS: Control Center → Portrait Orientation Lock → Off</li>
+                  <li>Android: Settings → Auto-rotate → On</li>                  
+                </ul>
+              </li>
+              <li>Rotate the device between portrait and landscape.</li>
+              <li><b>Check</b>: Does the layout reflow and remain fully usable in both orientations?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG22/Understanding/orientation.html" target="_blank">SC 1.3.4: Orientation (Level AA)</a></b>: Devices can be used in any orientation.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-elements-and-structure">
+          <section data-background="#C03C0C">
+            <h2><span class="checklist-heading">Section 3</span><br>Elements and structure</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-headings">
+          <section data-background="#EDEBEB">
+            <h3>9. Testing headings</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether headings are used and structured correctly so they are identifiable and navigable using screen readers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no vision who rely on a screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use a screen reader or voice navigation</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li><b>Check</b>: Do sections include clear, descriptive headings above the related content?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check – General</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                </ul>
+              </li>
+              <li>Swipe through elements.</li>
+              <li><b>Check</b>: Are headings announced as “heading” when read by the screen reader?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check – iOS</h5>
+            <ol class="font-sm">
+              <li>In Settings → Accessibility → VoiceOver → Rotor, ensure Headings is enabled.</li>
+              <li>Activate the Rotor by placing two fingers on the screen and twisting as if turning a dial.</li>
+              <li>Select Headings, then swipe up or down to navigate.</li>
+              <li><b>Check</b>: Are headings available and in the correct order?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check - Android</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>Android: Change Navigation granularity to Headings</li>
+                </ul>
+              </li>
+              <li><b>Check</b>: Can you move directly between headings using up/down gestures?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check – Android</h5>
+            <ol class="font-sm">
+              <li>With TalkBack on, change Navigation granularity to Headings (swipe up or down until you hear “Headings”).</li>
+              <li>Swipe up or down to move between headings.</li>
+              <li><b>Check</b>: Can you navigate directly between headings, and are they in the correct order?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html" target="_blank">SC 2.4.6: Headings and Labels (Level AA)</a></b>: A page&rsquo;s content is described in headings and labels</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-buttons">
+          <section data-background="#EDEBEB">
+            <h3>10. Testing buttons</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether buttons are labelled and coded correctly so they are identifiable and usable with screen readers and voice control.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no vision who rely on a screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use a screen reader or voice navigation</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement who rely on voice commands instead of touch</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li><b>Check</b>: Does the button include a clear, descriptive visible label that communicates its purpose?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check – Screen reader</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                </ul>
+              </li>
+              <li>Swipe through the interface.</li>
+              <li><b>Check</b>: Are buttons announced as “button” and do their names match their visible labels?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check - Voice control</h5>
+            <ol class="font-sm">
+              <li>Turn on voice control:
+                <ul>
+                  <li>iOS: Turn on Voice Control: Settings → Accessibility → Voice Control</li>
+                  <li>Android: Turn on Voice Access: Settings → Accessibility → Voice Access</li>                  
+                </ul>
+              </li>
+              <li>Say &ldquo;Tap Shop online&rdquo;</li>
+              <li><b>Check</b>: is the control activated?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">SC 4.1.2: Name, Role, Value (Level A)</a></b>: People using assistive technology understand all components.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html" target="_blank">SC 2.5.3: Label in Name (Level A)</a></b>: The visual label for controls is a trigger for speech activation.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-images">
+          <section data-background="#EDEBEB">
+            <h3>11. Testing images</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether decorative, informative, functional, and complex images are handled correctly, with appropriate alternatives.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced or no vision who use a screen reader, text-to-speech, or a Braille display</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="2">
+              <li><b>Check</b>:
+                <ul>
+                  <li>Decorative: Is it ignored?</li>
+                  <li>Informative: Is a brief, meaningful description announced?</li>
+                  <li>Functional: Is the destination or action announced?</li>
+                  <li>Complex: Is a short alt announced plus access to a full on-screen description?</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">SC 1.1.1: Non-text Content (Level A)</a></b>: Non-text information is available to more people.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-navigation-order">
+          <section data-background="#EDEBEB">
+            <h3>12. Testing navigation order</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether the navigation (focus/reading) order follows a clear, logical sequence that matches the visual layout and task flow.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no or reduced vision who rely on linear navigation (screen readers, braille)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People using keyboard or switch access (single-step navigation)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with varied learning or cognition who benefit from predictable sequences</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check (screen reader with focus highlight)</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                </ul>
+              </li>
+              <li>Ensure the focus highlight is visible.</li>
+              <li>Use swipe right (forward) and swipe left (back) to move through items one at a time. </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="4">
+              <li><b>Check</b>: As you swipe through the page, is everything in the expected visual order?</li>
+              <li><b>Check</b>: As you swipe through modals, groups or forms, is the internal order is logical?</li>
+              <li><b>Check</b>: As you swipe through sticky elements, do they appear in the expected order?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" target="_blank">SC 2.4.3: Focus Order (Level A)</a></b>: Keyboard users navigate content in a correct order.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html" target="_blank">SC 1.3.2: Meaningful Sequence (Level A)</a></b>: The order of content can be understood by more people.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">SC 1.3.1: Info and Relationships (Level A)</a></b>: Information about content structure is available to more people.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-motion-and-sensory">
+          <section data-background="#C03C0C">
+            <h2><span class="checklist-heading">Section 4</span><br>Motion and sensory</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-reduced-motion">
+          <section data-background="#EDEBEB">
+            <h3>13. Testing reduced motion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether animations are coded so that motion can be stopped, reduced, or simplified based on user settings.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Autistic people or people with ADHD who may find movement distracting</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People who experience motion sickness</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with vestibular disorders</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People who experience migraine</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People at risk of seizures</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li>Check: If any animation auto-plays for longer than 5 seconds alongside other content, is there a clear Pause / Stop / Hide control?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on reduced motion:
+                <ul>
+                  <li>iOS: Settings → Accessibility → Motion → Reduce Motion</li>
+                  <li>Android: Settings → Accessibility → Display size and text → Remove animations (availability varies by device; some users rely on Developer options to disable animation scales)</li>                  
+                </ul>
+              </li>
+              <li>Check: Do auto-playing and interaction animations stop, reduce, or switch to simpler transitions (e.g., cross-fade instead of parallax)?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.2.2 Pause, Stop, Hide — Moving/auto-updating content > 5s shown with other content provides a pause/stop/hide.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.3.1 Three Flashes or Below Threshold — No content flashes more than three times per second above threshold. (Relevance: seizure safety.)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>AAA: 2.3.3 Animation from Interactions — Animations triggered by user actions can be disabled unless essential.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-proximity">
+          <section data-background="#EDEBEB">
+            <h3>14. Testing proximity</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether feedback and results (e.g., confirmations, error messages) appear close to the control that triggered them, so users don’t have to pan or search.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use magnification</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with varied learning or cognition (reduced attention/working memory)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement (minimising extra navigation/panning)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li>Tap the button.</li>
+              <li>Check: Does the tiny modal (popover/dialog) appear adjacent to the button and within the current viewport?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on magnification:
+                <ul>
+                  <li>iOS: Settings → Accessibility → Zoom → On</li>
+                  <li>Android: Settings → Accessibility → Magnification → On</li>
+                </ul>
+              </li>
+              <li>Press the button. </li>
+              <li>Check: with magnification enabled, does the notification appear near the button so it is easy to find?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>No direct criterion.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-gestures">
+          <section data-background="#EDEBEB">
+            <h3>15. Testing gestures</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether important actions can be completed with simple, single-pointer gestures or controls (not only multi-point or path-based gestures).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with tremor or tics</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People who may rely on pointer devices, voice control, or switch access</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision using magnification</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li>Open Google Maps.</li>
+              <li>Check: Can you pinch to zoom in/out? (complex, multi-point gesture)</li>
+              <li>Check: Can you double-tap to zoom in? (simple, single-pointer)</li>
+              <li>Check: Is there a single-tap control to zoom out?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ol class="font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.5.1 Pointer Gestures — Functionality that uses multipoint or path-based gestures (like pinch or drag) is also operable with a single pointer without path-based movement, unless essential.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>AA (supports): 2.5.7 Dragging Movements (WCAG 2.2) — If dragging is required, provide a single-pointer alternative (e.g., tap/click arrows).</li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-forms-and-interaction">
+          <section data-background="#C03C0C">
+            <h2><span class="checklist-heading">Section 5</span><br>Forms and interaction</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-form-labels">
+          <section data-background="#EDEBEB">
+            <h3>16. Testing form labels</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether labels are correctly announced with their form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no vision who rely on a screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use a screen reader or voice navigation</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>:
+            <ol class="font-sm">
+              <li>Check: Is the purpose of the input clear from a visible label next to the field? (Avoid using placeholder text as the only label.)</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                </ul>
+              </li>
+              <li>Swipe to move focus to the input.</li>
+              <li>Check: Is the label announced with the input (for example, “Name, text field”), and does it match the visible label?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 1.3.1 Info and Relationships — Labels are programmatically associated with form fields.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 3.3.2 Labels or Instructions — Inputs include clear labels or instructions.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — Inputs expose the correct role (e.g., “text field”) and an accessible name.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-form-instructions">
+          <section data-background="#EDEBEB">
+            <h3>17. Testing form instructions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether instructions are correctly announced with their form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no vision who rely on a screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use a screen reader or voice navigation</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>
+            <ol class="font-sm">
+              <li>Check: Are the instructions visible and next to the field (not placeholder-only)</li>
+              <li>Check: Do the instructions clearly state the required format or rules.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                </ul>
+              </li>
+              <li>Swipe to move focus to the input.</li>
+              <li>Check: Are the label and instructions announced together with the input (for example, “Phone number, text field. Must be exactly 10 digits.”)?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 3.3.2 Labels or Instructions — Provide instructions when user input is required.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 1.3.1 Info and Relationships — Instructions are programmatically associated with the field.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — Field exposes role and an accessible name/description.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-form-errors">
+          <section data-background="#EDEBEB">
+            <h3>18. Testing form errors</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether form field errors are correctly announced with their fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no vision who rely on a screen reader</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use a screen reader or voice navigation</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check 1</h5>
+            <ol class="font-sm">
+              <li>Check: Is the error message visible and placed next to the specific field (not only at the top of the form)?</li>
+              <li>Check: Does the message clearly state what’s wrong and how to fix it.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check 2</h5>
+            <ol class="font-sm">
+              <li>Check: is colour used as the only cue for the error state?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>                  
+                </ul>
+              </li>
+              <li>Swipe to move focus to the input.</li>
+              <li>Check: Is the error announced together with the input.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 3.3.1 Error Identification — Errors are clearly indicated in text.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 3.3.3 Error Suggestion — Provide guidance on how to correct the input.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 1.3.1 Info and Relationships — Error text is programmatically associated with the field.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — The field exposes role/name; updates are conveyed.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-input-and-focus">
+          <section data-background="#C03C0C">
+            <h2><span class="checklist-heading">Section 6</span><br>Input and focus</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-touch-target-size">
+          <section data-background="#EDEBEB">
+            <h3>19. Testing touch target size</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether important actions have a large enough touch target and enough space around them to support accurate tapping.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with tremor or tics</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with large fingers</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision who use screen magnification</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Quick check</h5>:
+            <ol class="font-sm">
+              <li>Check: Do the buttons (including icon buttons) look large enough to tap accurately, with clear space between them?</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Measure</h5>
+            <ol class="font-sm">
+            <li>Take a screenshot.</li>
+            <li>Measure the tap target area (not just the visible icon) in a design tool.</li>
+            <li>Check: Is each target area ≥ 24 × 24 (CSS px / logical px: iOS pt, Android dp)?</li>
+            <li>If a target is smaller than 24 × 24:
+              <ul>
+                <li>Check spacing: Could you place a 24-px diameter circle centred on that target without intersecting any adjacent target?</li>
+              </ul>
+            </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>- AA: 2.5.8 Target Size (Minimum) — Targets are ≥ 24 × 24 CSS px, or smaller targets have sufficient spacing (a 24-px diameter circle centred on each does not intersect another target). (Exceptions apply, e.g., inline text links, essential controls.)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>AAA: 2.5.5 Target Size (Enhanced) — ≥ 44 × 44 CSS px.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-focus-management">
+          <section data-background="#EDEBEB">
+            <h3>20. Testing focus management</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether focus is managed in an intuitive way.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced or no vision who use a screen reader or braille display</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with varied learning or cognition</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Settings check</h5>
+            <ol class="font-sm">
+              <li>Turn on a screen reader:
+                <ul>
+                  <li>iOS: Settings → Accessibility → VoiceOver</li>
+                  <li>Android: Settings → Accessibility → TalkBack</li>
+                </ul>
+              </li>
+              <li>Trigger the modal (tap the button).</li>
+              <li>Check focus management:</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ol class="font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.4.3 Focus Order — Focus moves in a meaningful order</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.1.1 Keyboard & 2.1.2 No Keyboard Trap — Modal is operable with a keyboard and does not trap the user in the overall app</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 2.4.7 Focus Visible (and supports 2.4.11 Focus Not Obscured) — The focused element is visibly indicated and not hidden/obscured.</li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-keyboard">
+          <section data-background="#EDEBEB">
+            <h3>21. Testing keyboard</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether all functionality can be used via a keyboard.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced motion</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People who rely on a hardware keyboard or alternative input devices that emulate keyboard input</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check</h5>
+            <ol class="font-sm">
+              <li>Connect an external hardware keyboard (Bluetooth or USB).</li>
+              <li>iOS only, recommended: Enable Full Keyboard Access: Settings → Accessibility → Keyboard → Full Keyboard Access → On.</li>
+              <li>4. Check: All controls are operable via keyboard alone (no touch required).</li>
+              <li>Check: Focus is visible and follows a logical order (no unexpected jumps).</li>
+              <li>Check: There is no keyboard trap — you can move focus away or close pop-ups using keyboard commands.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>Use <kbd>TAB</kbd> / <kbd>SHIFT</kbd> + <kbd>TAB</kbd> to move focus through interactive elements</li>
+              <li>Use <kbd>ARRON </kbd> keys when components support internal navigation.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Menus &amp; dropdowns</h5>
+            <p>Open with Enter (or Alt+Down where applicable), move with Up/Down, select with Enter, close with Esc (or Back on Android).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Radio groups</h5>
+            <p>Move within the group with Arrow keys; select with Space.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Links and buttons</h5>
+            <p>Activate links with Enter. Activate buttons with Space or Enter.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Dialogs/Modals</h5>
+            <p>Open via keyboard; close with Esc (iOS often supports Esc or Cmd + .), or Back on Android.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.1.1 Keyboard — All functionality works with a keyboard.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.1.2 No Keyboard Trap — Focus can move away from any component.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 2.4.3 Focus Order — Focus moves in a meaningful order.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 2.4.7 Focus Visible — The focused element is clearly indicated.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-testing-voice-control">
+          <section data-background="#EDEBEB">
+            <h3>22. Testing voice control</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Aim</h5>
+            <p>To understand how to check whether all functionality can be used via voice control.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Audiences affected</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced motion</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People who rely on voice contol to navigate and interact with controls</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test: Tool check</h5>
+            <ol class="font-sm">
+              <li>Turn on voice control:
+                <ul>
+                  <li>iOS: Settings → Accessibility → Voice Control → ensure Show Names (or Show Numbers) is on.</li>
+                  <li>Android: Settings → Accessibility → Voice Access. (You can say “Show labels” or “Show numbers.”)</li>
+                </ul>
+              </li>
+              <li>Check: All controls are operable by voice alone (no touch needed).</li>
+              <li>Check: Speaking the visible label reliably activates the correct element.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test common interactions using visible labels</h5>
+            <ul class="icon-list font-sm">        
+              <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap Voice control”</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap Voice access”</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap Email address”</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap Subscription topic”</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test common interactions using numbers</h5>
+            <ul class="icon-list font-sm">        
+              <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Show numbers”</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Say: “Tap [number]</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>WCAG requirements</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>AA: 2.5.3 Label in Name — The accessible name includes the visible label text so commands like “Tap X” work.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A: 4.1.2 Name, Role, Value — Controls expose a programmatic name and role.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A (supports): 1.3.1 Info and Relationships — Controls are correctly identified/associated so names map to the right elements.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>

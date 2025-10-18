@@ -875,6 +875,16 @@ li .activity-heading {
   font-size: .9em;
 }
 
+.checklist-heading {
+  display:  inline-block;
+  color: #fff;
+  background: rgba(150, 0, 0, .7);
+  padding: .2em .4em;
+  margin: 0 0 .2em;
+  border-radius: .5em;
+  font-size: .6em;
+}
+
 /* ---------------------
 table-special
 -----------------------*/
