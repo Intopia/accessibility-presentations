@@ -586,15 +586,35 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s start by <b>adding an accessible name</b> to a text field. This can be done in two ways.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>1. Use the placeholder text</h5>
+            <p>Let&rsquo;s start with a <b>visible text label above a form field</b>.</p>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
+<pre><code contenteditable="true">
+<span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can we add <b>an accessible name</b> to a text field in two ways.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Use the <code>placeholder</code> text</h5>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">
+<span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -642,7 +662,12 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityLabel("Phone, required")</span></code></pre>
           </section>
 
@@ -651,7 +676,12 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityLabel("Phone")</span></code></pre>
           </section>
 
@@ -688,7 +718,12 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityHint("Include your area code")</span></code></pre>
           </section>
 
@@ -729,10 +764,14 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityCustomContent(
-    "Instructions",
-    "Include your area code"
+    "Instructions", "Include your area code"
   )</span></code></pre>
           </section>
 
@@ -741,15 +780,18 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityCustomContent(
-        "Instructions",
-        "Include your area code"
-    )
-    .accessibilityCustomContent(
-        "Error",
-        "Must be a valid area code"
-    )</span></code></pre>
+    "Instructions", "Include your area code"
+  )
+  .accessibilityCustomContent(
+    "Error", "Must be a valid area code"
+  )</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -811,12 +853,17 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)
-    .accessibilityCustomContent(
-        "Instructions",
-        "Include your area code",
-        <span class="codeHighlight">importance: .high</span>
-    )</code></pre>
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("Phone", text: $phone)
+  .accessibilityCustomContent(
+    "Instructions",
+    "Include your area code",
+    <span class="codeHighlight">importance: .high</span>
+  )</code></pre>
 </section>
 
           <section data-background="#EDEBEB">
