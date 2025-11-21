@@ -29,7 +29,7 @@
         <div class="menu">
           <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
         </div>
-
+ 
         <section data-background="#EDEBEB">
           <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
           <h1>Forms in native apps</h1>
@@ -43,9 +43,34 @@
 
 
 
+        <section id="slide-what-will-we-cover">
+          <section data-background="#EDEBEB">
+            <h3>What will we cover?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-two-modes">Part 1. Screen reader modes on the web</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-mobile">Part 2. Why mobile feels different</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-changing-your-mental-model">Part 3. Web vs iOS: shifting your mental model</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-swiftUI-structure">Part 4. SwiftUI language basics</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-ios-methods">Part 5. Adding instructions and errors in iOS</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-third-approach">Part 6: A third approach?</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
         <section id="slide-two-modes">
           <section data-background="#EDEBEB">
-            <h3>Part 1: Screen readers and their two modes (web context)</h3>
+            <h3>Part 1. Screen reader modes on the web</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -53,10 +78,13 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <ol>
-              <li><b>Browse mode (reading mode)</b><br><span class="font-sm">moves linearly through the whole page</span></li>
-              <li><b>Forms mode (focus mode)</b><br><span class="font-sm">triggered when entering form controls, or manually toggled</span></li>
-            </ol>
+            <h5>Browse mode (reading mode)</h5>
+            <p>Lets users read through the whole page, line by line and element by element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Forms mode (focus mode)</h5>
+            <p>Triggered when entering form controls, or manually toggled.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -84,13 +112,51 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span><b>Labels</b>: via matching <code>for</code> and <code>id</code> values</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><b>Instructions and errors</b>: via <code>aria-describedby</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><b>Radio group headings</b>: via <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><b>Invalid fields</b>: via <code>aria-invalid="true"</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><b>Required fields</b>: via <code>aria-required="true"</code> or <code>required</code></li>
-            </ul>
+            <p><b>Labels</b>: via matching <code>for</code> and <code>id</code> values:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label <span class="codeHighlight">for="aaa"</span>&gt;Email&lt;/label&gt;
+&lt;input <span class="codeHighlight">id="aaa"</span> type="text"&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Instructions and errors</b>: via <code>aria-describedby</code>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="bbb"&gt;Email&lt;/label&gt;
+&lt;span <span class="codeHighlight">id="ccc"</span>&gt;Use your full email address&lt;/span&gt;
+&lt;input id="bbb" <span class="codeHighlight">aria-describedby="ccc"</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Invalid fields</b>: via <code>aria-invalid="true"</code>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="fff"&gt;Email&lt;/label&gt;
+&lt;input id="fff" <span class="codeHighlight">aria-invalid="true"</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Required fields</b>: via <code>aria-required="true"</code> or <code>required</code>:</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="hhh"&gt;Email&lt;/label&gt;
+&lt;input id="hhh" <span class="codeHighlight">required</span>&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Radio group headings</b>: via <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;fieldset&gt;
+  <span class="codeHighlight">&lt;legend&gt;Do you like boats?&lt;/legend&gt;</span>
+  ...
+&lt;/fieldset&gt;</code></pre>
           </section>
         </section>
 
@@ -104,7 +170,7 @@
 
         <section id="slide-mobile">
           <section data-background="#EDEBEB">
-            <h3>Part 2. Why some teams think this is less critical on mobile</h3>
+            <h3>Part 2. Why mobile feels different</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -144,25 +210,30 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>A blind user drags a finger and <b>lands directly on a form field</b>.</p>
+            <p>A screen reader user taps <b>directly on a form field</b> that has a visible label and instructions.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Only <b>programmatically attached information</b> is announced. So, additional information or error messages would not be announced.</p>
+            <p>Only <b>programmatically attached information</b> is announced.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Without association:</h5>
+            <p>In the worst case, if the <b>label and instructions</b> are not programmatically associated, they will get:</p>
+            <p><em>“Text field.”</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the label is programmatically associated <b>but the instructions are not</b>, they will get:</p>
             <p><em>“Phone number. Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>With association:</h5>
+            <p>If the label and instructions <b>are programmatically associated</b>, they will get:</p>
             <p><em>“Phone number. Include your area code. Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Touch exploration is incredibly common — <b>and it requires associated info</b>.</p>
+            <p>Touch exploration is incredibly common — and it means that <b>we must prgrammatically associated key info</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -170,25 +241,231 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Imagine an error message <b>positioned after a field</b>.</p>
+            <p>Imagine an error message positioned after a field <b>but it has not been programmatically associated</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This error message <b>would not be announced</b> when the user swipes to the field.</p>
+            <p>A screen reader user may <b>hear the following</b>:</p>
+            <p>Swipe 1: <em>“Email.”</em></p>
+            <p>Swipe 2: <em>“Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This means they <b>may not be aware of the error message</b> and any information that may help them fill in the field successfully. </p>
+            <p>They may even hear the following <b>if the label has been associated</b>:</p>
+            <p>Swipe 1: <em>“Email.”</em></p>
+            <p>Swipe 2: <em>“Email. Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Without association:</h5>
-            <p><em>“Email. Text field.”</em></p>
+            <p>But they will not be aware that there is an error message <b>directly below the field</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>With association:</h5>
+            <p>So, they will not know that the field is <b>currently in a state of error</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And, they will not have any information that <b>may help them resolve the error</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, they should hear the following <b>when swiping to the field</b>:</p>
             <p><em>“Email. Text field. Must be a valid email address.”</em></p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-changing-your-mental-model">
+          <section data-background="#EDEBEB">
+            <h3>Part 3. Web vs iOS: shifting your mental model</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Semantics vs. Traits</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>HTML has built-in <b>semantics, structure, and hierarchy</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>For example:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Headings: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Sections: <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The DOM is the semantic structure, and the accessibility tree is generated from it.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Semantics and visual structure are connected but independent.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In iOS, <b>semantics are not foundational</b>. They are additive, essentially “tags”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>For example:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAddTraits(.isHeader)</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilitySortPriority()</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRole(.button)</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityHidden(true)</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Traits do not create structure; they only describe a single element in isolation.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>They don’t define hierarchy.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>They don’t imply relationships.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>They often override or replace native meaning.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. No structural hierarchy (no real document outline)</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In HTML, there is a <b>meaningful, navigable document outline</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Headings form a tree.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Landmarks form regions.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Lists have structure.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Tables have coordinates.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In iOS, there is <b>no document outline</b> at all.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>VoiceOver sees a flat list of elements <b>unless you explicitly define groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A “heading” is just a trait, with no parent–child meaning.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no concept of heading level (though this may change)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no equivalent of <code>&lt;nav&gt;</code> or <code>&lt;main&gt;</code>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no table semantic beyond traits.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The concept of labels</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the web world, we have the <code>&lt;label&gt;</code> element, which is used with form fields to <b>provide a programmatically associated label</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As explained earlier, the <code>&lt;label&gt;</code> can be associated with a form control <b>using matching for and id values</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In SwiftUI/iOS, there is no <b>semantic</b> <code>&lt;label&gt;</code> <b>element</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>&ldquo;There is no <s>spoon</s> label&rdquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>There is only:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Visual text (<code>Text</code>).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Interactive controls (<code>TextField</code>, <code>SecureField</code>, etc).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Unlike the web:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>You cannot bind a visual <code>Text</code> element to a form control.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no equivalent of <code>&lt;label for="id"&gt;</code>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>iOS does not infer any relationship between a <code>Text</code> and a <code>TextField</code>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means all accessibility information must be <b>applied directly to the control itself</b>, including:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessible name</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required state</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Instructions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Error messages</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The concept of states</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Another major difference between the web and iOS is how <b>form field states are handled</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On the web: <b>states are semantic</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can mark a field as being in a particular state <b>using explicit accessibility properties</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Error state: <code>aria-invalid="true"</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required state: <code>required</code> or <code>aria-required="true"</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These states are semantic, machine-readable, and appear as <b>distinct items in the accessibility tree</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In iOS/SwiftUI: <b>states are not semantic</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>iOS has <b>no equivalent properties</b> for:</p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>“invalid”</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>“required”</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is <b>no built-in way</b> to declare a field as <code>required</code> or <code>invalid</code> using accessibility APIs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instead, everything must be <b>expressed through text</b>.</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Error messages: “Error: You must use a valid email address.”</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required fields: “Email, required.”</li>
+            </ul>
           </section>
         </section>
 
@@ -202,7 +479,7 @@
 
         <section id="slide-swiftUI-structure">
           <section data-background="#EDEBEB">
-            <h3>Part 3. SwiftUI language structure</h3>
+            <h3>Part 4. SwiftUI language basics</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -301,11 +578,15 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
 
         <section id="slide-ios-methods">
           <section data-background="#EDEBEB">
-            <h3>Part 4. iOS methods for instructions and error messages</h3>
+            <h3>Part 5. Adding instructions and errors in iOS</h3>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s start by <b>adding a label to a text field</b>. This can be done in two ways.</p>
+            <h4>Adding an accessible name</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s start by <b>adding an accessible name</b> to a text field. This can be done in two ways.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -334,7 +615,7 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In SwiftUI/iOS the placeholder is <b>acceptable</b> as long as there is a visible label present.</p>
+            <p>In SwiftUI/iOS the placeholder <b>can serve as the accessible name</b> — but only when a visible text label is also present.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -357,12 +638,21 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>If you add an explicit accessible name to the <code>.accessibilityLabel</code>, it will override the placeholder and b<b>e used as the accessible name</b>.</p>
+            <p>If you add an explicit accessible name to the <code>.accessibilityLabel</code>, it will override the placeholder and <b>be used as the accessible name</b>.</p>
           </section>
 
           <section data-background="#222">
 <pre><code contenteditable="true">TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityLabel("Phone, required")</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is no need for the following, as it offers no extra value - you <b>may as well use the placeholder</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)
+  <span class="codeHighlight">.accessibilityLabel("Phone")</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -576,7 +866,7 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
 
         <section id="slide-third-approach">
           <section data-background="#EDEBEB">
-            <h3>Part 5: A third approach?</h3>
+            <h3>Part 6: A third approach?</h3>
           </section>
               
           <section data-background="#EDEBEB">
