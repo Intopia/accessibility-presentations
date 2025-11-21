@@ -200,9 +200,9 @@
 
 
 
-        <section id="slide-ios-methods">
+        <section id="slide-swiftUI-structure">
           <section data-background="#EDEBEB">
-            <h3>Part 3. iOS methods for instructions and error messages</h3>
+            <h3>Part 3. SwiftUI language structure</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -214,26 +214,150 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>Before we look at some form examples, here is <b>a breakdown of SwiftUI structure</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 1:</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">Text("Testing forms")
+  .font(.largeTitle.weight(.bold))
+  .accessibilityAddTraits(.isHeader)
+  .padding(.bottom, 8)</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML element</span>
+
+<span class="codeHighlight">Text</span>()</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Initialiser argument: What the view displays</span>
+
+Text(<span class="codeHighlight">"Testing forms"</span>)</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Modifiers:</span>
+
+Text("Testing forms")
+  <span class="codeHighlight">.font(.largeTitle.weight(.bold))
+  .accessibilityAddTraits(.isHeader)
+  .padding(.bottom, 8)</span></code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// MModifier parameters: like CSS property values</span>
+
+Text("Testing forms")
+  .font(<span class="codeHighlight">.largeTitle.weight(.bold)</span>)
+  .accessibilityAddTraits(<span class="codeHighlight">.isHeader</span>)
+  .padding(<span class="codeHighlight">.bottom, 8</span>)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 2:</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML input</span>
+
+<span class="codeHighlight">TextField</span>()</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Initialiser arguments: placeholder + binding</span>
+
+TextField(<span class="codeHighlight">"Phone", text: $phone</span>)</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Placeholder text: Shown when the field is empty</span>
+
+TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Binding: Updates the variable as the user types</span>
+
+TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-ios-methods">
+          <section data-background="#EDEBEB">
+            <h3>Part 4. iOS methods for instructions and error messages</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>Let&rsquo;s start by <b>adding a label to a text field</b>. This can be done in two ways.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>1. Use the placeholder text</h5>
-            <p>(Not the same as the HTML <code>placeholder</code> attribute.)</p>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("<span class="codeHighlight">Phone</span>", text: $phone)</code></pre>
+<pre><code contenteditable="true">TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is good practice as long as <b>no additional information is needed</b>.</p>
+            <p>This is acceptable practice in SwiftUI as long as <b>no additional information is needed</b>.</p>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>In HTML the <code>placeholder</code> attribute has <b>a range of accessibility issues</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>It cannot act as an accessible name reliably.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It creates usability and accessibility issues.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It is not persistent.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It conflicts with semantic labels.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In SwiftUI/iOS the placeholder is <b>acceptable</b> as long as there is a visible label present.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Just like in HTML, the placeholder <b>must never be the only label</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>It becomes the accessible name by default.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It does not conflict with a semantic <code>&lt;label&gt;</code> because none exists.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It is not misleading because the visible label above is persistent.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It avoids most of HTML’s structural problems.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It aligns with iOS design conventions.</li>
+            </ul>
+          </section>
 
           <section data-background="#EDEBEB">
             <h5>2. Use a custom accessibility label</h5>
             <p>Useful when you need to add extra information — such as “required”.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you add an explicit accessible name to the <code>.accessibilityLabel</code>, it will override the placeholder and b<b>e used as the accessible name</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -352,7 +476,7 @@
             <h5>Cons:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>By default, this content is only available through the rotor</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Not all users know how to use the rotor, so important information may be missed</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not all users know how to use the rotor, so important information may be missed. This includes many long-time VoiceOver users.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Not guaranteed to be announced when the field receives focus</li>
             </ul>
           </section>
@@ -417,7 +541,7 @@
           <section data-background="#EDEBEB">
             <ul class="icon-list font-xs">
               <li><span aria-hidden="true" class="icon icon-check"></span>The control already has a long <code>accessibilityLabel</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The user has Hints off (some builds exclude high-importance custom content if they classify it as a hint-like extension)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The user has Hints off (some iOS versions treat high-importance custom content as hint-like, depending on context.)</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>The user enters the field via certain rotor modes</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>The <code>TextField</code> is inside a parent element that is itself an accessibility element</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Custom focus movement is being used</li>
@@ -452,7 +576,7 @@
 
         <section id="slide-third-approach">
           <section data-background="#EDEBEB">
-            <h3>Part 4: A third approach?</h3>
+            <h3>Part 5: A third approach?</h3>
           </section>
               
           <section data-background="#EDEBEB">
