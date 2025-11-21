@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms in native apps</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Forms in native apps</h1>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-two-modes">
+          <section data-background="#EDEBEB">
+            <h3>Part 1: Screen readers and their two modes (web context)</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On desktop web, screen readers like NVDA and JAWS <b>operate in two modes</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol>
+              <li><b>Browse mode (reading mode)</b><br><span class="font-sm">moves linearly through the whole page</span></li>
+              <li><b>Forms mode (focus mode)</b><br><span class="font-sm">triggered when entering form controls, or manually toggled</span></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In forms mode, keystrokes are sent <b>directly to the focused control</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Screen readers usually only announce the control itself and any information that is <b>programmatically associated with it</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Anything not programmatically tied to a form control <b>can effectively become invisible</b> while the user is in forms mode.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is why <b>programmatic association</b> is non-negotiable on the web.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Without these connections, <b>users may miss essential information</b>!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some <b>common methods</b> include:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Labels</b>: via matching <code>for</code> and <code>id</code> values</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Instructions and errors</b>: via <code>aria-describedby</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Radio group headings</b>: via <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Invalid fields</b>: via <code>aria-invalid="true"</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Required fields</b>: via <code>aria-required="true"</code> or <code>required</code></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-mobile">
+          <section data-background="#EDEBEB">
+            <h3>Part 2. Why some teams think this is less critical on mobile</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Mobile screen readers (VoiceOver, TalkBack) <b>do not have forms mode</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Users move between one element at a time <b>using swipe or touch</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They can swipe through <b>all focusable items</b> on the screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This includes <b>labels, instructions and error messages</b> if those items are exposed to accessibility.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means users are likely to encounter nearby text, <b>even if it’s not formally associated</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This creates the illusion that <b>“mobile forms don’t really need programmatic association.”</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But that illusion is <b>misleading</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s look at some examples to help explain why programmatic association is <b>still essential on mobile</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 1: Touch exploration</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>A blind user drags a finger and <b>lands directly on a form field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Only <b>programmatically attached information</b> is announced. So, additional information or error messages would not be announced.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Without association:</h5>
+            <p><em>“Phone number. Text field.”</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>With association:</h5>
+            <p><em>“Phone number. Include your area code. Text field.”</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Touch exploration is incredibly common — <b>and it requires associated info</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 2: Swiping into a field with an error message below it.</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Imagine an error message <b>positioned after a field</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This error message <b>would not be announced</b> when the user swipes to the field.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means they <b>may not be aware of the error message</b> and any information that may help them fill in the field successfully. </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Without association:</h5>
+            <p><em>“Email. Text field.”</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>With association:</h5>
+            <p><em>“Email. Text field. Must be a valid email address.”</em></p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-ios-methods">
+          <section data-background="#EDEBEB">
+            <h3>Part 3. iOS methods for instructions and error messages</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The following examples use <b>SwiftUI</b> because the code reads more like English and is less intimidating if you’re not a developer.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>UIKit</b> is still widely used, but the accessibility behaviour is the same at a conceptual level.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s start by <b>adding a label to a text field</b>. This can be done in two ways.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Use the placeholder text</h5>
+            <p>(Not the same as the HTML <code>placeholder</code> attribute.)</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("<span class="codeHighlight">Phone</span>", text: $phone)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is good practice as long as <b>no additional information is needed</b>.</p>
+          </section>
+
+
+          <section data-background="#EDEBEB">
+            <h5>2. Use a custom accessibility label</h5>
+            <p>Useful when you need to add extra information — such as “required”.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)
+  <span class="codeHighlight">.accessibilityLabel("Phone, required")</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But how do we add <b>instructions and error messages</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We&rsquo;ll look at <b>two approaches</b> to associating instructions and errors with form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Method 1: <code>accessibilityHint</code></h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>accessibilityHint</code> allows you to <b>attach a short description</b> to the control.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It was originally designed for <b>interaction guidance</b>, not form-related instructions or errors.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of interaction guidance</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span><em>“Swipe left to reveal more items”</li></em>
+              <li><span aria-hidden="true" class="icon icon-check"></span><em>“Double tap to enlarge”</em></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But <code>accessibilityHint</code> is often used to <b>attach simple instructions</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)
+  <span class="codeHighlight">.accessibilityHint("Include your area code")</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Pros:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Easy to implement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Programmatically attached (so it reads automatically when the field is focused)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Cons:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Can be turned off by the user (“Speak Hints”)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Intended for interaction guidance, not business logic</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>One long, unstructured string</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not suitable as the only place for required information or errors</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Method 2: <code>UIAccessibilityCustomContent</code></h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>UIAccessibilityCustomContent</code> allows you to <b>attach multiple label/value pairs</b> to a control.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A structured way to add extra information:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required text</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Instructions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helper text</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Error messages</li>
+            </ul>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)
+  <span class="codeHighlight">.accessibilityCustomContent(
+    "Instructions",
+    "Include your area code"
+  )</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can also stack <b>multiple pieces of supporting information</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)
+  <span class="codeHighlight">.accessibilityCustomContent(
+        "Instructions",
+        "Include your area code"
+    )
+    .accessibilityCustomContent(
+        "Error",
+        "Must be a valid area code"
+    )</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Pros:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Structured label/value pairs</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Supports multiple types of information (required, instructions, errors)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Ideal for grouping supporting text in a predictable way</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>More semantic and more flexible than a single unstructured hint</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Cons:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>By default, this content is only available through the rotor</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not all users know how to use the rotor, so important information may be missed</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not guaranteed to be announced when the field receives focus</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, both methods have <b>potential issues</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 1:</h5>
+            <p>People may have hints turned off, and miss instruction and errors.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Method 2:</h5>
+            <p>People have to use the rotor to hear instruction and errors.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>A solution?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One solution is to <b>combine the second method</b>, <code>UIAccessibilityCustomContent</code> with an importance level of <code>.high</code></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When a piece of custom content is marked as high importance, VoiceOver <b>normally includes it in the field’s announcement</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>No rotor required</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>No hint dependency</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>No extra code to manually trigger announcements</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The content becomes predictable, discoverable, and reliable for users</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It effectively promotes your supporting text <b>into the main VoiceOver announcement</b> for that field.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField("Phone", text: $phone)
+    .accessibilityCustomContent(
+        "Instructions",
+        "Include your area code",
+        <span class="codeHighlight">importance: .high</span>
+    )</code></pre>
+</section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>resulting announcement</b> on focus would be:</p>
+            <p><em>“Phone. Include your area code. Text field.”</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are some <b>possible exceptions</b> where this information may not be announced:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The control already has a long <code>accessibilityLabel</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The user has Hints off (some builds exclude high-importance custom content if they classify it as a hint-like extension)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The user enters the field via certain rotor modes</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The <code>TextField</code> is inside a parent element that is itself an accessibility element</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Custom focus movement is being used</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The control is inside an <code>accessibilityElement(children: .combine)</code> situation</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is a third, more complex approach. <b>But before we proceed</b>...</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What are your thoughts?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which of these two feels clearer?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which approach feels more predictable?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Do you see any risks or advantages with either option?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-third-approach">
+          <section data-background="#EDEBEB">
+            <h3>Part 4: A third approach?</h3>
+          </section>
+              
+          <section data-background="#EDEBEB">
+            <p>This method can be used on <b>more complex custom layouts</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Instead of <b>attaching information to a field</b>, you can group text and fields into one accessibility element that includes:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The label</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The text field</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any instructions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any error message</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When the user focuses this element, <b>VoiceOver reads the combined accessibilityLabel</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This gives developers a way to <b>guarantee that users always hear</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The label</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Whether the field is required</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any instructions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Any error messages</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In the following example the label, text field and error text might all be <b>separate visuals on screen</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But VoiceOver <b>treats them as one combined announcement</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is a <b>simplified example</b> - developers would normally add additional conditions.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">container.isAccessibilityElement = true
+container.accessibilityLabel = 
+  "Email. Must be a valid email address."
+container.accessibilityTraits = .textField
+
+container.accessibilityActivationPoint = 
+    textField.center</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's look at this <b>line by line</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">container.isAccessibilityElement</span> = true</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>isAccessibilityElement</h5>
+            <p><em>"Treat this entire container as one single accessibility element."</em></p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">container.isAccessibilityElement = <span class="codeHighlight">true</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>true</h5>
+            <p><em>Don’t treat the label, field, and error message as separate things. When VoiceOver lands on it, read everything at once.</em></p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">container.accessibilityLabel = 
+    "Email. Must be a valid email address."</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This <b>replaces the default label of the text field</b>. You now have full control over what is spoken, in what order</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is like using <code>aria-label</code> on a non-native container to <b>override what is spoken for everything inside it</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">container.accessibilityTraits = .textField</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Without this line, VoiceOver would <b>treat the container as a static element</b> (just text).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Users wouldn’t know <b>they can enter data</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is like adding a <code>role</code> to a <b>non-native HTML element</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeHighlight">container.accessibilityActivationPoint = textField.center</span></code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This tells VoiceOver:</h5>
+            <p><em>“When the user double taps this combined element, actually activate the real text field inside it.”</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This approach is especially useful for <b>complex components</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Floating labels</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Stylised form components</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Complex custom layouts</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Inline instructions or examples</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It gives developers <b>full control over what VoiceOver says</b>.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
