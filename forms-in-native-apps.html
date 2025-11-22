@@ -78,12 +78,12 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Browse mode (reading mode)</h5>
+            <h5>Browse mode</h5>
             <p>Lets users read through the whole page, line by line and element by element.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Forms mode (focus mode)</h5>
+            <h5>Forms mode (JAWS)/ Focus mode (NVDA)</h5>
             <p>Triggered when entering form controls, or manually toggled.</p>
           </section>
 
@@ -100,7 +100,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is why <b>programmatic association</b> is non-negotiable on the web.</p>
+            <p>This is why programmatic association is <b>non-negotiable</b> on the web.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -233,6 +233,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>Users could swipe up or down to find out more, <b>but they should not have to</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>Touch exploration is incredibly common — and it means that <b>we must prgrammatically associated key info</b>.</p>
           </section>
 
@@ -246,14 +250,14 @@
 
           <section data-background="#EDEBEB">
             <p>A screen reader user may <b>hear the following</b>:</p>
-            <p>Swipe 1: <em>“Email.”</em></p>
-            <p>Swipe 2: <em>“Text field.”</em></p>
+            <p>Swipe 1 - Text label: <em>“Email.”</em></p>
+            <p>Swipe 2 - Form field: <em>“Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
             <p>They may even hear the following <b>if the label has been associated</b>:</p>
-            <p>Swipe 1: <em>“Email.”</em></p>
-            <p>Swipe 2: <em>“Email. Text field.”</em></p>
+            <p>Swipe 1 - Text lable: <em>“Email.”</em></p>
+            <p>Swipe 2 - Form field: <em>“Email. Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -288,34 +292,65 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>1. Semantics vs. Traits</h4>
+            <h4>1. No structural hierarchy</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>HTML has built-in <b>semantics, structure, and hierarchy</b>.</p>
+            <p>In HTML, there is a <b>strong hierarchy of information</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Elements combine to form a <b>meaningful, navigable document outline</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>For example:</h5>
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Headings: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Sections: <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Headings form a nested tree.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Landmarks define regions of the page.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Lists introduce grouping and order.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Tables provide grid relationships.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The DOM is the semantic structure, and the accessibility tree is generated from it.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Semantics and visual structure are connected but independent.</li>
-            </ul>
+            <p>The DOM <b>provides the structural hierarchy</b>, and the accessibility tree is generated directly from that structure.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In iOS, <b>semantics are not foundational</b>. They are additive, essentially “tags”.</p>
+            <p>In iOS, there is <b>no inherent hierarchy of information</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>For example:</h5>
+            <p>VoiceOver receives a flat list of elements <b>unless you explicitly group them</b> or control their reading order.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. No semantics</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>HTML elements have <b>built-in semantics</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each element carries a <b>native role and purpose</b> that browsers and assistive technologies understand.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;h1&gt;This is a heading&lt;h1&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In iOS, semantics are <b>not built in</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They must be <b>added manually</b> through accessibility modifiers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Examples of accessibility modifiers:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAddTraits(.isHeader)</code></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilitySortPriority()</code></li>
@@ -324,51 +359,69 @@
             </ul>
           </section>
 
+          <section data-background="#222">
+<pre><code contenteditable="true">Text("This is a heading")
+  .<span class="codeHighlight">font(.title2.weight(.semibold))</span> <span class="codeComment">// Size</span>
+  <span class="codeHighlight">.accessibilityAddTraits(.isHeader)</span> <span class="codeComment">// Heading</span>
+  .padding(.bottom, 4)
+</code></pre>
+          </section>
+
           <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Traits do not create structure; they only describe a single element in isolation.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>They don’t define hierarchy.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>They don’t imply relationships.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>They often override or replace native meaning.</li>
+            <h4>3. No form structure</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On the web, HTML provides three levels of <b>built-in form structure</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level 1: Form controls</h5>
+            <p>The elements users interact with (input, textarea, select, checkbox, etc.)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level 2: Form fields</h5>
+            <p>A combination of:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The label</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The control</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Instructions (optional)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Required indicators (optional)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Error messages (optional)</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>2. No structural hierarchy (no real document outline)</h4>
+            <h5>Level 3: Form groups</h5>
+            <p class="font-sm">Sets of related fields grouped under a shared heading, announced together by screen readers via <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In HTML, there is a <b>meaningful, navigable document outline</b>:</p>
+            <p>In iOS only the lowest-level concept exists — <b>controls</b> (TextField, Button, Picker, Toggle, etc.).</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Headings form a tree.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Landmarks form regions.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Lists have structure.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Tables have coordinates.</li>
+            <h5>But:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no “form field” concept.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no container that binds label + control + instructions + error.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>There is no <code>&lt;fieldset&gt;</code> or semantic form grouping.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In iOS, there is <b>no document outline</b> at all.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>VoiceOver sees a flat list of elements <b>unless you explicitly define groups</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>A “heading” is just a trait, with no parent–child meaning.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>There is no concept of heading level (though this may change)</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>There is no equivalent of <code>&lt;nav&gt;</code> or <code>&lt;main&gt;</code>.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>There is no table semantic beyond traits.</li>
+            <h5>Developers must manually assemble the entire experience:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A Text view (visible label)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A TextField or other control</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A Text view for instructions or errors</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Optional grouping using accessibility containers</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>The concept of labels</h4>
+            <h4>4. No semantic &lt;label&gt; element</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -376,15 +429,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>As explained earlier, the <code>&lt;label&gt;</code> can be associated with a form control <b>using matching for and id values</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <p>In SwiftUI/iOS, there is no <b>semantic</b> <code>&lt;label&gt;</code> <b>element</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>&ldquo;There is no <s>spoon</s> label&rdquo;.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -418,7 +463,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>The concept of states</h4>
+            <h4>5. No semantic states</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -466,6 +511,26 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>Error messages: “Error: You must use a valid email address.”</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Required fields: “Email, required.”</li>
             </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>6. A shift in thinking</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you come from a web background, native languages like SwiftUI and UIKit can <b>feel less structured and less guided</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>HTML gives you a <b>well-defined hierarchy</b> and built-in semantics.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In contrast, iOS requires you to <b>build structure and meaning intentionally</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It’s not wrong — it just involves <b>shifting your mental model</b>.</p>
           </section>
         </section>
 
@@ -527,7 +592,7 @@ Text("Testing forms")
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// MModifier parameters: like CSS property values</span>
+<pre><code contenteditable="true"><span class="codeComment">// Modifier parameters: like CSS property values</span>
 
 Text("Testing forms")
   .font(<span class="codeHighlight">.largeTitle.weight(.bold)</span>)
@@ -566,6 +631,95 @@ TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
 
 TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
+
+<!--
+          <section data-background="#EDEBEB">
+            <h4>A glossary?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is a <b>speed run</b> through a lot of concepts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Containers</h5>
+            <p class="font-sm">Layout structures that organise views:</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>VStack</code> – vertical layout</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>HStack</code> – horizontal layout</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>ZStack</code> – layered layout</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Group</code> – logical grouping (no layout)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>View</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A basic building block of SwiftUI.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Equivalent to an HTML element.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>View Type</h5>
+            <p class="font-sm">The specific kind of SwiftUI view you’re using.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Text</code> - static text</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Button</code> - interactive control</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>VStack</code> - vertical layout container)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>TextField</code> - editable text input</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Modifiers</h5>
+            <p class="font-sm">Functions you attach to a view to change it.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.font(.headline)</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.padding()</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Modifier Parameters</h5>
+            <p class="font-sm">The values you pass into a modifier to configure it.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.font(<b>.title2</b>.weight(.semibold))</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.font(.title2.weight(<b>.semibold</b>))</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Initialiser Argument</h5>
+            <p class="font-sm">Values you supply when creating a view.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Text(<b>"Submit your details"</b>)</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Traits</h5>
+            <p class="font-sm">Properties that describe what an element is or how it behaves to VoiceOver.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.isHeader</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.isButton</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.isSelected</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Roles (accessibilityRole)</h5>
+            <p class="font-sm">A newer, clearer API for giving an element a semantic role.</p>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRole(.button)</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRole(.image)</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You can find out more at <a href="https://developer.apple.com/documentation/SwiftUI" target="_blank">Apple&rsquo;s SwiftUI site</a>.</p>
+          </section>
+-->
         </section>
 
 
@@ -586,7 +740,7 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s start with a <b>visible text label above a form field</b>.</p>
+            <p>Let’s start with a <b>visible text label above a form field</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -600,7 +754,7 @@ TextField("Phone", text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We can we add <b>an accessible name</b> to a text field in two ways.</p>
+            <p>We can add <b>an accessible name</b> to a text field in two ways.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -622,7 +776,7 @@ TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In HTML the <code>placeholder</code> attribute has <b>a range of accessibility issues</b>:</p>
+            <p>In HTML the <code>placeholder</code> has <b>significant accessibility issues</b>:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -645,8 +799,8 @@ TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
           <section data-background="#EDEBEB">
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>It becomes the accessible name by default.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It does not conflict with a semantic <code>&lt;label&gt;</code> because none exists.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It is not misleading because the visible label above is persistent.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>No semantic conflict (SwiftUI has no <code>&lt;label&gt;</code> element).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It is not misleading because the visible label is persistent.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>It avoids most of HTML’s structural problems.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>It aligns with iOS design conventions.</li>
             </ul>
@@ -658,7 +812,7 @@ TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>If you add an explicit accessible name to the <code>.accessibilityLabel</code>, it will override the placeholder and <b>be used as the accessible name</b>.</p>
+            <p>If you add an explicit accessible name to <code>.accessibilityLabel</code>, it will override the placeholder and <b>be used as the accessible name</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -672,7 +826,37 @@ TextField("Phone", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There is no need for the following, as it offers no extra value - you <b>may as well use the placeholder</b>.</p>
+            <p>Be aware that the <code>placeholder</code> is still used internally by SwiftUI <b>as the TextField’s editing label</b>, even when you override the accessible name.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>SwiftUI exposes <b>two separate concepts to VoiceOver</b>:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The accessible name (from <code>accessibilityLabel</code>)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The editing label (derived from the <code>placeholder</code>)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When the strings differ, <b>VoiceOver may announce both</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To avoid duplication, <b>use an empty placeholder string</b> <code>("")</code> when providing a custom <code>accessibilityLabel</code>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField(<span class="codeHighlight">""</span>, text: $phone)
+  .accessibilityLabel("Phone, required")</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There is no need for the following, as it offers no extra value — you <b>may as well use the placeholder</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -682,7 +866,7 @@ Text("Phone")
 
 <span class="codeComment">// Form field</span>
 TextField("Phone", text: $phone)
-  <span class="codeHighlight">.accessibilityLabel("Phone")</span></code></pre>
+  <s>.accessibilityLabel("Phone")</s></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -690,7 +874,7 @@ TextField("Phone", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We&rsquo;ll look at <b>two approaches</b> to associating instructions and errors with form fields.</p>
+            <p>We’ll look at <b>two approaches</b> to associating instructions and errors with form fields.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -708,7 +892,7 @@ TextField("Phone", text: $phone)
           <section data-background="#EDEBEB">
             <h5>Examples of interaction guidance</h5>
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span><em>“Swipe left to reveal more items”</li></em>
+              <li><span aria-hidden="true" class="icon icon-check"></span><em>“Swipe left to reveal more items”</em></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><em>“Double tap to enlarge”</em></li>
             </ul>
           </section>
@@ -731,14 +915,14 @@ TextField("Phone", text: $phone)
             <h5>Pros:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>Easy to implement</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Programmatically attached (so it reads automatically when the field is focused)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Reads automatically when the field is focused if “Speak Hints” is on.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>Cons:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Can be turned off by the user (“Speak Hints”)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Can be turned off (“Speak Hints”)</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Intended for interaction guidance, not business logic</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>One long, unstructured string</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Not suitable as the only place for required information or errors</li>
@@ -750,15 +934,12 @@ TextField("Phone", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p><code>UIAccessibilityCustomContent</code> allows you to <b>attach multiple label/value pairs</b> to a control.</p>
+            <p><code>UIAccessibilityCustomContent</code> allows you to <b>attach structured metadata (key–value)</b> to a control.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>A structured way to add extra information:</h5>
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Required text</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Instructions</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Helper text</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Error messages</li>
             </ul>
           </section>
@@ -776,7 +957,7 @@ TextField("Phone", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>You can also stack <b>multiple pieces of supporting information</b>.</p>
+            <p>You can also provide <b>multiple pieces of supporting information</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -797,10 +978,10 @@ TextField("Phone", text: $phone)
           <section data-background="#EDEBEB">
             <h5>Pros:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Structured label/value pairs</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Supports multiple types of information (required, instructions, errors)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Structured key/value pairs</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Supports multiple types of information</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Ideal for grouping supporting text in a predictable way</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>More semantic and more flexible than a single unstructured hint</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>More semantic and flexible than a single hint</li>
             </ul>
           </section>
 
@@ -808,8 +989,9 @@ TextField("Phone", text: $phone)
             <h5>Cons:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>By default, this content is only available through the rotor</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Not all users know how to use the rotor, so important information may be missed. This includes many long-time VoiceOver users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not all users know how to use the rotor</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Not guaranteed to be announced when the field receives focus</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>VoiceOver always reads the key aloud (e.g., “Instructions”)</li>
             </ul>
           </section>
 
@@ -819,12 +1001,12 @@ TextField("Phone", text: $phone)
 
           <section data-background="#EDEBEB">
             <h5>Method 1:</h5>
-            <p>People may have hints turned off, and miss instruction and errors.</p>
+            <p>If users turn off hints, instructions and errors may be missed.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>Method 2:</h5>
-            <p>People have to use the rotor to hear instruction and errors.</p>
+            <p>Supporting text may require the rotor unless marked as high importance.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -832,24 +1014,23 @@ TextField("Phone", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>One solution is to <b>combine the second method</b>, <code>UIAccessibilityCustomContent</code> with an importance level of <code>.high</code></p>
+            <p>One solution is to use <b>UIAccessibilityCustomContent</b> with <code>importance: .high</code>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>When a piece of custom content is marked as high importance, VoiceOver <b>normally includes it in the field’s announcement</b>.</p>
+            <p>When custom content is marked as high importance, VoiceOver <b>often includes it in the default announcement</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>No rotor required</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>No hint dependency</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>No extra code to manually trigger announcements</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The content becomes predictable, discoverable, and reliable for users</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>No rotor required (in most cases)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Less dependent on hints</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The content becomes more predictable and discoverable</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>It effectively promotes your supporting text <b>into the main VoiceOver announcement</b> for that field.</p>
+            <p>It promotes supporting text <b>into the main VoiceOver announcement</b>, while preserving its key–value structure.</p>
           </section>
 
           <section data-background="#222">
@@ -867,27 +1048,74 @@ TextField("Phone", text: $phone)
 </section>
 
           <section data-background="#EDEBEB">
-            <p>The <b>resulting announcement</b> on focus would be:</p>
-            <p><em>“Phone. Include your area code. Text field.”</em></p>
+            <p>The resulting announcement will include the key and value:</p>
+            <p><em>“Phone. Instructions. Include your area code. Text field.”</em></p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There are some <b>possible exceptions</b> where this information may not be announced:</p>
+            <p>There are some <b>possible exceptions</b> where high-importance content may not be included:</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ul class="icon-list font-xs">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The control already has a long <code>accessibilityLabel</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The user has Hints off (some iOS versions treat high-importance custom content as hint-like, depending on context.)</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The user enters the field via certain rotor modes</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The <code>TextField</code> is inside a parent element that is itself an accessibility element</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Custom focus movement is being used</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The control is inside an <code>accessibilityElement(children: .combine)</code> situation</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Very long accessibility labels</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Speak Hints off (some iOS versions treat <code>.high</code> similarly to hints)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Certain rotor navigation modes</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Parent elements that override accessibility</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Combined child elements</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There is a third, more complex approach. <b>But before we proceed</b>...</p>
+            <p>There is a third, more complex approach. <b>But before we proceed</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Label recommendations</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Use the <code>placeholder</code> as the accessible label</h5>
+            <p>When no additional information is required, the placeholder is acceptable provided a visible text label is also present.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Use <code>accessibilityLabel</code> when additional information is needed</h5>
+            <p>If you need to convey extra meaning (such as required fields), provide a custom accessible name.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">.accessibilityLabel(<span class="codeHighlight">"Phone, required"</span>)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Instruction and error recommendations</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Use <code>accessibilityHint</code> for short, unstructured instructions</h5>
+            <p>Hints present additional context without requiring a key, and read naturally when VoiceOver hints are enabled.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">.accessibilityHint(<span class="codeHighlight">"Include your area code"</span>)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Use <code>accessibilityCustomContent</code> for structured information such as errors</h5>
+            <p>Errors naturally fit a key–value structure and are more predictable when announced in this form.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">.accessibilityCustomContent(
+  <span class="codeHighlight">"Error", 
+  "Must be a valid phone number",
+  importance: .high</span>
+)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
