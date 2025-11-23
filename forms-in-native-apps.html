@@ -111,49 +111,40 @@
             <p>Some <b>common methods</b> include:</p>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p><b>Labels</b>: via matching <code>for</code> and <code>id</code> values:</p>
-          </section>
-
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label <span class="codeHighlight">for="aaa"</span>&gt;Email&lt;/label&gt;
+<pre><code contenteditable="true"><span class="codeComment">&lt;!-- Labels: matching for and id values --&gt;</span>
+
+&lt;label <span class="codeHighlight">for="aaa"</span>&gt;Email&lt;/label&gt;
 &lt;input <span class="codeHighlight">id="aaa"</span> type="text"&gt;</code></pre>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p><b>Instructions and errors</b>: via <code>aria-describedby</code>:</p>
-          </section>
-
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="bbb"&gt;Email&lt;/label&gt;
+<pre><code contenteditable="true"><span class="codeComment">&lt;!-- Instructions / errors: aria-describedby --&gt;</span>
+
+&lt;label for="bbb"&gt;Email&lt;/label&gt;
 &lt;span <span class="codeHighlight">id="ccc"</span>&gt;Use your full email address&lt;/span&gt;
 &lt;input id="bbb" <span class="codeHighlight">aria-describedby="ccc"</span>&gt;</code></pre>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p><b>Invalid fields</b>: via <code>aria-invalid="true"</code>:</p>
-          </section>
-
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="fff"&gt;Email&lt;/label&gt;
+<pre><code contenteditable="true"><span class="codeComment">&lt;!-- Invalid fields: aria-invalid="true" --&gt;</span>
+
+&lt;label for="fff"&gt;Email&lt;/label&gt;
 &lt;input id="fff" <span class="codeHighlight">aria-invalid="true"</span>&gt;</code></pre>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p><b>Required fields</b>: via <code>aria-required="true"</code> or <code>required</code>:</p>
-          </section>
-
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="hhh"&gt;Email&lt;/label&gt;
+<pre><code contenteditable="true"><span class="codeComment">&lt;!-- Required fields: aria-required="true"
+or required --&gt;</span>
+
+&lt;label for="hhh"&gt;Email&lt;/label&gt;
 &lt;input id="hhh" <span class="codeHighlight">required</span>&gt;</code></pre>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p><b>Radio group headings</b>: via <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></p>
-          </section>
-
           <section data-background="#222">
-<pre><code contenteditable="true">&lt;fieldset&gt;
+<pre><code contenteditable="true"><span class="codeComment">&lt;!-- Radio group headings: fieldset, legend --&gt;</span>
+
+&lt;fieldset&gt;
   <span class="codeHighlight">&lt;legend&gt;Do you like boats?&lt;/legend&gt;</span>
   ...
 &lt;/fieldset&gt;</code></pre>
@@ -178,11 +169,11 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Users move between one element at a time <b>using swipe or touch</b>.</p>
+            <p>Users can <b>touch any element</b> on the screen to hear it announced.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>They can swipe through <b>all focusable items</b> on the screen.</p>
+            <p>They can also swipe through <b>all focusable items</b> on the screen.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -202,7 +193,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Let&rsquo;s look at some examples to help explain why programmatic association is <b>still essential on mobile</b>.</p>
+            <p>Let’s look at some examples to help explain why programmatic association is <b>still essential on mobile</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -716,7 +707,7 @@ TextField("", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This method can also be used to <b>add additional information</b> such as &ldquo;required&rdquo;.</p>
+            <p>This method can also be used to <b>add additional information</b> such as “required”.</p>
           </section>
 
           <section data-background="#222">
@@ -971,7 +962,6 @@ TextField("Phone", text: $phone)
           <section data-background="#EDEBEB">
             <p>More importantly, this content is available <b>without needing the rotor</b>.</p>
           </section>
-
 
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
