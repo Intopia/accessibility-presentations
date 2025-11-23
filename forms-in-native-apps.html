@@ -54,8 +54,8 @@
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-mobile">Part 2. Why mobile feels different</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-changing-your-mental-model">Part 3. Web vs iOS: shifting your mental model</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-swiftUI-structure">Part 4. SwiftUI language basics</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-ios-methods">Part 5. Adding instructions and errors in iOS</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-third-approach">Part 6: A third approach?</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-adding-accessible-names">Part 5. Adding accessible names</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-adding-instructions-errors">Part 6. Adding instructions and error messages</a></li>
             </ul>
           </section>
         </section>
@@ -256,7 +256,7 @@
 
           <section data-background="#EDEBEB">
             <p>They may even hear the following <b>if the label has been associated</b>:</p>
-            <p>Swipe 1 - Text lable: <em>“Email.”</em></p>
+            <p>Swipe 1 - Text label: <em>“Email.”</em></p>
             <p>Swipe 2 - Form field: <em>“Email. Text field.”</em></p>
           </section>
 
@@ -326,7 +326,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>2. No semantics</h4>
+            <h4>2. Limited semantics</h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -337,34 +337,24 @@
             <p>Each element carries a <b>native role and purpose</b> that browsers and assistive technologies understand.</p>
           </section>
 
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;h1&gt;This is a heading&lt;h1&gt;</code></pre>
+          <section data-background="#EDEBEB">
+            <p>iOS <b>does not create semantics</b> for layouts and relationships (no headings, no grouping, no document outline).</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In iOS, semantics are <b>not built in</b>.</p>
+            <p>However, controls do have <b>built-in semantics</b>:</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>They must be <b>added manually</b> through accessibility modifiers.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Examples of accessibility modifiers:</h5>
+            <h5>Examples of built-in control semantics:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAddTraits(.isHeader)</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilitySortPriority()</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRole(.button)</code></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityHidden(true)</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>TextField</code> – exposes the text field trait automatically</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Button</code> – has the button trait automatically</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Toggle</code> – is a switch with on/off state and role</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>SecureField</code> – is automatically a secure text entry</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>Picker</code> – becomes an adjustable picker element</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>DatePicker</code> – exposes structured accessibility values</li>
             </ul>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">Text("This is a heading")
-  .<span class="codeHighlight">font(.title2.weight(.semibold))</span> <span class="codeComment">// Size</span>
-  <span class="codeHighlight">.accessibilityAddTraits(.isHeader)</span> <span class="codeComment">// Heading</span>
-  .padding(.bottom, 4)
-</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -512,26 +502,6 @@
               <li><span aria-hidden="true" class="icon icon-check"></span>Required fields: “Email, required.”</li>
             </ul>
           </section>
-
-          <section data-background="#EDEBEB">
-            <h4>6. A shift in thinking</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>If you come from a web background, native languages like SwiftUI and UIKit can <b>feel less structured and less guided</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>HTML gives you a <b>well-defined hierarchy</b> and built-in semantics.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>In contrast, iOS requires you to <b>build structure and meaning intentionally</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>It’s not wrong — it just involves <b>shifting your mental model</b>.</p>
-          </section>
         </section>
 
 
@@ -632,6 +602,48 @@ TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
 TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>This “binding” ($phone) <b>connects the control</b> to a <code>@State</code>. For example:</p>
+        </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">@State private var <span class="codeHighlight">phone</span> = ""
+
+TextField("Phone", text: <span class="codeHighlight">$phone</span>)</code></pre>
+</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <code>@State</code> is <b>very important</b> from an accessibility perspective.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On the web, <b>the DOM</b> stores a field’s value.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>When a user types into a form control:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The DOM input value is updated.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The accessibility tree value is updated.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Screen readers announce the correct value when focus returns.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In iOS, <code>@State</code> store a field’s value.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>When a user types into a TextField:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The <code>@State</code> variable is updated.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>SwiftUI re-renders the view to show the value.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The accessibility tree is updated.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>VoiceOver announces the updated value when focus returns.</li>
+            </ul>
+          </section>
+
 <!--
           <section data-background="#EDEBEB">
             <h4>A glossary?</h4>
@@ -730,13 +742,9 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
 
 
 
-        <section id="slide-ios-methods">
+        <section id="slide-adding-accessible-names">
           <section data-background="#EDEBEB">
-            <h3>Part 5. Adding instructions and errors in iOS</h3>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Adding an accessible name</h4>
+            <h3>Part 5. Adding accessible names</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -758,7 +766,7 @@ TextField("Phone", text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>1. Use the <code>placeholder</code> text</h5>
+            <h4>Method 1. Use <code>placeholder</code></h4>
           </section>
 
           <section data-background="#222">
@@ -772,47 +780,19 @@ TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is acceptable practice in SwiftUI as long as <b>no additional information is needed</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>In HTML the <code>placeholder</code> has <b>significant accessibility issues</b>:</p>
+            <p>While the placeholder can be used to create an accessible name, <b>it is not recommended</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>It cannot act as an accessible name reliably.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It creates usability and accessibility issues.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It is not persistent.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It conflicts with semantic labels.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Placeholder stops being visible once the user types, which makes behaviour unpredictable.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>VoiceOver sometimes uses placeholder as editing label, which is announced differently when editing vs when entering.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Placeholder is not read in all rotor modes.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In SwiftUI/iOS the placeholder <b>can serve as the accessible name</b> — but only when a visible text label is also present.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Just like in HTML, the placeholder <b>must never be the only label</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>It becomes the accessible name by default.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>No semantic conflict (SwiftUI has no <code>&lt;label&gt;</code> element).</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It is not misleading because the visible label is persistent.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It avoids most of HTML’s structural problems.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>It aligns with iOS design conventions.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>2. Use a custom accessibility label</h5>
-            <p>Useful when you need to add extra information — such as “required”.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>If you add an explicit accessible name to <code>.accessibilityLabel</code>, it will override the placeholder and <b>be used as the accessible name</b>.</p>
+            <h4>Method 2. Use <code>accessibilityLabel</code></h4>
           </section>
 
           <section data-background="#222">
@@ -821,12 +801,22 @@ Text("Phone")
   .font(.headline)
 
 <span class="codeComment">// Form field</span>
-TextField("Phone", text: $phone)
-  <span class="codeHighlight">.accessibilityLabel("Phone, required")</span></code></pre>
+TextField("", text: $phone)
+  <span class="codeHighlight">.accessibilityLabel("Phone")</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Be aware that the <code>placeholder</code> is still used internally by SwiftUI <b>as the TextField’s editing label</b>, even when you override the accessible name.</p>
+            <p>This method can also be used to <b>add additional information</b> such as &ldquo;required&rdquo;.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
+Text("Phone")
+  .font(.headline)
+
+<span class="codeComment">// Form field</span>
+TextField("", text: $phone)
+  <span class="codeHighlight">.accessibilityLabel("Phone, required")</span></code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -838,11 +828,15 @@ TextField("Phone", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>When the strings differ, <b>VoiceOver may announce both</b>.</p>
+            <p>So, the <code>placeholder</code> is still used internally by SwiftUI <b>as the TextField’s editing label</b>, even when you override the accessible name.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>To avoid duplication, <b>use an empty placeholder string</b> <code>("")</code> when providing a custom <code>accessibilityLabel</code>.</p>
+            <p>In some cases, the placeholder value and <code>accessibilityLabel</code> value are <b>both announced when the field receives focus</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>most robust method</b> of appling an accessible name to controls is to use the <code>.accessibilityLabel</code> and with the <code>placeholder</code> set to <code>""</code>.</p>
           </section>
 
           <section data-background="#222">
@@ -852,11 +846,63 @@ Text("Phone")
 
 <span class="codeComment">// Form field</span>
 TextField(<span class="codeHighlight">""</span>, text: $phone)
-  .accessibilityLabel("Phone, required")</code></pre>
+  .accessibilityLabel(<span class="codeHighlight">"Phone, required"</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There is no need for the following, as it offers no extra value — you <b>may as well use the placeholder</b>.</p>
+            <h4>Two other advanced methods</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Two very advanced techniques exist in SwiftUI for <b>creating accessible names and combining content</b> - but they are not recommended:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>accessibilityRepresentation { }</code></p>
+            <p>Allows you to replace the entire accessibility object with a custom one.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>accessibilityElement(children: .ignore)</code></p>
+            <p>Tells VoiceOver to ignore everything inside a view and treat the parent as one combined element.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These techniques <b>give developers total control over what VoiceOver reads</b> — but with great power comes great responsibility.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They are not <b>recommended or needed for standard form fields</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-adding-instructions-errors">
+          <section data-background="#EDEBEB">
+            <h3>Part 6. Adding instructions and error messages</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’ll look at <b>three approaches</b> to associating instructions and errors with form fields.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Method 1: <code>accessibilityLabel</code></h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Sadly, the most robust method is to <b>add instructions or errors</b> directly into the <code>accessibilityLabel</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>With this method, you can add the instructions or errors <b>to the accessible name</b>:</p>
           </section>
 
           <section data-background="#222">
@@ -865,20 +911,36 @@ Text("Phone")
   .font(.headline)
 
 <span class="codeComment">// Form field</span>
-TextField("Phone", text: $phone)
-  <s>.accessibilityLabel("Phone")</s></code></pre>
+TextField("", text: $phone)
+  .accessibilityLabel(<span class="codeHighlight">"Phone, Include your area code"</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But how do we add <b>instructions and error messages</b>?</p>
+            <h5>Pros:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Easy to implement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Very robust.</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We’ll look at <b>two approaches</b> to associating instructions and errors with form fields.</p>
+            <h5>Cons:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Can create a long accessible name</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Method 1: <code>accessibilityHint</code></h4>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Yes, it’s ugly.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Yes, it’s verbose.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Yes, it feels wrong.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>But it is the only 100% reliable method.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Method 2: <code>accessibilityHint</code></h4>
           </section>
 
           <section data-background="#EDEBEB">
@@ -924,26 +986,18 @@ TextField("Phone", text: $phone)
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>Can be turned off (“Speak Hints”)</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Intended for interaction guidance, not business logic</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>One long, unstructured string</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Not suitable as the only place for required information or errors</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not recommended as the only place for required information or errors</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Method 2: <code>UIAccessibilityCustomContent</code></h4>
+            <h4>Method 3: <code>UIAccessibilityCustomContent</code></h4>
           </section>
 
           <section data-background="#EDEBEB">
             <p><code>UIAccessibilityCustomContent</code> allows you to <b>attach structured metadata (key–value)</b> to a control.</p>
           </section>
 
-          <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Instructions</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Error messages</li>
-            </ul>
-          </section>
-
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
 Text("Phone")
@@ -952,27 +1006,26 @@ Text("Phone")
 <span class="codeComment">// Form field</span>
 TextField("Phone", text: $phone)
   <span class="codeHighlight">.accessibilityCustomContent(
-    "Instructions", "Include your area code"
+    "Error", "Must include your area code"
   )</span></code></pre>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p>You can also provide <b>multiple pieces of supporting information</b>.</p>
-          </section>
-
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
-Text("Phone")
-  .font(.headline)
+<pre><code contenteditable="true"><span class="codeComment">// Key</span>
 
-<span class="codeComment">// Form field</span>
 TextField("Phone", text: $phone)
-  <span class="codeHighlight">.accessibilityCustomContent(
-    "Instructions", "Include your area code"
-  )
   .accessibilityCustomContent(
-    "Error", "Must be a valid area code"
-  )</span></code></pre>
+    <span class="codeHighlight">"Error"</span>, "Must include your area code"
+  )</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// Value</span>
+
+TextField("Phone", text: $phone)
+  .accessibilityCustomContent(
+    "Error", <span class="codeHighlight">"Must include your area code"</span>
+  )</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
@@ -980,8 +1033,7 @@ TextField("Phone", text: $phone)
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>Structured key/value pairs</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Supports multiple types of information</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Ideal for grouping supporting text in a predictable way</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>More semantic and flexible than a single hint</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>More flexible than a single hint</li>
             </ul>
           </section>
 
@@ -991,47 +1043,25 @@ TextField("Phone", text: $phone)
               <li><span aria-hidden="true" class="icon icon-check"></span>By default, this content is only available through the rotor</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Not all users know how to use the rotor</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Not guaranteed to be announced when the field receives focus</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>VoiceOver always reads the key aloud (e.g., “Instructions”)</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>So, both methods have <b>potential issues</b></p>
+            <p>You can also set <code>UIAccessibilityCustomContent</code> with <code>importance: .high</code>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Method 1:</h5>
-            <p>If users turn off hints, instructions and errors may be missed.</p>
+            <p>The <code>importance: .high</code> promotes this content <b>into the main VoiceOver announcement</b>, while preserving its key–value structure.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Method 2:</h5>
-            <p>Supporting text may require the rotor unless marked as high importance.</p>
+            <p>This means that both the <b>key and value</b> are announced together.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>A solution?</h4>
+            <p>More importantly, this content is available <b>without needing the rotor</b>.</p>
           </section>
 
-          <section data-background="#EDEBEB">
-            <p>One solution is to use <b>UIAccessibilityCustomContent</b> with <code>importance: .high</code>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>When custom content is marked as high importance, VoiceOver <b>often includes it in the default announcement</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>No rotor required (in most cases)</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Less dependent on hints</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The content becomes more predictable and discoverable</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>It promotes supporting text <b>into the main VoiceOver announcement</b>, while preserving its key–value structure.</p>
-          </section>
 
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// Visible text label</span>
@@ -1048,233 +1078,37 @@ TextField("Phone", text: $phone)
 </section>
 
           <section data-background="#EDEBEB">
-            <p>The resulting announcement will include the key and value:</p>
-            <p><em>“Phone. Instructions. Include your area code. Text field.”</em></p>
+            <p>There are some <b>possible exceptions</b> where high-importance content may not be included.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There are some <b>possible exceptions</b> where high-importance content may not be included:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list font-xs">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Very long accessibility labels</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Speak Hints off (some iOS versions treat <code>.high</code> similarly to hints)</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Certain rotor navigation modes</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Parent elements that override accessibility</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Combined child elements</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>There is a third, more complex approach. <b>But before we proceed</b>:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Label recommendations</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>1. Use the <code>placeholder</code> as the accessible label</h5>
-            <p>When no additional information is required, the placeholder is acceptable provided a visible text label is also present.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">TextField(<span class="codeHighlight">"Phone"</span>, text: $phone)</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>1. Use <code>accessibilityLabel</code> when additional information is needed</h5>
-            <p>If you need to convey extra meaning (such as required fields), provide a custom accessible name.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">.accessibilityLabel(<span class="codeHighlight">"Phone, required"</span>)</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Instruction and error recommendations</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>1. Use <code>accessibilityHint</code> for short, unstructured instructions</h5>
-            <p>Hints present additional context without requiring a key, and read naturally when VoiceOver hints are enabled.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">.accessibilityHint(<span class="codeHighlight">"Include your area code"</span>)</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>2. Use <code>accessibilityCustomContent</code> for structured information such as errors</h5>
-            <p>Errors naturally fit a key–value structure and are more predictable when announced in this form.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">.accessibilityCustomContent(
-  <span class="codeHighlight">"Error", 
-  "Must be a valid phone number",
-  importance: .high</span>
-)</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>What are your thoughts?</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Which of these two feels clearer?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Which approach feels more predictable?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Do you see any risks or advantages with either option?</li>
-            </ul>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="slide-third-approach">
-          <section data-background="#EDEBEB">
-            <h3>Part 6: A third approach?</h3>
-          </section>
-              
-          <section data-background="#EDEBEB">
-            <p>This method can be used on <b>more complex custom layouts</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Instead of <b>attaching information to a field</b>, you can group text and fields into one accessibility element that includes:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The label</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The text field</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Any instructions</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Any error message</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>When the user focuses this element, <b>VoiceOver reads the combined accessibilityLabel</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This gives developers a way to <b>guarantee that users always hear</b>:</p>
-          </section>
-
-          <section data-background="#EDEBEB">
+            <h5>Issues with using .high</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>The label</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Whether the field is required</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Any instructions</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Any error messages</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>.high is still ignored on some iOS 15–17 devices.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>.high behaves differently for multi-line vs single-line.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When hints are off, some versions treat .high like a hint even though it is not one.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>If the field already has a hint, custom content sometimes disappears entirely.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In the following example the label, text field and error text might all be <b>separate visuals on screen</b>.</p>
+            <p>There are more complex techniques developers can use to <b>build fully custom accessible components</b>, especially in UIKit.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But VoiceOver <b>treats them as one combined announcement</b>.</p>
+            <p>For now, we have focussed on SwiftUI’s <b>standard accessibility tools</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Here is a <b>simplified example</b> - developers would normally add additional conditions.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">container.isAccessibilityElement = true
-container.accessibilityLabel = 
-  "Email. Must be a valid email address."
-container.accessibilityTraits = .textField
-
-container.accessibilityActivationPoint = 
-    textField.center</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Let's look at this <b>line by line</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeHighlight">container.isAccessibilityElement</span> = true</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>isAccessibilityElement</h5>
-            <p><em>"Treat this entire container as one single accessibility element."</em></p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">container.isAccessibilityElement = <span class="codeHighlight">true</span></code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>true</h5>
-            <p><em>Don’t treat the label, field, and error message as separate things. When VoiceOver lands on it, read everything at once.</em></p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeHighlight">container.accessibilityLabel = 
-    "Email. Must be a valid email address."</span></code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This <b>replaces the default label of the text field</b>. You now have full control over what is spoken, in what order</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This is like using <code>aria-label</code> on a non-native container to <b>override what is spoken for everything inside it</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeHighlight">container.accessibilityTraits = .textField</span></code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Without this line, VoiceOver would <b>treat the container as a static element</b> (just text).</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Users wouldn’t know <b>they can enter data</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This is like adding a <code>role</code> to a <b>non-native HTML element</b>.</p>
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeHighlight">container.accessibilityActivationPoint = textField.center</span></code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>This tells VoiceOver:</h5>
-            <p><em>“When the user double taps this combined element, actually activate the real text field inside it.”</em></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This approach is especially useful for <b>complex components</b>:</p>
+            <h4>What are your thoughts on instructions / error messaging options?</h4>
           </section>
 
           <section data-background="#EDEBEB">
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Floating labels</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Stylised form components</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Complex custom layouts</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Inline instructions or examples</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which of these method feels clearer?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which approach feels more robust?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Do you see any risks or advantages with any option?</li>
             </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>It gives developers <b>full control over what VoiceOver says</b>.</p>
           </section>
         </section>
       </div>
