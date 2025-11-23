@@ -521,7 +521,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Example 1:</h4>
+            <h4>Example 1: A heading</h4>
           </section>
 
           <section data-background="#222">
@@ -562,7 +562,7 @@ Text("Testing forms")
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Example 2:</h4>
+            <h4>Example 2: A textfield</h4>
           </section>
 
           <section data-background="#222">
@@ -870,7 +870,8 @@ Text("Phone")
   .font(.headline)
 
 <span class="codeComment">// Form field</span>
-TextField("Phone", text: $phone)
+TextField("", text: $phone)
+  .accessibilityLabel("Phone, required")
   <span class="codeHighlight">.accessibilityHint("Include your area code")</span></code></pre>
           </section>
 
@@ -905,7 +906,8 @@ Text("Phone")
   .font(.headline)
 
 <span class="codeComment">// Form field</span>
-TextField("Phone", text: $phone)
+TextField("", text: $phone)
+  .accessibilityLabel("Phone, required")
   <span class="codeHighlight">.accessibilityCustomContent(
     "Error", "Must include your area code"
   )</span></code></pre>
@@ -915,6 +917,7 @@ TextField("Phone", text: $phone)
 <pre><code contenteditable="true"><span class="codeComment">// Key</span>
 
 TextField("Phone", text: $phone)
+  .accessibilityLabel("Phone, required")
   .accessibilityCustomContent(
     <span class="codeHighlight">"Error"</span>, "Must include your area code"
   )</code></pre>
@@ -923,7 +926,8 @@ TextField("Phone", text: $phone)
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// Value</span>
 
-TextField("Phone", text: $phone)
+TextField("", text: $phone)
+  .accessibilityLabel("Phone, required")
   .accessibilityCustomContent(
     "Error", <span class="codeHighlight">"Must include your area code"</span>
   )</code></pre>
@@ -969,7 +973,8 @@ Text("Phone")
   .font(.headline)
 
 <span class="codeComment">// Form field</span>
-TextField("Phone", text: $phone)
+TextField("", text: $phone)
+  .accessibilityLabel("Phone, required")
   .accessibilityCustomContent(
     "Instructions",
     "Include your area code",
