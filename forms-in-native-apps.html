@@ -52,8 +52,14 @@
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-two-modes">Part 1. Screen reader modes on the web</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-mobile">Part 2. Why mobile feels different</a></li>
+            </ul>
+
+            <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-changing-your-mental-model">Part 3. Web vs iOS: shifting your mental model</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-swiftUI-structure">Part 4. SwiftUI language basics</a></li>
+            </ul>
+
+            <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-adding-accessible-names">Part 5. Adding accessible names</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-adding-instructions-errors">Part 6. Adding instructions and error messages</a></li>
             </ul>
@@ -265,7 +271,7 @@ or required --&gt;</span>
 
           <section data-background="#EDEBEB">
             <p>Ideally, they should hear the following <b>when swiping to the field</b>:</p>
-            <p><em>“Email. Text field. Must be a valid email address.”</em></p>
+            <p><em>“Email. Error: Must be a valid email address. Text field.”</em></p>
           </section>
         </section>
 
@@ -525,22 +531,30 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">Text("Testing forms")
+<pre><code contenteditable="true"><span class="codeComment">// View</span>
+
+<span class="codeHighlight">Text("Testing forms")
+  .font(.largeTitle.weight(.bold))
+  .accessibilityAddTraits(.isHeader)
+  .padding(.bottom, 8)</span></code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML element</span>
+
+<span class="codeHighlight">Text</span>("Testing forms")
   .font(.largeTitle.weight(.bold))
   .accessibilityAddTraits(.isHeader)
   .padding(.bottom, 8)</code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML element</span>
-
-<span class="codeHighlight">Text</span>()</code></pre>
-          </section>
-
-          <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// Initialiser argument: What the view displays</span>
 
-Text(<span class="codeHighlight">"Testing forms"</span>)</code></pre>
+Text(<span class="codeHighlight">"Testing forms"</span>)
+  .font(.largeTitle.weight(.bold))
+  .accessibilityAddTraits(.isHeader)
+  .padding(.bottom, 8)</code></pre>
           </section>
 
           <section data-background="#222">
@@ -562,17 +576,19 @@ Text("Testing forms")
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>Example 2: A textfield</h4>
+            <h4>Example 2: A <code>TextField</code></h4>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">TextField("Phone", text: $phone)</code></pre>
+<pre><code contenteditable="true"><span class="codeComment">// View</span>
+
+<span class="codeHighlight">TextField("Phone", text: $phone)</span></code></pre>
           </section>
 
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML input</span>
 
-<span class="codeHighlight">TextField</span>()</code></pre>
+<span class="codeHighlight">TextField</span>("Phone", text: $phone)</code></pre>
           </section>
 
           <section data-background="#222">
@@ -594,21 +610,42 @@ TextField("Phone", <span class="codeHighlight">text: $phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This “binding” ($phone) <b>connects the control</b> to a <code>@State</code>. For example:</p>
+            <h4>The importance of <code>@State</code></h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This “binding” (<code>$phone</code>) <b>connects the control</b> to a <code>@State</code>. For example:</p>
         </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true">@State private var <span class="codeHighlight">phone</span> = ""
+<pre><code contenteditable="true"><span class="codeComment">// @State property</span>
+@State private var <span class="codeHighlight">phone</span> = ""
 
+<span class="codeComment">// Textfield control</span>
 TextField("Phone", text: <span class="codeHighlight">$phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The <code>@State</code> is <b>very important</b> from an accessibility perspective.</p>
+            <p><code>@State</code> is how SwiftUI lets the app <b>store information</b> that can change while the user is interacting with the screen.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>On the web, <b>the DOM</b> stores a field’s value.</p>
+            <h5>This stored information can include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Text typed by a user.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Whether a toggle is on/off.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Whether a menu is open or closed.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Which tab is selected.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>What page you're on.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><code>@State</code> is <b>very important</b> from an accessibility perspective.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On the web, <b>the DOM</b> stores each field’s value.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -621,15 +658,15 @@ TextField("Phone", text: <span class="codeHighlight">$phone</span>)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In iOS, <code>@State</code> store a field’s value.</p>
+            <p>In SwiftUI, the <code>@State</code> variable stores the field’s value.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <h5>When a user types into a TextField:</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>The <code>@State</code> variable is updated.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>SwiftUI re-renders the view to show the value.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>The accessibility tree is updated.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>SwiftUI re-runs the view and updates only the parts that changed.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>SwiftUI reconstructs accessibility information as part of its view update.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>VoiceOver announces the updated value when focus returns.</li>
             </ul>
           </section>
@@ -663,7 +700,7 @@ TextField("Phone", text: $phone)</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>We can add <b>an accessible name</b> to a text field in two ways.</p>
+            <p>We can add <b>an accessible name</b> to a <code>TextField</code> in two ways.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -769,11 +806,11 @@ TextField(<span class="codeHighlight">""</span>, text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <p>These techniques <b>give developers total control over what VoiceOver reads</b> — but with great power comes great responsibility.</p>
+            <p>These techniques give developers <b>total control over what VoiceOver reads</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>They are not <b>recommended or needed for standard form fields</b>.</p>
+            <p>They are not <b>recommended or needed</b> for standard form fields.</p>
           </section>
         </section>
 
@@ -976,8 +1013,7 @@ Text("Phone")
 TextField("", text: $phone)
   .accessibilityLabel("Phone, required")
   .accessibilityCustomContent(
-    "Instructions",
-    "Include your area code",
+    "Error", "Must include your area code"
     <span class="codeHighlight">importance: .high</span>
   )</code></pre>
 </section>
@@ -989,9 +1025,8 @@ TextField("", text: $phone)
           <section data-background="#EDEBEB">
             <h5>Issues with using .high</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>.high is still ignored on some iOS 15–17 devices.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>.high behaves differently for multi-line vs single-line.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>When hints are off, some versions treat .high like a hint even though it is not one.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.high</code> is still ignored on some iOS 15–17 devices.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>When hints are off, some versions of iOS treat <code>.high</code> like a hint even though it is not one.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>If the field already has a hint, custom content sometimes disappears entirely.</li>
             </ul>
           </section>
@@ -1005,14 +1040,90 @@ TextField("", text: $phone)
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>What are your thoughts on instructions / error messaging options?</h4>
+            <p>Let&rsquo;s look at <b>a quick demo</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
+            <h5>Which of these methods do you prefer?</h5>
             <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Which of these method feels clearer?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Which approach feels more robust?</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Do you see any risks or advantages with any option?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Method 1: <code>accessibilityLabel</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Method 2: <code>accessibilityHint</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Method 3: <code>UIAccessibilityCustomContent</code></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-modifier-list">
+          <section data-background="#EDEBEB">
+            <h3>SwiftUI accessibility modifier list</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Naming</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityLabel</code>: Sets the element’s spoken name.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityValue</code>: Announces the current value.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityHint</code>: Adds extra guidance.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityFootnote</code>: Adds secondary explanatory text.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Visibility &amp; structure</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityHidden</code>: Hides the element from accessibility.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityElement(children:)</code>: Controls how child views appear (include them, combine them, or ignore them).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityElement(_:)</code>: Marks a view as a single accessibility element.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRespondsToUserInteraction</code>: Controls whether the element is focusable.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Traits (roles &amp; characteristics)</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAddTraits</code>: Adds traits (button, selected, etc.).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRemoveTraits</code>: Removes traits (e.g. take away “button”).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Ordering &amp; navigation</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilitySortPriority</code>: Changes the reading/focus order.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityTraversalAction</code>: Custom behaviour for next/previous focus.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityScrollActio</code>n — Custom behaviour when user scrolls via VoiceOver.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityZoomAction</code>: Custom behaviour when user performs zoom gestures.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Actions</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAction</code>: Adds a custom action.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAction(named:)</code>: Adds a labelled custom action.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityAdjustableAction</code>: Handles increment/decrement actions (like sliders).</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Rewrite semantics (use with caution)</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityRepresentation</code>: Replaces the view’s entire accessibility identity.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Identifiers (testing only)</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><code>.accessibilityIdentifier</code>: Used only for UI tests; no effect on accessibility.</li>
             </ul>
           </section>
         </section>
