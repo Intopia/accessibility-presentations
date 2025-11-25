@@ -106,7 +106,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is why programmatic association is <b>non-negotiable</b> on the web.</p>
+            <p>This is why programmatic association is <b>non-negotiable</b> on the web-based forms.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -187,7 +187,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This means users are likely to encounter nearby text, <b>even if it’s not formally associated</b>.</p>
+            <p>This means users are likely to encounter text nearby form controls, <b>even if they&rsquo;re  not not formally associated</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -215,7 +215,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>In the worst case, if the <b>label and instructions</b> are not programmatically associated, they will get:</p>
+            <p>In the worst case, if the <b>label and instructions</b> aren&rsquo;t programmatically associated, they will get:</p>
             <p><em>“Text field.”</em></p>
           </section>
 
@@ -246,7 +246,11 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>A screen reader user may <b>hear the following</b>:</p>
+            <p>This time, the screen reader user is <b>swiping through each item</b> on the screen.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They may <b>hear the following</b>:</p>
             <p>Swipe 1 - Text label: <em>“Email.”</em></p>
             <p>Swipe 2 - Form field: <em>“Text field.”</em></p>
           </section>
@@ -327,7 +331,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>HTML elements have <b>built-in semantics</b>.</p>
+            <p>Every HTML element has <b>built-in semantics</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -349,8 +353,6 @@ or required --&gt;</span>
               <li><span aria-hidden="true" class="icon icon-check"></span><code>Button</code> – has the button trait automatically</li>
               <li><span aria-hidden="true" class="icon icon-check"></span><code>Toggle</code> – is a switch with on/off state and role</li>
               <li><span aria-hidden="true" class="icon icon-check"></span><code>SecureField</code> – is automatically a secure text entry</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><code>Picker</code> – becomes an adjustable picker element</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><code>DatePicker</code> – exposes structured accessibility values</li>
             </ul>
           </section>
 
@@ -359,7 +361,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>On the web, HTML provides three levels of <b>built-in form structure</b>:</p>
+            <p>On the web, HTML provides <b>three levels</b> of form structure:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -458,11 +460,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>On the web: <b>states are semantic</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>You can mark a field as being in a particular state <b>using explicit accessibility properties</b>:</p>
+            <p>On the web: <b>states are semantic</b>. For example:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -515,23 +513,21 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The following examples use <b>SwiftUI</b> because the code reads more like English and is less intimidating if you’re not a developer.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p><b>UIKit</b> is still widely used, but the accessibility behaviour is the same at a conceptual level.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <p>Before we look at some form examples, here is <b>a breakdown of SwiftUI structure</b>.</p>
           </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Why SwiftUI?</h5>
+            <p>Because the code is less intimidating that UIKit.</p>
+          </section>
+
 
           <section data-background="#EDEBEB">
             <h4>Example 1: A heading</h4>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// View</span>
+<pre><code contenteditable="true"><span class="codeComment">// View: Like an HTML element</span>
 
 <span class="codeHighlight">Text("Testing forms")
   .font(.largeTitle.weight(.bold))
@@ -540,7 +536,7 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML element</span>
+<pre><code contenteditable="true"><span class="codeComment">// View type: Like an HTML role</span>
 
 <span class="codeHighlight">Text</span>("Testing forms")
   .font(.largeTitle.weight(.bold))
@@ -558,7 +554,7 @@ Text(<span class="codeHighlight">"Testing forms"</span>)
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// Modifiers:</span>
+<pre><code contenteditable="true"><span class="codeComment">// Modifiers: Like CSS + ARIA attributes</span>
 
 Text("Testing forms")
   <span class="codeHighlight">.font(.largeTitle.weight(.bold))
@@ -580,13 +576,13 @@ Text("Testing forms")
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// View</span>
+<pre><code contenteditable="true"><span class="codeComment">// View: Like a text field element</span>
 
 <span class="codeHighlight">TextField("Phone", text: $phone)</span></code></pre>
           </section>
 
           <section data-background="#222">
-<pre><code contenteditable="true"><span class="codeComment">// View type: Equivalent to an HTML input</span>
+<pre><code contenteditable="true"><span class="codeComment">// View type: Like the role of input</span>
 
 <span class="codeHighlight">TextField</span>("Phone", text: $phone)</code></pre>
           </section>
