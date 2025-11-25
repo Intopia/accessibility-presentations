@@ -517,10 +517,15 @@ or required --&gt;</span>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Why SwiftUI?</h5>
+            <h5>Why SwiftUI and not UIKit?</h5>
             <p>Because the code is less intimidating that UIKit.</p>
           </section>
 
+          <section data-background="#EDEBEB">
+            <h5>Why not JetPack Compose?</h5>
+            <p>We could look at this in a future session if people are interested - so much more powerful and &ldquo;accessible&rdquo;.</p>
+            <p class="font-xxs">Not Java or Kotlin</p>
+          </section>
 
           <section data-background="#EDEBEB">
             <h4>Example 1: A heading</h4>
@@ -570,6 +575,20 @@ Text("Testing forms")
   .font(<span class="codeHighlight">.largeTitle.weight(.bold)</span>)
   .accessibilityAddTraits(<span class="codeHighlight">.isHeader</span>)
   .padding(<span class="codeHighlight">.bottom, 8</span>)</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>SwiftUI visual styles - not semantic:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Large titles: <code>.largeTitle</code>, <code>.title</code>, <code>.title2</code>, <code>.title3</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Headlines: <code>.headline</code>, <code>.subheadline</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Body styles: <code>.body</code>, <code>.callout</code>, <code>.caption</code>, <code>.caption2</code>, <code>.footnote</code></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>SwiftUI heading semantics:</h5>
+            <p class="font-sm">All we right now is <code>.accessibilityAddTraits(.isHeader)</code></p>
           </section>
 
           <section data-background="#EDEBEB">
