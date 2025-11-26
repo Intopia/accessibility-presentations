@@ -864,6 +864,9 @@ TextField(<span class="codeHighlight">""</span>, text: $phone)
 Text("Phone")
   .font(.headline)
 
+<span class="codeComment">// Visible instructions</span>
+Text("Include your area code")
+
 <span class="codeComment">// Form field</span>
 TextField("", text: $phone)
   .accessibilityLabel(<span class="codeHighlight">"Phone, Include your area code"</span>)</code></pre>
@@ -922,6 +925,9 @@ TextField("", text: $phone)
 Text("Phone")
   .font(.headline)
 
+<span class="codeComment">// Visible instructions</span>
+Text("Include your area code")
+
 <span class="codeComment">// Form field</span>
 TextField("", text: $phone)
   .accessibilityLabel("Phone, required")
@@ -963,13 +969,16 @@ TextField("", text: $phone)
   .accessibilityLabel("Phone, required")
   <span class="codeHighlight">.accessibilityCustomContent(
     "Error", "Must include your area code"
-  )</span></code></pre>
+  )</span>
+
+<span class="codeComment">// Visible error message</span>
+Text("Error: Must include your area code")</code></pre>
           </section>
 
           <section data-background="#222">
 <pre><code contenteditable="true"><span class="codeComment">// Key</span>
 
-TextField("Phone", text: $phone)
+TextField("", text: $phone)
   .accessibilityLabel("Phone, required")
   .accessibilityCustomContent(
     <span class="codeHighlight">"Error"</span>, "Must include your area code"
@@ -1031,7 +1040,10 @@ TextField("", text: $phone)
   .accessibilityCustomContent(
     "Error", "Must include your area code"
     <span class="codeHighlight">importance: .high</span>
-  )</code></pre>
+  )
+
+<span class="codeComment">// Visible error message</span>
+Text("Error: Must include your area code")</code></pre>
 </section>
 
           <section data-background="#EDEBEB">
