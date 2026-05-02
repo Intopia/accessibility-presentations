@@ -1,0 +1,1893 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating Accessibility Acceptance Criteria</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      table {
+        font-size: 0.7em;
+      }
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElements ByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <h1>Creating Accessibility Acceptance Criteria</h1>
+          <div class="subtitle">John Slatin AccessU 2026</div>
+        </section>
+
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-accessibility-acceptance-criteria">
+          <section data-background="#C03C0C">
+            <h2><span class="activity-heading">Part 1:</span><br>Introduction</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-will-we-cover">
+          <section data-background="#EDEBEB">
+            <h3>What will we cover</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Part 1: Introduction </h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>What are acceptance criteria?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>What about accessibility acceptance criteria?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Where can these criteria be used?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Two levels?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Component level acceptance criteria</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Page and user-flow level acceptance criteria</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Part 2: Writing page and user-flow accessibility criteria</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Why is this level of acceptance criteria so important?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Some common page or flow-level accessibility barriers</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How do you create accessibility acceptance criteria?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Why so many steps?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Why write the tests before our acceptance criteria?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The steps and activities</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Part 3: Writing component-level accessibility criteria</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The steps and activities</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+        <section id="slide-interactive-session">
+          <section data-background="#EDEBEB">
+            <h3>This is an interactive session</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>During this session, I’ll present some slides and invite you to <b>take part in a series of short activities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I’ll ask participants to respond in the chat, but you can <b>raise your hand if you’d prefer to answer verbally</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Please use whichever participation method <b>works best for you</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The activities are <b>voluntary</b>, so you do not need to take part if you would prefer not to.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-are-acceptance-criteria">
+          <section data-background="#EDEBEB">
+            <h3>What are acceptance criteria?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&rsquo;m going to do a quick overview of the broader concept of <b>acceptance criteria</b> for those who may be unfamiliar.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Acceptance criteria are <b>specific, clear, and testable conditions</b> that a product, feature, or user story must meet to be considered complete.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What acceptance criteria do</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Create shared understanding</h5>
+            <p>Align the team on what needs to be delivered.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Define &ldquo;done&rdquo;</h5>
+            <p>Confirm when a feature or story is complete.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Set scope</h5>
+            <p>Clarify what&rsquo;s in/out, reducing scope creep.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Guide development</h5>
+            <p>Help developers build the right thing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Support testing</h5>
+            <p>Provide a checklist for testers to verify success.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Key characteristics</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Clear and concise</h5>
+            <p>Easy to read and understand.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Testable</h5>
+            <p>Each point can be verified.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>User-focused</h5>
+            <p>Written from the end-user&rsquo;s perspective.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Specific</h5>
+            <p>No ambiguity about what must be done.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-What-about-accessibility-acceptance-criteria">
+          <section data-background="#EDEBEB">
+            <h3>What about accessibility acceptance criteria?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility acceptance criteria are <b>specific, testable accessibility requirements</b> that must be met for the product to be considered accessible and complete.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They help teams <b>define and verify accessibility expectations early</b>, so accessibility is built into design, development, and testing.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-where-can-accessibility-acceptance-criteria-be-used">
+          <section data-background="#EDEBEB">
+            <h3>Where can these criteria be used?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>User stories</h5>
+            <p>Added to stories to define accessibility expectations before work begins.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Definition of done</h5>
+            <p>Used to confirm accessibility requirements have been met before work is considered complete.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Design requirements</h5>
+            <p>Help designers define accessible interactions, layouts, and content behaviours.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Development guidance</h5>
+            <p>Provide developers with clear, testable accessibility expectations during implementation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test cases and QA</h5>
+            <p>Support testers in verifying accessibility requirements consistently.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Procurement and vendor work</h5>
+            <p>Set accessibility expectations for third-party products, platforms, and suppliers.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Design systems and components</h5>
+            <p>Define reusable accessibility requirements for shared patterns and components.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>AI prompts</h5>
+            <p>Included in AI prompts to help generate designs, code, and content that consider accessibility requirements from the start.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>skills.md files</h5>
+            <p>Added to <code>skills.md</code> files to provide consistent accessibility guidance and expectations for AI-assisted workflows and development tools.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-two-levels">
+          <section data-background="#EDEBEB">
+            <h3>Two levels?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this session, we&rsquo;ll explore <b>two levels of accessibility acceptance criteria</b>:</p>
+            <ol> 
+              <li>component level</li>
+              <li>page or user-flow level</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We&rsquo;ll also look at <b>when each level should be used</b>, why both are important, and how they work together to support accessible digital experiences.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-component-acceptance-criteria">
+          <section data-background="#EDEBEB">
+            <h3>Component level acceptance criteria</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What are UI components?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>UI components are distinct interface elements that perform a specific function within a digital interface.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They are the building blocks of websites and applications, designed to be reused in different contexts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Simple UI component examples:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form fields</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Labels</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Buttons</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Complex UI component examples:</h5>
+            <ul class="icon-list">
+             <li><span aria-hidden="true" class="icon icon-check"></span>Autocomplete dropdowns</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Modals</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Date pickers</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>In-page tabs</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What are component level acceptance criteria?</h5>
+            <p>Testable checks for reusable interface components (e.g. buttons, form fields, modals, and carousels).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What&rsquo;s their purpose?</h5>
+            <p>To ensure accessibility is considered and tested for all components, regardless of where or how they&rsquo;e used.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example:</h5>
+            <div class="text-example">
+              <p><em>The dropdown can be opened using keyboard controls (e.g. Tab + Enter or Space)</em></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Where they fit:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>In automated and manual testing checklists for individual UI components.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>In pattern documentation that guide consistent implementation.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Owners:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Design system leads</b>: define criteria for consistent, accessible components.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Designers</b>: design UI components that meet accessibility requirements.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Developers</b>: build components to meet accessibility requirements.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Testers</b>: test componenta to ensure they meet accessibility requirements.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-page-and-user-flow-acceptance-criteria">
+          <section data-background="#EDEBEB">
+            <h3>Page and user-flow level acceptance criteria</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>What are pages and user flows?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Pages are complete views or screens that present content, functionality, or interactions within a digital product.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They often bring multiple components together into a single layout to support a user’s goal.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Page examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Contact form</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Dashboard screen</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Search results page</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Settings/preferences page</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>User flows are end‑to‑end sequences of pages, states, or interactions that guide a user through completing a task or achieving an outcome.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each step in a flow can involve multiple components or pages working together.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>User flow examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Login process</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Submit a complaint process</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Get a quote process</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Reset password process</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What are page and user-flow level acceptance criteria?</h5>
+            <p>Testable checks that apply to full pages or complete user flows (e.g. sign-up, checkout).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What&rsquo;s their purpose?</h5>
+            <p>To ensure accessibility is considered and tested across entire journeys, not just individual components.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example:</h5>
+            <div class="text-example">
+              <p><em>All interactions — including navigation, opening/closing elements, entering data, and submission — can be completed using only a keyboard</em></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Where they fit:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>In user stories, epics, and sprint tickets.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>As part of the &ldquo;Definition of Done&rdquo;.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>As part of QA and UAT testing for full journeys.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>During design reviews of entire pages or flows.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>In backlog refinement to identify gaps early.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Owners:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">POs and BAs</b>: define expected outcomes for pages and user journeys.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Designers</b>: ensure accessible design across pages and user journeys.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Developers</b>: implement accessibility across pages and user journeys.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b style="color: #333;">Testers/QAs</b>: verify pages and user journeys meet expectations.</li>
+            </ul>
+          </section>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-writing-page-and-user-flow-accessibility-criteria">
+          <section data-background="#C03C0C">
+            <h2><span class="activity-heading">Part 2:</span><br>Writing page and user-flow accessibility criteria</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-is-this-level-of-acceptance-criteria-so-important">
+          <section data-background="#EDEBEB">
+            <h3>Why is this level of acceptance criteria so important?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many teams focus heavily on <b>individual UI components</b> — and that’s important.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In fact, we’ll be covering <b>component-level accessibility criteria</b> in session 3.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But there are also critical accessibility issues that <b>only surface at the page or user-flow level</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These can affect how people navigate, understand, and <b>interact with your product as a whole</b> — not just one element at a time.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-some-common-page-or-flow-level-accessibility-barriers">
+          <section data-background="#EDEBEB">
+            <h3>Some common page or flow-level accessibility barriers</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Poor heading hierarchy</h5>
+            <p>Making it harder to understand page structure for screen reader users.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Lack of focus management</h5>
+            <p>Such as modals or dynamic content not receiving focus.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Incorrect page order</h5>
+            <p>Where source order, focus order, and visual reading order are misaligned.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Inconsistent navigation patterns</h5>
+            <p>Causing disorientation for users relying on predictability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Insufficient instructions or feedback</h5>
+            <p>Particularly in multi-step flows like forms or checkouts.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Missing or unclear page titles</h5>
+            <p>Making it harder for screen reader users to identify where they are.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard traps or inaccessible interactions</h5>
+            <p>Especially in dynamic content like popups or menus.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Overwhelming cognitive load</h5>
+            <p>Due to too many competing elements or unclear tasks on a single page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Timeouts without warning</h5>
+            <p>Such as sessions that expire mid-task without alerting the user.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These types of issues <b>can’t be caught</b> by checking individual components in isolation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That’s why writing acceptance criteria at the page or flow level <b>is such a valuable practice</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-how-do-you-create-page">
+          <section data-background="#EDEBEB">
+            <h3>How do you create accessibility acceptance criteria?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There are <b>many ways</b> to create accessibility acceptance criteria for pages and user flows.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is <b>a practical method</b> you can use:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 1. Choose a <b>page or user flow</b> you want to review.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 2. Pick <b>a user group</b> to focus on.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 3. Consider how this group might <b>interact with the page or flow</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 4. List <b>potential barriers</b> they may encounter.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 5. Turn each barrier into a <b>test question</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 6. Reframe each test as a <b>positive statement</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 7: Add <b>simple steps to test</b> each criteria.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 8: <b>Repeat</b> steps 2–6 for each user group.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-so-many-steps">
+          <section data-background="#EDEBEB">
+            <h3>Why so many steps?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As you get more confident, you’ll find you can <b>move through these steps more quickly</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You may end up being able <b>combine some steps</b>—but the thinking behind each step is still important!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It helps make sure we’re <b>considering a range of different users and their needs</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-tests-first">
+          <section data-background="#EDEBEB">
+            <h3>Why write the tests before our acceptance criteria?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>It’s easier:</h5>
+            <p>Framing accessibility as a question (&ldquo;Can this be done with a keyboard?&rdquo;) feels more natural than writing formal criteria upfront.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>It adds rigour:</h5>
+            <p>Each test forces you to think about real-world usability and edge cases.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>It supports QA:</h5>
+            <p>These test questions become a ready-made checklist for quality assurance and user acceptance testing — especially across full flows.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-choose-a-page-or-user-flow-you-want-to-review">
+          <section data-background="#EDEBEB">
+            <h3>Step 1. Choose a page or user flow you want to review</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Page examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Contact form</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Dashboard screen</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Search results page</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Settings/preferences page</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>User flow examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Login process</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Submit a complaint process</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Get a quote process</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Reset password process</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-pick-one-user-group-to-focus-on">
+          <section data-background="#EDEBEB">
+            <h3>Step 2. Pick one user group to focus on</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Pick one of these user groups:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with no vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced colour vision</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced movement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with varied learning or cognition</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People with reduced or no hearing</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Why focus on user groups?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>No group gets left out</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>With this process, you look at each user group in turn.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>This means that all groups of people are considered.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>And often-forgotten groups are included.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Focuses your attention</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessibility can feel overwhelming.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focusing on one group at a time makes it more manageable.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helps you write clearer, more focused acceptance criteria.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Shifts the mindset from compliance to inclusion</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focusing on people, not rules, changes your approach.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>You shift from “what does WCAG say?” to “what does this user need?”.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Leads to more practical, human-centred outcomes.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>The order</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When writing accessibility acceptance criteria, <b>the order in which we consider user groups matters</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, we should focus <b>first on the appearance and usability of the component</b>, then move toward more technical or structural aspects.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That’s why <b>I recommend this order</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Start with people with <b>varied learning or cognition</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If a component doesn't work for this group, it likely has <b>fundamental issues with content, clarity, or UX</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These problems <b>should be resolved before moving on</b> — otherwise, you're building accessibility on a weak foundation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Then consider people with <b>reduced colour vision</b> and <b>reduced vision</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These groups <b>help you assess the visual presentation of the component</b> — including contrast, layout, text size, and use of colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Finally, focus on people with <b>reduced movement</b> and people with <b>no vision</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These groups help you <b>uncover technical and structural issues</b>, like keyboard operability, focus order, screen reader compatibility, and correct semantic markup.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-consider-how-this-group-might-interact">
+          <section data-background="#EDEBEB">
+            <h3>Step 3. Consider how this group might interact with the page or flow</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For this step, we want to understand how people <b>interact with the page or flow</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each user group may <b>rely on different assistive technologies</b>, settings, or preferences to access digital content.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Do they use?</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A keyboard or a keyboard alternatives?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Screen reader?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Voice control?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Magnification?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>A user-setting change the display (e.g. magnify, zoom)?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Captions?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Simplified layouts?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-list-potential-barriers-they-may-encounter">
+          <section data-background="#EDEBEB">
+            <h3>Step 4. List potential barriers they may encounter</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Now that we have identified the group and their technology needs, <b>we need to identify what might go wrong</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In this step, we start by thinking from the user’s perspective to <b>help identify barriers these users may face</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-identifying-accessibility-barriers">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Identifying accessibility barriers</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let's use a pretend example of a <b>login screen</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We will also focus on <b>people with reduced movement</b>. These people will likely use the keyboard, or keyboard equivalent.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul> 
+              <li>Step 1: Login screen</li>
+              <li>Step 2: People with reduced movement</li>
+              <li>Step 3: Keyboard or keyboard equivalent</li>
+              <li><b>Step 4. In chat, list potential barriers this group may encounter when on the login screen</b></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-turn-each-barrier-into-a-test">
+          <section data-background="#EDEBEB">
+            <h3>Step 5. Turn each barrier into a test question</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Now we need to write each potential barrier as a short question with a <b>clear pass/fail outcome</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each test question should be phrased so that when someone tests it and the outcome is accessible, they can confidently say: <b>“Yes, it passes!”</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If the answer is “No”, that’s <b>a clear sign of a failure</b> — something is missing or needs fixing.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Are instructions, labels, and feedback easy to understand? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Does all content and interactive elements have sufficient colour contrast? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Is all content available when zoomed or magnified? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Can all actions be completed using keyboard only? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Tips for test questions:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Phrase as a question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Must be testable (pass/fail)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Only one test per statement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use simple, user-focused language</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Common mistakes with test questions</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Too broad</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Too vague</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Multiple concepts in one statement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not phrased as a question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not testable or measurable</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-write-some-test-questions">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Write some test questions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I will ask you to rewrite each potential barrier as <b>short questions with a clear pass/fail outcomes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Incorrect focus order</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Does keyboard focus move through the page in a logical and meaningful order? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Keyboard traps</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Can keyboard users move to and away from all interactive elements without becoming trapped? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Missing skip mechanisms</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Is there a way for keyboard users to skip repeated content and move directly to the main content or form? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Auto-focus issues</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Does focus remain stable and predictable while interacting with the page? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Custom controls that are not keyboard accessible</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Can all custom controls be accessed and operated using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>CAPTCHA barriers</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Can CAPTCHA or verification steps be completed using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Timeouts or session expiry</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Do users have enough time to complete tasks without unexpected timeouts or session expiry? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>No visible indication of the current field</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Is the currently focused element always clearly visible? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Inconsistent keyboard interactions</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Do interactive elements follow expected keyboard interactions and behaviours? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Multi-step login flows with poor focus management</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Does keyboard focus move correctly through each step of the login process? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Convert this barrier into a test question:</h5>
+            <p>Blocked paste functionality</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Possible answer:</h5>
+            <p>Can users paste information such as passwords or verification codes into relevant fields? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-reframe-each-test-as-a-positive-statement">
+          <section data-background="#EDEBEB">
+            <h3>Step 6. Reframe each test as a positive statement</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Next, we need to reframe each test from a question into a <b>positive statement</b> - the final acceptance crriteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These statement become your final <b>acceptance criterion</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Does keyboard focus move through the page in a logical and meaningful order? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+            <div class="text-example">
+              <h5>Acceptance criteria</h5>
+              <p>Keyboard focus moves through the page in a logical and meaningful order.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Can keyboard users move to and away from all interactive elements without becoming trapped? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+            <div class="text-example">
+              <h5>Acceptance criteria</h5>
+              <p>It is possible to move to and away from all interactive elements without becoming trapped.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <h5>Test question</h5>
+              <p>Is there a way for keyboard users to skip repeated content and move directly to the main content or form? <span class="red">(PASS/FAIL)</span></p>
+            </div>
+            <div class="text-example">
+              <h5>Acceptance criteria</h5>
+              <p>There is a way to skip repeated content and move directly to the main content or form.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Tips for acceptance criteria:</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Must directly match the related test question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use clear, affirmative language (state what should happen)</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Keep to one idea per statement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use simple, user-focused language</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Phrase as an outcome rather than a process or instruction</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Common mistakes with acceptance criteria</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Too vague or generic</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Doesn’t match the test question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Negative or conditional language</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Multiple concepts in one statement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Not outcome-based</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-convert-questions-into-positive-statements">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Converting questions into positive statements</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I will ask you to convert each test question into a <b>positive statement</b> - the final acceptance criteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Does focus remain stable and predictable while interacting with the page? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>Focus remains stable and predictable while interacting with the page.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Can all custom controls be accessed and operated using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>All custom controls can be accessed and operated using only the keyboard.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Can CAPTCHA or verification steps be completed using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>CAPTCHA or verification steps can be completed using only the keyboard.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Do users have enough time to complete tasks without unexpected timeouts or session expiry? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>There is enough time to complete tasks without unexpected timeouts or session expiry.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>Do users have enough time to complete tasks without unexpected timeouts or session expiry? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>Keyboard focus remains visible and moves predictably after actions are completed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Is the currently focused element always clearly visible? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>The currently focused element is always clearly visible.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Do interactive elements follow expected keyboard interactions and behaviours? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>Interactive elements follow expected keyboard interactions and behaviours.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Does keyboard focus move correctly through each step of the login process? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>Keyboard focus moves correctly through each step of the login process.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Test question:</h5>
+            <p>Can users paste information such as passwords or verification codes into relevant fields? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Acceptance criteria:</h5>
+            <p>Information such as passwords or verification codes can be pasted into relevant fields.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-add-simple-steps">
+          <section data-background="#EDEBEB">
+            <h3>Step 7. Add simple steps to test each criteria</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We now have test questions and acceptance criteria for each potential barrier.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The final step is to create simple steps to test each criterion.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These steps can be used by QA, or anyone else in the team, to determine whether the criteria pass or fail.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-add-some-simple-steps-to-test">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Add some simple steps to test</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I will ask you to add a series of <b>simple steps that could be used to test</b> our acceptance criteria.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Acceptance criteria</b>: Keyboard focus moves through the page in a logical and meaningful order.</p>
+            <p><b>Test question</b>: Does keyboard focus move through the page in a logical and meaningful order? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Simple steps to test:</h5>
+            <ol class="font-sm">
+              <li>Put your mouse aside.</li>
+              <li>Use <kbd>TAB</kbd> to move forward through the page.</li>
+              <li>Use <kbd>SHIFT</kbd> + <kbd>TAB</kbd> to move backward through the page.</li>
+              <li>Check that focus moves in an order that matches the visual layout and expected task flow.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Acceptance criteria</b>: It is possible to move to and away from all interactive elements without becoming trapped.</p>
+            <p><b>Test question</b>: Can keyboard users move to and away from all interactive elements without becoming trapped? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Simple steps to test:</h5>
+            <ol class="font-sm">
+              <li>Put your mouse aside.</li>
+              <li>Use <kbd>TAB</kbd> and <kbd>SHIFT</kbd> + <kbd>TAB</kbd> to move through all interactive elements.</li>
+              <li>Check that you can move into and out of each element or section without getting stuck.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Acceptance criteria</b>:There is a way to skip repeated content and move directly to the main content or form.</p>
+            <p><b>Test question</b>: Is there a way for keyboard users to skip repeated content and move directly to the main content or form? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Simple steps to test:</h5>
+            <ol class="font-sm">
+              <li>Put your mouse aside.</li>
+              <li>Place focus at the start of the page.</li>
+              <li>Press <kbd>TAB</kbd>.</li>
+              <li>Check whether a skip link or similar option appears.</li>
+              <li>Activate it and check that focus moves directly to the main content or form.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Acceptance criteria</b>:There is enough time to complete tasks without unexpected timeouts or session expiry.</p>
+            <p><b>Test question</b>: Do users have enough time to complete tasks without unexpected timeouts or session expiry? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Simple steps to test:</h5>
+            <ol class="font-sm">
+              <li>Start the login or task flow.</li>
+              <li>Pause part-way through the process.</li>
+              <li>Check whether a timeout warning appears before the session expires.</li>
+              <li>Check whether there is a way to extend the session.</li>
+              <li>Check that the task can be completed without losing entered information unexpectedly.</li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-repeat-for-each-user-group">
+          <section data-background="#EDEBEB">
+            <h3>Step 8. Repeat for each user group</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For our login screen, focussing on people with limited movement, we now have the following information for each potential barrier:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Acceptance criteria</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Test question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Simple steps to test</li>    
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We can now <b>repeat steps 3-7</b> for each user group.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 3. Consider how this new group might interact with the page or flow</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 4. List potential barriers they may encounter</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 5. Turn each barrier into a test question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 6. Reframe each test as a positive statement</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 7. Add simple steps to test each criteria</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-an-interactive-example">
+          <section data-background="#EDEBEB">
+            <h3>Your acceptance criteria reference library</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is a <a href="https://intopia.github.io/acceptance-criteria-page-flow/" target="_blank">complete set of ready-to-use page and user-flow acceptance criteria</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Each item includes:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Acceptance criteria</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Test question</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Simple steps to test</li>    
+              <li><span aria-hidden="true" class="icon icon-check"></span>Definitions of pass</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-writing-component-level-accessibility-criteria">
+          <section data-background="#C03C0C">
+            <h2><span class="activity-heading">Part 3:</span><br>Writing component-level accessibility criteria</h2>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care">
+          <section data-background="#EDEBEB">
+            <h3>Why should you care about component-level accessibility criteria?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Most of the time, you’ll be working with <b>pages, flows, or existing components</b> from your design system.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You may not often need to <b>design or build new components</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But there are key moments where <b>component-level thinking becomes essential</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol>
+              <li>When a component <b>doesn’t exist</b> in your design system</li>
+              <li>When an existing component <b>needs to behaves differently</b> in your product</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Even if you rarely build components</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Component-level criteria give you the tools to <b>define, evaluate, and request accessible behaviour</b> at any level.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-same-steps-as-last-time">
+          <section data-background="#EDEBEB">
+            <h3>Same steps as last time?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We use the same steps from page and user-flow criteria — <b>but with a different lens</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 1. Choose a <b>page or user flow</b> you want to review.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 2. Pick <b>a user group</b> to focus on.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 3. Consider how this group might <b>interact with the page or flow</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 4. List <b>potential barriers</b> they may encounter.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 5. Turn each barrier into a <b>test question</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 6. Reframe each test as a <b>positive statement</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 7: Add <b>simple steps to test</b> each criteria.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Step 8: <b>Repeat</b> steps 2–6 for each user group.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s look at <b>how these steps change</b> when we focus on a component.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-choose-a-component-you-want-to-review">
+          <section data-background="#EDEBEB">
+            <h3>Step 1. Choose a component you want to review</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>page and user-flow level</b> acceptance criteria, we looked at full screens or user journey (e.g., “Book a flight”).</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>component level</b> acceptance criteria, we will zoom in on individual reusable elements — buttons, modals, tab sets, carousels, autocompletes, etc.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-component-pick-one-user-group-to-focus-on">
+          <section data-background="#EDEBEB">
+            <h3>Step 2. Pick one user group to focus on</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This step is the <b>same at both levels</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-component-consider-how-this-group-might-interact">
+          <section data-background="#EDEBEB">
+            <h3>Step 3. Consider how this group might interact with the component</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>page and user-flow level</b> acceptance criteria, we focused on task completion, maintaining context, feedback, and orientation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>component level</b> acceptance criteria, we look at three things.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1.  What the component is expected to do</h5>
+            <p>(e.g. open/close, show suggestions, validate input, announce its state)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2.  How users operate it using different input methods or settings</h5>
+            <p>(keyboard, screen reader, voice control, switch control, zoom, large text)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3.  The exact sequence of interactions</h5>
+            <p>(key presses, gestures, navigation steps, announcements, state changes)</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To write good component level criteria, you need to consider <b>how different input methods behave</b>. </p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-component-list-potential-barriers-they-may-encounter">
+          <section data-background="#EDEBEB">
+            <h3>Step 4. List potential barriers they may encounter</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>page and user-flow level</b> acceptance criteria, we looked at barriers that affect the overall journey.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For <b>component level</b> acceptance criteria, barriers become more technical and specific.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s explore <b>barriers that affect each group</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. People with varied learning or cognition</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Vague or unclear component labels (“Submit” vs “Confirm booking”).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Overwhelming options (long dropdowns, unclear categories).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>States not visually obvious (no clear “selected”, “expanded”, or “error” states).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Instructions too complex or missing.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Feedback not visible or too far from the component.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. People with reduced colour vision</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Low contrast between text and background.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>States conveyed only by colour (e.g. red error outline, green success).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Hover/focus/pressed states too subtle.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Icons that rely solely on colour distinctions.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. People with reduced vision</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Component breaks when zoomed (overlaps, clipping, hidden fields).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Text truncates or disappears.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Interactive elements shrink or become too small.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Hit areas not scaling with the text.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Content pushed off-screen with no way to reach it.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. People with reduced movement</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Component not reachable using <kbd>TAB</kbd>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus order illogical or jumps.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>No visible focus indicator.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Can&rsquo;t operate key interactions (<kbd>ENTER</kbd>, <kbd>SPACEBAR</kbd>, <kbd>ARROW</kbd> keys).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Requires precise pointer movement.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Small targets without adequate hit area.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>5. People with no vision</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Missing or incorrect accessible name.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Incorrect role (e.g. <code>&lt;div&gt;</code> used instead of <code>&lt;button&gt;</code>).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Missing or incorrect state information (expanded, checked, selected, invalid).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Dynamic changes not announced (e.g. autocomplete results, error messages).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Focus not moved when necessary (e.g. opening a modal).</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>No way to reach hidden content via screen reader navigation.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>6. People using voice control</h5>
+            <ul class="icon-list font-xs">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Visible label doesn&rsquo;t match the spoken command.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-component-turn-each-barrier-into-a-test-question">
+          <section data-background="#EDEBEB">
+            <h3>Step 5. Turn each barrier into a test question</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As before we need to write each potential barrier as a short question with a <b>clear pass/fail outcome</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each test question should be phrased so that when someone tests it and the outcome is accessible, they can confidently say: <b>“Yes, it passes!”</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Additional rigour</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Because components are the foundation of every interface, their test questions <b>need to be far more rigorous</b> than page or user-flow checks.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many accessibility criteria are <b>objective</b> — such as colour contrast, keyboard access, and ARIA roles.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These must be written in a way that is <b>explicit, measurable, and produces a clear pass/fail result</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, criteria for <b>people with varied learning or cognition</b> are different.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These criteria are often UX-based and rely on clarity, predictability, and comprehension — <b>all essential, but not always binary</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These checks still matter just as much, but their pass/fail outcome <b>depends on UX judgement</b> rather than a strict numerical threshold.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-component-step-six-seven-eight">
+          <section data-background="#EDEBEB">
+            <h3>Step 6, 7 and 8</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These steps remain <b>the same at both levels</b>:</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-writing-some-acceptance-criteria">
+          <section data-background="#147580">
+            <h3><span class="activity-heading">Activity:</span><br>Writing some acceptance criteria</h3>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-wrapping-up">
+          <section data-background="#EDEBEB">
+            <h3>Wrapping up</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>You've learned</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>How to apply the six-step process at component level</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How different user groups interact with components</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How to identify component-level barriers</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How to write accessibility acceptance criteria components</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What you can do next</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Apply this process to components in your own product</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Review existing components for gaps in interaction, naming, states, or behaviour</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Identify opportunities to improve the design system</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Share component-level criteria with your teams to align quality expectations</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
