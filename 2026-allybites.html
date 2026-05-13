@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Accessible names - experience the pain first-hand</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+      h1 { font-size: 2.6em; margin: 0; }
+      .subtitle { font-size: 1.1em;  margin: .5em 0 0; }
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html#session01">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <h1>Accessible names</h1>
+          <div class="subtitle">Experience the pain first-hand</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-an-accessible-name">
+          <section data-background="#EDEBEB">
+            <h3>What is an accessible name?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessible names are the <b>labels announced by assistive technologies</b> for elements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Buttons, links, form fields, images, tables, form groups, and many other elements <b>can all have accessible names</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>But sometimes:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>there is no accessible name</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>or there are multiple possible names</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>or browsers use a different source than people expect</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-which-name-wins">
+          <section data-background="#EDEBEB">
+            <h3>Which name wins?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is a <b>simplified breakdown</b> of how accessible names are decided:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm"> 
+              <li><code>aria-labelledby</code></li>
+              <li><code>aria-label</code></li>
+              <li>Native HTML mechanisms <span class="font-sm" style="display: block;">(visible text, <code>alt</code>, <code>&lt;label&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;caption&gt;</code> etc.)</span></li>
+                </ul>
+              </li>
+              <li><code>title</code></li>
+              <li><code>placeholder</code></li>
+              <li>no accessible name</li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-the-game">
+          <section data-background="#EDEBEB">
+            <h3>The game</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&lsquo;ll put some examples on screen, and you have to <b>shout out the accessible name to win chocolate</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Your job is simple: yell out the accessible name <b>before anyone else</b> in order to win!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 1: what&rsquo;s the name of the button?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: No accessible name</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 2: what&rsquo;s the name of the button?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;Submit&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Submit</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;<span class="highlight">Submit</span>&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 3: what&rsquo;s the name of the link?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;a href="#"&gt;
+  &lt;svg&gt;
+    &lt;title&gt;Hello&lt;/title&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Hello</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;a href="#"&gt;
+  &lt;svg&gt;
+    &lt;title&gt;<span class="highlight">Hello</span>&lt;/title&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 4: what&rsquo;s the name of the button?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button aria-label="Close"&gt;
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Close</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button aria-label="<span class="highlight">Close</span>"&gt;
+&lt;/button&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 5: what&rsquo;s the name of the link?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;a href="#" aria-label="Goodbye"&gt;
+  &lt;svg&gt;
+    &lt;title&gt;Hello&lt;/title&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Goodbye</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;a href="#" aria-label="<span class="highlight">Goodbye</span>"&gt;
+  &lt;svg&gt;
+    &lt;title&gt;Hello&lt;/title&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 6: what&rsquo;s the name of the input?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label&gt;Search the site&lt;/label&gt;
+&lt;input placeholder="Search"&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Search</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label&gt;Search the site&lt;/label&gt;
+&lt;input placeholder="<span class="highlight">Search</span>"&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 7: what&rsquo;s the name of the button?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button aria-labelledby="x" aria-label="Close"&gt;
+  Cancel
+&lt;/button&gt;
+&lt;span id="x"&gt;Delete&lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Delete</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button <span class="highlight">aria-labelledby="x"</span> aria-label="Close"&gt;
+  Cancel
+&lt;/button&gt;
+&lt;span id="x"&gt;<span class="highlight">Delete</span>&lt;/span&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 8: what&rsquo;s the name of the input?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="fish"&gt;Fish&lt;/label&gt;
+&lt;input
+  type="text"
+  id="fish"
+  aria-label="dog"
+  title="rabbit"
+  placeholder="fox"
+&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: dog</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="fish"&gt;Fish&lt;/label&gt;
+&lt;input
+  type="text"
+  id="fish"
+  <span class="highlight">aria-label="dog"</span>
+  title="rabbit"
+  placeholder="fox"
+&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Example 9: what&rsquo;s the name of the button?</h4>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;
+  &lt;img src="cross.png" alt="Hello"&gt;
+  &lt;span class="hidden"&gt;how are you&lt;/span&gt;
+  &lt;span aria-label="doing"&gt;&lt;/span&gt;
+  &lt;span aria-labelledby="aaa"&gt;&lt;/span&gt;
+  &lt;span role="image" title="?"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;p id="aaa" style="display: none;"&gt;today&lt;/p&gt;</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Answer</b>: Hello how are you doing today ?</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;button&gt;
+  &lt;img src="cross.png" alt="<span class="highlight">Hello</span>"&gt;
+  &lt;span class="hidden"&gt;<span class="highlight">how are you</span>&lt;/span&gt;
+  &lt;span aria-label="<span class="highlight">doing</span>"&gt;&lt;/span&gt;
+  &lt;span aria-labelledby="aaa"&gt;&lt;/span&gt;
+  &lt;span role="image" title="<span class="highlight">?</span>"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;p id="aaa" style="display: none;"&gt;<span class="highlight">today</span>&lt;/p&gt;</code></pre>
+          </section>
+
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+SUB-SECTION
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-takeaways">
+          <section data-background="#EDEBEB">
+            <h3>Takeaways</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>Accessible names follow predictable rules.</li>
+              <li>It becomes easier once you understand these rules.</li>
+              <li>You can quickly test names using the accessibility tree.</li>
+            </ol>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
