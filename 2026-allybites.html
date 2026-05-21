@@ -86,10 +86,48 @@ SUB-SECTION
           <section data-background="#EDEBEB">
             <ol class="font-sm"> 
               <li><code>aria-labelledby</code></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm"> 
+              <li><code>aria-labelledby</code></li>
+              <li><code>aria-label</code></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm"> 
+              <li><code>aria-labelledby</code></li>
               <li><code>aria-label</code></li>
               <li>Native HTML mechanisms <span class="font-sm" style="display: block;">(visible text, <code>alt</code>, <code>&lt;label&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;caption&gt;</code> etc.)</span></li>
-                </ul>
-              </li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm"> 
+              <li><code>aria-labelledby</code></li>
+              <li><code>aria-label</code></li>
+              <li>Native HTML mechanisms <span class="font-sm" style="display: block;">(visible text, <code>alt</code>, <code>&lt;label&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;caption&gt;</code> etc.)</span></li>
+              <li><code>title</code></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm"> 
+              <li><code>aria-labelledby</code></li>
+              <li><code>aria-label</code></li>
+              <li>Native HTML mechanisms <span class="font-sm" style="display: block;">(visible text, <code>alt</code>, <code>&lt;label&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;caption&gt;</code> etc.)</span></li>
+              <li><code>title</code></li>
+              <li><code>placeholder</code></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm"> 
+              <li><code>aria-labelledby</code></li>
+              <li><code>aria-label</code></li>
+              <li>Native HTML mechanisms <span class="font-sm" style="display: block;">(visible text, <code>alt</code>, <code>&lt;label&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;caption&gt;</code> etc.)</span></li>
               <li><code>title</code></li>
               <li><code>placeholder</code></li>
               <li>no accessible name</li>
@@ -129,6 +167,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: No accessible name</p>
+            <p>The button has no content and no labelling attribute, so there's nothing to announce.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -141,6 +180,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Submit</p>
+            <p>Visible text content inside a button is its accessible name by default.</p>
           </section>
 
           <section data-background="#222">
@@ -161,6 +201,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Hello</p>
+            <p>An SVG <code>&lt;title&gt;</code> acts as the text content of the SVG, so the browser treats it the same as visible text inside the link. The accessibility tree will show it as coming from <em>contents</em>.</p>
           </section>
 
           <section data-background="#222">
@@ -182,6 +223,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Close</p>
+            <p>The <code>aria-label</code> directly on the element sets the name, overriding the empty content.</p>
           </section>
 
           <section data-background="#222">
@@ -203,6 +245,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Goodbye</p>
+            <p>The <code>aria-label</code> outranks <code>&lt;title&gt;</code> inside a child SVG, so Goodbye beats Hello.</p>
           </section>
 
           <section data-background="#222">
@@ -224,6 +267,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Search</p>
+            <p>The <code>&lt;label&gt;</code> is not associated with the input (no for/id pairing), so it's ignored. The <code>placeholder</code> is the only thing left.</p>
           </section>
 
           <section data-background="#222">
@@ -244,6 +288,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Delete</p>
+            <p>The <code>aria-labelledby</code> beats <code>aria-label</code> every time, and it points to the <code>&lt;span&gt;</code> containing "Delete".</p>
           </section>
 
           <section data-background="#222">
@@ -270,6 +315,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: dog</p>
+            <p>The <code>&lt;label&gt;</code> is properly associated via for/id, but <code>aria-label</code> sits higher in the pecking order and wins.</p>
           </section>
 
           <section data-background="#222">
@@ -301,6 +347,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Hello how are you doing today ?</p>
+            <p>Buttons compute their name from all their child content. Each child contributes: alt text, visually hidden text, <code>aria-label</code>, <code>aria-labelledby</code> (even from a hidden element), and <code>title</code> on a <code>role="image"</code> span — all concatenated.</p>
           </section>
 
           <section data-background="#222">
@@ -315,6 +362,17 @@ SUB-SECTION
 &lt;p id="aaa" style="display: none;"&gt;<span class="highlight">today</span>&lt;/p&gt;</code></pre>
           </section>
 
+          <section data-background="#EDEBEB">
+            <p>The space before "?" comes from <b>how the browser computes the accessible name</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each child element's contribution is <b>separated by a space</b> when they're concatenated together.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So the <code>&lt;span role="image" title="?"&gt;</code> <b>adds its piece as a separate token</b>, giving "today ?" rather than "today?".</p>
+          </section>
         </section>
 
 
@@ -337,6 +395,11 @@ SUB-SECTION
               <li>You can quickly test names using the accessibility tree.</li>
             </ol>
           </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here is a <a href="https://intopia.github.io/exercise/testing-allybites2026.html" target="_blank">live demo of all the examples we explored</a> in case you want to review later.</p>
+          </section>
+
         </section>
       </div>
     </div>
