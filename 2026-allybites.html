@@ -307,7 +307,34 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Hello how are you doing today ?</p>
-            <p>Buttons compute their name from all their child content. Each child contributes: alt text, visually hidden text, <code>aria-label</code>, <code>aria-labelledby</code> (even from a hidden element), and <code>title</code> on a <code>role="img"</code> span — all concatenated.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">Buttons use “name from contents”, meaning their accessible name is built from the accessible text alternatives of descendant content. Different child elements can contribute text in different ways, and the final name is concatenated together.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">The image provides <code>alt</code> text: "Hello"</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">Even though visually hidden, the first <code>&lt;span&gt;</code> provides text: "how are you". Buttons build their accessible name from descendant content, so visually hidden text can still participate in the button’s name calculation. This works because the content is visually hidden only. It would not work if the element used <code>display: none</code>, <code>visibility: hidden</code>, or <code>aria-hidden="true"</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">The second <code>&lt;span&gt;</code> has a role of <code>img</code> and therefore provides a name via <code>aria-label</code>: "doing"</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">The third <code>&lt;span&gt;</code> has a role of <code>img</code> and therefore provides a name via <code>aria-labelledby</code>: "today"</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">The fourth <code>&lt;span&gt;</code> has a role of <code>img</code> and therefore provides a fallback accessible name via the <code>title</code>: "?"</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p class="font-sm">The space before "?" comes from how the browser computes accessible names. Each child element’s contribution is usually separated by a space when the final name is concatenated together. So the <code>&lt;span role="img" title="?"&gt;</code> contributes its own separate text token, producing "today ?" rather than "today?".</p>
           </section>
 
           <section data-background="#222">
@@ -320,18 +347,6 @@ SUB-SECTION
 &lt;/button&gt;
 
 &lt;p id="aaa" style="display: none;"&gt;<span class="highlight">today</span>&lt;/p&gt;</code></pre>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>The space before "?" comes from <b>how the browser computes the accessible name</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Each child element's contribution is <b>separated by a space</b> when they're concatenated together.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>So the <code>&lt;span role="img" title="?"&gt;</code> <b>adds its piece as a separate token</b>, giving "today ?" rather than "today?".</p>
           </section>
         </section>
 
