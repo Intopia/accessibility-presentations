@@ -350,7 +350,7 @@ SUB-SECTION
   &lt;span class="hidden"&gt;how are you&lt;/span&gt;
   &lt;span aria-label="doing"&gt;&lt;/span&gt;
   &lt;span aria-labelledby="aaa"&gt;&lt;/span&gt;
-  &lt;span role="image" title="?"&gt;&lt;/span&gt;
+  &lt;span role="img" title="?"&gt;&lt;/span&gt;
 &lt;/button&gt;
 
 &lt;p id="aaa" style="display: none;"&gt;today&lt;/p&gt;</code></pre>
@@ -358,7 +358,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p><b>Answer</b>: Hello how are you doing today ?</p>
-            <p>Buttons compute their name from all their child content. Each child contributes: alt text, visually hidden text, <code>aria-label</code>, <code>aria-labelledby</code> (even from a hidden element), and <code>title</code> on a <code>role="image"</code> span — all concatenated.</p>
+            <p>Buttons compute their name from all their child content. Each child contributes: alt text, visually hidden text, <code>aria-label</code>, <code>aria-labelledby</code> (even from a hidden element), and <code>title</code> on a <code>role="img"</code> span — all concatenated.</p>
           </section>
 
           <section data-background="#222">
@@ -367,7 +367,7 @@ SUB-SECTION
   &lt;span class="hidden"&gt;<span class="highlight">how are you</span>&lt;/span&gt;
   &lt;span aria-label="<span class="highlight">doing</span>"&gt;&lt;/span&gt;
   &lt;span aria-labelledby="aaa"&gt;&lt;/span&gt;
-  &lt;span role="image" title="<span class="highlight">?</span>"&gt;&lt;/span&gt;
+  &lt;span role="img" title="<span class="highlight">?</span>"&gt;&lt;/span&gt;
 &lt;/button&gt;
 
 &lt;p id="aaa" style="display: none;"&gt;<span class="highlight">today</span>&lt;/p&gt;</code></pre>
@@ -382,7 +382,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>So the <code>&lt;span role="image" title="?"&gt;</code> <b>adds its piece as a separate token</b>, giving "today ?" rather than "today?".</p>
+            <p>So the <code>&lt;span role="img" title="?"&gt;</code> <b>adds its piece as a separate token</b>, giving "today ?" rather than "today?".</p>
           </section>
         </section>
 
