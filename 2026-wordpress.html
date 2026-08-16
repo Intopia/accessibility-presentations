@@ -93,7 +93,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This is the <b>opposite</b> of good acceptance criteria.</p>
+            <p>This is the <b>opposite</b> of good practice.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -270,9 +270,12 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <p>In this session, we&rsquo;ll explore <b>two levels of accessibility acceptance criteria</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <ol> 
-              <li>component level</li>
-              <li>page or user-flow level</li>
+              <li><b>Page or user-flow level</b> accessibility acceptance criteria</li>
+              <li><b>Component level</b> accessibility acceptance criteria</li>
             </ol>
           </section>
         </section>
@@ -299,7 +302,7 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p>They often bring multiple components together <b>into a single layout</b> to support a user’s goal.</p>
+            <p>They often bring multiple components together <b>into a single layout</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -313,7 +316,11 @@ SUB-SECTION
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>User flows</b> are end‑to‑end sequences of pages, states, or interactions that guide a user through completing a task or achieving an outcome.</p>
+            <p><b>User flows</b> are end‑to‑end sequences of pages, states, or interactions.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These flows <b>guide users</b> through completing tasks or achieving outcomes.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -328,11 +335,6 @@ SUB-SECTION
               <li><span aria-hidden="true" class="icon icon-check"></span>Get a quote process</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Reset password process</li>
             </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>What are page and user-flow level acceptance criteria?</h5>
-            <p>Testable checks that apply to full pages or complete user flows (e.g. sign-up, checkout).</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -508,11 +510,6 @@ SUB-SECTION
               <li><span aria-hidden="true" class="icon icon-check"></span>Date pickers</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>In-page tabs</li>
             </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>What are component level acceptance criteria?</h5>
-            <p>Testable checks for reusable interface components (e.g. buttons, form fields, modals, and carousels).</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -824,7 +821,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <h5>Our example</h5>
-            <p>For people with reduced movement, barriers could include:</p>
+            <p>For people with reduced movement, technologies could include:</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -859,8 +856,6 @@ SUB-SECTION
               <li>Keyboard traps</li>
               <li>Custom controls that aren't operable by keyboard at all</li>
               <li>No visible focus indicator</li>
-              <li>Labels not programmatically associated</li>
-              <li>Error messages that aren't announced or focused</li>
               <li>Submit button not reachable or not actually a button</li>
               <li>CAPTCHA widget not keyboard accessible</li>
               <li>Skip link missing or non-functional</li>
@@ -991,7 +986,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <h5>Possible answer:</h5>
-            <p>Can all custom controls be accessed and operated using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
+            <p>Can all custom controls be accessed and operated using only the keyboard or voice control? <span class="red">(PASS/FAIL)</span></p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -1001,7 +996,7 @@ SUB-SECTION
 
           <section data-background="#EDEBEB">
             <h5>Possible answer:</h5>
-            <p>Can CAPTCHA or verification steps be completed using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
+            <p>Can CAPTCHA be completed using only the keyboard? <span class="red">(PASS/FAIL)</span></p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -1043,16 +1038,6 @@ SUB-SECTION
             <h5>Possible answer:</h5>
             <p>Does keyboard focus move correctly through each step of the login process? <span class="red">(PASS/FAIL)</span></p>
           </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Convert this barrier into a test question:</h5>
-            <p>Blocked paste functionality</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Possible answer:</h5>
-            <p>Can users paste information such as passwords or verification codes into relevant fields? <span class="red">(PASS/FAIL)</span></p>
-          </section>
         </section>
 
 
@@ -1083,7 +1068,7 @@ SUB-SECTION
             </div>
             <div class="text-example">
               <h5>Acceptance criteria</h5>
-              <p><s>Does</s> Keyboard focus move through the page in a logical and meaningful order.</p>
+              <p><s>Does</s> Keyboard focus <b>moves</b> through the page in a logical and meaningful order.</p>
             </div>
           </section>
 
@@ -1204,26 +1189,6 @@ SUB-SECTION
             <h5>Acceptance criteria:</h5>
             <p>Interactive elements follow expected keyboard interactions and behaviours.</p>
           </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test question:</h5>
-            <p>Does keyboard focus move correctly through each step of the login process? <span class="red">(PASS/FAIL)</span></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Acceptance criteria:</h5>
-            <p>Keyboard focus moves correctly through each step of the login process.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Test question:</h5>
-            <p>Can users paste information such as passwords or verification codes into relevant fields? <span class="red">(PASS/FAIL)</span></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Acceptance criteria:</h5>
-            <p>Information such as passwords or verification codes can be pasted into relevant fields.</p>
-          </section>
         </section>
 
 
@@ -1268,6 +1233,14 @@ SUB-SECTION
           <section data-background="#EDEBEB">
             <p><b>Acceptance criteria</b>: Keyboard focus moves through the page in a logical and meaningful order.</p>
             <p><b>Test question</b>: Does keyboard focus move through the page in a logical and meaningful order? <span class="red">(PASS/FAIL)</span></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But how do QAs <b>test it</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Ideally, we should provide them with <b>some simple tests</b>!</p>
           </section>
 
           <section data-background="#EDEBEB">
