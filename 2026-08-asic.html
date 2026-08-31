@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ASIC: Introduction to digital accessibility | Intopia</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Introduction to digital accessibility</h1>
+          <div class="subtitle">ASIC</div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h3>Acknowledgement of Country</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&rsquo;d like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We pay our respects to <b>Elders past and present</b>, and extend to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, I am on the lands of the <a href="https://www.sydneyharbourhighline.org.au/aboriginal-heritage/" target="_blank">Cammeraygal people</a> of the Eora Nation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you know the traditional owners of the land that you are on today, <b>please feel free to share in chat</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introductions">
+          <section data-background="#EDEBEB">
+            <h3>What will we cover?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Why should you care about accessibility?</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Digital Experience Policy: what it means for accessibility</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>People and assistive technologies</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-why-should-you-care-about-accessibility">
+          <section data-background="#EDEBEB">
+            <h3>Why should you care about accessibility?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Key reasons to care:</h5>
+            <ol class="font-sm">
+              <li>Reduce legal risk</li>
+              <li>Reduce reputational risk</li>
+              <li>Avoid costly rework</li>
+              <li>Improve user experience</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Reduce legal risk</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All public-facing digital products in Australia must meet <b>legal accessibility requirements</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Failing to do so could lead to <b>complaints and even legal action</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here are two key resources for understanding and meeting <b>digital accessibility obligations in Australia</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>The Disability Discrimination Act 1992</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The Australian Human Rights Commission’s Digital Access Guidelines</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>The Disability Discrimination Act 1992</h5>
+            <p>All public-facing digital products in Australia are required to comply with the &lsquo;Disability Discrimination Act 1992&rsquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>It is unlawful for a person who, whether for payment or not, provides goods or services, or makes facilities available, to discriminate against another person on the ground of the other person’s disability.</em></p>
+              <p class="font-xs"><a href="https://www.legislation.gov.au/C2004A04426/latest/versions" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Australian Human Rights Commission</h5>
+            <p>The Commission recently released the <a href="https://humanrights.gov.au/our-work/disability-rights/publications/guidelines-equal-access-digital-goods-and-services" target="_blank">Guidelines on Equal Access to Digital Goods and Services</a>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These guidelines offer <b>practical advice</b> on making websites, apps, and other digital services accessible to people with disability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <div class="text-example">
+              <p><em>Organisations should conform with WCAG 2.2 at a minimum Level AA and consider appropriate Level AAA success criteria such as video transcripts, audio contrast, clear links and section headings.</em></p>
+              <p class="font-xs"><a href="https://humanrights.gov.au/our-work/disability-rights/chapter-3-standards-and-guidelines-digital-accessibility" target="_blank">Source</a></p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Have there been any legal cases?</h5>
+            <p>Yes! A number of legal cases have highlighted what can happen when organisations fail to meet these responsibilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>2000: <a href="https://www.w3.org/WAI/business-case/archive/socog-case-study" target="_blank">Bruce Maguire v. SOCOG</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2013: <a href="https://humanrights.gov.au/our-work/legal/publications/casenote-haraksin-v-murrays-australia-ltd-no-2-2013-fca-217" target="_blank">Haraksin v Murrays Australia</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>2015: <a href="https://jec.org.au/disability-rights/disability-discrimination/coles-agrees-to-make-online-shopping-site-more-accessible/" target="_blank">Gisele Mesnage v. Coles</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Reduce reputational risk</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Legal action can be costly, but the <b>damage to an organisation’s reputation</b> could be even worse.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2000: Bruce Maguire v SOCOG</h5>
+            <p>Became a global symbol of inaccessible websites, reputational damage far outweighed small legal costs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2015: Gisele Mesnage v Coles</h5>
+            <p>Mainstream media coverage painted Coles as excluding customers with disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Avoid costly rework</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility problems can <b>increase the risk of costly rework</b> when issues are found late in a project.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Fixing accessibility issues after launch is <b>far more expensive and time-consuming</b> than addressing them during design and development.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Embedding accessibility early <b>helps teams work more efficiently</b> and reduces rework costs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Improve user experience</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Features designed for people with disabilities often improve the user experience for <b>other groups</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We’ve all heard the <b>cliché about ramps into buildings</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They were <b>originally built for wheelchair users</b>, but they also help people with strollers, trolleys, or other mobility needs.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But here are some <b>digital examples</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Captions</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Help people who are deaf or hard of hearing.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Also help people in noisy environments or with temporary hearing loss.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Good contrast</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helps people with low vision or colour vision deficiency.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Also helps people viewing screens in bright light or experiencing temporary vision issues.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Keyboard accessible</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helps people with no vision and people with limited movement.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Also helps people with temporary movement issues, people whose hands are busy, and power users.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Adjustable font sizes</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helps people with visual impairments.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Also helps people with tired eyes, mobile readers, and older adults.</li>
+            </ul>
+          </section>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-digital-experience-policy">
+          <section data-background="#EDEBEB">
+            <h3>Digital Experience Policy: what it means for accessibility</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The Australian Government’s <b>Digital Experience Policy</b> sets expectations for designing and delivering better digital government services.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The policy is supported by <b>four standards</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-">
+              <li><b>Digital Service Standard:</b> leave no one behind.</li>
+              <li><b>Digital Inclusion Standard:</b> inclusive and accessible.</li>
+              <li><b>Digital Access Standard:</b> consistent and usable.</li>
+              <li><b>Digital Performance Standard:</b> measure whether services work for users.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <b>Digital Service Standard</b> and <b>Digital Inclusion Standard</b> contain the most explicit accessibility requirements.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Who does the policy apply to?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>It is an <b>Australian Government (Commonwealth)</b> policy.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It applies to <b>digital services</b> — not just websites.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Different standards apply depending on the type and lifecycle of the service.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It does <b>not mandate requirements for state or territory services</b>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Compliance depends on the <b>type of service</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Existing public-facing services must meet the <b>Digital Service Standard</b> and <b>Digital Inclusion Standard</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>New or replacement services subject to the "Investment Oversight Framework" <b>must apply the policy and relevant standards</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Digital Service Standard</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This standard focuses on high-quality services that are <b>user-friendly, inclusive, adaptable and measurable</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Its accessibility anchor is criterion 3: <b>Leave no one behind</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This means teams need to:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Understand the diversity of users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Design for people who face barriers.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Test assumptions with real users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Improve services over time.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Digital Inclusion Standard</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is where the policy’s <b>accessibility expectations are most explicit</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>The five criteria are:</h5>
+            <ol class="font-sm">
+              <li>Embrace diversity</li>
+              <li>Motivate digital use</li>
+              <li>Protect users</li>
+              <li>Make it accessible</li>
+              <li>Provide flexibility and choice</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Make it accessible</h5>
+            <p>Digital services must comply with relevant accessibility legislation and standards.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>This includes:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Disability Discrimination Act 1992.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>The latest version of WCAG.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Australian Government Style Manual.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But the standard goes beyond WCAG. Accessibility needs to be considered across the <b>whole service lifecycle</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>That includes:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Planning and design.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Development and content.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Procurement and contract renewals.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Testing and ongoing improvement.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Practical accessibility expectations</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Test with assistive technologies.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Test with disabled users.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Do not rely only on automated testing.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Make accessibility requirements clear to vendors.</li>
+            </ul>
+          </section>
+
+<!--
+          <section data-background="#EDEBEB">
+            <h4>What if a service doesn't comply?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Agencies may need to:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Uplift the service to meet the requirements.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Seek an exemption from the Digital Transformation Agency (DTA) where requirements cannot be met.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For accessibility, there may also be obligations under the <b>Disability Discrimination Act 1992</b> — separate from the Policy itself.</p>
+          </section>
+-->
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-people-and-assistive-technologies">
+          <section data-background="#EDEBEB">
+            <h3>People and assistive technologies</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We&rsquo;re going to look at a range of different people and how they <b>interact with the digital world</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li>People with <b>no vision</b></li>
+              <li>People with <b>reduced vision</b></li>
+              <li>People with <b>reduced colour vision</b></li>
+              <li>People with <b>reduced movement</b></li>
+              <li>People with <b>varied learning or cognition</b></li>
+              <li>People with <b>reduced or no hearing</b></li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-no-vision">
+            <h4>1. People with no vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Blindness</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span><a href="https://www.aihw.gov.au/getmedia/753886ff-066c-4a54-b795-e900e339400a/agtaehd-c03.pdf.aspx#:~:text=Definitions%20of%20legal%20blindness%20used,or%20a%20combination%20of%20visual" target="_blank">Legally blind</a></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>A keyboard - without a mouse</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=q_ATY9gimOM" target="_blank">Screen reader software</a> <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=SlxIEPEC_Qc" target="_blank">Refreshable braille devices</a> <span class="font-xs success">(e.g. Stand-alone, Smart displays)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-low-vision">
+            <h4>2. People with reduced vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Lens Disorders <span class="font-xs success">(e.g. Cataracts)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Retinal Disorders <span class="font-xs success">(e.g. Diabetic Retinopathy)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Optic Nerve Disorders <span class="font-xs success">(e.g. Glaucoma)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Corneal Disorders <span class="font-xs success">(e.g. Keratoconus)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Refractive and Developmental Disorders <span class="font-xs success">(e.g. Astigmatism)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>System settings <span class="font-xs success">(e.g. magnification, font size, spacing, colour)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Browser-based page zoom <span class="font-xs success">(e.g. increase to 400%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Increase text-size only <span class="font-xs success">(e.g. increase text to 200%)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=EEN79RRvKqE&amp;t=4s" target="_blank">Screen magnifier software</a> <span class="font-xs success">(e.g. ZoomText)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-colour">
+            <h4>3. People with reduced colour vision</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Colour vision deficiency</b> (CVD) or Colour blindness, is the decreased ability to see colour or differences in colour.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Green-deficient <i class="font-xs success">(Deuteranomaly)</i> and Green-Blind <i class="font-xs success">(Deuteranopia)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Red-deficient <i class="font-xs success">(Protanomaly)</i> and Red-Blind <i class="font-xs success">(Protanopia)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Blue-deficient <i class="font-xs success">(Tritanomaly)</i> and Blue-Blind <i class="font-xs success">(Tritanopia)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Blue Cone Monochromacy <i class="font-xs success">(Achromatomaly)</i></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Monochromacy <i class="font-xs success">(Achromatopsia)</i></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-limited-movement">
+            <h4>4. People with reduced movement</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Traumatic injuries <span class="font-xs success">(e.g. Spinal cord injuries, loss of limbs)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Full-body conditions <span class="font-xs success">(e.g. Spina Bifida, Cerebral Palsy, Multiple Sclerosis)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Arm &amp; hand conditions <span class="font-xs success">(e.g. Osteoarthritis, Rheumatoid Arthritis)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Other motor-related conditions <span class="font-xs success">(e.g. Tremors, Tic disorders)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=bWI1oI_f_rg" target="_blank">Head pointers</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://youtu.be/QCVPr_F8eY4?si=kmroen2beswIpqzt&t=22" target="_blank">Mouthsticks</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=ZMvikz2cA-8&amp;t=102s" target="_blank">Sip and puff devices</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.youtube.com/watch?v=04Rhnt4J2b4&amp;t=30s" target="_blank">Eye or head tracking software</a> <span class="font-xs success">(e.g. Dynavox, Apple Head Tracking)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-different-learning">
+            <h4>5. People with varied learning or cognition</h4>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Intellectual disabilities <span class="font-xs success">(e.g. Down Syndrome, Fragile X Syndrome)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Neurodiverse conditions <span class="font-xs success">(e.g. Dyslexia, Dyscalculia, Autism Spectrum Disorder/Condition, Attention Deficit Hyperactivity Disorder)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Processing differences <span class="font-xs success">(e.g. Aphasia, Auditory processing disorders)</span></li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Memory impairments <span class="font-xs success">(e.g. Dementia, Alzheimer disease)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;Text-to-speech&rsquo; software <span class="font-xs success">(e.g. Microsoft Immersive Reader, Apple Spoken Content)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;Speech-to-text&rsquo; software <span class="font-xs success">(e.g. Dragon NaturallySpeaking, Apple Dictation, Windows Voice Access)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen masking software <span class="font-xs success">(e.g. Read&Write)</span></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Screen reader software <span class="font-xs success">(e.g. JAWS, NVDA, VoiceOver, Narrator)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB" id="people-with-reduced-hearing">
+            <h4>6. People with reduced or no hearing</h4>
+          </section>
+ 
+          <section data-background="#EDEBEB">
+            <h5>May include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Hard of Hearing</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Deaf</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>May use:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-hand"></span>Hearing aids</li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span><a href="https://www.hearinglink.org/technology/hearing-loops/what-is-a-hearing-loop/" target="_blank">Hearing or induction loops</a></li>
+              <li><span aria-hidden="true" class="icon icon-hand"></span>&lsquo;Speech-to-text&rsquo; software <span class="font-xs success">(e.g. Dragon NaturallySpeaking, Apple Dictation, Windows Voice Access)</span></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Disabilities are varied and complex</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Some people have multiple disabilities or conditions.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Disabilities may be spectrums.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Some disabilities change over time.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Some disabilities change from day to day.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Any of these people could be your customers — <b>now or in the future</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-wcag">
+          <section data-background="#EDEBEB">
+            <h3>What is WCAG?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The <a href="https://www.w3.org/" target="_blank">World Wide Web Consortium</a> (W3C) develops <b>international standards for the World Wide Web</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>One of these standards is the <b>Web Content Accessibility Guidelines</b> - often shortened to &lsquo;WCAG&rsquo;.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG explains how to make websites and digital content <b>more accessible to people with disabilities</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The current standard is <b>WCAG 2.2</b>, released on 5 October 2023.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>WCAG structure</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>WCAG is <b>organised into layers</b>, from high-level principles through to detailed examples:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-sm">
+              <li>Principles
+                <ul>
+                  <li>Guidelines
+                    <ul>
+                      <li>
+                        Success Criteria
+                        <ul>
+                          <li>Sufficient Techniques</li>
+                          <li>Advisory Techniques</li>
+                          <li>Failures</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Success Criteria</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each guideline contains a set of <b>testable Success Criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These measurable checks are used to <b>evaluate whether digital products are accessible</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In WCAG 2.2, there are <a href="https://intopia.github.io/accessibility-presentations/wcag22.html" target="_blank">87 Success Criteria</a> in total.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Compliance levels</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each Success Criterion has <b>one of three levels</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level A</h5>
+            <p class="font-sm">Minimum requirements that remove the most critical barriers for some people with disabilities.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level AA</h5>
+            <p class="font-sm">The recommended target for most organisations. Balances accessibility with practical implementation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Level AAA</h5>
+            <p class="font-sm">The highest level. Includes advanced accessibility improvements, but not all content can reasonably meet this level.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To be “AA compliant”, a site must meet all Level A and Level AA criteria — <b>a total of 56 criteria</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Some important WCAG documents</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/TR/WCAG22/" target="_blank">Web Content Accessibility Guidelines 2.2</a></h5>
+            <p class="font-sm">The official list of Success Criteria. These are the requirements for WCAG conformance.</p>
+          </section>
+
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/WAI/WCAG22/Understanding/" target="_blank">All WCAG 2.2 Understanding Docs</a></h5>
+            <p class="font-sm">Plain-language explanations of each criterion: what it means, why it matters, and how to apply it.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5><a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2" target="_blank">How to Meet WCAG (Quick Reference)</a></h5>
+            <p class="font-sm">An interactive checklist where you can filter by role, technology, or topic to find the criteria and techniques that apply to your work.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-questions">
+          <section data-background="#C03C0C">
+            <h2>Questions or discussion?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
