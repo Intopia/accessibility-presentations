@@ -1,0 +1,1366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Qantas session 1: Accessibility testing | Intopia</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#EDEBEB">
+          <img class="intopia-logo" src="assets/img/logo-intopia.png" alt="Intopia">
+          <h1>Qantas session 1: Accessibility testing</h1>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-acknowledgement-of-country">
+          <section data-background="#EDEBEB">
+            <h3>Acknowledgement of Country</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>I&rsquo;d like to acknowledge the <b>Traditional Owners of the lands</b> on which we meet today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>We pay our respects to <b>Elders past and present</b>, and extend to all First Nations people present today.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In my case, I am on the lands of the <a href="https://www.sydneyharbourhighline.org.au/aboriginal-heritage/" target="_blank">Cammeraygal people</a> of the Eora Nation.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you know the traditional owners of the land that you are on today, <b>please feel free to share in chat</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introductions">
+          <section data-background="#EDEBEB">
+            <h3>Introductions</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Add some quick intros in chat:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>What&rsquo;s your current role?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>How long have you worked at Qantas?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>My name is Russ Weakley:</h5>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-pen-swirl"></span>1995 - 2003: Web designer</li>
+              <li><span aria-hidden="true" class="icon icon-code"></span>2003 - 2020: Front end to Design systems</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>2020 - 2025: Accessibility specialist</li>
+              <li><span aria-hidden="true" class="icon icon-universal-access"></span>Passionate about  accessibility since 2003</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Feel free to interrupt and <b>ask questions</b> at any time!</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Resources provided?</h5>
+            <p>A version of the slides and any other associated resources will be provided after the session.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What will we cover?</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-an-overview-of-some-testing-tools">Accessibility testing tools: An overview</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-strengths-and-weaknesses">Accessibility testing tools: Strengths and weaknesses</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-axe-core-playwright">axe-core and Playwright</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-measuring-the-importance-of-issues">Measuring the importance of issues</a></li>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Discussions</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>What are the accessibility roles and responsibilities within your team?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>What collaborative practices does your team use?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>How does your team identify and address accessibility issues?</li>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-an-overview-of-some-testing-tools">
+          <section data-background="#EDEBEB">
+            <h3>Accessibility testing tools: An overview</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Let&rsquo;s quickly run through <b>some of the testing tools</b> available, then explore their strengths and weaknesses.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Automated accessibility scanning tools and platforms</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://www.deque.com/axe" target="_blank">Deque Axe</a></th>
+      <td>Web platform</td>
+      <td>Paid</td>
+      <td>Developers, testers, accessibility teams</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://www.levelaccess.com/" target="_blank">Level Access</a></th>
+      <td>Web platform</td>
+      <td>Paid</td>
+      <td>Developers, testers, accessibility teams</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://monsido.com/" target="_blank">Monsido</a></th>
+      <td>Web platform</td>
+      <td>Paid</td>
+      <td>Content teams, accessibility teams</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://tanaguru.com/" target="_blank">Tanaguru</a></th>
+      <td>Web platform, including multi-page user journeys</td>
+      <td>Free and paid options</td>
+      <td>Testers, accessibility teams</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://usablenet.com/technology/aqa" target="_blank">UsableNet AQA</a></th>
+      <td>Web platform</td>
+      <td>Paid</td>
+      <td>Developers, testers, accessibility teams</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Developer and CI tools</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://github.com/dequelabs/axe-core" target="_blank">axe-core</a></th>
+      <td>JavaScript accessibility rules engine, used by many of the tools on this page</td>
+      <td>Free</td>
+      <td>Developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://github.com/component-driven/cypress-axe" target="_blank">Cypress with cypress-axe</a></th>
+      <td>Browser testing framework, with axe-core added through a plugin</td>
+      <td>Free</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://pa11y.org/" target="_blank">Pa11y</a></th>
+      <td>Command line tool and CI runner</td>
+      <td>Free</td>
+      <td>Developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://playwright.dev/docs/accessibility-testing" target="_blank">Playwright with @axe-core/playwright</a></th>
+      <td>Browser testing framework, with axe-core added through a package</td>
+      <td>Free</td>
+      <td>Developers, testers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Automated mobile tools</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor" target="_blank">Android Accessibility Scanner</a></th>
+      <td>Android</td>
+      <td>Free</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://developer.android.com/studio/write/lint" target="_blank">Android Studio Lint</a></th>
+      <td>Android Studio</td>
+      <td>Free</td>
+      <td>Developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://www.deque.com/android-accessibility/" target="_blank">Axe for Android</a></th>
+      <td>Android</td>
+      <td>Paid</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://developer.apple.com/documentation/accessibility/accessibility-inspector" target="_blank">iOS Accessibility Inspector</a></th>
+      <td>Xcode on macOS</td>
+      <td>Free</td>
+      <td>Developers, testers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Browser extensions</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Accessibility Insights for Web</th>
+      <td><a href="https://accessibilityinsights.io/downloads/" target="_blank">Chrome or Edge</a></td>
+      <td>Free</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row">ARC Toolkit</th>
+      <td><a href="https://chromewebstore.google.com/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce" target="_blank">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/arc-toolkit/" target="_blank">Firefox</a>, <a href="https://www.tpgi.com/arc-platform/arc-toolkit/" target="_blank">Edge</a></td>
+      <td>Free</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row">axe DevTools</th>
+      <td><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" target="_blank">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/" target="_blank">Firefox</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/axe-devtools-web-access/kcenlimkmjjkdfcaleembgmldmnnlfkn" target="_blank">Edge</a></td>
+      <td>Free, with paid features</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row">Tota11y</th>
+      <td><a href="https://addons.mozilla.org/en-US/firefox/addon/tota11y-accessibility-toolkit/" target="_blank">Firefox</a></td>
+      <td>Free</td>
+      <td>Developers, designers</td>
+    </tr>
+    <tr>
+      <th scope="row">WAVE Evaluation Tool</th>
+      <td><a href="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_blank">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/wave-accessibility-tool/" target="_blank">Firefox</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/wave-evaluation-tool/khapceneeednkiopkkbgkibbdoajpkoj" target="_blank">Edge</a></td>
+      <td>Free</td>
+      <td>Developers, testers, content authors</td>
+    </tr>
+    <tr>
+      <th scope="row">Web Developer extension</th>
+      <td><a href="https://chrispederick.com/work/web-developer/" target="_blank">Chrome, Firefox, Opera</a></td>
+      <td>Free</td>
+      <td>Developers, testers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Built-in browser tools</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://developer.chrome.com/docs/devtools/accessibility/reference" target="_blank">Chrome DevTools Accessibility pane</a></th>
+      <td>Chrome</td>
+      <td>Built in</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/" target="_blank">Firefox Accessibility Inspector</a></th>
+      <td>Firefox</td>
+      <td>Built in</td>
+      <td>Developers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Lighthouse</a></th>
+      <td>Chrome and Edge DevTools</td>
+      <td>Built in</td>
+      <td>Developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://webkit.org/web-inspector/" target="_blank">Safari Web Inspector</a></th>
+      <td>Safari on macOS</td>
+      <td>Built in</td>
+      <td>Developers, testers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Bookmarklets</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://a11y-tools.com/bookmarklets/#revealfocusorder" target="_blank">A11y audit bookmarklets</a></th>
+      <td>Any browser</td>
+      <td>Free</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://www.ssa.gov/accessibility/andi/help/install.html" target="_blank">ANDI Accessibility Testing Tool</a></th>
+      <td>Any browser</td>
+      <td>Free</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="testing-bookmarklets-intopia.html">Intopia's accessibility testing bookmarklets</a></th>
+      <td>Any browser</td>
+      <td>Free</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://pauljadam.com/bookmarklets/" target="_blank">JavaScript Bookmarklets for Accessibility Testing</a></th>
+      <td>Any browser</td>
+      <td>Free</td>
+      <td>Testers, developers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Colour contrast tools</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Colour Contrast Analyser (CCA)</a></th>
+      <td>Mac, Windows</td>
+      <td>Free</td>
+      <td>Designers, testers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://www.getstark.co/" target="_blank">Stark</a></th>
+      <td>Figma and Sketch plugins</td>
+      <td>Free, with paid features</td>
+      <td>Designers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Color Contrast Checker</a></th>
+      <td>Web</td>
+      <td>Free</td>
+      <td>Designers, developers, testers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Content testing tools</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://www.grammarly.com/" target="_blank">Grammarly</a></th>
+      <td>Web, desktop, browser extension</td>
+      <td>Free, with paid features</td>
+      <td>Content authors</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://hemingwayapp.com/" target="_blank">Hemingway</a></th>
+      <td>Web, desktop</td>
+      <td>Free, with paid features</td>
+      <td>Content authors</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/tools/readability-bookmarklet/" target="_blank">Readability Bookmarklet</a></th>
+      <td>Any browser</td>
+      <td>Free</td>
+      <td>Content authors, testers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://www.webfx.com/tools/read-able/" target="_blank">Readability Test</a></th>
+      <td>Web</td>
+      <td>Free</td>
+      <td>Content authors</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Keyboard testing</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Keyboard-only navigation</th>
+      <td>Any browser</td>
+      <td>Built in</td>
+      <td>Everyone</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Screen readers</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="https://support.freedomscientific.com/Downloads/JAWS" target="_blank">JAWS - Job Access With Speech</a></th>
+      <td>Windows</td>
+      <td>Paid</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://www.nvaccess.org/download/" target="_blank">NVDA - NonVisual Desktop Access</a></th>
+      <td>Windows</td>
+      <td>Free</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&amp;hl=en" target="_blank">TalkBack</a></th>
+      <td>Android</td>
+      <td>Built in</td>
+      <td>Testers, developers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://support.apple.com/en-au/guide/voiceover/welcome/mac" target="_blank">VoiceOver</a></th>
+      <td>macOS and iOS</td>
+      <td>Built in</td>
+      <td>Testers, developers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+
+          <section data-background="#EDEBEB">
+<table style="font-size: 65%;">
+  <caption>Screen magnification and low vision tools</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Platform</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Typical users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Browser zoom</th>
+      <td>Any browser</td>
+      <td>Built in</td>
+      <td>Everyone</td>
+    </tr>
+    <tr>
+      <th scope="row">macOS Zoom</th>
+      <td>macOS</td>
+      <td>Built in</td>
+      <td>Testers, designers</td>
+    </tr>
+    <tr>
+      <th scope="row">Windows Magnifier</th>
+      <td>Windows</td>
+      <td>Built in</td>
+      <td>Testers, designers</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="https://support.freedomscientific.com/Downloads/ZoomText" target="_blank">ZoomText</a></th>
+      <td>Windows</td>
+      <td>Paid</td>
+      <td>Testers</td>
+    </tr>
+  </tbody>
+</table>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-strengths-and-weaknesses">
+          <section data-background="#EDEBEB">
+            <h3>Accessibility testing tools: Strengths and weaknesses</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>All of the accessibility testing tools we just reviewed have <b>limitations</b>.</p>
+          </section>
+
+          <!-- How much can automation find? -->
+
+          <section data-background="#EDEBEB">
+            <p>How much can automated tools find? <b>It depends how you count</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Counting by WCAG success criteria</h5>
+            <p class="font-sm">Only around a quarter to a third of WCAG success criteria can be fully tested automatically. The rest need human judgement.</p>
+            <p class="font-xxs"><a href="https://academy.pega.com/topic/automated-testing-tools/v1" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Counting by issues found</h5>
+            <p class="font-sm">A 2021 Deque study found automated tests caught 57% of issues on real sites, because the most common issues are the ones machines can detect.</p>
+            <p class="font-xxs"><a href="https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues" target="_blank">Source</a></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Either way, if an accessibility testing tool passes a website, this <b>doesn’t necessarily mean the site is accessible</b>.</p>
+            <p class="font-xxs"><a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score" target="_blank">Source</a></p>
+          </section>
+
+          <!-- Three kinds of automation -->
+
+          <section data-background="#EDEBEB">
+            <p>Not all automated testing is the same. There are <b>three broad types</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Automated scanners</h5>
+            <p class="font-sm">Tools like axe, WAVE and Lighthouse check the page against a set of rules, as it is when the scan runs.</p>
+            <p class="font-sm"><b>Strength:</b> fast, consistent and repeatable.<br>
+            <b class="font-sm">Weakness:</b> they only see the page at rest, and can’t make judgement calls.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Scripted browser tests</h5>
+            <p class="font-sm">Tools like Playwright and Cypress act like a user: pressing keys, opening menus and dialogs, then checking what happens.</p>
+            <p class="font-sm"><b>Strength:</b> can test behaviour, not just markup.<br>
+            <b class="font-sm">Weakness:</b> someone has to decide what “correct” looks like, then write and maintain each test.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. AI-assisted tools</h5>
+            <p class="font-sm">Newer tools use AI to attempt judgement calls, such as whether alt text matches an image or link text makes sense.</p>
+            <p class="font-sm"><b>Strength:</b> can flag issues rule-based tools can’t.<br>
+            <b class="font-sm">Weakness:</b> results can vary between runs, and can be confidently wrong.</p>
+          </section>
+
+          <!-- What tools still struggle with -->
+
+          <section data-background="#EDEBEB">
+            <p>Even with all three types, there are things tools <b>still struggle with</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>1. Meaningful use of content and context</h5>
+            <p>Scanners can’t judge if headings, links or alt text make sense in context. AI tools can suggest problems, but their suggestions still need a human check.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>2. Visible focus indicators</h5>
+            <p>Tools can detect that a focus style exists, but rarely confirm it’s clearly visible or has enough contrast against its surroundings.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>3. Logical reading and focus order</h5>
+            <p>Scanners don’t assess order. Scripted tests can check tab order, but only against an order a person has decided is correct.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>4. Keyboard use in complex components</h5>
+            <p>Scanners can’t test how menus, dialogs or custom controls behave. Scripted tests can, but only for the behaviour someone has written a test for.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>5. Target size and spacing</h5>
+            <p>Tools can now measure targets against the 24 by 24 pixel minimum, but deciding whether an exception applies still needs judgement.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>6. Error prevention and recovery</h5>
+            <p>Tools can check that error messages exist and are linked to fields, but not whether they actually help users fix the problem.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>7. Clear, understandable language</h5>
+            <p>Readability tools can estimate reading level, but can’t judge whether content is clear for its intended audience.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>8. Timing and animation issues</h5>
+            <p>Tools don’t reliably detect timeouts, unexpected motion, or whether users can pause, stop or extend them.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>9. Captions and transcripts</h5>
+            <p>Tools can check that a caption track exists, but not whether captions or transcripts are accurate, complete or synchronised.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>10. Authentic user experience for people with disability</h5>
+            <p>No tool can show what it’s really like to use a site with a screen reader, voice control or switch access. That needs testing with people with disability.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>However, these tools are still very useful, as long as we are aware of <b>what each type can and can’t do</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-axe-core-playwright">
+          <section data-background="#EDEBEB">
+            <h3>axe-core and Playwright</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>axe-core</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core is an <b>accessibility testing engine</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>If you&rsquo;ve used the axe DevTools browser extension, <b>you&rsquo;ve already used axe-core</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It&rsquo;s the engine inside that extension, and inside many other accessibility tools, <b>including Lighthouse</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core runs <b>inside the web page itself</b>.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">Page loads
+↓
+axe-core runs inside the page
+↓
+axe-core returns its results</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>That&rsquo;s all any axe tool does.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The extension, the command line and Playwright all do <b>these same three steps</b>. They just show the results differently.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core checks the page for <b>many automatically detectable problems</b> at once, such as:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Missing accessible names</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Invalid ARIA</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Colour contrast</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Form labelling</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Landmark and heading issues</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each problem is given an <b>impact level</b>:</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Minor</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Moderate</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Serious</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Critical</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core also reports things it <b>can&rsquo;t decide on its own</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These are called <b>&ldquo;incomplete&rdquo; results</b>, and need a person to check them. A common example is text over a background image.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But axe-core can only detect issues that <b>can be determined automatically</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>It can&rsquo;t tell us:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Is the focus order logical?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Is a visible label meaningful?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Does the alt text describe the image?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Does it make sense with a screen reader?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Is the keyboard interaction right for this component?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So axe-core gives us <b>automated accessibility testing</b>, not a complete accessibility audit.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Playwright</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright is a <b>browser automation and testing framework</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It can control a browser <b>much like a person would</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Developers install it with a couple of commands. <b>You don&rsquo;t need to.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Playwright can:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Open a page and log in</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Click buttons and complete forms</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Open dialogs</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use keyboard commands</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Wait for dynamic content</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Take screenshots</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means Playwright can get an application into <b>the exact state we want to test</b>.</p>
+          </section>
+          
+          <section data-background="#222">
+<pre><code contenteditable="true">Open checkout page
+↓
+Add a product to the cart
+↓
+Open the cart dialog
+↓
+Run an accessibility test</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright and axe-core work <b>well together</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core can check a page, but it can&rsquo;t navigate through an application.</p>
+            <p>Playwright does the navigating, then <b>runs axe-core in the page it has opened</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There&rsquo;s even an official package that <b>connects the two</b>:</p>
+            <p><code>@axe-core/playwright</code></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But Playwright can also <b>test accessibility on its own</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Playwright can check if elements have:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>The expected accessible name?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>The expected accessible description?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>The expected role?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>The expected error message connected to it?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Keyboard focus right now?</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, Playwright can:</p>
+            <ol class="font-sm">
+              <li>Open the dialog</li>
+              <li>Press Escape</li>
+              <li>Check the dialog has closed</li>
+              <li>Check focus went back to the button that opened it</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is <b>functional accessibility testing</b>: checking that things actually <em>behave</em> accessibly, not just that the code looks right to a scanner.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Reporting</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>On its own, axe-core just returns a list of results. It&rsquo;s accurate, but <b>raw</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright gives us <b>control over reporting</b>, such as:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A readable report showing which tests passed and failed</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Screenshots of the page when a test fails</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Choosing which results matter, such as only serious and critical issues</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Attaching the axe-core results to the report for later</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Pass or fail</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Development teams often run tests <b>automatically</b>, every time code changes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This is called <b>continuous integration</b>, or CI.</p>
+          </section>
+
+          <section data-background="#222">
+<pre><code>Developer changes code
+↓
+Tests run automatically
+↓
+All tests pass?  →  Code can go live
+Any test fails?  →  Code is blocked</code></pre>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Every Playwright test either <b>passes or fails</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So a failing accessibility test can <b>stop inaccessible code from reaching users</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Accessibility becomes a <b>gate that code has to pass through</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And because it&rsquo;s a gate, <b>teams decide what fails the build</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, a team might fail the build on <b>every axe-core violation</b>, or only on <b>serious and critical issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>But notice</b>: A person still has to decide what &ldquo;correct&rdquo; looks like.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Different variations</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><img src="assets/img/axe-core-progress-diagram.png" style="width: 80%;" alt=""></p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-measuring-the-importance-of-issues">
+          <section data-background="#EDEBEB">
+            <h3>Measuring the importance of issues</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Three concepts can be independently reviewed to determine <b>the importance of accessibility issues</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol>
+              <li>Impact on users</li>
+              <li>Impact on the business</li>
+              <li>Frequency</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Impact on users</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This defines how the issue <b>impacts one or more types of users&rsquo; ability</b> to accomplish a task.</p>
+           </section>
+
+          <section data-background="#EDEBEB">
+            <h5>A task could include:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Filling in a form.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Navigating to a location.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Accessing content.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Even choosing a date from a date picker.</li>              
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table class="font-xxs">
+              <thead>
+                <tr>
+                  <th>Rating</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Critical</th>
+                  <td>Stops one or more types of users from completing a task.</td>
+                </tr>
+                <tr>
+                  <th>High</th>
+                  <td>
+                    <p>May cause serious problems or significant inconvenience to one or more types of users.</p>
+                    <p>At least one method must be available that allows these users to complete the task, even if it requires additional time.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Moderate</th>
+                  <td>May cause problems or frustrations for one or more types of users.</td>
+                </tr>
+                <tr>
+                  <th>Low</th>
+                  <td>May be an inconvenience or irritation to one or more types of users.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Impact on the business</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This defines the <b>impact on the business</b> if the task can&rsquo;t be completed.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rating</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>High</th>
+                  <td>Will have a significant impact on the business.</td>
+                </tr>
+                <tr>
+                  <th>Moderate</th>
+                  <td>May have an impact on the business.</td>
+                </tr>
+                <tr>
+                  <th>Low</th>
+                  <td>Will have little to no impact on the business.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Frequency</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This defines <b>how often the issue occurs</b> across the tested pages/processes.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rating</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>High</th>
+                  <td>The issue occurs on almost all tested pages.</td>
+                </tr>
+                <tr>
+                  <th>Moderate</th>
+                  <td>The issue occurs numerous times within tested pages.</td>
+                </tr>
+                <tr>
+                  <th>Low</th>
+                  <td>The issue occurs rarely across tested pages.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>A scorecard?</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>The scoring system</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Score: 4</th>
+                  <th>Score: 3</th>
+                  <th>Score: 2</th>
+                  <th>Score: 1</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Impact users</th>
+                  <td>Critical</td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Business impact</th>
+                  <td></td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Frequency</th>
+                  <td></td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>An example?</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Score: 4</th>
+                  <th>Score: 3</th>
+                  <th>Score: 2</th>
+                  <th>Score: 1</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Impact users</th>
+                  <td>Critical</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><input type="text" value="4" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Business impact</th>
+                  <td></td>
+                  <td>High</td>
+                  <td></td>
+                  <td></td>
+                  <td><input type="text" value="3" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Frequency</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Low</td>
+                  <td><input type="text" value="1" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul>
+              <li>Impact on users: <b>4</b></li>
+              <li>Impact on the business: <b>3</b></li>
+              <li>Frequency: <b>1</b></li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These should remain <b>three separate numbers</b> because each team may rate categories differently.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>For example, some teams may consider &lsquo;Impact on the business&rsquo; <b>the most important criterion</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Some examples for you to try</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 1</h5>
+            <div class="text-example">
+              <p><b>Issue</b>: A keyboard-only user cannot choose an item from a navigation dropdown menu as the menu is not keyboard accessible.</p>
+              <p><b>Business impact</b>: Affects all pages, including pages critical for the business</p>
+              <p><b>Frequency</b>: Affects all pages.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 1 score:</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Score: 4</th>
+                  <th>Score: 3</th>
+                  <th>Score: 2</th>
+                  <th>Score: 1</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Impact users</th>
+                  <td>Critical</td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Business impact</th>
+                  <td></td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Frequency</th>
+                  <td></td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 2</h5>
+            <div class="text-example">
+              <p><b>Issue</b>: The sorting function on a sortable table does not work for screen reader users.</p>
+              <p><b>Business impact</b>: This is a product comparison table for new products.</p>
+               <p><b>Frequency</b>: Occurs once on the site.</p>
+            </div>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Example 2 score:</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Score: 4</th>
+                  <th>Score: 3</th>
+                  <th>Score: 2</th>
+                  <th>Score: 1</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Impact users</th>
+                  <td>Critical</td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Business impact</th>
+                  <td></td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+                <tr>
+                  <th>Frequency</th>
+                  <td></td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                  <td>Low</td>
+                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Other examples</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>A heading order issue?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>A colour-contrast issue?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>An accessible name on a button issue?</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-roles-and-responsibilities">
+          <section data-background="#EDEBEB">
+            <h3>Discussion</h3>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
