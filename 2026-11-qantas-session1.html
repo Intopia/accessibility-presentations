@@ -114,7 +114,8 @@
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-an-overview-of-some-testing-tools">Accessibility testing tools: An overview</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-strengths-and-weaknesses">Accessibility testing tools: Strengths and weaknesses</a></li>
               <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-axe-core-playwright">axe-core and Playwright</a></li>
-              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-measuring-the-importance-of-issues">Measuring the importance of issues</a></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="#slide-defining-the-severity-of-accessibility-issues">Defining the severity of accessibility issues</a></li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
@@ -618,6 +619,42 @@
             <p class="font-xxs"><a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score" target="_blank">Source</a></p>
           </section>
 
+          <!-- False positives -->
+
+          <section data-background="#EDEBEB">
+            <p>The reverse is also true. Automated tools can produce <b>false positives</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>What is a false positive?</h5>
+            <p class="font-sm">A result that a tool flags as an issue, but when a person checks it in context, <b>it isn&rsquo;t actually an accessibility defect</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Some common examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Colour contrast flagged on text over images or gradients, where the tool can&rsquo;t work out the real background colour.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Visually hidden text, intended only for screen reader users, flagged for low contrast.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Newer HTML or ARIA patterns flagged because the tool hasn&rsquo;t caught up yet.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Many tools also report <b>warnings or &ldquo;needs review&rdquo; items</b>. These are prompts for a person to check, not confirmed failures.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So a flagged result <b>doesn&rsquo;t necessarily mean</b> there is an accessibility issue.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Findings need to be <b>validated in context</b> before an issue is raised.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Raising false positives wastes team time and can <b>erode trust</b> in both the tools and the people reporting the issues.</p>
+          </section>
+
           <!-- Three kinds of automation -->
 
           <section data-background="#EDEBEB">
@@ -954,15 +991,48 @@ Any test fails?  →  Code is blocked</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>But notice</b>: A person still has to decide what &ldquo;correct&rdquo; looks like.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <h4>Different variations</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><img src="assets/img/axe-core-progress-diagram.png" style="width: 80%;" alt=""></p>
+            <p>Some teams run axe-core <b>from the command line</b>, to check pages, sections or entire sites.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>They can feed in <b>a list of URLs</b> and get basic reports back.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some teams use axe-core with Playwright, often <b>alongside Storybook</b>, to check each component.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>In some cases, a failing check <b>stops the CI pipeline</b>, so issues can&rsquo;t be published.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some teams use Playwright&rsquo;s advanced features to <b>test how the UI behaves</b>. They may have hundreds of small tests ready to run on a site or feature.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And some teams now combine these options with <b>AI agents</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Agents can:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Write Playwright tests from a description</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Drive a browser directly</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use Playwright&rsquo;s own test agents (very new)</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But an agent can write a test that passes because it checks what the page <b>does</b>, not what it <b>should</b> do.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Key message</b>: In every one of these scenarios, a person still has to decide what &ldquo;correct&rdquo; looks like.</p>
           </section>
         </section>
 
@@ -974,29 +1044,17 @@ Any test fails?  →  Code is blocked</code></pre>
 
 
 
-        <section id="slide-measuring-the-importance-of-issues">
+        <section id="slide-defining-the-severity-of-accessibility-issues">
           <section data-background="#EDEBEB">
-            <h3>Measuring the importance of issues</h3>
+            <h3>Defining the severity of accessibility issues</h3>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Three concepts can be independently reviewed to determine <b>the importance of accessibility issues</b>.</p>
-          </section>
+            <p>We will now look at a common method used to <b>rank the severity</b> of accessibility issues.</p>
+           </section>
 
           <section data-background="#EDEBEB">
-            <ol>
-              <li>Impact on users</li>
-              <li>Impact on the business</li>
-              <li>Frequency</li>
-            </ol>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>1. Impact on users</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This defines how the issue <b>impacts one or more types of users&rsquo; ability</b> to accomplish a task.</p>
+            <p>This method defines how the issue <b>impacts one or more types of users&rsquo; ability</b> to accomplish a task.</p>
            </section>
 
           <section data-background="#EDEBEB">
@@ -1042,287 +1100,56 @@ Any test fails?  →  Code is blocked</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <h4>2. Impact on the business</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This defines the <b>impact on the business</b> if the task can&rsquo;t be completed.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <table>
-              <thead>
-                <tr>
-                  <th>Rating</th>
-                  <th>Explanation</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>High</th>
-                  <td>Will have a significant impact on the business.</td>
-                </tr>
-                <tr>
-                  <th>Moderate</th>
-                  <td>May have an impact on the business.</td>
-                </tr>
-                <tr>
-                  <th>Low</th>
-                  <td>Will have little to no impact on the business.</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>3. Frequency</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>This defines <b>how often the issue occurs</b> across the tested pages/processes.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <table>
-              <thead>
-                <tr>
-                  <th>Rating</th>
-                  <th>Explanation</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>High</th>
-                  <td>The issue occurs on almost all tested pages.</td>
-                </tr>
-                <tr>
-                  <th>Moderate</th>
-                  <td>The issue occurs numerous times within tested pages.</td>
-                </tr>
-                <tr>
-                  <th>Low</th>
-                  <td>The issue occurs rarely across tested pages.</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>A scorecard?</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>The scoring system</h5>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Score: 4</th>
-                  <th>Score: 3</th>
-                  <th>Score: 2</th>
-                  <th>Score: 1</th>
-                  <th>Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Impact users</th>
-                  <td>Critical</td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Business impact</th>
-                  <td></td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Frequency</th>
-                  <td></td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>An example?</h5>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Score: 4</th>
-                  <th>Score: 3</th>
-                  <th>Score: 2</th>
-                  <th>Score: 1</th>
-                  <th>Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Impact users</th>
-                  <td>Critical</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td><input type="text" value="4" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Business impact</th>
-                  <td></td>
-                  <td>High</td>
-                  <td></td>
-                  <td></td>
-                  <td><input type="text" value="3" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Frequency</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Low</td>
-                  <td><input type="text" value="1" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <ul>
-              <li>Impact on users: <b>4</b></li>
-              <li>Impact on the business: <b>3</b></li>
-              <li>Frequency: <b>1</b></li>
+            <h5>A simple way to think about it:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Critical</b>: Some users cannot proceed with the task.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>High</b>: Some users can proceed with a workaround.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Moderate</b>: Some users can proceed with frustration.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Low</b>: Some users can proceed with inconvenience.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>These should remain <b>three separate numbers</b> because each team may rate categories differently.</p>
+            <h4>Let&rsquo;s explore examples</h4>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>For example, some teams may consider &lsquo;Impact on the business&rsquo; <b>the most important criterion</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h4>Some examples for you to try</h4>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Example 1</h5>
-            <div class="text-example">
-              <p><b>Issue</b>: A keyboard-only user cannot choose an item from a navigation dropdown menu as the menu is not keyboard accessible.</p>
-              <p><b>Business impact</b>: Affects all pages, including pages critical for the business</p>
-              <p><b>Frequency</b>: Affects all pages.</p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Example 1 score:</h5>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Score: 4</th>
-                  <th>Score: 3</th>
-                  <th>Score: 2</th>
-                  <th>Score: 1</th>
-                  <th>Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Impact users</th>
-                  <td>Critical</td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Business impact</th>
-                  <td></td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Frequency</th>
-                  <td></td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Example 2</h5>
-            <div class="text-example">
-              <p><b>Issue</b>: The sorting function on a sortable table does not work for screen reader users.</p>
-              <p><b>Business impact</b>: This is a product comparison table for new products.</p>
-               <p><b>Frequency</b>: Occurs once on the site.</p>
-            </div>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Example 2 score:</h5>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Score: 4</th>
-                  <th>Score: 3</th>
-                  <th>Score: 2</th>
-                  <th>Score: 1</th>
-                  <th>Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Impact users</th>
-                  <td>Critical</td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Business impact</th>
-                  <td></td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-                <tr>
-                  <th>Frequency</th>
-                  <td></td>
-                  <td>High</td>
-                  <td>Moderate</td>
-                  <td>Low</td>
-                  <td><input type="text" style="width: 50px; font-size: .8em; text-align: center; padding: .1em .3em; color: #C03C0C; font-weight: bold;"></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Other examples</h5>
+            <p>A primary navigation menu that is not keyboard accessible?</p>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>A heading order issue?</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>A colour-contrast issue?</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>An accessible name on a button issue?</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Critical</b>: Some users cannot proceed with the task.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>High</b>: Some users can proceed with a workaround.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Moderate</b>: Some users can proceed with frustration.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Low</b>: Some users can proceed with inconvenience.</li>
+            </ul>
+           </section>
+
+          <section data-background="#EDEBEB">
+            <p>A page has headings that jump from level 2 to level 5?</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Critical</b>: Some users cannot proceed with the task.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>High</b>: Some users can proceed with a workaround.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Moderate</b>: Some users can proceed with frustration.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Low</b>: Some users can proceed with inconvenience.</li>
+            </ul>
+           </section>
+
+          <section data-background="#EDEBEB">
+            <p>Links in the content have insufficient colour contrast?</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Critical</b>: Some users cannot proceed with the task.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>High</b>: Some users can proceed with a workaround.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Moderate</b>: Some users can proceed with frustration.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Low</b>: Some users can proceed with inconvenience.</li>
+            </ul>
+           </section>
+
+          <section data-background="#EDEBEB">
+            <p>An input field has no accessible name?</p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Critical</b>: Some users cannot proceed with the task.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>High</b>: Some users can proceed with a workaround.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Moderate</b>: Some users can proceed with frustration.</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><b>Low</b>: Some users can proceed with inconvenience.</li>
             </ul>
           </section>
         </section>
