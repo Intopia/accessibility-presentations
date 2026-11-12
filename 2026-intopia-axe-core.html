@@ -59,13 +59,17 @@
               <li><a href="#slide-what-is-playwright">What is Playwright?</a></li>
               <li><a href="#slide-setting-up-and-running-playwright">Setting up and running Playwright</a></li>
               <li><a href="#slide-two-key-features-of-playwright">Two key features of Playwright</a></li>
-              <li><a href="#slide-playwrights-most-powerful-feature">Playwright's most powerful feature</a></li>
+              <li><a href="#slide-playwrights-most-powerful-feature">Playwright&#8217;s most powerful feature</a></li>
               <li><a href="#slide-going-beyond-axe-core-and-playwright">Going beyond axe-core and Playwright</a></li>
             </ol>
           </section>
 
           <section data-background="#EDEBEB">
-            <p><b>Before we start</b>: I'm no expert in any of this!</p>
+            <p>This presentation assumes you know almost <b>nothing about axe-core or Playwright</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>And importantly, I&#8217;m <b>no expert</b> in any of this!</p>
           </section>
         </section>
 
@@ -82,37 +86,29 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>At some point, you may find yourself <b>engaging with technical teams</b> who use axe-core or Playwright.</p>
+            <p>At some point, you may find yourself engaging with teams who <b>already use, or are considering using, axe-core or Playwright</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>So, what's <b>your role</b> in all of this?</p>
+            <p>Here&#8217;s the <b>short answer</b> if you ever get into this situation:</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>You don't need to become a developer</h5>
+            <h5>You DON&#8217;T need to know:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>You don't need to write scripts.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>You don't need to implement axe-core or Playwright.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How to write scripts.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>How to implement axe-core or Playwright.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>You do need to understand:</h5>
+            <h5>You DO need to understand:</h5>
+            <p class="font-sm">How these tools work, so you can help teams:</p>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>What these tools can and cannot test.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>What a "pass" actually means.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Where human testing is still needed.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>Your role could include:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Helping teams understand where axe-core and Playwright fit into broader testing strategies.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Explaining what these tools can and cannot test.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Helping define complex behavioural tests in Playwright.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Reviewing results and identifying gaps.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Decide where they fit in broader testing strategies.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Understand what they can and cannot test.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Define behavioural tests in Playwright.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Identify where human testing is still needed.</li>
             </ul>
           </section>
 
@@ -161,10 +157,6 @@ axe-core returns its results</code></pre>
               <li><span aria-hidden="true" class="icon icon-check"></span>Alongside Playwright for automated testing.</li>
             </ul>
           </section>
-
-          <section data-background="#EDEBEB">
-            <p>Playwright can also run tests <b>without axe-core</b>.</p>
-          </section>
         </section>
 
 
@@ -184,7 +176,7 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Developers sometimes use this approach for quick checks and debugging. <b>Let's try it ourselves</b>.</p>
+            <p>Developers sometimes use this approach for quick checks and debugging. <b>Let&#8217;s try it ourselves</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -222,15 +214,15 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>While axe-core in the terminal can test multiple URLs, <b>it needs to be told which URLs to test</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <p>To test an entire site, developers need <b>a way to discover and list its pages</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>How can they do this?</h5>
+            <p>While axe-core in the terminal can test multiple URLs, <b>it needs to be told which URLs to test</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>How can they find and list multiple pages?</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>Use an XML sitemap.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Use a web crawler to discover links.</li>
@@ -239,11 +231,12 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Some development use axe-core from the terminal to run accessibility checks across multiple pages, <b>without ever using Playwright</b>.</p>
+            <h5>Some developers stop here</h5>
+            <p>They use axe-core from the terminal to run accessibility checks across multiple pages, without ever using Playwright.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But other teams want to go further. <b>That's where Playwright comes in</b>.</p>
+            <p>But other teams want to go further. <b>That&#8217;s where Playwright comes in</b>.</p>
           </section>
         </section>
 
@@ -261,14 +254,26 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Videos of terminal commands</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Run axe-core on a page</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Run WCAG rules only</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Make axe report a failure</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Test more than one page at once</li>
+            <ul class="font-xs">
+              <li><a href="https://intopia.github.io/exercise/assets/mp4/console1.mp4" target="_blank"><b>console1.mp4</b></a>:
+                <ul>
+                  <li>Step 2. Run axe on a test page</li>
+                  <li>Step 3. Read the results</li>
+                </ul>
+                </li>
+              <li><a href="https://intopia.github.io/exercise/assets/mp4/console2.mp4" target="_blank"><b>console2.mp4</b></a>:
+                <ul>
+                  <li>Test the fixed page</li>
+                  <li>Test more than one page at once</li>
+                </ul>
+              </li>
+              <li><a href="https://intopia.github.io/exercise/assets/mp4/console4.mp4" target="_blank"><b>console4.mp4</b></a>:
+                <ul>
+                  <li>Save results as a file</li>
+                  <li>Write and run a report</li>
+                </ul>
+              </li>
             </ul>
-            <p class="font-xs">console1, console2, console4</p>
           </section>
         </section>
 
@@ -325,20 +330,24 @@ Run an accessibility test</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>axe-core can check a page, but it <b>can&rsquo;t navigate through an application</b>.</p>
+            <p>axe-core can check a page, but it <b>can&#8217;t navigate through an application</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Playwright can do the navigating, then <b>run axe-core in the page it has opened</b>.</p>
+            <p>Playwright can do the navigating and <b>getting the page into the state you want</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>There&rsquo;s even an official package that <b>connects the two</b>:</p>
+            <p>Then <b>run axe-core in the page it has opened</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There&#8217;s even an official package that <b>connects the two</b>:</p>
             <p><code>@axe-core/playwright</code></p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But as mentioned before, Playwright can also test accessibility-related behaviour <b>without axe-core</b>.</p>
+            <p>Playwright can also test accessibility-related behaviour <b>without axe-core</b>.</p>
           </section>
         </section>
 
@@ -443,7 +452,7 @@ npx playwright install chromium</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>This means developers can <b>find accessibility issues while they're working</b>, rather than waiting for a formal audit.</p>
+            <p>This means developers can <b>find accessibility issues while they&#8217;re working</b>, rather than waiting for a formal audit.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -480,7 +489,7 @@ Any test fails?  →  Code is blocked</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Who decides what should cause a failure? <b>That's where accessibility specialists can help</b>.</p>
+            <p>Who decides what should cause a failure? <b>That&#8217;s where accessibility specialists can help</b>.</p>
           </section>
         </section>
 
@@ -494,7 +503,7 @@ Any test fails?  →  Code is blocked</code></pre>
 
         <section id="slide-playwrights-most-powerful-feature">
           <section data-background="#EDEBEB">
-            <h3>Playwright's most powerful feature</h3>
+            <h3>Playwright&#8217;s most powerful feature</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -520,7 +529,7 @@ Any test fails?  →  Code is blocked</code></pre>
               <li><span aria-hidden="true" class="icon icon-check"></span>Find the disclosure buttons.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Activate each button with Enter.</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Check whether the content opens or closes.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Check whether aria-expanded matches the state.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check whether <code>aria-expanded</code> matches the state.</li>
             </ul>
           </section>
 
@@ -557,6 +566,32 @@ Any test fails?  →  Code is blocked</code></pre>
 
 
 
+        <section id="slide-playwright-activity">
+          <section data-background="#EDEBEB">
+            <h3>Video</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="font-xs">
+              <li><a href="https://intopia.github.io/exercise/assets/mp4/playwright2.mp4" target="_blank"><b>playwright2.mp4</b></a>:
+                <ul>
+                  <li>View the HTML page example</li>
+                  <li>Run the test in Terminal</li>
+                  <li>Review the HTML report</li>
+                  <li>Review the errors in Terminal</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
         <section id="slide-going-beyond-axe-core-and-playwright">
           <section data-background="#EDEBEB">
             <h3>Going beyond axe-core and Playwright</h3>
@@ -577,14 +612,9 @@ Any test fails?  →  Code is blocked</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Playwright’s own agents</h5>
+            <h5>Playwright&#8217;s own agents</h5>
             <p>Agents can plan tests, generate scripts and attempt to repair failing tests.</p>
-            <p class="font-xs"><a href="playwright.dev/docs/test-agents" target="_blank">Source</a></p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>The builder checks its own work</h5>
-            <p>Build, test, fix, repeat.</p>
+            <p class="font-xs"><a href="https://playwright.dev/docs/test-agents" target="_blank">Source</a></p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -619,7 +649,137 @@ Any test fails?  →  Code is blocked</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <img style="width: 80%" src="assets/img/axe-core-progress-diagram.png" alt="">
+            <p>Developers may use <b>any combination of these approaches</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm">
+              <li><b>axe-core in the browser console</b>:<br>Quick checks, debugging and experimentation.</li>
+              <li><b>axe-core in the terminal</b>:<br>Repeatable checks across individual or multiple pages, with reporting and configurable failures.</li>
+              <li><b>axe-core with Playwright</b>:<br>Run axe-core checks within automated workflows, including on code changes.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ol class="font-sm" start="4">
+              <li><b>axe-core with Playwright for complex testing</b>:<br>Navigate applications, change states and run axe-core at specific points.</li>
+              <li><b>Playwright without axe-core</b>:<br>Test specific behaviours, such as keyboard navigation, focus management and form validation.</li>
+              <li><b>AI agents</b>:<br>Help generate tests, explore applications, run checks and identify potential problems using any of these approaches.</li>
+            </ol>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There isn&#8217;t <b>one correct approach</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Teams can choose and combine tools <b>based on what they need to test</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As we all know, <b>human testing is still needed</b>, regardless of the approach.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-other-testing-tools">
+          <section data-background="#EDEBEB">
+            <h3>Other automated testing tools</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core and Playwright are not the only options. Developers may use <b>other tools and combinations</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Two examples:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Cypress with cypress-axe</b>: Uses axe-core within Cypress tests.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Pa11y</b>: Runs automated accessibility checks using HTML_CodeSniffer, axe-core or both.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Different tools, but many of the <b>same concepts, strengths and limitations</b> apply.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-next">
+          <section data-background="#EDEBEB">
+            <h3>What next?</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>My axe-core and Playwright tutorials</h5>
+            <p>A series of six tutorials, starting with the basics and moving into practical automation.</p>
+            <p class="font-xs">
+              <a href="https://intopia.github.io/exercise/axe-core-playwright-introduction.html" target="_blank">Introduction to axe-core and Playwright</a>
+            </p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Two courses on Udemy</h5>
+            <ul class="icon-list font-sm">
+              <li>
+                <span aria-hidden="true" class="icon icon-check"></span>
+                <a href="https://www.udemy.com/course/playwright-from-zero-to-hero/" target="_blank">Playwright: Web Automation Testing From Zero to Hero</a>
+              </li>
+              <li>
+                <span aria-hidden="true" class="icon icon-check"></span>
+                <a href="https://www.udemy.com/course/playwright-e2e-automation-framework-webapidevice-2025/" target="_blank">Playwright E2E Automation With TypeScript, MCP &amp; AI Agents</a>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Languages and formats for describing accessibility</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.w3.org/TR/act-rules-format/" target="_blank">ACT Rules Format</a>: Defining accessibility test rules.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://www.w3.org/TR/EARL10-Schema/" target="_blank">EARL</a>: Recording and sharing accessibility test results.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://cucumber.io/docs/gherkin/reference/" target="_blank">Gherkin</a>: Describing expected behaviour using Given, When, Then.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><a href="https://ucdl.org/" target="_blank">UCDL</a>: Describing accessibility use cases that can become automated browser tests.</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-conclusion">
+          <section data-background="#EDEBEB">
+            <h3>Conclusion</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>As mentioned at the start, <b>you don't need to know all the technical details</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>You already have the accessibility knowledge. It's about <b>applying that knowledge to automated testing</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h3>Questions?</h3>
           </section>
         </section>
 
