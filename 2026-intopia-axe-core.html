@@ -86,6 +86,10 @@
           </section>
 
           <section data-background="#EDEBEB">
+            <p>So, what's <b>your role</b> in all of this?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <h5>You don't need to become a developer</h5>
             <ul class="icon-list font-sm">
               <li><span aria-hidden="true" class="icon icon-check"></span>You don't need to write scripts.</li>
@@ -103,19 +107,19 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>Your role is important</h5>
+            <h5>Your role could include:</h5>
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Define what accessible behaviour looks like.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Help teams decide what needs testing.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Review results and identify gaps.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helping teams understand where axe-core and Playwright fit into broader testing strategies.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Explaining what these tools can and cannot test.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Helping define complex behavioural tests in Playwright.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Reviewing results and identifying gaps.</li>
             </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>You already know how to test accessibility. <b>These tools help automate parts of that process</b>.</p>
+            <p>The aim of this presentation is to help you understand <b>what these tools do and where you fit in</b>.</p>
           </section>
         </section>
-
 
 
 <!--  –––––––––––––––––––––––––
@@ -134,15 +138,7 @@
           </section>
 
           <section data-background="#EDEBEB">
-            <p>If you&rsquo;ve used the axe DevTools browser extension, <b>you&rsquo;ve already used axe-core</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>It&rsquo;s the engine inside that extension, and inside many other accessibility tools, <b>including Lighthouse</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>axe-core runs <b>inside the web page itself</b>.</p>
+            <p>It runs <b>inside the web page itself</b>.</p>
           </section>
 
           <section data-background="#222">
@@ -154,15 +150,20 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>That's the <b>basic process</b> behind axe-core testing.</p>
+            <p>The axe-core engine can be used in <b>different ways</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>The extension, command line and Playwright <b>all use the same testing engine</b>, but in different ways.</p>
+            <h5>For example:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Inside tools such as axe DevTools and Lighthouse.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>From the terminal.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Alongside Playwright for automated testing.</li>
+            </ul>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>So axe-core gives us <b>automated accessibility testing</b>, not a complete accessibility audit.</p>
+            <p>Playwright can also run tests <b>without axe-core</b>.</p>
           </section>
         </section>
 
@@ -179,11 +180,11 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Developers usually run axe-core through <b>automated tools</b>.</p>
+            <p>The browser console is one way to run axe-core <b>directly on a page</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But we can run it directly in the browser console to <b>see how the engine works</b>.</p>
+            <p>Developers sometimes use this approach for quick checks and debugging. <b>Let's try it ourselves</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -208,7 +209,55 @@ axe-core returns its results</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Some teams run axe-core from the command line to check <b>individual pages or multiple pages at once</b>.</p>
+            <p>Developers can also run axe-core from the terminal, which opens up <b>more powerful testing options</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>Using the terminal, they can:</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Test multiple pages at once.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Generate basic reports.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Define what counts as a failure.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>While axe-core in the terminal can test multiple URLs, <b>it needs to be told which URLs to test</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>To test an entire site, developers need <b>a way to discover and list its pages</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h5>How can they do this?</h5>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use an XML sitemap.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use a web crawler to discover links.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use an AI agent to explore the site.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Some development use axe-core from the terminal to run accessibility checks across multiple pages, <b>without ever using Playwright</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But other teams want to go further. <b>That's where Playwright comes in</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-axe-core-terminal-activity">
+          <section data-background="#EDEBEB">
+            <h3>Videos!</h3>
           </section>
 
           <section data-background="#EDEBEB">
@@ -219,30 +268,10 @@ axe-core returns its results</code></pre>
               <li><span aria-hidden="true" class="icon icon-check"></span>Make axe report a failure</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>Test more than one page at once</li>
             </ul>
-            <p class="font-xs">console1.mp4, console2.mp4, console3.mp4, console4.mp4</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>Same axe-core engine but with <b>more power</b>!</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <h5>With terminal, teams can:</h5>
-            <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Test multiple pages.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Generate basic reports.</li>
-              <li><span aria-hidden="true" class="icon icon-check"></span>Define what counts as a failure.</li>
-            </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p><b>Some development teams stop here</b>. They use axe-core from the terminal to run accessibility checks across multiple pages, without ever using Playwright.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>But other teams want to go further. <b>That's where Playwright comes in</b>.</p>
+            <p class="font-xs">console1, console2, console4</p>
           </section>
         </section>
+
 
 
 
@@ -309,7 +338,7 @@ Run an accessibility test</code></pre>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>But Playwright can also test accessibility-related behaviour <b>without axe-core</b>.</p>
+            <p>But as mentioned before, Playwright can also test accessibility-related behaviour <b>without axe-core</b>.</p>
           </section>
         </section>
 
