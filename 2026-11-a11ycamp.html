@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Playwright for accessibility testing: powerful but fragile</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+b,
+.instructions-heading,
+.reveal code { color: #217331; }
+.black { color: black; }
+b.heavy { color: black; font-weight: 700; }
+h3 { color: #fff; font-weight: 700; font-size: 3em; }
+h4 { color: #217331; font-weight: 700; font-size: 2em; }
+
+</style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#EDEBEB">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+        <section data-background="#217331">
+          <h1 style="font-size: 2.4em;">Playwright for accessibility testing: </h1>
+          <h2 style="font-size: 1.8em;">Powerful but fragile</h2>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-introduction">
+          <section data-background="#217331">
+            <h3>The aim</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>A quick overview of Playwright</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Strengths and weaknesses</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Where it works best</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But first, <b>a quick side note on axe-core</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+
+        <section id="slide-what-is-axe-core">
+          <section data-background="#217331">
+            <h3>axe-core</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>axe-core is an <b>accessibility testing engine</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It comes with a large set of <b>predefined accessibility rules</b> that can check for issues with:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Images</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Forms and interactive controls</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>HTML semantics</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Use of ARIA</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Colour contrast</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Page titles and language</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>The axe-core engine can be used in <b>different ways</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>For example:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Inside tools such as axe DevTools and Lighthouse</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>From the terminal</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Integrated with Playwright for automated testing</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>They all follow the same three steps:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Load axe-core into the page.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Run its predefined accessibility rules.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Report the results.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, when you use axe DevTools to scan a page, <b>axe-core runs inside that page</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But axe-core has <b>limitations</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Can check a page <b>in its current state</b></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>Cannot <b>navigate between pages</b></li>
+              <li><span aria-hidden="true" class="icon icon-circle-xmark"></span>Cannot <b>interact with pages</b></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-what-is-playwright">
+          <section data-background="#217331">
+            <h3>Playwright</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright is a <b>browser automation and testing framework</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It can control a browser <b>much like a person would</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright and axe-core <b>work well together</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>There&#8217;s even an official package that <b>connects the two</b>:</p>
+            <p><code>@axe-core/playwright</code></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But Playwright can also <b>run accessibility tests without axe-core</b>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+
+        <section id="slide-key-features-of-playwright">
+          <section data-background="#217331">
+            <h3>Features</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright is often used for <b>three main purposes in accessibility testing</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Reporting</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright can produce <b>detailed HTML reports</b> showing test results and failures.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Blocking builds and releases</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>When a Playwright test fails, CI can be configured to <b>stop a build or block a release</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This can <b>prevent</b> known accessibility issues from reaching production.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Running automatically</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Once written, tests can <b>run automatically</b> at different stages of development.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>For example:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>During development</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Whenever code is committed</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>On a regular schedule</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But Playwright can do <b>much more than run axe-core scans</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Navigate to pages</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright can open pages, follow links and even <b>navigate through multi-page processes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>5. Interact with pages</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>For example, Playwright can:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Click or use the keyboard</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Type and submit forms</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Open and close dialogs</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Wait for dynamic content</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>Some accessibility testing examples</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>1. Keyboard access</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Tab through a page</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that expected elements receive focus</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that they can be activated using the keyboard</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>2. Accordions</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Find accordion buttons</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Activate each button</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that <code>aria-expanded="true"</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that focus stays on the button</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>3. Form errors</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Submit a form with invalid data</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Find fields with errors</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check for <code>aria-invalid="true"</code></li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that error messages are associated with the fields</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>4. Modal dialogs</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Find and activate the trigger button</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that focus moves inside the dialog</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Close the dialog using Escape</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Check that focus returns to the trigger</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, Playwright can navigate to a page and <b>put it into the state you want to test</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It can then <b>check the behaviour itself</b> or <b>run axe-core</b> to check that state.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-how-does-it-work">
+          <section data-background="#217331">
+            <h3>Setup</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Developers write JavaScript tests that <b>tell Playwright what to do in a browser</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Three things are needed</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Node.js</b>: Runs JavaScript outside the browser</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>Playwright</b>: Controls the browser and runs tests</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span><b>A browser</b>: Such as Chromium</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Here&#8217;s a simple example of a <b>Playwright test</b> that uses axe-core.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>The test will:</b></p>
+            <ol class="font-sm">
+              <li>Go to the page</li>
+              <li>Run axe-core</li>
+              <li>Filter for the critical and serious issues</li>
+              <li>Expect there to be none</li>
+            </ol>
+          </section>
+
+          <section data-background="#222">
+<pre><code class="font-xs"><span class="codeComment">// Imports left out to save space</span>
+test('home page has no critical or serious issues', async ({ page }) => {
+  await page.goto('https://example.com');
+  const results = await new AxeBuilder({ page }).analyze();
+  const important = results.violations.filter(
+    v => v.impact === 'critical' || v.impact === 'serious'
+  );
+  expect(important).toEqual([]);
+});</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code class="font-sm"><span class="codeComment">// Name of the test</span>
+test('home page has no critical or serious issues',
+</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code class="font-sm"><span class="codeComment">// Open the page</span>
+await page.goto('https://example.com');
+</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code class="font-sm"><span class="codeComment">// Run axe-core and get the results</span>
+const results = await new AxeBuilder({ page }).analyze();
+</code></pre>
+          </section>
+
+          <section data-background="#222">
+<pre><code class="font-sm"><span class="codeComment">// Keep only critical and serious issues</span>
+const important = results.violations.filter(
+v => v.impact === 'critical' || v.impact === 'serious'
+</code></pre>
+          </section>
+
+
+          <section data-background="#EDEBEB">
+            <p>You can <b>run the tests</b> in the terminal with:</p>
+            <p><code>npx playwright test</code>.</p>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-playwrights-weaknesses">
+          <section data-background="#217331">
+            <h3>Weaknesses</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>You&#8217;re probably thinking:</b></p>
+            <p><em>&ldquo;This is all too good to be true!&rdquo;</em></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Like any solution, Playwright has <b>a range of weaknesses too</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Advanced rules are fragile</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Different websites use <b>different structures and approaches</b> for the same components.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Tests that find, open and interact with components often need <b>detailed knowledge of how they&#8217;re built</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Tests can fail when:</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>The markup doesn&#8217;t match what the test expects</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>The code, content or timing changes</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>That&#8217;s manageable in a closed, predictable world like a <b>design system</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>It&#8217;s much harder in <b>large applications</b> with many teams, different codebases and legacy systems.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Tests only find what they&#8217;re told to look for</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>For example, a test might:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Find accordion triggers by their <code>button</code> role</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Miss accordion triggers that don&#8217;t have that role</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>These cases don&#8217;t fail. <b>They just aren&#8217;t tested.</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So developers may think <b>everything has passed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>3. Tests can check the wrong thing</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>For example, a test might:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Activate an accordion button</li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Expect focus to move into the accordion content</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But focus should <b>stay on the button</b>, and its <code>aria-expanded</code> state should change to <code>true</code>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>This means a test can <b>pass while confirming incorrect accessibility behaviour</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>4. Comprehensive testing needs lots of tests</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Each test checks <b>specific requirements</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Even a design system can need <b>hundreds of tests</b> to check different components, states and behaviours.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Once written, these tests can <b>run automatically whenever the code changes</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But <b>that&#8217;s a lot of work!</b></p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>5. Passing tests don&#8217;t guarantee accessibility</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Even hundreds of passing tests <b>don&#8217;t guarantee an accessible experience</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>We still need to ask questions such as:</b></p>
+            <ul class="icon-list font-sm">
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Is this name meaningful?</em></li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Does this focus order make sense?</em></li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Is this page usable with a screen reader?</em></li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-where-it-fits">
+          <section data-background="#217331">
+            <h3>Best fit</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, where does Playwright <b>work best for accessibility testing</b>?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>1. Excellent for regression testing</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Once an issue is found and fixed, a test can <b>keep checking that it stays fixed</b>.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <h4>2. Great in controlled environments</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>Playwright is particularly useful in <b>design systems</b>, where components and their expected behaviours are known.</p>
+          </section>
+       </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="slide-final-thoughts">
+          <section data-background="#217331">
+            <h3>Wrapup</h3>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Playwright has <b>powerful features</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It also has <b>important weaknesses</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Really good in <b>some situations</b>.</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>It doesn&#8217;t replace manual testing or <b>testing with people with disability</b>.</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Want to explore further?</b></p>
+            <p>A free tutorial series on axe-core and Playwright:</p>
+            <p><a href="https://intopia.github.io/exercise/axe-core-playwright-introduction.html" target="_blank">intopia.github.io/exercise/axe-core-playwright-introduction.html</a></p>
+          </section>
+        </section>
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition:'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
+</html>
