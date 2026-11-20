@@ -128,6 +128,15 @@ h4 { color: #217331; font-weight: 700; font-size: 2em; }
           </section>
 
           <section data-background="#EDEBEB">
+            <p><b>Results can be presented as:</b></p>
+            <ul class="icon-list">
+              <li><span aria-hidden="true" class="icon icon-check"></span>Reports inside browser extensions</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>Output in the terminal</li>
+              <li><span aria-hidden="true" class="icon icon-check"></span>JSON or HTML files</li>
+            </ul>
+          </section>
+
+          <section data-background="#EDEBEB">
             <p>So, when you use axe DevTools to scan a page, <b>axe-core runs inside that page</b>.</p>
           </section>
 
@@ -194,10 +203,6 @@ h4 { color: #217331; font-weight: 700; font-size: 2em; }
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Playwright is often used for <b>three main purposes in accessibility testing</b>.</p>
-          </section>
-
-          <section data-background="#EDEBEB">
             <h4>1. Reporting</h4>
           </section>
 
@@ -207,6 +212,14 @@ h4 { color: #217331; font-weight: 700; font-size: 2em; }
 
           <section data-background="#EDEBEB">
             <h4>2. Blocking builds and releases</h4>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p><b>Quick side note</b>: What is continuous integration (CI)?</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>CI is a process where automated checks can run <b>whenever developers make changes to code</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -232,10 +245,6 @@ h4 { color: #217331; font-weight: 700; font-size: 2em; }
               <li><span aria-hidden="true" class="icon icon-check"></span>Whenever code is committed</li>
               <li><span aria-hidden="true" class="icon icon-check"></span>On a regular schedule</li>
             </ul>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>But Playwright can do <b>much more than run axe-core scans</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -352,48 +361,65 @@ h4 { color: #217331; font-weight: 700; font-size: 2em; }
             </ol>
           </section>
 
-          <section data-background="#222">
-<pre><code class="font-xs"><span class="codeComment">// Imports left out to save space</span>
-test('home page has no critical or serious issues', async ({ page }) => {
-  await page.goto('https://example.com');
-  const results = await new AxeBuilder({ page }).analyze();
-  const important = results.violations.filter(
-    v => v.impact === 'critical' || v.impact === 'serious'
-  );
-  expect(important).toEqual([]);
-});</code></pre>
-          </section>
+<section data-background="#222">
+<pre><code><span class="codeComment">// Imports left out to save space</span>
+test(
+  'home page has no critical or serious issues',
+  async ({ page }) => {
+    await page.goto('https://example.com');
+    const results = await new AxeBuilder({ page })
+      .analyze();
+    const important = results.violations.filter(
+      v => v.impact === 'critical' ||
+           v.impact === 'serious'
+    );
+    expect(important).toEqual([]);
+  }
+);</code></pre>
+</section>
 
-          <section data-background="#222">
-<pre><code class="font-sm"><span class="codeComment">// Name of the test</span>
-test('home page has no critical or serious issues',
+<section data-background="#222">
+<pre><code><span class="codeComment">// Name of the test</span>
+test(
+  'home page has no critical or serious issues',
+</code></pre>
+</section>
+
+<section data-background="#222">
+<pre><code><span class="codeComment">// Open the page</span>
+  async ({ page }) => {
+    await page.goto('https://example.com');
 </code></pre>
           </section>
 
-          <section data-background="#222">
-<pre><code class="font-sm"><span class="codeComment">// Open the page</span>
-await page.goto('https://example.com');
+<section data-background="#222">
+<pre><code><span class="codeComment">// Run axe-core and get the results</span>
+const results = await new AxeBuilder({ page })
+  .analyze();
 </code></pre>
-          </section>
+</section>
 
-          <section data-background="#222">
-<pre><code class="font-sm"><span class="codeComment">// Run axe-core and get the results</span>
-const results = await new AxeBuilder({ page }).analyze();
-</code></pre>
-          </section>
 
-          <section data-background="#222">
-<pre><code class="font-sm"><span class="codeComment">// Keep only critical and serious issues</span>
-const important = results.violations.filter(
-v => v.impact === 'critical' || v.impact === 'serious'
-</code></pre>
-          </section>
+<section data-background="#222">
+<pre><code><span class="codeComment">// Keep only critical and serious issues</span>
+    const important = results.violations.filter(
+      v => v.impact === 'critical' ||
+           v.impact === 'serious'
+    );</code></pre>
+</section>
 
+<section data-background="#222">
+<pre><code><span class="codeComment">// Expect no critical or serious issues</span>
+    expect(important).toEqual([]);</code></pre>
+</section>
 
           <section data-background="#EDEBEB">
             <p>You can <b>run the tests</b> in the terminal with:</p>
-            <p><code>npx playwright test</code>.</p>
           </section>
+
+<section data-background="#222">
+<pre><code>npx playwright test</code></pre>
+</section>
         </section>
 
 
@@ -407,11 +433,6 @@ v => v.impact === 'critical' || v.impact === 'serious'
         <section id="slide-playwrights-weaknesses">
           <section data-background="#217331">
             <h3>Weaknesses</h3>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p><b>You&#8217;re probably thinking:</b></p>
-            <p><em>&ldquo;This is all too good to be true!&rdquo;</em></p>
           </section>
 
           <section data-background="#EDEBEB">
