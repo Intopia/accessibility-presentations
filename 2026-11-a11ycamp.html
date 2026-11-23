@@ -521,7 +521,7 @@ const results = await new AxeBuilder({ page })
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Different websites use <b>different structures and approaches</b> for the same components.</p>
+            <p>Websites use <b>different structures and approaches</b> for the same components.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -549,19 +549,15 @@ const results = await new AxeBuilder({ page })
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>For example, a test might:</h5>
-            <ul class="icon-list">
-              <li><span aria-hidden="true" class="icon icon-check"></span>Find accordion triggers by their <code>button</code> role</li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span>Miss accordion triggers that don&#8217;t have that role</li>
-            </ul>
+            <p>A test might find accordion triggers by their <code>button</code> role.</p>
+          </section>
+
+          <section data-background="#EDEBEB">
+            <p>But this test could miss accordion triggers that <b>don't have that role</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
             <p>These cases don&#8217;t fail. <b>They just aren&#8217;t tested.</b>
-          </section>
-
-          <section data-background="#EDEBEB">
-            <p>So developers may think <b>everything has passed</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -589,17 +585,26 @@ const results = await new AxeBuilder({ page })
           </section>
 
           <section data-background="#EDEBEB">
-            <p>Even hundreds of passing tests <b>don&#8217;t guarantee an accessible experience</b>.</p>
+            <p>axe-core and Playwright can find many issues, but some accessibility questions <b>need human judgement</b>.</p>
           </section>
 
           <section data-background="#EDEBEB">
-            <h5>We still need to ask questions such as:</h5>
+            <p>Here are just a <b>small set of examples</b>:</p>
+          </section>
+
+          <section data-background="#EDEBEB">
             <ul class="icon-list font-sm">
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Is this name meaningful?</em></li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Does this focus order make sense?</em></li>
-              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Is this page usable with a screen reader?</em></li>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Is the alternative text meaningful?</em>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Does the focus order make sense?</em>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Are error messages understandable?</em>
+              <li><span aria-hidden="true" class="icon icon-circle-question"></span><em>Is the experience usable with a screen reader?</em>
             </ul>
           </section>
+
+          <section data-background="#EDEBEB">
+            <p>So, even when every test passes, the experience may <b>still have accessibility problems</b>.</p>
+          </section>
+
         </section>
 
 
@@ -612,11 +617,11 @@ const results = await new AxeBuilder({ page })
 
         <section id="slide-where-it-fits">
           <section data-background="#C03C0C">
-            <h3>Best fit</h3>
+            <h3>Where does Plsyeright fit</h3>
           </section>
 
           <section data-background="#EDEBEB">
-            <p>So, where does Playwright <b>work best for accessibility testing</b>?</p>
+            <p>There are<b> two places</b> where Playwright works very well.</p>
           </section>
 
           <section data-background="#EDEBEB">
@@ -646,7 +651,7 @@ const results = await new AxeBuilder({ page })
 
         <section id="slide-final-thoughts">
           <section data-background="#C03C0C">
-            <h3>Wrapup</h3>
+            <h3>Wrap-up</h3>
           </section>
 
           <section data-background="#EDEBEB">
